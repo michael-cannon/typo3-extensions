@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'cbgaedms'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="doctype">Document Type</label>
+			<label index="description">Description</label>
+			<label index="doc">Name</label>
+			<label index="version">Version</label>
+			<label index="feuser">Created By</label>
+			<label index="versiontitle">Version Title</label>
+			<label index="docversion">Document Version</label>
+			<label index="filename">Document Filename</label>
+			<label index="file">Document File</label>
+			<label index="useraccess">User Access</label>
+			<label index="agency">Location</label>
+			<label index="agencysilo">Company Silo</label>
+			<label index="country">Country</label>
+			<label index="address">Address</label>
+			<label index="address2">Address 2</label>
+			<label index="city">City</label>
+			<label index="state">State</label>
+			<label index="postalcode">Postal Code</label>
+			<label index="numberofemployees">Number of Employees</label>
+			<label index="officephone">Office Phone</label>
+			<label index="officefax">Office Fax</label>
+			<label index="administrator">Administrators</label>
+			<label index="parentagency">Parent Agency</label>
+			<label index="documents">Documents</label>
+			<label index="incidentmanager">Incident Manager</label>
+			<label index="viewers">Viewers</label>
+			<label index="alternateincidentmanagers">Alt. Incident Managers</label>
+			<label index="buildingpoc">Building POC</label>
+			<label index="buildingpocphone">Building POC Phone</label>
+			<label index="buildingpocphoneafterhours">Building POC Phone After Hours</label>
+			<label index="buildingalternatepoc">Building Alternate POC</label>
+			<label index="buildingalternatepocphone">Building Alternate POC Phone</label>
+			<label index="buildingalternatepocphoneafterhours">Building Alternate POC Phone After Hours</label>
+			<label index="emergencycall">Emergency Call in Number/Hotline</label>
+			<label index="emergencybridgeline">Emergency Bridgeline</label>
+			<label index="passcode">Passcode</label>
+			<label index="chairpasscode">Chairperson Passcode</label>
+			<label index="securityphone">Security Phone</label>
+			<label index="receptionphone">Reception Phone</label>
+			<label index="phone247us">24/7 Notification Center in the U.S</label>
+			<label index="phone247nonus">24/7 Notification Center outside the U.S.</label>
+			<label index="silo">Business Silo</label>
+			<label index="tx_cbgaedms_mobilephone">Mobile Phone</label>
+			<label index="tx_cbgaedms_homephone">Home Phone</label>
+			<label index="emptyDoctypeError">Empty Document Type Name</label>
+			<label index="emptySiloError">Empty Silo Name</label>
+			<label index="accessRestricted">Access Restricted</label>
+			<label index="accessRestrictedDetail">Contact your account manager for access.</label>
+			<label index="hidden">Hidden</label>
+			<label index="required">Required</label>
+			<label index="agencyMissingError">Agency is missing</label>
+			<label index="agencysiloMissingError">Company Silo is missing</label>
+			<label index="countryMissingError">Country is missing</label>
+			<label index="addressMissingError">Address is missing</label>
+			<label index="cityMissingError">City is missing</label>
+			<label index="stateMissingError">State is missing</label>
+			<label index="postalcodeMissingError">Postal Code is missing</label>
+			<label index="numberofemployeesMissingError">Number of employees should be a number</label>
+			<label index="parentagencyMissingError">Parent agency is missing</label>
+			<label index="incidentmanagerMissingError">Incident manager is missing</label>
+			<label index="alternateincidentmanagersMissingError">Alternate incident manager is missing</label>
+			<label index="pleaseSelect">Please Select</label>
+			<label index="noState">Ignore This Field</label>
+			<label index="incidentManagerNotSet">IM Not Set</label>
+			<label index="alternateIncidentManagersNotSet">Alt. IM Not Set</label>
+			<label index="docMissingError">Missing document name</label>
+			<label index="doctypeMissingError">Missing document type</label>
+			<label index="newfileMissingError">Missing document file</label>
+			<label index="first_nameMissingError">First name missing</label>
+			<label index="last_nameMissingError">Last name missing</label>
+			<label index="titleMissingError">Title missing</label>
+			<label index="emailMissingError">Email needed</label>
+			<label index="officephoneMissingError">Office phone needed</label>
+			<label index="mobilephoneMissingError">Mobile phone needed</label>
+			<label index="homephoneMissingError">Home phone needed</label>
+			<label index="noLocationincidentmanagerAccess">No incident manager is assigned</label>
+			<label index="noLocationalternateincidentmanagersAccess">No alternate incident manager is assigned</label>
+			<label index="noLocationviewersAccess">No viewer assigned</label>
+			<label index="noLocationsFound">No locations found</label>
+			<label index="nothingToReport">Nothing To Report</label>
+			<label index="goBack">Go back</label>
+			<label index="reportI0">Locations</label>
+			<label index="reportI1">Document Types</label>
+			<label index="reportI2">Document Changes</label>
+			<label index="frequency">Frequency</label>
+			<label index="frequencyI0">Daily</label>
+			<label index="frequencyI1">Weekly</label>
+			<label index="frequencyI2">Monthly</label>
+			<label index="frequencyI3">Quarterly</label>
+			<label index="frequencyI4">Semi-annually</label>
+			<label index="frequencyI5">Annually</label>
+			<label index="reportMissingError">Report is missing</label>
+			<label index="frequencyMissingError">Frequency is missing</label>
+		</languageKey>
+		<languageKey index="ch" type="array">
+		</languageKey>
+	</data>
+</T3locallang>

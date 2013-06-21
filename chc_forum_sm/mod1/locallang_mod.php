@@ -1,0 +1,135 @@
+<?php
+/**
+ * Language labels for module "tools_txchcforumM1" - header, description
+ * 
+ * This file is detected by the translation tool.
+ */
+
+$LOCAL_LANG = Array (
+	'default' => Array (
+		'mlang_tabs_tab' => 'CHC Forum',
+		'mlang_labels_tabdescr' => 'This module is used to administer and maintain the chc forum plugin',
+		'mlang_labels_tablabel' => 'CHC Forum administration module',
+	),
+	'dk' => Array (
+	),
+	'de' => Array (
+		'mlang_tabs_tab' => 'CHC Forum',
+		'mlang_labels_tabdescr' => 'Mit diesem Modul verwalten und pflegen Sie das CHC Forum Plugin',
+		'mlang_labels_tablabel' => 'CHC Forum Administrator Modul',
+	),
+	'no' => Array (
+		'mlang_tabs_tab' => 'CHC forum',
+		'mlang_labels_tabdescr' => 'Denne modulen brukes til å administrere og vedlikeholde CHC forum plugin',
+		'mlang_labels_tablabel' => 'CHC forum administrasjonsmeny',
+	),
+	'it' => Array (
+		'mlang_tabs_tab' => 'CHC Forum',
+		'mlang_labels_tabdescr' => 'Questo module serve ad amministrare il plugin chc forum',
+		'mlang_labels_tablabel' => 'Modulo di amministrazione CHC Forum',
+	),
+	'fr' => Array (
+	),
+	'es' => Array (
+		'mlang_tabs_tab' => 'Foro CHC',
+		'mlang_labels_tabdescr' => 'Este módulo se usa para administrar y mantener el plugin del Foro CHC',
+		'mlang_labels_tablabel' => 'Módulo de administración del Foro CHC',
+	),
+	'nl' => Array (
+		'mlang_tabs_tab' => 'CHC Forum',
+		'mlang_labels_tabdescr' => 'Deze module is bedoeld om vookeuren en overige instellingen te beheren van de chc forum plugin.',
+		'mlang_labels_tablabel' => 'CHC Forum beheer module',
+	),
+	'cz' => Array (
+		'mlang_tabs_tab' => 'CHC fórum',
+		'mlang_labels_tabdescr' => 'Tento modul slouží ke správì a údržbì plug-inu chc fórum',
+		'mlang_labels_tablabel' => 'Administraèní modul CHC fóra',
+	),
+	'pl' => Array (
+	),
+	'si' => Array (
+	),
+	'fi' => Array (
+		'mlang_tabs_tab' => 'CHC Forum',
+		'mlang_labels_tabdescr' => 'Tätä aliohjelmaa käytetään CHC puginin foorumien ylläpitoon ja hallintaan',
+		'mlang_labels_tablabel' => 'CHC Foorumin hallinnan aliohjelma',
+	),
+	'tr' => Array (
+	),
+	'se' => Array (
+		'mlang_tabs_tab' => 'CHC forum',
+		'mlang_labels_tabdescr' => 'Denna modul används till att administrera och underhålla CHC forum',
+		'mlang_labels_tablabel' => 'CHC forums administrationsmodul',
+	),
+	'pt' => Array (
+	),
+	'ru' => Array (
+		'mlang_tabs_tab' => 'CHC-ôîðóì',
+		'mlang_labels_tabdescr' => 'Ýòîò ìîäóëü ïðåäíàçíà÷åí äëÿ àäìèíèñòðèðîâàíèÿ è óïðàâëåíèÿ ðàñøèðåíèåì CHC-ôîðóì',
+		'mlang_labels_tablabel' => 'Ìîäóëü àäìèíèñòðèðîâàíèÿ CHC-ôîðóìà',
+	),
+	'ro' => Array (
+	),
+	'ch' => Array (
+	),
+	'sk' => Array (
+	),
+	'lt' => Array (
+	),
+	'is' => Array (
+	),
+	'hr' => Array (
+		'mlang_tabs_tab' => 'CHC forum',
+		'mlang_labels_tabdescr' => 'Ovaj modul se koristi za administraciju i održavanje chc forum plugina',
+		'mlang_labels_tablabel' => 'CHC forum administracijski modul',
+	),
+	'hu' => Array (
+		'mlang_tabs_tab' => 'CHC fórum',
+		'mlang_labels_tabdescr' => 'Ez a modul a CHC fórum adminisztrálására szolgál',
+		'mlang_labels_tablabel' => 'CHC fórum adminisztrációs modul',
+	),
+	'gl' => Array (
+	),
+	'th' => Array (
+	),
+	'gr' => Array (
+	),
+	'hk' => Array (
+		'mlang_tabs_tab' => 'CHC ½×¾Â',
+		'mlang_labels_tabdescr' => '¦¹¼Ò²Õ¥Î§@ºÞ²z©MºûÅ@CHC½×¾Â´¡¤J¦¡¤¸¥ó',
+		'mlang_labels_tablabel' => 'CHC½×¾ÂºÞ²z¼Ò²Õ',
+	),
+	'eu' => Array (
+	),
+	'bg' => Array (
+	),
+	'br' => Array (
+	),
+	'et' => Array (
+	),
+	'ar' => Array (
+	),
+	'he' => Array (
+	),
+	'ua' => Array (
+	),
+	'lv' => Array (
+	),
+	'jp' => Array (
+	),
+	'vn' => Array (
+	),
+	'ca' => Array (
+	),
+	'ba' => Array (
+	),
+	'kr' => Array (
+	),
+	'eo' => Array (
+	),
+	'my' => Array (
+	),
+	'hi' => Array (
+	),
+);
+?>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'comment_notify'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label
+			index="fe_users.tx_commentnotify_global_notify_enabled">Receive Email Notifications of Member Comments?</label>
+			<label index="tt_content.list_type_pi1">Comment Notification</label>
+			<label index="tx_commentnotify_users_posts">Users/Posts Info/Options</label>
+			<label index="tx_commentnotify_users_posts.fe_userid">Front End User ID</label>
+			<label index="tx_commentnotify_users_posts.postid">Post ID</label>
+			<label index="tx_commentnotify_users_posts.what.I.0">Messageboard</label>
+			<label index="tx_commentnotify_users_posts.what.I.1">News or Blog Comments</label>
+			<label index="tx_commentnotify_users_posts.what">Where Posted</label>
+			<label index="tx_commentnotify_users_posts.notifyenabled">Notify Enabled for this Post</label>
+			<label index="tx_commentnotify_users_posts.lastnotified">Last Notified</label>
+			<label index="tx_commentnotify_notifications">Notification Times</label>
+			<label index="tx_commentnotify_notifications.users_posts_id">Users/Posts ID</label>
+			<label index="tx_commentnotify_notifications.notificationtime">Notification Time</label>
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,1 @@
+DROP TABLE `#__sugar_case_portal_fields`;

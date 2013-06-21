@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>Survey Plugin Template</title>
+</head>
+
+
+<body>
+
+<br>
+
+<br>
+
+<h2>FRONTEND USER REGISTRATION SURVEY TEMPLATE</h2>
+
+
+<br>
+
+<!-- ###SURVEY_TEMPLATE### begin-->
+<form name="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data">
+  <table style="border: 0pt none ; padding: 1px;" cellspacing="0">
+    <tbody>
+      <tr>
+        <td colspan="2" class="survey_errors">
+		<!--###SUB_REQUIRED_SURVEY_FIELDS###-->
+        <p style="color: #FF0000; font-weight: bold;">###MISSING_SURVEY_FIELDS###</p>
+		<!--###SUB_REQUIRED_SURVEY_FIELDS###-->
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+		<p>
+		Hello ###FIRST_NAME###,
+		</p>
+		<p>
+		To better serve you, we ask that you take a moment today and update your
+		profile.  
+		</p>
+		<p>
+		You may choose to <a href="###REDIRECT###">skip to ###PAGE_TITLE###</a> at this time and proceed, or take a
+		moment
+		to update your profile and you will not receive this message again.
+		</p>
+		<p>
+		Thank you,
+		</p>
+		<p>
+		The BPMInstitute.org Team
+		</p>
+		</td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="1">###SURVEY###</td>
+      </tr>
+	  <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="sectiontitles-red">Please Scan Over The Form Before Submitting</td>
+      </tr>
+      <tr>
+        <td colspan="2">###HIDDENFIELDS###
+        <p> <input name="tx_srfeuserregistersurvey_pi1[submit]" value="###SUBMIT_BUTTON_LABEL###" class="textfield10 tx-srfeuserregister-pi1-submit" type="submit">(Please
+press submit only once. This may take a moment.) </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<!-- ###SURVEY_TEMPLATE### end-->
+<br>
+
+<big><b><br>
+
+<br>
+
+Survey Item Templates<br>
+
+<br>
+
+</b></big>
+<i>This template has been used to
+add survey items to registration form.<br><br><br>
+</i>
+
+<!--###STRINGITEM### begin-->
+<div class="survey_item">
+<p class="description" style="color: rgb(255, 0, 0); font-weight: bold;">###MISSING_VALUE###</p>
+<p class="description">###DESCRIPTION###</p>
+<p class="itemform">###QUESTION###
+<br>
+<input name="FE[fe_users][tx_mssurvey_pi1][###TITLE###]" size="###WIDTH###" value="###DEFAULT_VALUE###" type="text"></p>
+</div>
+<!--###STRINGITEM### end-->
+
+
+<!--###SHORTSTRINGITEM### begin-->
+<p class="itemform"><input name="FE[fe_users][tx_mssurvey_pi1][###TITLE###]" size="###WIDTH###" value="###DEFAULT_VALUE###" type="text"></p>
+<!--###SHORTSTRINGITEM### end-->
+
+
+<!--###TEXTITEM### begin-->
+<div class="survey_item">
+<p class="description" style="color: rgb(255, 0, 0); font-weight: bold;">###MISSING_VALUE###</p>
+<p class="description">###DESCRIPTION###</p>
+<p class="itemform">###QUESTION###
+<br>
+<textarea name="FE[fe_users][tx_mssurvey_pi1][###TITLE###]" cols="###WIDTH###" rows="###HEIGHT###">###DEFAULT_VALUE###</textarea></p>
+</div>
+<!--###TEXTITEM### end-->
+
+
+<!--###SHORTTEXTITEM### begin-->
+<p class="itemform"><textarea name="FE[fe_users][tx_mssurvey_pi1][###TITLE###]" cols="###WIDTH###" rows="###HEIGHT###">###DEFAULT_VALUE###</textarea></p>
+<!--###SHORTTEXTITEM### end-->
+
+
+<!--###RADIOITEM### begin-->
+<div class="survey_item">
+<p class="description" style="color: rgb(255, 0, 0); font-weight: bold;">###MISSING_VALUE###</p>
+<p class="description">###DESCRIPTION###</p>
+<p class="itemform">###QUESTION###
+<br>###VALUES###
+</p>###HIDDEN###
+</div>
+<!--###RADIOITEM### end-->
+
+
+<!--###SHORTRADIOITEM### begin-->
+<p class="itemform">###VALUES###</p>
+<!--###SHORTRADIOITEM### end-->
+
+
+<!--###CHECKBOXITEM### begin-->
+<div class="survey_item">
+<p class="description" style="color: rgb(255, 0, 0); font-weight: bold;">###MISSING_VALUE###</p>
+<p class="description">###DESCRIPTION###</p>
+<p class="itemform">###QUESTION###
+<br>###VALUES###
+</p>
+</div>
+<!--###CHECKBOXITEM### end-->
+
+
+<!--###SHORTCHECKBOXITEM### begin-->
+<p class="itemform">###VALUES###</p>
+<!--###SHORTCHECKBOXITEM### end-->
+
+
+<!--###SELECTITEM### begin-->
+<div class="survey_item">
+<p class="description" style="color: rgb(255, 0, 0); font-weight: bold;">###MISSING_VALUE###</p>
+<p class="description">###DESCRIPTION###</p>
+<p class="itemform">###QUESTION###
+<select ###multiple="" size="###HEIGHT###" name="FE[fe_users][tx_mssurvey_pi1][###TITLE###]###ARR###">
+</select>
+</p>
+</div>
+<!--###SELECTITEM### end-->
+
+
+<!--###SHORTSELECTITEM### begin-->
+<p class="itemform">
+<select ###multiple="" size="###HEIGHT###" name="FE[fe_users][tx_mssurvey_pi1][###TITLE###]###ARR###">
+</select>
+</p>
+<!--###SHORTSELECTITEM### end-->
+
+
+<!--###MULTITEM### begin-->
+<div class="survey_item">
+<p class="description" style="color: rgb(255, 0, 0); font-weight: bold;">###MISSING_VALUE###</p>
+<p class="description">###DESCRIPTION###</p>
+###COLUMNS######ROWS###
+<table class="multitable">
+  <tbody>
+    <tr>
+      <th></th>
+    </tr>
+  </tbody>
+</table>
+</div>
+<!--###MULTITEM### end-->
+
+
+<!--###RADIOVALUE### begin-->
+<input ###CHECKED### name="FE[fe_users][tx_mssurvey_pi1][###TITLE###]" value="###VALUE###" type="radio" onClick="clearRadioTextboxes( this, '###TITLE###')">###VALUE### <br>
+<!--###RADIOVALUE### end-->
+
+
+<!--###RADIO_VALUE_WITH_TEXTBOX### begin-->
+<input id="###TITLE###_###VALUE###" ###CHECKED### name="FE[fe_users][tx_mssurvey_pi1][###TITLE###]" value="###VALUE###" type="radio" onClick="clearRadioTextboxes( this, '###TITLE###'); this.form.elements['FE[fe_users][tx_mssurvey_pi1][###TITLE###_###VALUE###]'].focus()">###VALUE###
+&nbsp; <input name="FE[fe_users][tx_mssurvey_pi1][###TITLE###_###VALUE###]" size="22" value="###DEFAULT_VALUE###" type="text" onFocus="document.getElementById('###TITLE###_###VALUE###').checked = true;">
+<!--###RADIO_VALUE_WITH_TEXTBOX### end-->
+
+
+<!--###CHECKBOXVALUE### begin-->
+<input ###CHECKED### name="FE[fe_users][tx_mssurvey_pi1][###TITLE###][]" value="###VALUE###" type="checkbox">###VALUE###<br>
+<!--###CHECKBOXVALUE### end-->
+
+
+<!--###CHECKBOX_VALUE_WITH_TEXTBOX### begin-->
+<input id="###TITLE###_###VALUE###" ###CHECKED### name="FE[fe_users][tx_mssurvey_pi1][###TITLE###][]" value="###VALUE###" type="checkbox" onClick=" if ( this.checked) { this.form.elements['FE[fe_users][tx_mssurvey_pi1][###TITLE###_###VALUE###_value]'].focus(); } else { this.form.elements['FE[fe_users][tx_mssurvey_pi1][###TITLE###_###VALUE###_value]'].value = ''; }">###VALUE###
+&nbsp; <input name="FE[fe_users][tx_mssurvey_pi1][###TITLE###_###VALUE###_value]" size="22" value="###DEFAULT_VALUE###" type="text" onFocus="document.getElementById('###TITLE###_###VALUE###').checked = true;"><br>
+<!--###CHECKBOX_VALUE_WITH_TEXTBOX### end-->
+
+
+<!--###SELECTVALUE### begin-->
+###VALUE###
+<!--###SELECTVALUE### end-->
+
+
+<big><b><br>
+<br>Survey Enabled Pages Report Template<br><br>
+</b></big>
+
+<i>Template for report display of survey enabled pages in back-end function wizard module.</i>
+<br><br><br>
+
+<!--###SURVEY_ENABLED_PAGES_REPORT_TEMPLATE###-->
+<div style="padding-top: 5px;"></div>
+<div style="padding-top: 5px;"></div>
+<h3 class="uppercase">REPORT OF SURVEY ENABLED PAGES</h3>
+
+<table cellpadding="4">
+
+    <tr>
+        <td><strong>Page ID</strong></td>
+        <td><strong>Page Title</strong></td>
+    </tr>
+    
+    <!--###PAGE_DETAILS###-->
+    <tr>
+        <td align="right">###PAGE_ID###</td>
+        <td>###PAGE_TITLE###</td>
+    </tr>
+    <!--###PAGE_DETAILS###-->
+    
+</table>
+
+<!--###SURVEY_ENABLED_PAGES_REPORT_TEMPLATE###-->
+
+</body>
+</html>

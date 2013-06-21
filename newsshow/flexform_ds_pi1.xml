@@ -1,0 +1,606 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_def</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<dark>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Dark design</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</dark>
+					<show_last>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Limit news</label>
+							<config>
+								<type>input</type>
+								<size>2</size>
+								<eval>num</eval>
+							</config>
+						</TCEforms>
+					</show_last>
+					<days>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Week Days</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</days>
+					<!--in_cat>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Include Categories</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tt_news_cat</allowed>
+								<size>1</size>
+								<maxitems>100</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</in_cat>
+					<ex_cat>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Exclude Categories</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tt_news_cat</allowed>
+								<size>1</size>
+								<maxitems>100</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</ex_cat-->
+		            <listOrderBy>
+		            	<TCEforms>
+		            		<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.listOrderby</label>
+		            		<config>
+		            			<type>select</type>
+		            			<items type="array">
+		            						<numIndex index="0" type="array">
+		            					<numIndex index="0"></numIndex>
+		            					<numIndex index="1"></numIndex>
+		            				</numIndex>
+		            				<numIndex index="1" type="array">
+		            					<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.datetime</numIndex>
+		            					<numIndex index="1">datetime</numIndex>
+		            				</numIndex>
+		            				<numIndex index="2" type="array">
+		            					<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.archivedate</numIndex>
+		            					<numIndex index="1">archivedate</numIndex>
+		            				</numIndex>
+		            				<numIndex index="3" type="array">
+		            					<numIndex index="0">LLL:EXT:lang/locallang_general.php:LGL.author</numIndex>
+		            					<numIndex index="1">author</numIndex>
+		            				</numIndex>
+		            				<numIndex index="4" type="array">
+		            					<numIndex index="0">LLL:EXT:lang/locallang_general.php:LGL.title</numIndex>
+		            					<numIndex index="1">title</numIndex>
+		            				</numIndex>
+		            				<numIndex index="5" type="array">
+		            					<numIndex index="0">LLL:EXT:lang/locallang_general.php:LGL.type</numIndex>
+		            					<numIndex index="1">type</numIndex>
+		            				</numIndex>
+		            				<numIndex index="6" type="array">
+		            					<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.random</numIndex>
+		            					<numIndex index="1">random</numIndex>
+		            				</numIndex>
+		            				<numIndex index="7" type="array">
+		            					<numIndex index="0">LLL:EXT:newsreadedcount/locallang_db.php:tt_news.tx_newsreadedcount_readedcounter</numIndex>
+		            					<numIndex index="1">tx_newsreadedcount_readedcounter</numIndex>
+		            				</numIndex>
+		            			</items>
+		            			<maxitems>1</maxitems>
+		            			<size>1</size>
+		            		</config>
+		            	</TCEforms>
+	                </listOrderBy>
+		            <ascDesc>
+		            	<TCEforms>
+		            		<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.ascDesc</label>
+		            		<config>
+		            			<type>select</type>
+		            			<items type="array">
+		            			<numIndex index="0" type="array">
+		            					<numIndex index="0"></numIndex>
+		            					<numIndex index="1"></numIndex>
+		            				</numIndex>
+		            				<numIndex index="1" type="array">
+		            					<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.ascDesc_asc</numIndex>
+		            					<numIndex index="1">asc</numIndex>
+		            				</numIndex>
+		            				<numIndex index="2" type="array">
+		            					<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.ascDesc_desc</numIndex>
+		            					<numIndex index="1">desc</numIndex>
+		            				</numIndex>
+		            			</items>
+		            			<maxitems>1</maxitems>
+		            			<size>1</size>
+		            		</config>
+		            	</TCEforms>
+	                </ascDesc>
+                    <categoryMode>
+		            	<TCEforms>
+		            		<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.select_deselect_categories</label>
+		            		<config>
+		            			<type>select</type>
+		            			<items type="array">
+		            				<numIndex index="0" type="array">
+		            					<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_showAll</numIndex>
+		            					<numIndex index="1">0</numIndex>
+		            				</numIndex>
+		            				<numIndex index="1" type="array">
+		            					<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_showSelected</numIndex>
+		            					<numIndex index="1">1</numIndex>
+		            				</numIndex>
+		            				<numIndex index="2" type="array">
+		            					<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_DontShowSelected</numIndex>
+		            					<numIndex index="1">-1</numIndex>
+		            				</numIndex>
+		            			</items>
+		            			<maxitems>1</maxitems>
+		            			<size>1</size>
+		            		</config>
+		            	</TCEforms>
+	                </categoryMode>
+	                <categorySelection>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Categories</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tt_news_cat</allowed>
+								<size>7</size>
+								<maxitems>100</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</categorySelection>
+		            <!--categorySelection>
+		            	<TCEforms>
+		            		<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection</label>
+		            		<config>
+		            			<type>select</type>
+		            			<form_type>user</form_type>
+		            			<userFunc>tx_ttnews_treeview->displayCategoryTree</userFunc>
+		            			<treeView>1</treeView>
+		            			<foreign_table>tt_news_cat</foreign_table>
+		            			<foreign_table_where>AND tt_news_cat.pid=###STORAGE_PID### ORDER BY tt_news_cat.sorting</foreign_table_where>
+		            			<size>5</size>
+		            			<autoSizeMax>10</autoSizeMax>
+		            			<minitems>0</minitems>
+		            			<maxitems>20</maxitems>
+		            			<itemsHeader>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.itemsHeader</itemsHeader>
+		            			<items type="array">
+		            				<numIndex index="100">
+		            						<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_notCategorized</numIndex>
+		            						<numIndex index="1">0</numIndex>
+		            				</numIndex>
+		            			</items>
+		            			<allowNonIdValues>1</allowNonIdValues>
+		            		</config>
+		            	</TCEforms>
+		            </categorySelection-->
+		            <news>
+		            	<TCEforms>
+		            		<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.news_selection</label>
+		            		<config>
+		            			<type>select</type>
+		            			<foreign_table>tt_news</foreign_table>
+		            			<foreign_table_where>ORDER BY tt_news.title</foreign_table_where>
+		            			<size>7</size>
+		            			<autoSizeMax>25</autoSizeMax>
+		            			<minitems>0</minitems>
+		            			<maxitems>99</maxitems>
+		            			<itemsHeader>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.itemsHeader</itemsHeader>
+		            			<items type="array">
+		            				<numIndex index="0" type="array">
+		            					<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.news_selection_ignore</numIndex>
+		            					<numIndex index="1">-1</numIndex>
+		            				</numIndex>
+		            			</items>
+		            			<allowNonIdValues>1</allowNonIdValues>
+		            		</config>
+		            	</TCEforms>
+		            </news>
+    			</el>
+			</ROOT>
+		</sDEF>
+		<sSIDE>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Side</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<blog>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>What's Popular</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tt_news, pages, tx_chcforum_thread</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<prepend_tname>1</prepend_tname>
+							</config>
+						</TCEforms>
+					</blog>
+					<blogTitle>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Custom Title</label>
+							<config>
+							    <default>What's Popular</default>
+								<type>input</type>
+								<size>20</size>
+								<eval>string</eval>
+							</config>
+						</TCEforms>
+					</blogTitle>
+					<blogText>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Custom Text</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+								<eval>string</eval>
+							</config>
+						</TCEforms>
+					</blogText>
+					<blogImage>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Custom Image</label>
+							<config>
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>jpg,jpeg,png</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<uploadfolder>uploads/pics</uploadfolder>
+							</config>
+						</TCEforms>
+					</blogImage>
+
+					<reader>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Reader Advice</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tt_news, pages, tx_chcforum_thread</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<prepend_tname>1</prepend_tname>
+							</config>
+						</TCEforms>
+					</reader>
+					<readerTitle>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Custom Title</label>
+							<config>
+							    <default>Reader Advice</default>
+								<type>input</type>
+								<size>20</size>
+								<eval>string</eval>
+							</config>
+						</TCEforms>
+					</readerTitle>
+					<readerText>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Custom Text</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+								<eval>string</eval>
+							</config>
+						</TCEforms>
+					</readerText>
+					<readerImage>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Custom Image</label>
+							<config>
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>jpg,jpeg,png</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<uploadfolder>uploads/pics</uploadfolder>
+							</config>
+						</TCEforms>
+					</readerImage>
+					<bottom>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Bottom Link</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</bottom>
+					<bottomTitle>
+					    <TCEforms>
+							<exclude>1</exclude>
+							<label>Bottom Link Title</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+								<eval>string</eval>
+							</config>
+						</TCEforms>
+					</bottomTitle>
+				</el>
+			</ROOT>
+		</sSIDE>
+		<sPLAYER>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_player</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<transition>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_player.transition</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.default</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_player.transition.I.0</numIndex>
+										<numIndex index="1">blocks</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_player.transition.I.1</numIndex>
+										<numIndex index="1">fade</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_player.transition.I.2</numIndex>
+										<numIndex index="1">bgfade</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_player.transition.I.3</numIndex>
+										<numIndex index="1">circles</numIndex>
+									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_player.transition.I.4</numIndex>
+										<numIndex index="1">fluids</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</transition>
+					<random>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_player.random</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</random>
+					<timer>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_player.timer</label>
+							<config>
+								<type>input</type>
+								<default>4</default>
+								<size>5</size>
+								<eval>num</eval>
+							</config>
+						</TCEforms>
+					</timer>
+				</el>
+			</ROOT>
+		</sPLAYER>
+		<!--sFLASH>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<version>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.version</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<max>2</max>
+								<checkbox></checkbox>
+								<eval>num</eval>
+							</config>
+						</TCEforms>
+					</version>
+					<width>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.width</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<max>5</max>
+								<checkbox></checkbox>
+								<eval>num</eval>
+							</config>
+						</TCEforms>
+					</width>
+					<height>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.height</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<max>5</max>
+								<checkbox></checkbox>
+								<eval>num</eval>
+							</config>
+						</TCEforms>
+					</height>
+					<loop>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.loop</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.default</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.no</numIndex>
+										<numIndex index="1">false</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.yes</numIndex>
+										<numIndex index="1">true</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</loop>
+					<menu>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.menu</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.default</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.no</numIndex>
+										<numIndex index="1">false</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.yes</numIndex>
+										<numIndex index="1">true</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</menu>
+					<quality>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.quality</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<checkbox></checkbox>
+							</config>
+						</TCEforms>
+					</quality>
+					<scale>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.scale</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<checkbox></checkbox>
+							</config>
+						</TCEforms>
+					</scale>
+					<bgcolor>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.bgcolor</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<checkbox></checkbox>
+								<wizards>
+									<colorpick>
+										<type>colorbox</type>
+										<title>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.bgcolor.wizard</title>
+										<script>wizard_colorpicker.php</script>
+										<dim>20x20</dim>
+										<tableStyle>solid 1px #000000; margin-left: 20px;</tableStyle>
+										<JSopenParams>width=365,height=550,status=0,menubar=0,scrollbars=1</JSopenParams>
+										<exampleImg>gfx/wizard_colorpickerex.jpg</exampleImg>
+									</colorpick>
+								</wizards>
+							</config>
+						</TCEforms>
+					</bgcolor>
+					<swliveconnect>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.s_flash.swliveconnect</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.default</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.no</numIndex>
+										<numIndex index="1">false</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tt_content.flexform_pi1.LGL.yes</numIndex>
+										<numIndex index="1">true</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</swliveconnect>
+				</el>
+			</ROOT>
+		</sFLASH-->
+	</sheets>
+</T3DataStructure>

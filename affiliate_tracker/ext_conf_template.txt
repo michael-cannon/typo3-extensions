@@ -1,0 +1,2 @@
+  # cat=basic; type=int; label=Sysfolder PID: The PID of the sysfolder where the extension data will be stored. NOTE: If this is an invalid page, the extension will not work.
+sysfolder_pid = 0

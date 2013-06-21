@@ -1,0 +1,16 @@
+plugin.tx_piapappnote_pi1 {
+# cat=plugin.tx_piapappnote_pi1/file; type=file[html,htm,tmpl,txt]; label= Template File: HTML-Template for display. See EXT:piap_appnote/res/template.html for an example.
+	templateFile = EXT:piap_appnote/res/template.html
+	listView {
+# cat=plugin.tx_piapappnote_pi1/resultsAtATime; type=int; label= Items on page: Number of items on one listing page.
+		results_at_a_time = 3
+# cat=plugin.tx_piapappnote_pi1/maxPages; type=int; label= Links in nav bar: Number of links to other pages in navigation bar.
+		maxPages = 3
+	}
+# cat=plugin.tx_piapappnote_pi1/noTitleText; type=string; label= No title text: Text to show if an application note has an empty title
+	noTitleText = No title
+# cat=plugin.tx_piapappnote_pi1/defaultSortField; type=string; label= Default sort field: Field to sort by in the list view by default. Options are title, noteid, datetime, and author. Title also sorts by specialpriority if necessary.
+	defaultSortField = title
+# cat=plugin.tx_piapappnote_pi1/defaultSortOrder; type=string; label= Default sort order: ascending or descending
+	defaultSortOrder = ascending
+}

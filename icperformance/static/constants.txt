@@ -1,0 +1,55 @@
+config {
+	# cat=icperformance/enable; type=boolean; label=Jump URL Enable: Jumpurl is a concept where external links are redirected from the index_ts.php script, which first logs which url it was.
+	jumpurl_enable = 0
+
+	# cat=icperformance/enable; type=boolean; label=Jump Mailto Disable: Disables the use of jumpUrl when linking to email-adresses.
+	jumpurl_mailto_disable = 1
+
+	# cat=icperformance/enable; type=boolean; label=Stat Logging
+	stat = 0
+
+	# cat=icperformance/; type=list; label=Track Page Type:List of pagetypes that should be registered in the statistics table, sys_stat. If no types are listed, all types are logged.
+	stat_typeNumList = 0,1
+
+	# cat=icperformance/; type=boolean; label=Log Page Title Length:The length of the page names in the path written to logfile/database.
+	stat_titleLen = 20
+
+	# cat=icperformance/enable; type=boolean; label=Apache Logging
+	stat_apache = 0
+
+	# cat=icperformance/file; type=file; label=TYPO3 Apache Logfile:This the filename of the logfile in the directory $TYPO3_CONF_VARS["FE"]["logfile_dir"] (localconf) on the server where TYPO3 writes to the apachelogfile. 
+	stat_apache_logfile = 
+
+	# cat=icperformance/enable; type=boolean; label=MySQL Logging
+	stat_mysql = 0
+
+	# cat=icperformance/enable; type=boolean; label=No Cache
+	no_cache = 0
+
+	# cat=icperformance/enable; type=boolean; label=Clear Cache at Midnight
+	cache_clearAtMidnight = 1
+
+	# cat=icperformance; type=int; label=Clear Lifetime in seconds:Set to 900 (60 seconds/minute * 15 minutes) for medium traffic news sites
+	cache_period = 900
+
+	# cat=icperformance; type=string; label=Header Comment
+	headerComment =
+
+	# cat=icperformance/enable; type=boolean; label=Disable Prefix Comment:If set, the stdWrap property "prefixComment" will be disabled, thus preventing any revealing and space consuming comments in the HTML source code.
+	disablePrefixComment = 1
+
+    # cat=icperformance/enable; type=boolean; label= Use bidirectional relations
+	useBidirectionalRelations = 0
+
+	# cat=icperformance/links; type=string; label=Remove Header JavaScript:If set, the default JavaScript in the header will be removed.
+	removeDefaultJS = external
+
+	# cat=icperformance/enable; type=boolean; label=Link to TYPO3 CSS:If set, the inline styles TYPO3 controls in the core are written to a file.
+	inlineStyle2TempFile = 1
+
+	# cat=icbase/enable; type=boolean; label=Enable Indexed Search
+	index_enable = 0
+
+	# cat=icbase/enable; type=boolean; label=Enable External Document Search
+	index_externals = 0
+}

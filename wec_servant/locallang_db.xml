@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'wec_servant'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index='tt_content.list_type_pi1'>WEC Servant Matcher</label>
+			<label index='fe_users.tx_wecservant_is_contact'>Is Ministry Contact</label>
+
+			<label index='tx_wecservant_minopp'>Ministry Opportunity</label>
+			<label index='tx_wecservant_minopp.name'>Name Of Ministry Opportunity</label>
+			<label index='tx_wecservant_minopp.reference_code'>Shelby Opportunity ID</label>
+			<label index='tx_wecservant_minopp.description'>Description</label>
+			<label index='tx_wecservant_minopp.datetime'>Date/Time</label>
+			<label index='tx_wecservant_minopp.youth_friendly'>Youth Friendly?</label>
+			<label index='tx_wecservant_minopp.supervision_required'>Youth Supervision Required?</label>
+			<label index='tx_wecservant_minopp.ministry_uid'>Ministry</label>
+			<label index='tx_wecservant_minopp.contact_uid'>Contact Person</label>
+			<label index='tx_wecservant_minopp.ministry_info'>Ministry</label>
+			<label index='tx_wecservant_minopp.location'>Location (building/place/room/etc)</label>
+			<label index='tx_wecservant_minopp.times_needed'>Days/Times Needed</label>
+			<label index='tx_wecservant_minopp.priority.I.0'>None</label>
+			<label index='tx_wecservant_minopp.priority.I.1'>Normal</label>
+			<label index='tx_wecservant_minopp.priority.I.2'>Urgent</label>
+			<label index='tx_wecservant_minopp.priority.I.3'>High</label>
+			<label index='tx_wecservant_minopp.priority.I.4'>Low</label>
+			<label index='tx_wecservant_minopp.priority.I.5'>Special</label>
+			<label index='tx_wecservant_minopp.priority'>Priority Of Need</label>
+			<label index='tx_wecservant_minopp.dates'>Dates</label>
+			<label index='tx_wecservant_minopp.dates.from'>From</label>
+			<label index='tx_wecservant_minopp.dates.to'>To</label>
+			<label index='tx_wecservant_minopp.skills'>Skills/Interests Needed</label>
+			<label index='tx_wecservant_minopp.contact_info'>Contact Information (if needed)</label>
+			<label index='tx_wecservant_minopp.misc_description'>Misc. Description</label>
+			<label index='tx_wecservant_minopp.qualifications'>Qualifications</label>
+			<label index='tx_wecservant_minopp.openings'>Number of Openings (leave blank for unlimited)</label>
+			<label index='tx_wecservant_minopp.grouptype'>Group Type</label>
+
+			<label index='tx_wecservant_skills'>Ministry Skills</label>
+			<label index='tx_wecservant_skills.name'>Skill/Interest name</label>
+			<label index='tx_wecservant_skills.description'>Any additional description</label>
+			<label index='tx_wecservant_skills.group_by'>Group this by (optional)</label>
+			<label index='tx_wecservant_skills.sort_order'>Sort order (1 = lowest)</label>
+			<label index='tx_wecservant_skills.required_group'>Required Group (0=no,1=yes,2=default)?</label>
+
+			<label index='wec_servant.pi_flexform.sheet_main'>Main</label>
+			<label index='wec_servant.pi_flexform.title'>Title of Servant Matcher:</label>
+			<label index='wec_servant.pi_flexform.canFindByMinistry'>Allow To "Find By Ministry" (dropdown)</label>
+			<label index='wec_servant.pi_flexform.canFindByMinistries'>Allow To "Find By Ministries" (checkbox)</label>
+			<label index='wec_servant.pi_flexform.canFindByPriority'>Allow To "Find By Priority/Needs"</label>
+			<label index='wec_servant.pi_flexform.canFindByDates'>Allow To "Find By Dates"</label>
+			<label index='wec_servant.pi_flexform.canFindByLastAdded'>Allow To "Find By Last Added"</label>
+			<label index='wec_servant.pi_flexform.canFindBySkills'>Allow To "Find By Skills"</label>
+			<label index='wec_servant.pi_flexform.template_file'>Template file</label>
+
+			<label index='wec_servant.pi_flexform.sheet_options'>Options</label>
+			<label index='wec_servant.pi_flexform.how_can_respond'>How Can Respond?</label>
+			<label index='wec_servant.pi_flexform.how_can_respond.choice1'>No Form</label>
+			<label index='wec_servant.pi_flexform.how_can_respond.choice2'>Interest Form Only</label>
+			<label index='wec_servant.pi_flexform.how_can_respond.choice3'>Commitment Form Only</label>
+			<label index='wec_servant.pi_flexform.how_can_respond.choice4'>Interest + Commitment</label>
+			<label index='wec_servant.pi_flexform.see_all_ministries'>Show Ministry List At First (otherwise hide)?</label>
+			<label index='wec_servant.pi_flexform.see_all_skills'>Show Skills List At First (otherwise hide)?</label>
+			<label index='wec_servant.pi_flexform.show_all_entry'>Show All Of Description?</label>
+			<label index='wec_servant.pi_flexform.hide_view_this'>Hide View This Button?</label>
+			<label index='wec_servant.pi_flexform.show_waitlist'>Show Waitlist Button if No Openings</label>
+			<label index='wec_servant.pi_flexform.require_login_to_signup'>Require Login For Signup/Commitment?</label>
+			<label index='wec_servant.pi_flexform.can_save_for_later'>Can Save For Later?</label>
+
+			<label index='wec_servant.pi_flexform.sheet_fields'>Fields</label>
+			<label index='wec_servant.pi_flexform.display_oppfields'>Fields to DISPLAY for showing opportunities</label>
+			<label index='wec_servant.pi_flexform.required_formfields'>Fields REQUIRED for signup form</label>
+			<label index='wec_servant.pi_flexform.display_formfields'>Fields to DISPLAY for signup form</label>
+
+			<label index='wec_servant.pi_flexform.sheet_group'>Administrator</label>
+			<label index='wec_servant.pi_flexform.administrator_group'>Administrator(s) UID or username (sep. by comma)</label>
+			<label index='wec_servant.pi_flexform.contact_name'>Contact name for outgoing email</label>
+			<label index='wec_servant.pi_flexform.contact_email'>Contact email (i.e., admin@web.com) for outgoing email</label>
+			<label index='wec_servant.pi_flexform.notify_email'>Notify email to receive ALL contacts</label>
+			<label index='wec_servant.pi_flexform.grouptype_name'>Group type name</label>
+
+			<label index='wec_servant.pi_flexform.sheet_preview'>Preview</label>
+			<label index='wec_servant.pi_flexform.is_preview'>Is This A Preview Only?</label>
+			<label index='wec_servant.pi_flexform.preview_title'>Title Of Preview:</label>
+			<label index='wec_servant.pi_flexform.preview_button'>Preview Button Name:</label>
+			<label index='wec_servant.pi_flexform.preview_howmany'>How Many To Preview (0 = just a link)?</label>
+			<label index='wec_servant.pi_flexform.preview_description_length'>Length for Description Field?</label>
+			<label index='wec_servant.pi_flexform.preview_ministry'>Which Ministry To Preview?</label>
+			<label index='wec_servant.pi_flexform.no_ministry'>No Ministry</label>
+			<label index='wec_servant.pi_flexform.previewdata_PID'>Choose Servant Matcher Data Folder</label>
+			<label index='wec_servant.pi_flexform.previewlink_PID'>Choose Servant Matcher Page To Link To</label>
+
+			<label index='wec_servant.pi_flexform.sheet_text'>Text</label>
+			<label index='wec_servant.pi_flexform.header_text'>Header Text On Main Screen (HTML ok)</label>
+			<label index='wec_servant.pi_flexform.signup_instructions'>Contact Form: Header/Instructions (optional)</label>
+			<label index='wec_servant.pi_flexform.signup_emailHeader'>Contact Email: Header text (optional)</label>
+			<label index='wec_servant.pi_flexform.signup_emailFooter'>Contact Email: Footer text (optional)</label>
+
+			<label index='fe_groups.tx_wecgroup_type'>Type of Group</label>
+			<label index="fe_groups.tx_wecservant_ministryadministrator">Ministry Administrator</label>
+			<label index='tx_wecgroup_type'>Group Type</label>
+			<label index='tx_wecgroup_type.name'>Name of Group Type</label>
+			<label index='tx_wecgroup_type.description'>Description of Group Type</label>
+			<label index="fe_users.tx_wecservant_shelbyid">Shelby ID</label>
+			<label index="fe_users.tx_wecservant_bg_check_date">Date of Background Check</label>
+			<label index="moduleFunction.tx_wecservant_modfunc1">WEC Servant Reporting</label>
+		</languageKey>
+	</data>
+</T3locallang>

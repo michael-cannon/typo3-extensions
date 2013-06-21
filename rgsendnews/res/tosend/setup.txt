@@ -1,0 +1,23 @@
+plugin.tt_news {
+
+	rgsendnews = 1		
+	rgsendnews {
+		sendPage = {$plugin.rgsendnews.sendpid}
+		templateFile = EXT:rgsendnews/res/template.html
+		
+		pathToMootools = EXT:rgsendnews/res/mootools-release-1.11.js
+		pathToJS = EXT:rgsendnews/res/send.js
+		pathToCSS = EXT:rgsendnews/res/styles.css
+		useCaptcha = 1
+	}
+}
+
+plugin.tx_rgsendnews_pi1 {
+	savePid = {$plugin.rgsendnews.savepid}
+	stylesheet = http://www.rggooglemap.com/typo3conf/ext/rgsendnews/res/news.css
+	templateFile = EXT:rgsendnews/res/template.html
+	
+
+	bodytext.stripHtml = 1
+	useCaptcha = 1
+}

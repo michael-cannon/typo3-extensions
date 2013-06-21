@@ -1,0 +1,61 @@
+/**
+ * @author Michael Cannon <michael@peimic.com>
+ * @version $Id: constants.txt,v 1.1.1.1 2010/04/15 10:03:39 peimic.comprock Exp $
+ */
+
+plugin.icsugarcases {
+	# cat=icsugarcases/enable; type=boolean; label=XYZ:Abc something
+	xyz = 1
+
+	# cat=icsugarcases/; type=options[editcase,home]; label=New Case Save Redirect: Edit for editing more details or Home for seeing case listing.
+	new.case.save.redirect = editcase
+
+	# cat=icsugarcases/; type=options[editcase,home]; label=Edit Case Save Redirect: Edit for editing more details or Home for seeing case listing.
+	edit.case.save.redirect = home
+
+	# cat=icsugarcases/; type=options[editcase,home]; label=New Note Save Redirect: Edit for editing more details or Home for seeing case listing.
+	new.note.save.redirect = editcase
+
+	# cat=icsugarcases/; type=int; label=Number of Records per Page
+	limit = 10
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Portal Home Template File
+	template.home = EXT:icsugarcases/templates/home.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Cases List Template File
+	template.casesList = EXT:icsugarcases/templates/casesList.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Case Marker Template File: Do not edit. Goal is to remove.
+	template.case = EXT:icsugarcases/templates/case.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Case List Entry Template File
+	template.caseEntryList = EXT:icsugarcases/templates/caseEntryList.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Notes List Template File
+	template.notesList = EXT:icsugarcases/templates/notesList.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Note Marker Template File: Do not edit. Goal is to remove.
+	template.note = EXT:icsugarcases/templates/note.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Notes List Entry Template File
+	template.noteEntryList = EXT:icsugarcases/templates/noteEntryList.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Error Template File
+	template.error = EXT:icsugarcases/templates/error.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=New Case Template File
+	template.newCase = EXT:icsugarcases/templates/newCase.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Edit Case Template File
+	template.editCase = EXT:icsugarcases/templates/editCase.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Search Template File
+	template.search = EXT:icsugarcases/templates/search.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Page Browser Template File
+	template.pageBrowser = EXT:icsugarcases/templates/pageBrowser.tmpl
+
+	# cat=icsugarcases/file; type=file[html,htm,tmpl,txt]; label=Portal Navigation Template File
+	template.portalNav = EXT:icsugarcases/templates/portalNav.tmpl
+
+}

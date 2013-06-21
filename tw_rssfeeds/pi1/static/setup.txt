@@ -1,0 +1,104 @@
+plugin.tx_twrssfeeds_pi1 { 
+
+url = 
+maxItem = 
+ItemSeparator = 
+DescSeparator = 
+ChannelBg = 
+SubmitValue = 
+LinkTarget = 
+ChannelDesc = 
+ItemDesc = 
+Image = 
+Textinput = 
+TitleFile =
+LinkDau =
+LinkAfter =
+HTMLEnt =
+
+_CSS_DEFAULT_STYLE ( 
+
+#twrss_table {
+/*width:200px;*/
+	font-size: 12px; 
+	color: #666666; 
+	font-family: verdana; 
+	font-style: normal; 
+	font-weight: normal; 
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px; 
+	margin-right:10px; 
+	line-height: 16px;
+}
+
+.twrss_head{
+	font-size: 12px; 
+	color: #666666; 
+	font-family: verdana; 
+	font-style: normal; 
+	font-weight: bold; 
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px; 
+	margin-right:10px; 
+	line-height: 16px;  
+}
+
+.twrss_head_channel{
+	font-size: 12px; 
+	color: #666666; 
+	font-family: verdana; 
+	font-style: normal; 
+	font-weight: bold; 
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px; 
+	margin-right:10px; 
+	line-height: 16px;  
+}
+
+.twrss_imagefile{
+float:left;
+margin-left:10px;
+margin-right:10px;
+}
+
+.twrss_bodytext{
+	font-size: 12px; 
+	color: #666666; 
+	font-family: verdana; 
+	font-style: normal; 
+	font-weight: normal; 
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px; 
+	margin-right:10px; 
+	line-height: 16px;  
+}
+
+.twrss_bodytext A{
+	font-size: 12px; 
+	color: #666666; 
+	font-family: verdana; 
+	font-style: normal; 
+	font-weight: normal; 
+	line-height: 16px;  
+        text-decoration:underline;
+}
+
+.twrss_bodytext A:hover{
+	font-size: 12px; 
+	color: #666666; 
+	font-family: verdana; 
+	font-style: normal; 
+	font-weight: normal;  
+	line-height: 16px;  
+        text-decoration:underline;
+}
+
+
+
+)
+
+}

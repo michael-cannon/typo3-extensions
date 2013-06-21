@@ -1,0 +1,228 @@
+plugin.tx_srfeuserregister_pi1 {
+	#$Id: ext_typoscript_setup.txt,v 1.1.1.1 2010/04/15 10:04:04 peimic.comprock Exp $
+	templateFile = {$plugin.tx_srfeuserregister_pi1.file.templateFile}
+
+	wrap1.wrap = {$plugin.tx_srfeuserregister_pi1.wrap1}
+	wrap2.wrap = {$plugin.tx_srfeuserregister_pi1.wrap2}
+	wrap3.wrap = {$plugin.tx_srfeuserregister_pi1.wrap3}
+	color1.wrap = {$plugin.tx_srfeuserregister_pi1.color1}
+	color2.wrap = {$plugin.tx_srfeuserregister_pi1.color2}
+	color3.wrap = {$plugin.tx_srfeuserregister_pi1.color3}
+
+	icon_delete = {$plugin.tx_srfeuserregister_pi1.file.icon_delete}
+
+	pid = {$plugin.tx_srfeuserregister_pi1.pid}
+	registerPID = {$plugin.tx_srfeuserregister_pi1.registerPID}
+	editPID = {$plugin.tx_srfeuserregister_pi1.editPID}
+	confirmPID = {$plugin.tx_srfeuserregister_pi1.confirmPID}
+	confirmType = {$plugin.tx_srfeuserregister_pi1.confirmType}
+	loginPID = {$plugin.tx_srfeuserregister_pi1.loginPID}
+	defaultCODE = {$plugin.tx_srfeuserregister_pi1.defaultCODE}
+
+	formName = {$plugin.tx_srfeuserregister_pi1.formName}
+	onChangeCountryAttribute = {$plugin.tx_srfeuserregister_pi1.onChangeCountryAttribute}
+
+	# you may modify here the conditions under which an attachment file will be added to the email
+	addAttachment =  {$plugin.tx_srfeuserregister_pi1.enableEmailAttachment}
+	addAttachment.cmd = setfixed
+	addAttachment.sFK = APPROVE
+	addAttachment.file = {$plugin.tx_srfeuserregister_pi1.file.attachmentFile}
+
+	create = 1
+	create {
+		preview = {$plugin.tx_srfeuserregister_pi1.enablePreviewRegister}
+		fields = {$plugin.tx_srfeuserregister_pi1.formFields}
+		required = {$plugin.tx_srfeuserregister_pi1.requiredFields}
+		defaultValues {
+			redemptionCode =
+			captcha = 1
+			module_sys_dmail_html = 1
+			disable = {$plugin.tx_srfeuserregister_pi1.enableEmailConfirmation}
+		}
+		overrideValues {
+			# usergroup = {$plugin.tx_srfeuserregister_pi1.userGroupUponRegistration}
+			disable = {$plugin.tx_srfeuserregister_pi1.enableEmailConfirmation}
+			processed = 0
+			paid = 0
+			captcha = 1
+		}
+		evalValues {
+			password = twice, atLeast[{$plugin.tx_srfeuserregister_pi1.passwordAtLeast}], atMost[{$plugin.tx_srfeuserregister_pi1.passwordAtMost}]
+			username = uniqueLocal, atLeast[{$plugin.tx_srfeuserregister_pi1.usernameAtLeast}], atMost[{$plugin.tx_srfeuserregister_pi1.usernameAtMost}]
+			usergroup = 
+			# email = email,atMost[255],uniqueLocal
+			email = emailValidMx,atMost[255]
+			name = atMost[{$plugin.tx_srfeuserregister_pi1.nameAtMost}]
+			first_name = atMost[50]
+			last_name = atMost[50]
+			date_of_birth = date
+			company = atMost[50]
+			city = atMost[40]
+			zip = atMost[20]
+			telephone = atMost[25]
+			fax = atMost[25]
+			image = upload
+			title = 
+			address = noSpam
+			www = wwwURL
+			payment_method =
+			zone = pco
+			cc_number = creditcard,atMost[20]
+			cc_expiry = expiry,atMost[7]
+			cc_name = atMost[255],trim
+			cc_type = atMost[20]
+			ach_routing = routing,atMost[9]
+			ach_account = int,atMost[17]
+			join_agree =
+			referrer_uri =
+			starttime =
+			endtime =
+			redemptionCode = redemptionCode
+			tt_products = 
+			tx_securityquestion_question = int 
+			tx_securityquestion_answer = atMost[255],trim
+			captcha = captcha
+		}
+	}
+
+	setfixed = {$plugin.tx_srfeuserregister_pi1.enableEmailConfirmation}
+	setfixed.APPROVE {
+		_FIELDLIST = uid,pid,usergroup
+		# usergroup = {$plugin.tx_srfeuserregister_pi1.userGroupAfterConfirmation}
+		disable = 0
+	}
+	enableAutoLoginOnConfirmation = {$plugin.tx_srfeuserregister_pi1.enableAutoLoginOnConfirmation}
+	autoLoginRedirect_url = {$plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url}
+	editsavedRedirect_url = {$plugin.tx_srfeuserregister_pi1.editsavedRedirect_url}
+	setfixed.DELETE {
+		_FIELDLIST = uid,pid
+	}
+
+	authcodeFields = {$plugin.tx_srfeuserregister_pi1.authcodeFields}
+	authcodeFields.codeLength = {$plugin.tx_srfeuserregister_pi1.codeLength}
+
+	invite < .create
+
+	edit < .create
+	edit {
+		preview = {$plugin.tx_srfeuserregister_pi1.enablePreviewEdit}
+		defaultValues {
+			disable = 0
+			module_sys_dmail_html >
+		}
+		overrideValues {
+			usergroup >
+			disable = 0
+		}
+		evalValues {
+			usergroup = unsetEmpty
+		}
+	}
+
+	infomail = 0
+
+	forceFileDelete = {$plugin.tx_srfeuserregister_pi1.forceFileDelete}
+
+	parseValues {
+		username = nospace,trim
+		usergroup = trim
+		email = lower,nospace,trim
+		password = trim,nospace
+		name = trim
+		first_name = trim
+		last_name = trim
+		date_of_birth = date
+		title = trim
+		company = trim
+		city = trim
+		zip =
+		image = files
+		module_sys_dmail_html = setEmptyIfAbsent 
+		www = wwwURL
+		zone =
+		cc_number = trim
+		cc_expiry =
+		cc_name = trim
+		cc_type = trim
+		payment_method = trim
+		ach_routing = trim
+		ach_account = trim
+		join_agree = trim
+		referrer_uri = trim
+		starttime = trim
+		endtime = trim
+		redemptionCode =
+		tt_products =
+		tx_securityquestion_question = 
+		tx_securityquestion_answer = trim
+	}
+
+	parseFromDBValues {
+		date_of_birth = adodb_date
+	}
+	parseToDBValues {
+		date_of_birth = adodb_date
+	}
+
+	email.from = {$plugin.tx_srfeuserregister_pi1.email}
+	email.fromName = {$plugin.tx_srfeuserregister_pi1.siteName}
+	email.admin = {$plugin.tx_srfeuserregister_pi1.email}
+	email.field = email
+	email.HTMLMail =  {$plugin.tx_srfeuserregister_pi1.enableHTMLMail}
+	email.HTMLMailCSS =  {$plugin.tx_srfeuserregister_pi1.HTMLMailCSS}
+
+	email.CREATE_SAVED = {$plugin.tx_srfeuserregister_pi1.enableEmailOnRegister}
+	email.EDIT_SAVED = {$plugin.tx_srfeuserregister_pi1.enableEmailOnUpdate}
+	email.DELETE_SAVED =  {$plugin.tx_srfeuserregister_pi1.enableEmailOnDelete}
+	email.SETFIXED_APPROVE =  {$plugin.tx_srfeuserregister_pi1.enableEmailOnApprove}
+	email.SETFIXED_DELETE =  {$plugin.tx_srfeuserregister_pi1.enableEmailOnRefuse}
+
+	notify.CREATE_SAVED = {$plugin.tx_srfeuserregister_pi1.enableAdminNotifyOnRegister}
+	notify.EDIT_SAVED = {$plugin.tx_srfeuserregister_pi1.enableAdminNotifyOnUpdate}
+	notify.DELETE_SAVED =  {$plugin.tx_srfeuserregister_pi1.enableAdminNotifyOnDelete}
+	notify.SETFIXED_CREATE = {$plugin.tx_srfeuserregister_pi1.enableAdminNotifyConfirmation}
+	notify.SETFIXED_INVITE = {$plugin.tx_srfeuserregister_pi1.enableAdminNotifyConfirmation}
+	notify.SETFIXED_APPROVE =  {$plugin.tx_srfeuserregister_pi1.enableAdminNotifyOnApprove}
+	notify.SETFIXED_DELETE =  {$plugin.tx_srfeuserregister_pi1.enableAdminNotifyOnRefuse}
+
+	ccAllowedTypes = {$plugin.tx_srfeuserregister_pi1.ccAllowedTypes}
+	tempuserTimelimit = {$plugin.tx_srfeuserregister_pi1.tempuserTimelimit}
+	timelimit = {$plugin.tx_srfeuserregister_pi1.timelimit}
+	enableAutoLoginTempuser = {$plugin.tx_srfeuserregister_pi1.enableAutoLoginTempuser}
+	enableAutoLogin = {$plugin.tx_srfeuserregister_pi1.enableAutoLogin}
+	enableCreditcardSave = {$plugin.tx_srfeuserregister_pi1.enableCreditcardSave}
+	userGroupUponRegistration = {$plugin.tx_srfeuserregister_pi1.userGroupUponRegistration}
+	dropFields = {$plugin.tx_srfeuserregister_pi1.dropFields}
+	conferenceUsergroupAppend = {$plugin.tx_srfeuserregister_pi1.conferenceUsergroupAppend}
+	corporateGroup 		= 16
+	professionalGroup 	= 2
+	complimentaryGroup 	= 4
+	memberGroup 		= 1
+	corporateMembershipCharge		= 2000
+	professionalMembershipCharge	= 249
+	corporateMembershipProductID	= 8
+	professionalMembershipProductID	= 13
+
+	_CSS_DEFAULT_STYLE (
+	.tx-srfeuserregister-pi1 P { font-family:Verdana, sans-serif; font-size:12px; line-height:125%; color:#35006d; margin-top:8px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; padding-right:3px; padding-left:3px; text-indent:0px; }
+	.tx-srfeuserregister-pi1 A:link { background-color:transparent; color:navy; text-decoration:none; font-weight:bold;}
+	.tx-srfeuserregister-pi1 A:visited { background-color:transparent; color:navy; font-weight:bold; text-decoration:none; }
+	.tx-srfeuserregister-pi1 A:hover { background-color:transparent; color:#333333; text-decoration:none; }
+	.tx-srfeuserregister-pi1 A:active { background-color:transparent; color:navy; font-weight:bold; text-decoration:none; }
+	.tx-srfeuserregister-pi1 TD { vertical-align:top;  font-family:Verdana, sans-serif; font-size:12px; line-height:125%; color:#35006d; margin-top:8px; margin-bottom:0px; padding-top:0px; padding-bottom:0px; padding-right:3px; padding-left:3px; text-indent:0px;}
+	.tx-srfeuserregister-pi1 INPUT { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+	.tx-srfeuserregister-pi1 INPUT.tx-srfeuserregister-pi1-submit { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+	.tx-srfeuserregister-pi1 INPUT.tx-srfeuserregister-pi1-uploader { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+	.tx-srfeuserregister-pi1 INPUT.tx-srfeuserregister-pi1-icon { font-size:10px; font-family:Verdana; background-color:transparent;}
+	.tx-srfeuserregister-pi1 SELECT { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+	.tx-srfeuserregister-pi1 TEXTAREA { font-size:10px; font-family:Verdana; background-color:#35006d; color:#ffffff; font-weight:bold; }
+	.tx-srfeuserregister-pi1 .tx-srfeuserregister-pi1-radio INPUT  { font-size:10px; font-family:Verdana; background-color:transparent; color:#35006d; font-weight:bold; vertical-align:middle; }
+	.tx-srfeuserregister-pi1 .tx-srfeuserregister-pi1-checkbox INPUT  { font-size:10px; font-family:Verdana; background-color:transparent; color:#35006d; font-weight:bold; vertical-align:middle; }
+	)
+
+   _DEFAULT_PI_VARS {
+   }
+ 
+   enableCanspamLogging = {$plugin.tx_srfeuserregister_pi1.enableCanspamLogging}
+
+}

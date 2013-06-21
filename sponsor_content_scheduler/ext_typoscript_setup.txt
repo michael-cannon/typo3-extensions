@@ -1,0 +1,31 @@
+
+plugin.tx_sponsorcontentscheduler_pi1 {
+   siteMapper = {$plugin.tx_sponsorcontentscheduler_pi1.siteMapper}
+   articlesPID = {$plugin.tx_sponsorcontentscheduler_pi1.articlesPID}
+   presentationsPID = {$plugin.tx_sponsorcontentscheduler_pi1.presentationsPID}
+   roundTablesPID = {$plugin.tx_sponsorcontentscheduler_pi1.roundTablesPID}
+   whitePapersPID = {$plugin.tx_sponsorcontentscheduler_pi1.whitePapersPID}
+   catarticlesPID = {$plugin.tx_sponsorcontentscheduler_pi1.catarticlesPID}
+   catpresentationsPID = {$plugin.tx_sponsorcontentscheduler_pi1.catpresentationsPID}
+   catroundTablesPID = {$plugin.tx_sponsorcontentscheduler_pi1.catroundTablesPID}
+   catwhitePapersPID = {$plugin.tx_sponsorcontentscheduler_pi1.catwhitePapersPID}
+   roundTableCategoryId = {$plugin.tx_sponsorcontentscheduler_pi1.roundTableCategoryId}
+   roundTableParticipantsPid = {$plugin.tx_sponsorcontentscheduler_pi1.roundTableParticipantsPid}
+   sponsorLoginPageId = {$plugin.tx_sponsorcontentscheduler_pi1.sponsorLoginPageId}
+}
+
+
+plugin.tx_sponsorcontentscheduler_pi2 {
+    CMD = 
+    pidList = 
+    recursive = 
+	templateFile = EXT:sponsor_content_scheduler/templates/sponsored_by.html
+	staticInfo = 1
+}
+plugin.tx_sponsorcontentscheduler_pi2.listView {
+    results_at_a_time = 
+    maxPages = 
+}
+  # Example of how to overrule LOCAL_LANG values for the plugin:
+plugin.tx_sponsorcontentscheduler_pi2._LOCAL_LANG.default {
+}

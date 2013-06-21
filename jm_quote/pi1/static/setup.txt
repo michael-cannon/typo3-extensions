@@ -1,0 +1,1 @@
+plugin.tx_jmquote_pi1.listMode = 0

@@ -1,0 +1,44 @@
+# Common configuration
+plugin.tx_cbgaedms_mvc4.configurations < plugin.tx_cbgaedms
+plugin.tx_cbgaedms_mvc4.configurations {
+}
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+includeLibs.tx_lib_switch = EXT:lib/class.tx_lib_switch.php
+includeLibs.tx_cbgaedms_controller_Reporting = EXT:cbgaedms/controllers/class.tx_cbgaedms_controller_Reporting.php
+includeLibs.tx_cbgaedms_controller_Report_Notifications = EXT:cbgaedms/controllers/class.tx_cbgaedms_controller_Report_Notifications.php
+
+# The controller switch
+plugin.tx_cbgaedms.controllerSwitch = USER
+plugin.tx_cbgaedms.controllerSwitch {
+    userFunc = tx_lib_switch->main
+
+    Reporting = USER
+    Reporting {
+       userFunc = tx_cbgaedms_controller_Reporting->main
+       setupPath = plugin.tx_cbgaedms_mvc4.configurations.
+       configurations < plugin.tx_cbgaedms_mvc4.configurations
+       configurations.defaultAction = Control_Panel_Reports
+    }
+
+    Report_Notifications = USER
+    Report_Notifications {
+       userFunc = tx_cbgaedms_controller_Report_Notifications->main
+       setupPath = plugin.tx_cbgaedms_mvc4.configurations.
+       configurations < plugin.tx_cbgaedms_mvc4.configurations
+       configurations.defaultAction = Report_Notifications_List
+		configurations.validationRules {
+			10 {
+				field = report
+				pattern = /^\d+$/
+				message = %%%reportMissingError%%%
+			}
+			20 {
+				field = frequency
+				pattern = /^\d+$/
+				message = %%%frequencyMissingError%%%
+			}
+		}
+    }
+}
+tt_content.list.20.cbgaedms_mvc4 =< plugin.tx_cbgaedms.controllerSwitch

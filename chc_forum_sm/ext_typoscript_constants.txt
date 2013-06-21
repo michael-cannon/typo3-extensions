@@ -1,0 +1,36 @@
+chc-forum.style {
+    # cat=chc-forum/color; type=color; label= border 1
+  bordercolor1 = #999999
+    # cat=chc-forum/color; type=color; label= border 2
+  bordercolor2 = #666666
+		# cat=chc-forum/color; type=color; label= border 3
+  bordercolor3 = #DEDEDE
+    # cat=chc-forum/color; type=color; label= table background
+  bgTable = #FFFFFF
+    # cat=chc-forum/color; type=color; label= table background: single post quote text
+  bgSinglePost = #FAFAFA
+    # cat=chc-forum/color; type=color; label= background: table headers, footer box, preview box
+  bgHeader = #A7B3CB
+    # cat=chc-forum/color; type=color; label= category headers background: category headers, single post edit
+  bgCat = #F3F5F8
+    # cat=chc-forum/color; type=color; label= cell background
+  bgCell = #E3E7EF
+    # cat=chc-forum/color; type=color; label= nav 1 background: navigation, single post attachment
+  bgNav = #DEE3E7
+    # cat=chc-forum/color; type=color; label= nav 2 background: navigation path, page links
+  bgNav2 = #E9E9E9
+		# cat=chc-forum/color; type=color; label= link color: navigation path links, page links
+	navLinks = #6F6E70
+    # cat=chc-forum/color; type=color; label= alert background 
+  bgMessage = #FFD6EF
+    # cat=chc-forum/color; type=color; label= error message background 
+  bgMessage2 = #FFCCCC
+    # cat=chc-forum/color; type=color; label= error message text color 
+  errorMessageText = #CF1127
+    # cat=chc-forum/color; type=color; label= message border 
+  bordercolorMessage = #FF0000
+    # cat=chc-forum/color; type=color; label= new messages 
+  colorNewMessages = #FF0000
+  	# cat=chc-forum/paths; type=string; label= image path
+  imagePath = typo3conf/ext/chc_forum/pi1/templates/img
+}

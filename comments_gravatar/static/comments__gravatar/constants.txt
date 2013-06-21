@@ -1,0 +1,16 @@
+plugin.comments_gravatar {
+	# cat=comments_gravatar/enable; type=boolean; label=Show Gravatar Icon
+	enable = 1
+
+	# cat=comments_gravatar; type=options[g,pg,r,x]; label=Gravatar Rating: Maximum allowed Gravatar rating to show. G is safe, X is sex.
+	rating = g
+
+	# cat=comments_gravatar; type=string; label=Specific CSS Styling
+	style = 
+
+	# cat=comments_gravatar; type=string; label=No Gravatar Icon Path; Full URL path required, including http
+	defaultIcon = 
+
+	# cat=comments_gravatar/dims; type=int; label=Gravatar Icon Size
+	iconSize = 48
+}

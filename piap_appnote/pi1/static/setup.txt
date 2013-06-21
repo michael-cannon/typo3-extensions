@@ -1,0 +1,27 @@
+plugin.tx_piapappnote_pi1 {
+	templateFile = {$plugin.tx_piapappnote_pi1.templateFile}
+	listView {
+		results_at_a_time = {$plugin.tx_piapappnote_pi1.listView.results_at_a_time}
+		maxPages = {$plugin.tx_piapappnote_pi1.listView.maxPages}
+	}
+	noTitleText = {$plugin.tx_piapappnote_pi1.noTitleText}
+	defaultSortField = {$plugin.tx_piapappnote_pi1.defaultSortField}
+	defaultSortOrder = {$plugin.tx_piapappnote_pi1.defaultSortOrder}
+}
+
+plugin.tx_piapappnote_pi1 {
+	CMD =
+	pidList =
+	recursive =
+}
+
+  # Example of default set CSS styles (these go into the document header):
+plugin.tx_piapappnote_pi1._CSS_DEFAULT_STYLE (
+  .tx-piapappnote-pi1 H2 { margin-top: 0px; margin-bottom: 0px; }
+)
+  # Example of how to overrule LOCAL_LANG values for the plugin:
+plugin.tx_piapappnote_pi1._LOCAL_LANG.default {
+  pi_list_searchBox_search = Search!
+}
+  # Example of how to set default values from TS in the incoming array, $this->piVars of the plugin:
+#plugin.tx_piapappnote_pi1._DEFAULT_PI_VARS.test = test

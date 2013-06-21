@@ -1,0 +1,17 @@
+plugin.tx_bahagphotogallery_pi1 {
+	enlargeViewIcon = {$plugin.tx_bahagphotogallery_pi1.enlargeViewIcon}
+	downloadIcon1 = {$plugin.tx_bahagphotogallery_pi1.downloadIcon1}
+	downloadIcon2 = {$plugin.tx_bahagphotogallery_pi1.downloadIcon2}
+	iptcDataTemplateFile = {$plugin.tx_bahagphotogallery_pi1.iptcDataTemplateFile}
+
+
+	_CSS_DEFAULT_STYLE (
+                                .tx-bahagphotogallery-pi1 a {color: #FF0000; text-decoration: none; font-family: Verdana,Arial,sans-serif;font-size:11px;}
+                                .tx-bahagphotogallery-pi1 a:hover {color: #003366;}
+		                        .tx-bahagphotogallery-pi1 td {font-family:Verdana, Arial;  font-size:11px;}
+                                .tx-bahagphotogallery-pi1 td.bgcolor_1 {background:#FF0000; color:#FFFFFF}
+                                .tx-bahagphotogallery-pi1 table.bgcolor_2 {background:#F8F8F8; border:1px solid #D2D2D2}
+                                .tx-bahagphotogallery-pi1 div.thumb-border-color {border: 1px solid #000000;}
+
+	)
+}

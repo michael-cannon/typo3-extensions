@@ -1,0 +1,92 @@
+/***************************
+ *  Default styles for the
+ *     EXT rgsendnews
+ * by Ringer Georg (just2b)
+ *   http://www.ringer.it
+ ***************************/  
+
+/* Send link */
+#rgsnsendlink{
+	cursor:pointer;
+	font-weight:bold;
+	background:url(email_go.png) 0 2px no-repeat;
+	padding:2px 0 0 20px;
+}
+
+/* nest div, necessary */
+#rgsnnest {
+	padding:4px 0 0 20px;
+	position:absolute;	
+}
+
+/* close button in the form */
+#rgsnclose {
+	float:right;
+	cursor:pointer;
+}
+
+/* popup div */
+#rgsn{
+  width:250px;
+  border:1px solid #999;
+  background:#fff;
+}
+
+/* top bar in the popup div */
+#rgsn .topbar {
+	border-bottom:1px solid #ccc;
+	padding:2px 2px 2px 5px;
+	background:#eee;
+	letter-spacing:1px;
+	cursor:pointer;	
+}
+
+/* bottom bar in the popup div */
+#rgsn .bottombar{
+	border-top:1px solid #ccc;
+	font-size:1px;
+	height:3px;
+	background:#eee;
+}
+
+/* styling of the form, same syntax as a standard mailform of TYPO3 */
+#rgsnform {
+	background:url(mail2.gif) no-repeat right bottom;
+	padding:5px;
+}
+
+#rgsnform fieldset {
+	border:0;
+}
+
+#rgsnform legend {
+	display:none;
+}
+
+#rgsnform fieldset.csc-mailform label {
+	width:90px;
+}
+
+#rgsnform fieldset.csc-mailform .csc-captcha img {
+	float:right;
+	margin-top:-32px;
+	margin-right:10px;
+}
+
+#rgsnform fieldset.csc-mailform .csc-captcha input {
+	letter-spacing:1px;
+	width:35px;
+	text-align:center;
+}
+
+
+
+/* sucess & error messages */
+.success, .error {
+  margin:10px;
+  padding:2px 5px;
+  text-align:center;
+  color:#fff;                  
+}
+.error   {  border:1px solid #ff0000; background:#c60606; }     
+.success {  border:1px solid #00ff18; background:#009900; }

@@ -1,0 +1,60 @@
+<?php
+/**
+ * Language labels for database tables/fields belonging to extension "geoclassauction"
+ *
+ * This file is detected by the translation tool.
+ */
+
+$LOCAL_LANG = Array (
+	'default' => Array (
+		'tt_content.list_type_pi1' => 'GeoClassAuction Director',	
+		'tt_content.list_type_pi2' => 'GeoClassAuction Leads',	
+		'tx_geoclassauction_auctionsites' => 'Auction Sites',	
+		'tx_geoclassauction_auctionsites.sitename' => 'Site Name',	
+		'tx_geoclassauction_auctionsites.siteurl' => 'Site URL',	
+		'tx_geoclassauction_auctionsites.codes' => 'Auction Site Codes',	
+		'tx_geoclassauction_auctionsites.fe_user' => 'Location',	
+		'tx_geoclassauction_auctionsites.description' => 'Description',	
+		'tx_geoclassauction_leads' => 'Auction Leads',	
+		'tx_geoclassauction_leads.auction' => 'Auction',	
+		'tx_geoclassauction_leads.fe_user' => 'Lead Name',	
+		'tx_geoclassauction_leads.attendanceday.I.0' => 'Monday',	
+		'tx_geoclassauction_leads.attendanceday.I.1' => 'Tuesday',	
+		'tx_geoclassauction_leads.attendanceday.I.2' => 'Wednesday',	
+		'tx_geoclassauction_leads.attendanceday.I.3' => 'Thursday',	
+		'tx_geoclassauction_leads.attendanceday.I.4' => 'Friday',	
+		'tx_geoclassauction_leads.attendanceday.I.5' => 'Saturday',	
+		'tx_geoclassauction_leads.attendanceday.I.6' => 'Sunday',	
+		'tx_geoclassauction_leads.attendanceday' => 'Attendance Day',	
+		'tx_geoclassauction_leads.attendancetime.I.0' => '8 AM',	
+		'tx_geoclassauction_leads.attendancetime.I.1' => '9 AM',	
+		'tx_geoclassauction_leads.attendancetime.I.2' => '10 AM',	
+		'tx_geoclassauction_leads.attendancetime.I.3' => '11 AM',	
+		'tx_geoclassauction_leads.attendancetime.I.4' => '12 PM (noon)',	
+		'tx_geoclassauction_leads.attendancetime.I.5' => '1 PM',	
+		'tx_geoclassauction_leads.attendancetime.I.6' => '2 PM',	
+		'tx_geoclassauction_leads.attendancetime.I.7' => '3 PM',	
+		'tx_geoclassauction_leads.attendancetime.I.8' => '4 PM',	
+		'tx_geoclassauction_leads.attendancetime.I.9' => '5 PM',	
+		'tx_geoclassauction_leads.attendancetime.I.10' => '6 PM',	
+		'tx_geoclassauction_leads.attendancetime.I.11' => '7 PM',	
+		'tx_geoclassauction_leads.attendancetime.I.12' => '8 PM',	
+		'tx_geoclassauction_leads.attendancetime.I.13' => '9 PM',	
+		'tx_geoclassauction_leads.attendancetime' => 'Attendance Time',	
+		'tx_geoclassauction_leads.vehicle' => 'Vehicle Description',	
+		'tx_geoclassauction_leads.pleasecall' => 'Please Call',	
+		'tx_geoclassauction_leads.note' => 'Note for Dealer',	
+		'tx_geoclassauction_leads.howheard.I.0' => 'Newspaper',	
+		'tx_geoclassauction_leads.howheard.I.1' => 'Mail',	
+		'tx_geoclassauction_leads.howheard.I.2' => 'Radio',	
+		'tx_geoclassauction_leads.howheard.I.3' => 'TV',	
+		'tx_geoclassauction_leads.howheard.I.4' => 'Internet',	
+		'tx_geoclassauction_leads.howheard' => 'How Heard?',	
+		'tx_geoclassauction_leads.eventcode' => 'Event Code',	
+		'tx_geoclassauction_leads.isdealer' => 'Is Dealer?',	
+		'tx_geoclassauction_leads.contacted' => 'Lead Contacted',	
+		'tx_geoclassauction_leads.internalnotes' => 'Internal Notes',	
+		'fe_users.tx_geoclassauction_homephone' => 'Home Phone',	
+	),
+);
+?>

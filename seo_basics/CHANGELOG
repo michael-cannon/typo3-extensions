@@ -1,0 +1,65 @@
+2009-10-10 Saturday 11:28  mc
+
+	* update CHANGELOG
+
+2009-10-10 Saturday 03:44  mc
+
+	* Inital import of "CHANGELOG" file
+
+2009-09-28 Monday 08:03  mc
+
+	* Meta author cleanup by Joey <info@cybercraft.de>
+
+2009-09-26 Saturday 05:29  mc
+
+	* pretty print meta author email w/w/o author
+
+2009-09-26 Saturday 04:27  mc
+
+	* author meta revision
+
+2009-09-25 Friday 01:25  mc
+
+	* adjust minimum keywords to 3
+
+2009-09-24 Thursday 05:07  mc
+
+	* correct title length; add meta abstract
+
+2009-09-24 Thursday 04:06  mc
+
+	* adjust maximums based upon SEO research
+
+2009-09-24 Thursday 03:45  mc
+
+	* Removal of "CHANGELOG"
+
+2009-09-24 Thursday 03:45  mc
+
+	* Inital import of "CHANGELOG" file
+
+2009-09-24 Thursday 03:44  mc
+
+	* Removal of "ChangeLog"
+
+2009-09-24 Thursday 03:44  mc
+
+	* varchar to tinytext; Create standalone TypoScript templates; Add
+	  canonical tag
+
+2009-09-24 Thursday 02:18  mc
+
+	* Move "ext_typoscript_setup.txt" to "static/setup.txt"
+
+2009-09-24 Thursday 02:18  mc
+
+	* Inital import of "static" directory
+
+2009-09-24 Thursday 02:13  mc
+
+	* Inital import of 'seo_basics' directory
+
+2009-09-24 Thursday 02:13  mc
+
+	* Initial revision
+

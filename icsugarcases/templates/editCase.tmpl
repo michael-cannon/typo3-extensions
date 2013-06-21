@@ -1,0 +1,86 @@
+<!-- $Id: editCase.tmpl,v 1.1.1.1 2010/04/15 10:03:39 peimic.comprock Exp $ -->
+<h2>###HEADER### ###VALUE_CASE_NUMBER### ###VALUE_NAME###</h2>
+<p>###CONTENT###</p>
+<form name="SaveView" method="post" action="###ACTION_LINK###">
+	<input type="hidden" name="###PREFIXID###[task]" value="###SAVE_TYPE###" />
+	<input type="hidden" name="###PREFIXID###[id]" value="###CASE_ID###" />
+
+	<label for="name">###NAME###</label>
+	<input type="text" name="###PREFIXID###[name]" id="name" value="###VALUE_NAME###" />
+
+	<label for="case_number">###CASE_NUMBER###</label>
+	<input type="text" name="###PREFIXID###[case_number]" id="case_number" value="###VALUE_CASE_NUMBER###" readonly="readonly" />
+
+	<label for="date_entered">###DATE_ENTERED###</label>
+	<input type="text" name="###PREFIXID###[date_entered]" id="date_entered" value="###VALUE_DATE_ENTERED###" readonly="readonly" />
+
+	<label for="date_modified">###DATE_MODIFIED###</label>
+	<input type="text" name="###PREFIXID###[date_modified]" id="date_modified" value="###VALUE_DATE_MODIFIED###" readonly="readonly" />
+
+	<label for="account_name">###ACCOUNT_NAME###</label>
+	<input type="text" name="###PREFIXID###[account_name]" id="account_name" value="###VALUE_ACCOUNT_NAME###" readonly="readonly" />
+
+	<label for="status">###STATUS###</label>
+	<input type="text" name="###PREFIXID###[status]" id="status" value="###VALUE_STATUS###" readonly="readonly" />
+
+	<label for="priority">###PRIORITY###</label>
+	<input type="text" name="###PREFIXID###[priority]" id="priority" value="###VALUE_PRIORITY###" readonly="readonly" />
+
+	<label for="description">###DESCRIPTION###</label>
+	<textarea name="###PREFIXID###[description]" id="description">###VALUE_DESCRIPTION###</textarea>
+
+	<label for="resolution">###RESOLUTION###</label>
+	<textarea name="###PREFIXID###[resolution]" id="resolution" readonly="readonly">###VALUE_RESOLUTION###</textarea>
+
+	<label for="assigned_user_name">###ASSIGNED_USER_NAME###</label>
+	<input type="text" name="###PREFIXID###[assigned_user_name]" id="assigned_user_name" value="###VALUE_ASSIGNED_USER_NAME###" readonly="readonly" />
+
+	<label for="modified_by_name">###MODIFIED_BY_NAME###</label>
+	<input type="text" name="###PREFIXID###[modified_by_name]" id="modified_by_name" value="###VALUE_MODIFIED_BY_NAME###" readonly="readonly" />
+
+	<label for="created_by_name">###CREATED_BY_NAME###</label>
+	<input type="text" name="###PREFIXID###[created_by_name]" id="created_by_name" value="###VALUE_CREATED_BY_NAME###" readonly="readonly" />
+
+	<input type="button" value="###SAVE###" onclick="javascript:submitForm(this.form)" />
+	<input type="reset" value="###RESET###" />
+	<input type="submit" value="###CANCEL###" />
+</form>
+<br />
+<h2 id="notes">###NOTE_NAME###</h2>
+###NOTES###
+<h2>###NOTE_NEW_NOTE###</h2>
+<form name="SaveView" method="post" action="###ACTION_LINK###" enctype="multipart/form-data">
+	<input type="hidden" name="###PREFIXID###[task]" value="###NOTE_SAVE_TYPE###" />
+	<input type="hidden" name="###PREFIXID###[caseID]" value="###CASE_ID###" />
+	<input type="hidden" name="###PREFIXID###[embed_flag]" value="###EMBED_FLAG###" />
+
+	<label for="name">###NOTE_SUBJECT###</label>
+	<input type="text" name="###PREFIXID###[name]" id="name" />
+
+	<label for="description">###NOTE_DESCRIPTION###</label>
+	<textarea name="###PREFIXID###[description]" id="description"></textarea>
+
+	<label for="attachment">###NOTE_FILENAME###</label>
+	<input type="file" name="###PREFIXID###[attachment]" id="attachment" />
+
+	<input type="button" value="###NOTE_SAVE###" onclick="javascript:submitForm(this.form)" />
+	<input type="reset" value="###RESET###" />
+</form>
+<script type="text/javascript">
+	function submitForm(f) {
+		if( ! ValidateForm(f) ) {
+			return false;
+		}
+		f.submit();
+	}
+
+	function ValidateForm(thisForm) {
+		if(thisForm.name.value == "") {
+			alert("###NAME###/###NOTE_SUBJECT### ###IS_REQUIRED###");
+			thisForm.name.focus();
+			return false;
+		}
+
+		return true;
+	}
+</script>

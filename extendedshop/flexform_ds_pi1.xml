@@ -1,0 +1,59 @@
+<T3DataStructure>
+ <sheets>
+  <sDEF>
+   <ROOT>
+    <TCEforms>
+     <sheetTitle>LLL:EXT:extendedshop/locallang_db.xml:tt_content.pi_flexform.sheet_general</sheetTitle>
+    </TCEforms>
+    <type>array</type>
+     <el>
+      <view_mode>
+       <TCEforms>
+        <label>LLL:EXT:extendedshop/locallang_db.xml:tt_content.pi_flexform.view_mode</label>
+        <config>
+         <type>select</type>
+         <items type="array">
+          <numIndex index="0" type="array">
+           <numIndex index="0"></numIndex>
+           <numIndex index="1"></numIndex>
+           </numIndex>
+          <numIndex index="1" type="array">
+           <numIndex index="0">LLL:EXT:extendedshop/locallang_db.xml:tt_content.pi_flexform.view_mode.I.1</numIndex>
+           <numIndex index="1">LIST</numIndex>
+           </numIndex>
+          <numIndex index="2" type="array">
+           <numIndex index="0">LLL:EXT:extendedshop/locallang_db.xml:tt_content.pi_flexform.view_mode.I.2</numIndex>
+           <numIndex index="1">SINGLE</numIndex>
+          </numIndex>
+          <numIndex index="3" type="array">
+           <numIndex index="0">LLL:EXT:extendedshop/locallang_db.xml:tt_content.pi_flexform.view_mode.I.3</numIndex>
+           <numIndex index="1">OFFER</numIndex>
+          </numIndex>
+          <numIndex index="4" type="array">
+           <numIndex index="0">LLL:EXT:extendedshop/locallang_db.xml:tt_content.pi_flexform.view_mode.I.4</numIndex>
+           <numIndex index="1">BASKET</numIndex>
+          </numIndex>
+          <numIndex index="5" type="array">
+           <numIndex index="0">LLL:EXT:extendedshop/locallang_db.xml:tt_content.pi_flexform.view_mode.I.5</numIndex>
+           <numIndex index="1">SEARCH</numIndex>
+          </numIndex>
+          <numIndex index="6" type="array">
+           <numIndex index="0">LLL:EXT:extendedshop/locallang_db.xml:tt_content.pi_flexform.view_mode.I.6</numIndex>
+           <numIndex index="1">ADVANCEDSEARCH</numIndex>
+          </numIndex>
+          <numIndex index="7" type="array">
+           <numIndex index="0">LLL:EXT:extendedshop/locallang_db.xml:tt_content.pi_flexform.view_mode.I.7</numIndex>
+           <numIndex index="1">ORDERSINFO</numIndex>
+          </numIndex>
+         </items>
+         <minitems>0</minitems>
+         <maxitems>1</maxitems>
+         <size>1</size>
+        </config>
+       </TCEforms>
+      </view_mode>
+     </el>
+    </ROOT>
+   </sDEF>
+  </sheets>
+</T3DataStructure>

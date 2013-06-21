@@ -1,0 +1,426 @@
+2009-05-18 Monday 04:44  cannon
+
+	* CHANGELOG: 0.3.0 post update
+
+2009-05-18 Monday 04:42  cannon
+
+	* ext_icon.gif: update icon
+
+2009-05-18 Monday 04:37  cannon
+
+	* class.tx_newslead.php: update for multiple files
+
+2009-04-02 Thursday 23:34  cannon
+
+	* class.tx_newslead.php, ext_emconf.php,
+	  modfunc1/class.tx_newslead_modfunc1.php,
+	  modfunc2/class.tx_newslead_modfunc2.php: Acqal branding
+
+2006-10-13 Friday 09:13  markus
+
+	* class.tx_newslead.php:  * At lead sending enable lead if the
+	  client has unused leads left
+
+2006-09-15 Friday 10:12  cannon
+
+	* modfunc2/class.tx_newslead_modfunc2.php: debug off
+
+2006-09-15 Friday 00:46  cannon
+
+	* modfunc2/class.tx_newslead_modfunc2.php: match total lead count
+	  with download report
+
+2006-09-14 Thursday 23:55  cannon
+
+	* modfunc2/class.tx_newslead_modfunc2.php: distinct u.uid for truly
+	  unique leads count
+
+2006-05-29 Monday 11:40  cannon
+
+	* ext_emconf.php: Typo3 extension repository uploading
+
+2006-04-10 Monday 10:35  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php,
+	  modfunc2/class.tx_newslead_modfunc2.php: put clearoption inside
+
+2006-04-10 Monday 10:33  cannon
+
+	* clearOptions.js: Inital import of "clearOptions.js" file
+
+2006-04-10 Monday 03:18  cannon
+
+	* class.tx_newslead.php: track external links
+
+2006-04-07 Friday 20:59  cannon
+
+	* class.tx_newslead.php: HTTP_REFERER
+
+2006-04-07 Friday 20:55  cannon
+
+	* class.tx_newslead.php, ext_tables.sql, locallang.php,
+	  locallang_db.php, news_lead.tmpl, tca.php: add referrer
+
+2006-04-07 Friday 20:44  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php,
+	  modfunc2/class.tx_newslead_modfunc2.php, modfunc2/locallang.php:
+	  don't display user selection; reports
+
+2006-04-06 Thursday 16:17  cannon
+
+	* class.tx_newslead.php: debug off
+
+2006-04-03 Monday 16:54  cannon
+
+	* class.tx_newslead.php: allow for lead recording of non linked
+	  files
+
+2005-09-02 Friday 07:07  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: Added modification to
+	  clear all selected options upon clicking the Clear Options button
+	  instead of resetting to default. (js)
+
+2005-09-02 Friday 07:06  jaspreet
+
+	* modfunc2/class.tx_newslead_modfunc2.php: Added modification to
+	  clear all selected options upon clicking the Clear Options button
+	  instead of resetting to default. (js)
+
+2005-08-25 Thursday 08:44  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: Misc tweaks.
+
+2005-08-25 Thursday 08:42  jaspreet
+
+	* modfunc2/class.tx_newslead_modfunc2.php: Changed form identifiers
+	  to modfunc2 prefix.
+
+2005-08-25 Thursday 07:54  jaspreet
+
+	* modfunc2/class.tx_newslead_modfunc2.php: Changed order to "order
+	  by category asc, title asc, date desc"
+
+2005-08-23 Tuesday 09:11  jaspreet
+
+	* modfunc2/class.tx_newslead_modfunc2.php: Dropped the repetition
+	  of the count/nonsent checkboxes.  (To unselect an option the user
+	  would have to unselect both count checkboxes or both nonsent
+	  checkboxes.) js
+
+2005-08-23 Tuesday 09:07  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: Added "remember options"
+	  logic to remember what options the user selected.  Also dropped
+	  the repetition of the count/nonsent checkboxes (js)
+
+2005-08-22 Monday 13:55  jaspreet
+
+	* modfunc2/class.tx_newslead_modfunc2.php: Added "remember
+	  options".  (I.e., reselects the user's previously selected
+	  options on the form.)
+
+2005-08-22 Monday 08:02  jaspreet
+
+	* modfunc2/class.tx_newslead_modfunc2.php: Deleted unneeded older
+	  versions of functions.  Functionally same as prior version.
+
+2005-08-19 Friday 09:18  jaspreet
+
+	* modfunc2/: class.tx_newslead_modfunc2.php, locallang.php: Initial
+	  checkin of crosstab leads sent/unsent/total report.
+	  Display/download as Excel file.
+
+2005-08-19 Friday 09:14  cannon
+
+	* ext_tables.php, locallang_db.php: Added Leads Report as modfunc2.
+	  (js)
+
+2005-08-09 Tuesday 12:18  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: apply heading changes to
+	  leads
+
+2005-08-04 Thursday 12:28  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: add input to form
+
+2005-08-03 Wednesday 19:08  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: mod textarea and news
+	  item display
+
+2005-07-18 Monday 13:53  cannon
+
+	* class.tx_newslead.php: start 00:00 to end 23:59
+
+2005-06-07 Tuesday 02:27  cannon
+
+	* modfunc1/: class.tx_newslead_modfunc1.php, locallang.php: Require
+	  module to be on a page with participants or leads
+
+2005-06-05 Sunday 19:02  cannon
+
+	* ext_tables.php: begin displaying survey items on front-end
+
+2005-05-22 Sunday 23:29  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: load zone long name if
+	  available
+
+2005-05-20 Friday 18:05  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: rm AND z.zn_code =
+	  u.zone
+
+2005-04-16 Saturday 00:47  cannon
+
+	* modfunc1/: class.tx_newslead_modfunc1.php, locallang.php: add
+	  display button to downloads
+
+2005-04-07 Thursday 01:41  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: drop leads dups; swap
+	  group/order positions
+
+2005-04-06 Wednesday 12:53  cannon
+
+	* locallang.php: remove involvement
+
+2005-04-06 Wednesday 12:53  cannon
+
+	* class.tx_newslead.php, news_lead.tmpl: drop file name and
+	  involvement
+
+2005-04-01 Friday 11:24  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: comment out nc.title to
+	  prevent dups; join on zone code if available to prevent dups
+
+2005-03-31 Thursday 18:28  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: show involvement other
+	  text only when such exists
+
+2005-03-31 Thursday 18:25  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: add zone/country
+	  translations; add bpm involvement to leads
+
+2005-03-31 Thursday 17:57  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: Add download buttons to
+	  top; rearrange download options
+
+2005-03-27 Sunday 18:59  cannon
+
+	* CHANGELOG: updatge changelogs
+
+2005-03-23 Wednesday 23:17  cannon
+
+	* CHANGELOG: add CHANGELOG
+
+2005-03-21 Monday 23:06  cannon
+
+	* modfunc1/: class.tx_newslead_modfunc1.php, locallang.php: add
+	  news category option
+
+2005-03-21 Monday 17:06  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: add version
+
+2005-03-21 Monday 17:06  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: exit script after
+	  download
+
+2005-03-21 Monday 16:46  cannon
+
+	* modfunc1/class.tx_newslead_modfunc1.php: leads to requests
+
+2005-03-21 Monday 16:42  cannon
+
+	* modfunc1/: class.tx_newslead_modfunc1.php, locallang.php: add
+	  basic count report
+
+2005-03-21 Monday 11:45  cannon
+
+	* modfunc1/locallang.php: date format; too many option selection
+	  text
+
+2005-03-21 Monday 11:34  cannon
+
+	* modfunc1/: class.tx_newslead_modfunc1.php, locallang.php: enable
+	  downloading
+
+2005-03-21 Monday 01:48  cannon
+
+	* modfunc1/: class.tx_newslead_modfunc1.php, locallang.php: display
+	  input form with option fields based upon current leads
+
+2005-03-20 Sunday 23:17  cannon
+
+	* ext_emconf.php, ext_tables.php, locallang_db.php,
+	  modfunc1/class.tx_newslead_modfunc1.php, modfunc1/locallang.php:
+	  add Leads Download module wizard
+
+2005-03-20 Sunday 12:07  cannon
+
+	* ext_tables.sql: remove default from auto_increment
+
+2005-03-19 Saturday 20:34  cannon
+
+	* class.tx_newslead.php, ext_tables.php, ext_tables.sql,
+	  locallang_db.php, tca.php: starttime/endtime to startdate/enddate
+
+2005-03-19 Saturday 20:04  cannon
+
+	* class.tx_newslead.php, ext_tables.php, ext_tables.sql,
+	  locallang_db.php, tca.php: start/end attributes renamed as
+	  starttime/endtime
+
+2005-03-19 Saturday 19:35  cannon
+
+	* ext_tables_static+adt.sql: rm static data
+
+2005-03-17 Thursday 14:01  cannon
+
+	* ext_tables.sql, ext_tables_static+adt.sql: rename news to
+	  news_id; rename member to fe_user_id; add isTempRegistered
+
+2005-03-17 Thursday 00:32  cannon
+
+	* ext_emconf.php: updated to 0.2.0 for all but userinfo; userinfo
+	  updated to 0.1.0
+
+2005-03-16 Wednesday 23:09  cannon
+
+	* class.tx_newslead.php: only pass file name not whole path
+
+2005-03-16 Wednesday 19:25  cannon
+
+	* class.tx_newslead.php: track file download
+
+2005-03-16 Wednesday 19:04  cannon
+
+	* class.tx_newslead.php, ext_tables_static+adt.sql,
+	  locallang_db.php, tca.php: add filename to leads; check for
+	  filename in lead
+
+2005-03-16 Wednesday 13:47  cannon
+
+	* class.tx_newslead.php: comment change
+
+2005-03-16 Wednesday 13:09  cannon
+
+	* class.tx_newslead.php: call news_userinfo from news_lead for
+	  parsing template marker array
+
+2005-03-16 Wednesday 13:03  cannon
+
+	* class.tx_newslead.php, ext_emconf.php, news_lead.tmpl: add
+	  userinfo; pull user info from leads; update template fields
+
+2005-03-16 Wednesday 11:54  cannon
+
+	* class.tx_newslead.php: add reply to
+
+2005-03-15 Tuesday 19:51  cannon
+
+	* ext_tables.php: add add icon
+
+2005-03-15 Tuesday 15:00  cannon
+
+	* class.tx_newslead.php: language, register, and leads changes
+
+2005-03-14 Monday 01:35  cannon
+
+	* ext_emconf.php, ext_tables.php: add to T3 repository
+
+2005-03-13 Sunday 15:54  cannon
+
+	* class.tx_newslead.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, locallang.php, news_lead.tmpl: rename
+	  article marker; add lead test
+
+2005-03-13 Sunday 02:28  cannon
+
+	* class.tx_newslead.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, locallang.php, news_lead.tmpl: update
+	  leads email template; account for tracking all downloads; don't
+	  save lead if file not of that news item
+
+2005-03-10 Thursday 13:37  cannon
+
+	* class.tx_newslead.php, news_lead.tmpl: prefix subject to body
+
+2005-03-10 Thursday 00:18  cannon
+
+	* ext_emconf.php: update emconf
+
+2005-03-09 Wednesday 20:29  cannon
+
+	* class.tx_newslead.php: remove cbPrint/exit
+
+2005-03-09 Wednesday 14:12  cannon
+
+	* class.tx_newslead.php: remove always send lead
+
+2005-03-09 Wednesday 14:08  cannon
+
+	* ext_emconf.php: update emconf
+
+2005-03-09 Wednesday 14:06  cannon
+
+	* class.tx_newslead.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, locallang.php, news_lead.tmpl: add
+	  locallang; localize email text; use email template
+
+2005-03-08 Tuesday 20:13  cannon
+
+	* ext_emconf.php, ext_tables.sql, ext_tables_static+adt.sql: add
+	  static data
+
+2005-03-08 Tuesday 19:38  cannon
+
+	* ext_tables.sql: add insert sql
+
+2005-03-08 Tuesday 19:27  cannon
+
+	* class.tx_newslead.php, ext_emconf.php, ext_localconf.php,
+	  ext_tables.php, ext_tables.sql, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, locallang_db.php, news_lead.tmpl,
+	  tca.php: add class; check timeframe; add lead record; send lead
+	  only once per period
+
+2005-03-06 Sunday 04:23  cannon
+
+	* ext_tables.php, ext_tables.sql, locallang_db.php, tca.php:
+	  Reorder hidden to last; Add descriptor to lead period
+
+2005-03-06 Sunday 04:01  cannon
+
+	* ext_emconf.php, ext_tables.php, ext_tables.sql, locallang_db.php,
+	  tca.php, doc/wizard_form.dat, doc/wizard_form.html (utags:
+	  initial-1): revise type
+
+2005-03-06 Sunday 03:28  cannon
+
+	* ext_emconf.php, ext_icon.gif, ext_localconf.php, ext_tables.php,
+	  ext_tables.sql, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, icon_tx_newslead_leadperiod.gif,
+	  icon_tx_newslead_leads.gif, locallang_db.php, tca.php,
+	  doc/wizard_form.dat, doc/wizard_form.html: Initial revision
+
+2005-03-06 Sunday 03:28  cannon
+
+	* ext_emconf.php, ext_icon.gif (tags: initial-1), ext_localconf.php
+	  (tags: initial-1), ext_tables.php, ext_tables.sql,
+	  ext_typoscript_constants.txt (tags: initial-1),
+	  ext_typoscript_setup.txt (tags: initial-1),
+	  icon_tx_newslead_leadperiod.gif (tags: initial-1),
+	  icon_tx_newslead_leads.gif (tags: initial-1), locallang_db.php,
+	  tca.php, doc/wizard_form.dat, doc/wizard_form.html (utags:
+	  initial): initial source import
+

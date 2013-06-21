@@ -1,0 +1,2 @@
+script=res/send.js
+components=Window.DomReady,Fx.Slide,Element.Form,XHR,Ajax,Element.Selectors,Fx.Style,Fx.Styles,Fx.Elements

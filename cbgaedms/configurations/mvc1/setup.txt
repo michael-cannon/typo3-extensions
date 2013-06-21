@@ -1,0 +1,95 @@
+# Common configuration
+plugin.tx_cbgaedms_mvc1.configurations < plugin.tx_cbgaedms
+plugin.tx_cbgaedms_mvc1.configurations {
+}
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+includeLibs.tx_lib_switch = EXT:lib/class.tx_lib_switch.php
+includeLibs.tx_cbgaedms_controller_Location = EXT:cbgaedms/controllers/class.tx_cbgaedms_controller_Location.php
+includeLibs.tx_cbgaedms_controller_Business_Silo = EXT:cbgaedms/controllers/class.tx_cbgaedms_controller_Business_Silo.php
+
+# The controller switch
+plugin.tx_cbgaedms.controllerSwitch = USER
+plugin.tx_cbgaedms.controllerSwitch {
+    userFunc = tx_lib_switch->main
+
+    Location = USER
+    Location {
+       userFunc = tx_cbgaedms_controller_Location->main
+       setupPath = plugin.tx_cbgaedms_mvc1.configurations.
+       configurations < plugin.tx_cbgaedms_mvc1.configurations
+       configurations.defaultAction = Location_List
+		configurations.validationRules {
+			10 {
+				field = agency
+				pattern = /^\X+/
+				message = %%%agencyMissingError%%%
+			}
+			20 {
+				field = agencysilo
+				pattern = /^\d+$/
+				message = %%%agencysiloMissingError%%%
+			}
+			30 {
+				field = country
+				pattern = /^\X+/
+				message = %%%countryMissingError%%%
+			}
+			40 {
+				field = address
+				pattern = /^\X+/
+				message = %%%addressMissingError%%%
+			}
+			50 {
+				field = city
+				pattern = /^\X+/
+				message = %%%cityMissingError%%%
+			}
+			60 {
+				field = state
+				pattern = /^\X+/
+				message = %%%stateMissingError%%%
+			}
+			70 {
+				field = postalcode
+				pattern = /^\X+/
+				message = %%%postalcodeMissingError%%%
+			}
+			80 {
+				field = numberofemployees
+				pattern = /^\d+$|^$/
+				message = %%%numberofemployeesMissingError%%%
+			}
+			90 {
+				field = parentagency
+				pattern = /^\d+$|^$/
+				message = %%%parentagencyMissingError%%%
+			}
+			90 {
+				field = incidentmanager
+				pattern = /^\d+$/
+				message = %%%incidentmanagerMissingError%%%
+			}
+			110 {
+				field = alternateincidentmanagers
+				pattern = /^(\d+,?)+$|^$/
+				message = %%%alternateincidentmanagersMissingError%%%
+			}
+		}
+    }
+    Business_Silo = USER
+    Business_Silo {
+       userFunc = tx_cbgaedms_controller_Business_Silo->main
+       setupPath = plugin.tx_cbgaedms_mvc1.configurations.
+       configurations < plugin.tx_cbgaedms_mvc1.configurations
+       configurations.defaultAction = Business_Silo_List
+		configurations.validationRules {
+			10 {
+				field = silo
+				pattern = /^\X+/
+				message = %%%emptySiloError%%%
+			}
+		}
+    }
+}
+tt_content.list.20.cbgaedms_mvc1 =< plugin.tx_cbgaedms.controllerSwitch

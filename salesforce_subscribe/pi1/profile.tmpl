@@ -1,0 +1,134 @@
+<!-- ########################################
+	Waiting page
+######################################## -->
+<!-- ###WAITING_PAGE### -->
+<table width="100%" height="300" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle">Please wait a moment while we retrieve your information...</td>
+  </tr>
+</table>
+<!-- ###WAITING_PAGE### -->
+
+<!-- ########################################
+	Thank you page
+######################################## -->
+<!-- ###THANKYOU_PAGE### -->
+<table width="100%" height="300" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle">Thank you for updating your information. </td>
+  </tr>
+</table>
+<!-- ###THANKYOU_PAGE### -->
+
+<!-- ########################################
+	Editing information page
+######################################## -->
+
+<!-- ###EDIT_INFO### -->
+<form id="profile" name="profile" method="post">
+<h2>Update your Profile</h2>
+<p><b>Contact Information: </b></p>
+<input type="hidden" name="action" value="changeInfo">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="200" align="left" valign="top">First Name </td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top">
+      <label>
+      <input type="text" name="###PRID###[FirstName]" value="###FIRSTNAME###" />
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">Last Name </td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[LastName]" value="###LASTNAME###" /></td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">Title</td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[Title]" value="###TITLE###" /></td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">Company</td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[Company]" value="###COMPANY###" /></td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">Address </td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[MailingStreet]" value="###MAILINGSTREET###" /></td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">City</td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[MailingCity]" value="###MAILINGCITY###" /></td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">State</td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[MailingState]" value="###MAILINGSTATE###" /></td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">Zip</td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[MailingPostalCode]" value="###MAILINGPOSTALCODE###" /></td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">Country</td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[MailingCountry]"
+    value="###MAILINGCOUNTRY###" /></td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">Phone</td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[Phone]" value="###PHONE###" /></td>
+  </tr>
+  <tr>
+    <td width="200" align="left" valign="top">Email</td>
+    <td width="3" align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><input type="text" name="###PRID###[Email]" value="###EMAIL###" /></td>
+  </tr>
+</table>
+<h2>Newsletters</h2>
+<!-- <p><b>Subscriptions:<br />
+</b>(Newsletter subscriptions include   information from us and occasional
+partner   information.)</p> -->
+<ul>
+<!-- ###SUBSCRIBES### -->
+  <li>
+    <label><input type="checkbox" name="subscribe[###ID###]" value="true" ###SUBSCRIBE_CHECKED### /> ###SUBSCRIBE###</label></li>
+<!-- ###SUBSCRIBES### -->
+</ul>
+<h2>Round Table Announcements</h2>
+<ul>
+<li>
+    <label><input type="checkbox" name="BPM Round Tables"
+	value="true"  />BPM Round Tables (Need in SF)</label></li>
+<li>
+    <label><input type="checkbox" name="SOA Round Tables"
+	value="true"  />SOA Round Tables (Need in SF)</label></li>
+</ul>
+<h2>Event information</h2>
+<ul>
+<!-- ###EVENTS### -->
+  <li>
+      <label><input type="checkbox" name="event[###ID###]" value="true"
+	  ###CHECKED### /> ###EVENT###</label></li>
+<!-- ###EVENTS### -->
+</ul>
+<hr />
+<input type="hidden" name="subscribes" value="###SUBSCRIBES_LIST###" />
+<p><input type="submit" value="Change"></p>
+</form>
+<!-- ###EDIT_INFO### -->
+
+<!-- ########################################
+	User not logged in
+######################################## -->
+
+<!-- ###NOT_LOGGED### -->
+You are not logged
+<!-- ###NOT_LOGGED### -->
+

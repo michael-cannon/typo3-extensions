@@ -1,0 +1,113 @@
+<!--###USERFORM### begin-->
+<form action="###URL###" method="post">
+<p class="description">###USERMSG###</p>
+<input type="text" name="tx_mssurvey_pi1[survey_user]"/>
+<input type="hidden" name="tx_mssurvey_pi1[submitted]" value="1"/>
+<input type="submit" value="###SUBMIT###"/>
+<input type="reset"/>
+</form>
+
+<!--###USERFORM### end-->
+
+
+<!--###SURVEYFORM### begin-->
+
+<!--###PROGRESSBAR### begin-->
+<!--###PROGRESSBAR### begin-->
+
+<form action="###URL###" method="post">
+<input type="hidden" name="tx_mssurvey_pi1[submitted]" value="1"/>
+###ITEMS###
+<input type="submit" value="###SUBMIT###"/></form>
+<!--###SURVEYFORM### end-->
+
+<!--###STRINGITEM### begin-->
+<div class="survey_item"><p class="description">###DESCRIPTION###</p>
+<p class="itemform"><label>###QUESTION### <input type="text"
+name="tx_mssurvey_pi1[###TITLE###]" size="###WIDTH###" value="###VALUE###" /></label></p>
+</div>
+<!--###STRINGITEM### end-->
+
+<!--###SHORTSTRINGITEM### begin-->
+<p class="itemform"><input type="text" name="tx_mssurvey_pi1[###TITLE###]"
+size="###WIDTH###" value="###VALUE###" /></p>
+<!--###SHORTSTRINGITEM### end-->
+
+<!--###TEXTITEM### begin-->
+<div class="survey_item"><p class="description">###DESCRIPTION###</p>
+<p class="itemform"><label>###QUESTION### <textarea name="tx_mssurvey_pi1[###TITLE###]"
+cols="###WIDTH###" rows="###HEIGHT###">###VALUE###</textarea></label></p>
+</div>
+<!--###TEXTITEM### end-->
+
+<!--###SHORTTEXTITEM### begin-->
+<p class="itemform"><textarea name="tx_mssurvey_pi1[###TITLE###]"
+cols="###WIDTH###" rows="###HEIGHT###" >###VALUE###</textarea></p>
+<!--###SHORTTEXTITEM### end-->
+
+<!--###RADIOITEM### begin-->
+<div class="survey_item"><p class="description">###DESCRIPTION###</p>
+<p class="itemform">###QUESTION### 
+###VALUES###
+</p>
+</div>
+<!--###RADIOITEM### end-->
+
+<!--###SHORTRADIOITEM### begin-->
+<p class="itemform">###VALUES###</p>
+<!--###SHORTRADIOITEM### end-->
+
+<!--###CHECKBOXITEM### begin-->
+<div class="survey_item"><p class="description">###DESCRIPTION###</p>
+<p class="itemform">###QUESTION### 
+###VALUES###
+</p>
+</div>
+<!--###CHECKBOXITEM### end-->
+
+<!--###SHORTCHECKBOXITEM### begin-->
+<p class="itemform">###VALUES###</p>
+<!--###SHORTCHECKBOXITEM### end-->
+
+<!--###SELECTITEM### begin-->
+<div class="survey_item"><p class="description">###DESCRIPTION###</p>
+<p class="itemform">###QUESTION### 
+<select ###MULTI### size="###HEIGHT###" name="tx_mssurvey_pi1[###TITLE###]###ARR###">###VALUES###</select>
+</p>
+</div>
+<!--###SELECTITEM### end-->
+
+<!--###SHORTSELECTITEM### begin-->
+<p class="itemform">
+<select ###MULTI### size="###HEIGHT###" name="tx_mssurvey_pi1[###TITLE###]###ARR###">###VALUES###</select>
+</p>
+
+<!--###SHORTSELECTITEM### end-->
+
+<!--###MULTITEM### begin-->
+<div class="survey_item"><p class="description">###DESCRIPTION###</p>
+<table class="multitable" >
+<tr><th></th>###COLUMNS###</tr>
+###ROWS###
+</table>
+</div>
+<!--###MULTITEM### end-->
+
+
+
+
+
+
+<!--###RADIOVALUE### begin-->
+<br />
+<label><input type="radio" ###CHECKED###="###CHECKED###" name="tx_mssurvey_pi1[###TITLE###]" value="###VALUE###"/>###VALUE###</label>
+<!--###RADIOVALUE### end-->
+
+<!--###CHECKBOXVALUE### begin-->
+<br />
+<label><input type="checkbox" ###CHECKED###="###CHECKED###" name="tx_mssurvey_pi1[###TITLE###][]" value="###VALUE###"/>###VALUE###</label>
+<!--###CHECKBOXVALUE### end-->
+
+<!--###SELECTVALUE### begin-->
+<option>###VALUE###</option>
+<!--###SELECTVALUE### end-->

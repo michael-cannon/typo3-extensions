@@ -1,0 +1,10 @@
+plugin.tt_news.news_default_image {
+	useCategoryImage = {$plugin.tt_news.news_default_image.useCategoryImage}
+	categoryImageParams = {$plugin.tt_news.news_default_image.categoryImageParams}
+}
+
+plugin.tt_news {
+	maxCatImages = 1
+	catImageMaxWidth = 150
+	catImageMaxHeight = 150
+}

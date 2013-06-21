@@ -1,0 +1,120 @@
+2009-04-23 Thursday 13:43  cannon
+
+	* disablePrefixComment = 1
+
+2009-04-02 Thursday 23:56  cannon
+
+	* corp title drop
+
+2009-04-02 Thursday 23:51  cannon
+
+	* Removal of "ChangeLog"
+
+2009-04-02 Thursday 23:44  cannon
+
+	* Acqal branding
+
+2009-04-02 Thursday 23:34  cannon
+
+	* Acqal branding
+
+2009-02-26 Thursday 09:44  cannon
+
+	* cache but minimal time
+
+2008-10-01 Wednesday 23:53  cannon
+
+	* copy indexing config back into cbperformance
+
+2008-08-19 Tuesday 12:06  cannon
+
+	* update key to auto drop/add
+
+2008-08-19 Tuesday 12:05  cannon
+
+	* Inital import of "my.cnf" file
+
+2008-08-19 Tuesday 11:42  cannon
+
+	* remove indexing to cbstarter
+
+2008-07-08 Tuesday 16:32  cannon
+
+	* correct indexes
+
+2008-05-22 Thursday 14:46  cannon
+
+	* add sys_dmail indexes
+
+2008-05-21 Wednesday 17:49  cannon
+
+	* 15-minute cache
+
+2008-05-21 Wednesday 12:29  cannon
+
+	* clean up
+
+2008-04-02 Wednesday 19:16  cannon
+
+	* manual updates; constants page cleanup
+
+2008-04-02 Wednesday 17:31  cannon
+
+	* revise constants page
+
+2008-03-21 Friday 11:15  cannon
+
+	* performance index; extension author update
+
+2008-03-15 Saturday 11:08  cannon
+
+	* minor var placement revisions
+
+2008-03-04 Tuesday 07:24  cannon
+
+	* bare bones and starting my.cnf
+
+2008-03-04 Tuesday 07:19  cannon
+
+	* add bare bones indexing options
+
+2008-03-03 Monday 17:58  cannon
+
+	* refine performance; give cbstarter own section in TS Constants
+
+2008-02-28 Thursday 00:22  cannon
+
+	* disable useBidirectionalRelations
+
+2008-02-27 Wednesday 21:40  cannon
+
+	* correct last index
+
+2008-02-27 Wednesday 21:38  cannon
+
+	* add indices
+
+2008-02-27 Wednesday 13:05  cannon
+
+	* Inital import of "ext_tables.sql" file
+
+2008-02-20 Wednesday 10:21  cannon
+
+	* Inital import of "pageTSconfig.txt" file
+
+2008-02-20 Wednesday 10:21  cannon
+
+	* Inital import of "ext_localconf.php" file
+
+2008-02-20 Wednesday 10:21  cannon
+
+	* Inital import of "ext_conf_template.txt" file
+
+2008-02-20 Wednesday 09:55  cannon
+
+	* Initial cbperformance import
+
+2008-02-20 Wednesday 09:55  cannon
+
+	* Initial revision
+

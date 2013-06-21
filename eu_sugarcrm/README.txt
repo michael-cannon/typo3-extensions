@@ -1,0 +1,3 @@
+- Compatible with SugarCRM 5.x
+- The type attribute is now identical to Sugar's module name, e.g. "Leads". In previous versions it read "Lead".
+- The splitting of dates (date + time) has been removed in SugarCRM 5.x. Existing contact forms have to be updated to deliver the full date

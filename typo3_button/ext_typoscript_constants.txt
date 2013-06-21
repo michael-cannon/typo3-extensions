@@ -1,0 +1,16 @@
+plugin.tx_typo3button_pi1 {
+# cat=plugin.tx_typo3button_pi1/file/1; type=file[html,htm,tmpl,txt]; label= Template File: HTML template file for display of a button.
+  templateFile 		= EXT:typo3_button/pi1/template.tmpl
+# cat=plugin.tx_typo3button_pi1/url/1a; type=string; label= URL: URL that buttons link to.
+  url				= http://www.typo3.com
+# cat=plugin.tx_typo3button_pi1/altText/1b; type=string; label= Alt Text: Text that will appear if images are disabled in the browser.
+  altText			= TYPO3 is a free Open Source enterprise content management system
+# cat=plugin.tx_typo3button_pi1/titleText/1c; type=string; label= Title Text: Text that will appear when hovering over images.
+  titleText 		= TYPO3 is a free Open Source enterprise content management system
+#cat=plugin.tx_typo3button_pi1/demo/1d; type=boolean; label= Demo Mode: Shows all buttons.
+  demoMode			= 0
+# cat=plugin.tx_typo3button_pi1/target/1e; type=string; label= Link Target: Landing target to open link in
+  target			= _blank
+# cat=plugin.tx_typo3button_pi1/align/1f; type=options[left,center,right]; label= Logo Alignment
+  align				= center
+}

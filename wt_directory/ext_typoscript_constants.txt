@@ -1,0 +1,53 @@
+###
+# This are the default TS-constants for wt_directory
+##
+
+plugin.wtdirectory {
+	# cat=plugin.wtdirectory/file/010; type=file[html,htm,tmpl,txt]; label= Template File list: HTML-template file for list view (see EXT:wt_directory/templates/tmpl_list.html for an example)
+	template.list = EXT:wt_directory/templates/tmpl_list.html
+	
+	# cat=plugin.wtdirectory/file/020; type=file[html,htm,tmpl,txt]; label= Template File detail: HTML-template file for detail view (see EXT:wt_directory/templates/tmpl_detail.html for an example)
+	template.detail = EXT:wt_directory/templates/tmpl_detail.html
+	
+	# cat=plugin.wtdirectory/file/030; type=file[html,htm,tmpl,txt]; label= Template Marker ALL: HTML-template file for an ALL marker (all markers in one marker) (see EXT:wt_directory/templates/tmpl_detail.html for an example)
+	template.ALLmarker = EXT:wt_directory/templates/tmpl_markerall.html
+	
+	# cat=plugin.wtdirectory/file/040; type=file[html,htm,tmpl,txt]; label= Template for Pagebrowser: HTML-template file for pagebrowser in listview (see EXT:wt_directory/templates/tmpl_pagebrowser.html for an example)
+	template.pagebrowser = EXT:wt_directory/templates/tmpl_pagebrowser.html
+	
+	# cat=plugin.wtdirectory/file/040; type=file[html,htm,tmpl,txt]; label= Template for Search/Filter: HTML-template file for filter and searchboxes above the list (see EXT:wt_directory/templates/tmpl_search.html for an example)
+	template.search = EXT:wt_directory/templates/tmpl_search.html
+	
+	# cat=plugin.wtdirectory/enable/200; type=text; label= tt_address picture path: Relative path to the folder with pictures from tt_address (default uploads/pics/)
+	path.ttaddress_pictures = uploads/pics/
+	
+	# cat=plugin.wtdirectory/enable/500; type=boolean; label= Hide description if empty value: Description will not shown if the value is empty
+	enable.hideDescription = 1
+	
+	# cat=plugin.wtdirectory/enable/510; type=boolean; label= Autolink for URL: Change URL and Email addresses to links
+	enable.autoChange = 1
+	
+	# cat=plugin.wtdirectory/enable/520; type=boolean; label= Show on map on detailpage: GOOGLEMAP - If a user changes from list to detailview the right marker is shown in the googlemap (if rggooglemap is included on detailpage)
+	enable.googlemapOnDetail = 0
+	
+	# cat=plugin.wtdirectory/enable/530; type=boolean; label= vCard export in listview: Enables vCard export possibility in list view
+	enable.vCardForList = 0
+	
+	# cat=plugin.wtdirectory/enable/540; type=boolean; label= vCard export in detailview: Enables vCard export possibility in detail view
+	enable.vCardForDetail = 1
+	
+	# cat=plugin.wtdirectory//800; type=text; label= vCard link label: Label for vCard links
+	label.vCard = <img src="typo3conf/ext/wt_directory/ext_icon.gif" alt="vCard icon" />
+	
+	# cat=plugin.wtdirectory//810; type=int; label= Show results per page: Show X results per page in list view
+	list.perPage = 10
+	
+	# cat=plugin.wtdirectory//820; type=text; label= List view - order by: Define order by for the listing of the addresses (like lastname asc)
+	list.orderby = 
+	
+	# cat=plugin.wtdirectory//900; type=text; label= Detailpage title: Define an individual page title (like MY HOMEPAGE ###WTDIRECTORY_TTADDRESS_NAME### ###WTDIRECTORY_TTADDRESS_EMAIL###)
+	detail.title = 
+	
+	# cat=plugin.wtdirectory//950; type=text; label= Disable categories in search: Disable some categories in category choose (like 45,23,12)
+	filter.cat.disable = 
+}

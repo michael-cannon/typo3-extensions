@@ -1,0 +1,12 @@
+2010-06-22  ben
+
+	* css/mainstyles.css: removed z-index: 100 at header DIV and added
+	  z-index: 5 to topNav DIV. Since smoothgallary is z-index:15,
+	  changing z-index to 5 fixes the bug when using smoothgallary.
+
+2010-06-21  ben
+
+	* css/images/bn_top_logo.gif, css/images/local_menu_arrow.gif,
+	  css/images/masthead_title.gif, css/mainstyles.css, css/rte.css,
+	  typoscript/skin_typoscript.ts: skins bug fixing and template
+	  optimization.

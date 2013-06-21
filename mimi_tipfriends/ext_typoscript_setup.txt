@@ -1,0 +1,2 @@
+#Changing the template File
+plugin.tx_mimitipfriends_pi1.templateFile = 

@@ -1,0 +1,16 @@
+RTE {
+	classes {
+		mb {
+			name = Multibox
+		}
+	}
+
+	default {
+		# allow module box selection
+		classesLinks := addToList(mb)
+		proc.allowedClasses := addToList(mb)
+	}
+}
+
+# Check Click-enlarge by default on tt_content
+TCAdefaults.tt_content.image_zoom = 1

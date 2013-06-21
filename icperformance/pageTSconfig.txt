@@ -1,0 +1,7 @@
+# This can allow you to have the cache for additional pages cleared when
+# saving to some page or branch of the page tree.
+# @ref http://typo3.org/documentation/document-library/core-documentation/doc_core_tsconfig/4.2.0/view/1/3/#id4154790
+# TCEMAIN.clearCacheCmd = all
+
+# @ref http://typo3.org/documentation/document-library/extension-manuals/clearcacheextend/0.1.3/view/1/2/
+TCEMAIN.clearCacheCmd = changes(tt_content){pages(0)},contains(dam;0),contains(plugin;tt_news;0)

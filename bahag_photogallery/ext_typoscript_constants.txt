@@ -1,0 +1,13 @@
+plugin.tx_bahagphotogallery_pi1 {
+    # cat=plugin.tx_bahagphotogallery_pi1//; type=string; label = Enter path for enlarged view icon
+	enlargedViewIcon = 
+
+    # cat=plugin.tx_bahagphotogallery_pi1//; type=string; label = Enter path for normal download icon
+	downloadIcon1 = 
+
+    # cat=plugin.tx_bahagphotogallery_pi1//; type=string; label = Enter path for zipped download icon
+	downloadIcon2 = 
+	
+    # cat=plugin.tx_bahagphotogallery_pi1//; type=string; label = IPTC Data Template File
+	iptcDataTemplateFile = EXT:bahag_photogallery/templates/iptc.htm
+}

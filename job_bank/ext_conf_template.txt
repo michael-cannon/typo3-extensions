@@ -1,0 +1,11 @@
+# cat=basic; type=string; label= Date Format for Calendar
+dateFormatCalendar=dd/mm/yyyy
+
+# cat=basic; type=string; label= Display List (field name [pipe symbol] Display Name, ..)
+jobListingFields=occupation|Occupation,location|Location Name,crdate|Creation Date
+
+# cat=basic; type=int; label= Storage Page Id
+storagePID=
+
+# cat=basic; type=int; label= T3Consulting Category (Industry Id) 
+industryPID=

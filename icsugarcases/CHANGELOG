@@ -1,0 +1,106 @@
+2009-11-17 Tuesday 19:17  mc
+
+	* Inital import of "CHANGELOG" file
+
+2009-11-17 Tuesday 19:16  mc
+
+	* Removal of "ChangeLog"
+
+2009-11-17 Tuesday 19:15  mc
+
+	* update CHANGELOG
+
+2009-11-17 Tuesday 19:10  mc
+
+	* update CHANGELOG
+
+2009-11-17 Tuesday 18:48  mc
+
+	* Removal of "sugarcases.html.php"
+
+2009-11-17 Tuesday 18:48  mc
+
+	* Inital import of "templates" directory
+
+2009-11-17 Tuesday 18:46  mc
+
+	* add case listing, case edit and new case; add language labels for
+	  new views; add page browser; enable subparts in populateTemplate;
+
+2009-11-17 Tuesday 00:04  mc
+
+	* show data up through displayHome, but not presentation layer
+
+2009-11-13 Friday 22:38  mc
+
+	* correct sugar_error
+
+2009-11-12 Thursday 22:24  mc
+
+	* add error template; fix TypoScript includes; begin sugarcases
+	  presentation layer through method displayHome; add
+	  sugar_portal_configuration table; update language labels;
+	  successfully implement initCaseApp; create method
+	  populateTemplate;
+
+2009-11-12 Thursday 22:21  mc
+
+	* Inital import of "templates" directory
+
+2009-11-12 Thursday 22:21  mc
+
+	* Inital import of "res/sugarcases.html.php" file
+
+2009-11-12 Thursday 16:19  mc
+
+	* Inital import of
+	  "icon_tx_icsugarcases_sugar_portal_configuration.gif" file
+
+2009-11-12 Thursday 16:18  mc
+
+	* add config table entry
+
+2009-11-12 Thursday 16:17  mc
+
+	* Inital import of "res/sugarcases.class.php" file
+
+2009-11-12 Thursday 16:17  mc
+
+	* Inital import of "tca.php" file
+
+2009-11-12 Thursday 16:17  mc
+
+	* Inital import of "ext_tables.sql" file
+
+2009-11-12 Thursday 15:13  mc
+
+	* Inital import of "sugarinc" directory
+
+2009-11-12 Thursday 15:13  mc
+
+	* Inital import of "sugarapp" directory
+
+2009-11-12 Thursday 15:10  mc
+
+	* Removal of "placeholder"
+
+2009-11-12 Thursday 14:46  mc
+
+	* m2u
+
+2009-11-12 Thursday 14:43  mc
+
+	* Inital import of "res" directory
+
+2009-11-12 Thursday 14:42  mc
+
+	* correct icon
+
+2009-11-12 Thursday 14:36  mc
+
+	* Inital import of 'icsugarcases' directory
+
+2009-11-12 Thursday 14:36  mc
+
+	* Initial revision
+

@@ -1,0 +1,14 @@
+/**
+ * @author Michael Cannon <michael@peimic.com>
+ * @version $Id: constants.txt,v 1.1.1.1 2010/04/15 10:03:40 peimic.comprock Exp $
+ */
+plugin.icsugarcrm {
+	# cat=icsugarcrm/enable; type=boolean; label=XYZ:Abc something
+	xyz = 1
+
+	# cat=icsugarcrm/typo; type=wrap; label=Header Wrap
+	header.wrap = <h2>|</h2>
+
+	# cat=icsugarcrm/typo; type=wrap; label=Content Wrap
+	content.wrap = <p>|</p>
+}

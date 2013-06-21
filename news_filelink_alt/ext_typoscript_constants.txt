@@ -1,0 +1,19 @@
+plugin.tt_news.news_filelink_alt {
+	# cat=plugin.tt_news.news_filelink_alt//1; type=boolean; label= Pretty Print Filename: If enabled, the link file name is pretty printed.
+	prettyPrint = 1
+
+	# cat=plugin.tt_news.news_filelink_alt//2; type=boolean; label= Remove P Wrapper: If enabled, surrounding p tags are remove from content.
+	removePWrap = 1
+
+	# cat=plugin.tt_news.news_filelink_alt//2; type=boolean; label= Add Icon to Link: If enabled, icons are created if none already are there.
+	addIcon = 1
+
+	# cat=plugin.tt_news.news_filelink_alt//2; type=boolean; label= Icon to Text: If enabled, icons are converted to text tags
+	icon2text = 0
+
+	# cat=plugin.tt_news.news_filelink_alt//3; type=boolean; label= Alternate File Name: If enabled, link file names are converted to alternative text as defined in locallang.php
+	altFilename = 0
+
+	# cat=plugin.tt_news.news_filelink_alt//4; type=boolean; label= Icon space: If enabled, a space between icon and link will be made
+	iconSpace = 1
+}

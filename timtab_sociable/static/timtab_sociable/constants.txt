@@ -1,0 +1,103 @@
+# constants
+
+plugin.tx_timtabsociable_pi1 {
+    # cat=plugin.tx_timtabsociable/links; type=text; label=global link target for icons
+	iconTarget = _self
+
+    # cat=plugin.tx_timtabsociable/links; type=text; label=global wrap for icons
+	iconWrap = |
+	
+	file {
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for addthis.com
+		addthis = EXT:timtab_sociable/res/img/addthis.gif
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for ask.com
+		ask = EXT:timtab_sociable/res/img/ask.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for backflip
+		backflip = EXT:timtab_sociable/res/img/backflip.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for blinkbits
+		blinkbits = EXT:timtab_sociable/res/img/blinkbits.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for blinklist
+		blinklist = EXT:timtab_sociable/res/img/blinklist.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for blogmarks
+		blogmarks = EXT:timtab_sociable/res/img/blogmarks.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for bluedot
+		bluedot = EXT:timtab_sociable/res/img/bluedot.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for comments
+		comments = EXT:timtab_sociable/res/img/co.mments.gif
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for connotea
+		connotea = EXT:timtab_sociable/res/img/connotea.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for del.icio.us
+		delicious = EXT:timtab_sociable/res/img/delicious.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for del.irio.us
+		delirious = EXT:timtab_sociable/res/img/delirious.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for digg
+		digg = EXT:timtab_sociable/res/img/digg.gif
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for fark
+		fark = EXT:timtab_sociable/res/img/fark.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for feedmelinks
+		feedmelinks = EXT:timtab_sociable/res/img/feedmelinks.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for folkd
+		folkd = EXT:timtab_sociable/res/img/folkd.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for furl
+		furl = EXT:timtab_sociable/res/img/furl.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for google
+		google = EXT:timtab_sociable/res/img/google.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for Hype!
+		hype = EXT:timtab_sociable/res/img/hype.gif
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for linkagogo
+		linkagogo = EXT:timtab_sociable/res/img/linkagogo.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for linkarena
+		linkarena = EXT:timtab_sociable/res/img/linkarena.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for live
+		live = EXT:timtab_sociable/res/img/live.gif
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for manolia
+		magnolia = EXT:timtab_sociable/res/img/magnolia.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for misterwong
+		misterwong = EXT:timtab_sociable/res/img/wong.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for mylinkde
+		mylinkde = EXT:timtab_sociable/res/img/mylinkde.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for netscape
+		netscape = EXT:timtab_sociable/res/img/netscape.gif
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for netvouz
+		netvouz = EXT:timtab_sociable/res/img/netvouz.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for newsvine
+		newsvine = EXT:timtab_sociable/res/img/newsvine.gif
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for oneview
+		oneview = EXT:timtab_sociable/res/img/oneview.gif
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for rawsugar
+		rawsugar = EXT:timtab_sociable/res/img/rawsugar.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for reddit
+		reddit = EXT:timtab_sociable/res/img/reddit.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for scuttle
+		scuttle = EXT:timtab_sociable/res/img/scuttle.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for shadows
+		shadows = EXT:timtab_sociable/res/img/shadows.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for simpy
+		simpy = EXT:timtab_sociable/res/img/simpy.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for smarking
+		smarking = EXT:timtab_sociable/res/img/smarking.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for spurl
+		spurl = EXT:timtab_sociable/res/img/spurl.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for stumbleupon
+		stumbleupon = EXT:timtab_sociable/res/img/su.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for tailrank
+		tailrank = EXT:timtab_sociable/res/img/tailrank.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for tagthat
+		tagthat = EXT:timtab_sociable/res/img/tagthat.gif
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for technorati
+		technorati = EXT:timtab_sociable/res/img/technorati.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for webnews
+		webnews = EXT:timtab_sociable/res/img/webnews.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for wink
+		wink = EXT:timtab_sociable/res/img/wink.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for wists
+		wists = EXT:timtab_sociable/res/img/wists.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for yahoomyweb
+		yahoomyweb = EXT:timtab_sociable/res/img/yahoomyweb.png
+	    # cat=plugin.tx_timtabsociable/file; type=file[gif,jpg,jpeg,png]; label=icon file for yiggde
+		yiggde = EXT:timtab_sociable/res/img/yiggit.png
+	}
+
+    # cat=plugin.tx_timtabsociable/links; type=int; label=PID of URL folder
+	pid = 0
+}

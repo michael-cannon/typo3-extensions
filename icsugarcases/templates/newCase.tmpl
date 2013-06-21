@@ -1,0 +1,35 @@
+<!-- $Id: newCase.tmpl,v 1.1.1.1 2010/04/15 10:03:39 peimic.comprock Exp $ -->
+<h2>###HEADER###</h2>
+<p>###CONTENT###</p>
+<form name="SaveView" method="post" action="###ACTION_LINK###">
+	<input type="hidden" name="###PREFIXID###[task]" value="###SAVE_TYPE###" />
+	<input type="hidden" name="###PREFIXID###[id]" value="###CASE_ID###" />
+
+	<label for="name">###NAME###</label>
+	<input type="text" name="###PREFIXID###[name]" id="name" />
+
+	<label for="description">###DESCRIPTION###</label>
+	<textarea name="###PREFIXID###[description]" id="description"></textarea>
+
+	<input type="button" value="###SAVE###" onclick="javascript:submitForm(this.form)" />
+	<input type="reset" value="###RESET###" />
+	<input type="submit" value="###CANCEL###" />
+</form>
+<script type="text/javascript">
+	function submitForm(f) {
+		if( ! ValidateForm(f) ) {
+			return false;
+		}
+		f.submit();
+	}
+
+	function ValidateForm(thisForm) {
+		if(thisForm.name.value == "") {
+			alert("###NAME### ###IS_REQUIRED###");
+			thisForm.name.focus();
+			return false;
+		}
+
+		return true;
+	}
+</script>

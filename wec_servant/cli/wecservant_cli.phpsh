@@ -1,0 +1,33 @@
+#! /usr/bin/php -q
+<?php
+
+// Sample crontab entry for running weekdays at 10:07
+// 7 10 * * 1,2,3,4,5 /usr/bin/php /var/www/domains/stonebriar.org/www/htdocs/typo3conf/ext/wec_servant/cli/wecservant_cli.phpsh
+
+// *****************************************
+// Standard initialization of a CLI module:
+// *****************************************
+
+	// Defining circumstances for CLI mode:
+define('TYPO3_cliMode', TRUE);
+
+	// Defining PATH_thisScript here: Must be the ABSOLUTE path of this script in the right context:
+	// This will work as long as the script is called by it's absolute path!
+define('PATH_thisScript', $_SERVER['SCRIPT_FILENAME']);
+if (!PATH_thisScript)
+	define('PATH_thisScript', $_ENV['_'] ? $_ENV['_'] : $_SERVER['_']);
+
+	// Include configuration file:
+require_once(dirname(PATH_thisScript).'/conf.php');
+
+	// Include init file:
+require_once(dirname(PATH_thisScript).'/'.$BACK_PATH.'init.php');
+
+# HERE you run your application!
+require_once( dirname(PATH_thisScript).'/../modfunc1/class.tx_wecservant_modfunc1.php' );
+$mod							= t3lib_div::makeInstance('tx_wecservant_modfunc1');
+$mod->init();
+// you can capture the output for a monitor script
+$mod->reportMailer();
+
+?>

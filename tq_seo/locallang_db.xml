@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'tq_seo'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pages.tx_tqseo_pagetitle">&lt;title&gt;-TAG (absolute, overwrites prefix/suffix)</label>
+			<label index="pages_language_overlay.tx_tqseo_pagetitle">&lt;title&gt;-TAG</label>
+			<label index="pages.tx_tqseo_is_exclude">Exclude page from SearchEngines</label>
+			<label index="pages.tx_tqseo_pagetitle_prefix">Pagetitel prefix (inheritable)</label>
+			<label index="pages.tx_tqseo_pagetitle_suffix">Pagetitel suffix (inheritable)</label>
+			<label index="pages.tx_tqseo_inheritance">Pagetitle inheritance mode</label>
+
+			<label index="pages.tx_tqseo_inheritance.I.0">Normal</label>
+			<label index="pages.tx_tqseo_inheritance.I.1">Skip (don't herit from this page)</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="pages.tx_tqseo_pagetitle">&lt;title&gt;-TAG (absolut, überschreibt Prefix/Suffix)</label>
+			<label index="pages_language_overlay.tx_tqseo_pagetitle">&lt;title&gt;-TAG</label>
+			<label index="pages.tx_tqseo_is_exclude">Seite von Suchmaschinen ausschließen</label>
+			<label index="pages.tx_tqseo_priority">Priorität (0-100)</label>
+			<label index="pages.tx_tqseo_pagetitle_prefix">Seitentitel Präfix (vererbbar)</label>
+			<label index="pages.tx_tqseo_pagetitle_suffix">Seitentitel Suffix (vererbbar)</label>
+			<label index="pages.tx_tqseo_inheritance">Seitentitel-Vererbungsmodus</label>
+
+			<label index="pages.tx_tqseo_inheritance.I.0">Normal</label>
+			<label index="pages.tx_tqseo_inheritance.I.1">Überspringen (von dieser Seite nicht vererben)</label>
+		</languageKey>
+	</data>
+</T3locallang>

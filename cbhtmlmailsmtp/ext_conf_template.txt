@@ -1,0 +1,17 @@
+# cat=basic; type=string; label=SMTP host : Name or IP of the SMTP host
+smtpHost = localhost
+
+# cat=basic; type=int+; label=SMTP port : Port for the SMTP protocol of SMTP host
+smtpPort = 25
+
+# cat=basic; type=options[0,1]; label=SMTP Auth? : SMTP Auth required?
+smtpAuth = 0
+
+# cat=basic; type=string; label=SMTP user : SMTP user for SMTP Auth
+smtpUser = 
+
+# cat=basic; type=string; label=SMTP password : SMTP password for SMTP Auth
+smtpPass = 
+
+# cat=basic; type=options[0,1]; label=SMTP persistant connection? : Use persistant SMTP Connection?
+smtpPersist = 0

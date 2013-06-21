@@ -1,0 +1,54 @@
+2013-03-12 03:46  peimic.comprock
+
+* Update images
+
+2013-03-12 03:37  peimic.comprock
+
+* Update manual
+
+2013-03-12 03:37  peimic.comprock
+
+* * Update .htaccess with performance parts * Remove CVS ID
+
+2013-03-12 03:36  peimic.comprock
+
+* * Rename extension * Correct email address * Add TYPO3 dependency
+
+2013-03-12 03:35  peimic.comprock
+
+* Update configuration to latest relaurl
+
+2013-03-12 03:34  peimic.comprock
+
+* Rename Peimic_RealURL to RealURL_Helper
+
+2013-03-12 03:22  peimic.comprock
+
+* * Rename Peimic_RealURL to RealURL_Helper
+
+2012-02-06 14:19  peimic.comprock
+
+* Adapt for latest realurl include
+
+2011-12-16 16:15  peimic.comprock
+
+* Remove need for realurl-custom.php
+
+2011-04-22 00:52  peimic.comprock
+
+* add tx_atolflashpdfviewer_pi1
+
+2010-11-21 06:05  peimic.comprock
+
+* update branding
+
+2010-04-15 10:03  tag initial
+
+2010-04-15 10:03  peimic.comprock
+
+* Inital import of 'typo3' directory
+
+2010-04-15 10:03  peimic.comprock
+
+* Initial revision
+

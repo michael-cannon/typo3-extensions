@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>Mimi Tip many friends</title>
+</head>
+
+<body>
+
+
+<!-- ###TIP_FORM### -->
+
+	<!-- to avoid any problem with realUrl i control the action through
+    javascript in a very simple way-->
+	
+    <form method="POST" onsubmit="this.action=document.location">
+    
+    
+    
+    <!--hidden field to save the referer-->
+    ###HIDDEN_REFERER###
+    
+    <h1 class='tip_many_friends'>###TIP_MANY_FRIENDS###</h1>
+	<span class="tip_many_friends_error">###ERROR_MESSAGE###</span>
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" class="tip_many_friends">
+	
+		<tr><td class="tip_many_friends-field">###MY_NAME###</td><td class='tip_many_friends-input'>###MY_NAME_INPUT###</tr>
+		<tr><td class="tip_many_friends-field">###MY_EMAIL###</td><td class='tip_many_friends-input'>###MY_EMAIL_INPUT###</tr>
+		<tr><td class="tip_many_friends-field">###EMAIL1###</td><td class='tip_many_friends-input'>###EMAIL1_INPUT###</tr>
+		<tr><td class="tip_many_friends-field">###MY_MESSAGE###</td><td class='tip_many_friends-input'>###MY_MESSAGE_INPUT###</tr>
+		<tr><td class="tip_many_friends-field">###SUBMIT_MESSAGE###</td><td class='tip_many_friends-input'>###SUBMIT_INPUT###</tr>		
+
+	</table>
+	</form>	
+<!-- ###TIP_FORM### -->
+
+<!-- ###TIP_THANKYOU### -->
+   <h1 class='tip_many_friends_thank_you'>###TIP_MANY_FRIENDS_THANKYOU###</h1>
+   
+   <p class="tip_many_friends_thank_you-p">###TIP_MANY_FRIENDS_THANKYOU_TEXT###</p>
+   
+  <p>###BACK_LINK###</p>
+
+<!-- ###TIP_THANKYOU### -->
+
+       
+		
+
+</body>
+</html>

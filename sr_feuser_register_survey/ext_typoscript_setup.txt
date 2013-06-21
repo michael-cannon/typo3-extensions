@@ -1,0 +1,7 @@
+plugin.tx_srfeuserregistersurvey_pi1 {
+	templateFile = {$plugin.tx_srfeuserregistersurvey_pi1.file.templateFile}
+
+	_CSS_DEFAULT_STYLE (
+		.survey_errors, .survey_errors P { color: #FF0000; font-weight: bold;}
+  	)
+}

@@ -1,0 +1,204 @@
+RTE {
+	default {
+		# Define the buttons to show
+		showButtons (
+			formatblock, blockstyle, textstyle, class
+			, bold, italic, underline
+			, strikethrough, subscript, superscript
+			, left, center, right, justifyfull
+			, orderedlist, unorderedlist, outdent, indent
+			, link, image, table
+			, undo, redo, copy, cut, paste
+			, spellcheck, findreplace, removeformat, showhelp
+			, textindicator, insertcharacter
+			, chMode
+			, toggleborders, tableproperties, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter, columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge
+		)
+
+		removeTags := removeFromList(center, font, strike, u, script)
+		removeTagsAndContents := removeFromList(script)
+
+		proc {
+			# Allow embed (Youtube) HTML tags in the RTE
+			allowTags := addToList(embed, iframe, object, param, script)
+			allowTagsOutside := addToList(embed, iframe, object, script)
+
+			entryHTMLparser_db {
+				allowTags < RTE.default.proc.allowTags
+				removeTags < RTE.default.removeTags
+				removeTagsAndContents < RTE.default.removeTagsAndContents
+
+				tags {
+					# Allow style and align for paragraphs
+					p {
+						fixAttrib.align.unset >
+						allowedAttribs := addToList(align, style)
+					}
+				}
+			}
+		}
+
+		buttons {
+			toggleborders.keepInToolbar = 1
+
+			image {
+				options {
+					# realistic magic insert sizes
+					magic.maxWidth = 600
+					magic.maxHeight = 450
+				}
+			}
+		}
+
+		ignoreMainStyleOverride = 1
+		showTagFreeClasses = 1
+
+		hidePStyleItems = removeFromList(pre)
+
+		## Configuration specific to the spellcheck button or SpellCheck feature (htmlArea RTE only)
+		## Enable the use of personal dictionaries
+		enablePersonalDicts = 1
+
+		# This disables the RTE context menu so that spelling checking can be done with some browsers' context menu.
+		disableContextMenu = 1
+	}
+
+	# MLC 20081030 WEC inspired settings
+	default {
+		buttons {
+			# Disable Upload tab for media links
+			# link.options.removeItems = media_upload
+
+			image {
+				options {
+					# Disable Upload and Drag&Drop tabs for images
+					# removeItems = upload
+				}
+			}
+		}
+
+		removeTagsAndContents = link, meta, title
+
+		# clear typical styling
+		classesAnchor >
+		classesLinks = 
+		# set classes available to these properties. Paragraph is another name
+		# for block
+		classesCharacter := addToList(coding, note, important, warning)
+		classesParagraph := addToList(coding, note, important, warning, float_left, center, float_right)
+		classesTD := addToList(sub)
+		classesTable := addToList(full, fixed)
+
+		# list all available classes here, otherwise they're removed on RTE save
+		proc.allowedClasses := addToList(coding, note, important, warning, float_left, center, float_right, sub, full, fixed)
+
+		# clear typical styling
+		inlineStyle >
+
+		# disable the “New magic image”
+		blindImageOptions = magic
+	}
+
+	classes >
+}
+
+TCEFORM {
+	pages {
+		# MLC set 0 to 1 to turn off page item
+		layout.disabled = 0
+		lastUpdated.disabled = 0
+		newUntil.disabled = 0
+
+		target.disabled = 0
+		no_cache.disabled = 0
+		cache_timeout.disabled = 0
+		
+		abstract.disabled = 0
+		keywords.disabled = 0
+		author.disabled = 0
+		email.disabled = 0
+		description.disabled = 0 
+
+		fe_login_mode.disabled = 0
+		module.disabled = 0
+		# image.config.disable_controls = upload
+	}
+
+	tt_news {
+		# image.config.disable_controls = upload
+	}
+
+	tt_content {
+		header_layout {
+			altLabels.1 = Heading 1
+			altLabels.2 = Heading 2
+			altLabels.3 = Heading 3
+			altLabels.4 = Heading 4
+			altLabels.5 = Heading 5
+		}
+		
+		# example for adding and remove header_layout items
+		# header_layout.removeItems = 100
+		# header_layout.addItems.6 = Heading 6
+		# header_layout.addItems.99 = Hidden
+
+		section_frame {
+			# altLabels.1 = Title Bar
+			# addItems.2 = Module Feature
+			removeItems = 1, 5, 6, 10, 11, 12, 20, 21
+		}
+
+		# example to remove various content types
+		# other options: rte, multimedia
+		# CType.removeItems = div, splash, script, bullets, search
+
+		sys_language_uid.disabled = 0
+		colPos.disabled = 1
+		section_frame.disabled = 0
+		sectionIndex.disabled = 1
+		spaceBefore.disabled = 1
+		spaceAfter.disabled = 1
+
+		header_position.disabled = 1
+		date.disabled = 1
+		linkToTop.disabled = 1
+
+		bodytext.RTEfullScreenWidth = 100%
+	}
+
+	# Disable the secondary fields for the header of FCEs only
+	header_position.types.templavoila_pi1.disabled = 1
+	header_link.types.templavoila_pi1.disabled = 1
+	header_layout.types.templavoila_pi1.disabled = 1
+	date.types.templavoila_pi1.disabled = 1
+}
+
+# field names of the pages table to be displayed in the create-new-page-wizard
+mod.web_txtemplavoilaM1 {
+	# 1 show unlink and delete icons for local elements side-by-side
+	# 2 show the delete icon and hide the unlink icon whenever possible
+	enableDeleteIconForLocalElements = 1
+	createPageWizard.fieldNames = hidden, nav_hide, title, tx_seo_titletag, keywords, description, abstract, author, author_email
+}
+
+mod.xMOD_alt_doc {
+    disableDocSelector = 1
+    disableCacheSelector = 1
+}
+
+TSFE.jumpUrl_transferSession = 1
+
+TCEMAIN {
+	translateToMessage = TRANSLATION NEEDED for %s
+
+	# Don't hide newly copied pages or content. Prevent `copy X` on copy
+	default {
+		disablePrependAtCopy = 1
+		disableHideAtCopy = 1
+	}
+
+	table {
+		pages < .default
+		tt_content < .default
+	}
+}

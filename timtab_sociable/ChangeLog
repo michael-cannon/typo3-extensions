@@ -1,0 +1,75 @@
+07-12-08 Frank Nägler <typo3@naegler.net>
+	* release 2.0.3
+	* bugfix: wrong call for stdWrap on iconWrap
+	* added new bookmark service (hype.yeebase.com) hype it! yeah ;-)
+
+07-11-05 Frank Nägler <typo3@naegler.net>
+	* release 2.0.2
+	* bugfix: wrong TypoScript config #0000030
+
+07-11-03 Frank Nägler <typo3@naegler.net>
+	* release 2.0.1
+	* bugfix: wrong TypoScript config (copy failure)
+
+07-10-13 Frank Nägler <typo3@naegler.net>
+	* release 2.0.0
+	* reimplementation of the extension.
+	* services can be configured by TypoScript
+	* documentation updated
+	* added new bookmark service (oneview.de) thanks to Christoph Moeller for this hint
+
+07-10-05 Frank Naegler  <typo3@naegler.net>
+	* added new bookmark service (tagthat.de) thanks to Markus Gevers for this hint
+	* bugfix #0000028: .tagline has no effect
+
+07-07-11 Frank Naegler  <typo3@naegler.net>
+	* improvement of the generated URLs (& = &amp;)
+	* added new bookmark service (folkd.com) thanks to Bernd Wilke for this hint
+	* added new bookmark service (linkarena.com) thanks to Bernd Wilke for this hint
+	* added new bookmark service (webnews.de) thanks to Bernd Wilke for this hint
+
+07-01-23 Frank Naegler  <typo3@naegler.net>
+	* added new bookmark service (yigg.de)
+
+06-12-27 Frank Naegler  <typo3@naegler.net>
+    * added new bookmark service (addthis.com)
+    * added new bookmark service (ask.com)
+    * added new bookmark service (backflip.com)
+    * added new bookmark service (stumbleupon.com)
+    * added new bookmark service (google.com)
+    * added new bookmark service (live.com)
+    * added new bookmark service (technorati.com)
+    * added new bookmark service (netscape.com)
+    * added new bookmark service (wink.com)
+    * added new bookmark service (bluedot.us)
+    
+    
+06-12-19 Frank Naegler  <typo3@naegler.net>
+    * new feature: know you can use this extension on every page not only on Blog-Posts
+    
+06-10-06 Frank Naegler  <typo3@naegler.net>
+    * added new bookmark service (de.lirio.us)
+    * added new bookmark service (fark.com)
+    * added new bookmark service (feedmelinks.com)
+    * added new bookmark service (linkagogo.com)
+    * added new bookmark service (netvouz.com)
+    * added new bookmark service (rawsugar.com)
+    * added new bookmark service (scuttle.org)
+    * added new bookmark service (shadows.com)
+    * added new bookmark service (simpy.com)
+    * added new bookmark service (smarking.com)
+    * added new bookmark service (wists.com)
+    * bugfix #0000011: Path to image incorrect
+
+06-09-10 Frank Naegler  <typo3@naegler.net>
+    * added new bookmark service (digg.com)
+    * added new bookmark service (newsvine.com)
+
+06-09-09 Frank Naegler  <typo3@naegler.net>
+
+    * added documentation
+    * added new social bookmark service (mylink.de)
+
+06-09-08 Frank Naegler  <typo3@naegler.net>
+
+    * Initial release

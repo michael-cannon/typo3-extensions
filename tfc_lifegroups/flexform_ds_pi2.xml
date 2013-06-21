@@ -1,0 +1,35 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>General Configuration</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+  				<el>
+					<semester>
+  						<TCEforms>
+  							<label>Semester:</label>
+  							<config>
+  								<type>select</type>
+  								<items type="array">
+  									<numIndex index="0" type="array">
+  										<numIndex index="0"></numIndex>
+  										<numIndex index="1">0</numIndex>
+  									</numIndex>
+  								</items>
+								<foreign_table>tx_tfclifegroups_semesters</foreign_table>
+								<foreign_table_where>
+									ORDER BY title
+								</foreign_table_where>
+  								<size>1</size>
+  								<maxitems>1</maxitems>
+  								<minitems>0</minitems>
+  							</config>
+  						</TCEforms>
+  					</semester>
+  				</el>
+  			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

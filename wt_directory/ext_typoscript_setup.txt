@@ -1,0 +1,109 @@
+# WT_DIRECTORY PLUGIN #
+includeLibs.user_wtdirectory_pagebrowser = EXT:wt_directory/lib/class.user_wtdirectory_pagebrowser.php
+
+# main settings
+plugin.tx_wtdirectory_pi1 {
+	
+	# Constants
+	template.list = {$plugin.wtdirectory.template.list}
+	template.detail = {$plugin.wtdirectory.template.detail}
+	template.ALLmarker = {$plugin.wtdirectory.template.ALLmarker}
+	template.pagebrowser = {$plugin.wtdirectory.template.pagebrowser}
+	template.search = {$plugin.wtdirectory.template.search}
+	path.ttaddress_pictures = {$plugin.wtdirectory.path.ttaddress_pictures}
+	enable.googlemapOnDetail = {$plugin.wtdirectory.enable.googlemapOnDetail}
+	enable.hideDescription = {$plugin.wtdirectory.enable.hideDescription}
+	enable.autoChange = {$plugin.wtdirectory.enable.autoChange}
+	enable.vCardForList = {$plugin.wtdirectory.enable.vCardForList}
+	enable.vCardForDetail = {$plugin.wtdirectory.enable.vCardForDetail}
+	label.vCard = {$plugin.wtdirectory.label.vCard}
+	list.perPage = {$plugin.wtdirectory.list.perPage}
+	list.orderby = {$plugin.wtdirectory.list.orderby}
+	detail.title = {$plugin.wtdirectory.detail.title}
+	filter.cat.disable = {$plugin.wtdirectory.filter.cat.disable}
+	
+	
+	# Detail view
+	detail {
+		field.image = IMAGE
+		field.image.file.width = 180
+		field.image.wrap = |
+		
+		field.name = TEXT
+		field.name.wrap = <h2>|</h2>
+	}
+	
+	
+	# List view
+	list {
+		field.image = IMAGE
+		field.image.file.width = 120
+		field.image.wrap = |
+		
+		field.name = TEXT
+		field.name.wrap = <h2>|</h2>
+	}
+	
+	
+	# Pagebrowser
+	pagebrowser = HMENU
+	pagebrowser {
+		special = userfunction
+		special.userFunc = user_wtdirectory_pagebrowser->user_pagebrowser
+		
+		1 = TMENU
+		1 {
+			wrap = <ul class="wt_directory_pagebrowser">|</ul>
+			NO.allWrap = <li>|</li>
+			ACT = 1
+			ACT.allWrap = <li>|</li>
+			ACT.doNotLinkIt = 1
+			# ACT.ATagParams = class="act"
+		}
+	}
+	
+	
+	# vCard settings
+	vCard {
+		enable = 1
+		display_name = ###WTDIRECTORY_TTADDRESS_NAME###
+		first_name = ###WTDIRECTORY_TTADDRESS_FIRST_NAME###
+		last_name = ###WTDIRECTORY_TTADDRESS_LAST_NAME###
+		additional_name = ###WTDIRECTORY_TTADDRESS_MIDDLE_NAME###
+		name_prefix = 
+		name_suffix = 
+		nickname =
+		title = ###WTDIRECTORY_TTADDRESS_TITLE###
+		role = 
+		department =
+		company = ###WTDIRECTORY_TTADDRESS_COMPANY###
+		work_po_box =
+		work_extended_address =
+		work_address =
+		work_city =
+		work_state =
+		work_postal_code =
+		work_country =
+		home_po_box =
+		home_extended_address =
+		home_address = ###WTDIRECTORY_TTADDRESS_ADDRESS###
+		home_city = ###WTDIRECTORY_TTADDRESS_CITY###
+		home_state = ###WTDIRECTORY_TTADDRESS_REGION###
+		home_postal_code = ###WTDIRECTORY_TTADDRESS_ZIP###
+		home_country = ###WTDIRECTORY_TTADDRESS_COUNTRY###
+		office_tel =
+		home_tel = ###WTDIRECTORY_TTADDRESS_PHONE###
+		cell_tel =
+		fax_tel =
+		pager_tel =
+		email1 = ###WTDIRECTORY_TTADDRESS_EMAIL###
+		email2 =
+		url = ###WTDIRECTORY_TTADDRESS_URL###
+		photo = ###WTDIRECTORY_TTADDRESS_IMAGE###
+		birthday = ###WTDIRECTORY_TTADDRESS_BIRTHDAY###
+		timezone =
+		sort_string =
+		note = Created by wt_directory
+	}
+
+}

@@ -1,0 +1,25 @@
+
+plugin.tx_jobbankresumemgr_pi1 {
+  # cat=plugin.Job Bank Resume Manager/file; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template file for display of calendar box. See EXT:mc_advcalendar_extended/advcalendar_box.tmpl for an example
+  templateFile = EXT:job_bank_resume_mgr/main.tmpl
+
+  # cat=plugin.Job Bank Resume Manager; type=string; label= Admin Contact Email
+  email_admin =
+ 
+   # cat=plugin.Job Bank Resume Manager; type=string; label= Admin Name
+  name_admin = 
+
+  # cat=plugin.Job Bank Resume Manager; type=string; label= Email Subject
+  email_subject = 
+
+  # cat=plugin.Job Bank Resume Manager; type=int; label= Storage Page Id
+  storagePID = 
+
+    # cat=plugin.Job Bank Resume Manager; type=string; label= Site Namer for Multidomain
+  siteName = 
+  
+    # cat=plugin.Job Bank Resume Manager; type=int; label= Job bank search page Id
+  jobBankPageId =  
+  
+
+}

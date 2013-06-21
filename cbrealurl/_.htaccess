@@ -1,0 +1,313 @@
+### Begin PHP helpers
+
+# for 1und1 servers per Alex Kellner
+# AddType x-mapp-php5 .php
+# AddHandler x-mapp-php5 .php
+
+# for misc servers
+# AddHandler php53-cgi .php
+# php_flag magic_quotes_gpc off
+
+### Begin PHP helpers
+
+
+### Begin: Compression via TYPO3 ###
+
+# Compressing resource files will save bandwidth and so improve loading speed especially for users
+# with slower internet connections. TYPO3 can compress the .js and .css files for you.
+# *) Uncomment the following lines and
+# $TYPO3_CONF_VARS['BE']['compressionLevel'] = '5';
+# $TYPO3_CONF_VARS['FE']['compressionLevel'] = '5';
+#    config.compressJs and config.compressCss for GZIP compression of Frontend JS and CSS files.
+
+<FilesMatch "\.js\.gzip$">
+	AddType "text/javascript" .gzip
+</FilesMatch>
+<FilesMatch "\.css\.gzip$">
+	AddType "text/css" .gzip
+</FilesMatch>
+AddEncoding gzip .gzip
+
+### End: Compression via TYPO3 ###
+
+
+### Begin: Browser caching of ressource files ###
+
+<IfModule mod_mime.c>
+	AddType application/x-font-woff .woff
+    AddType application/java .class
+    AddType application/msword .doc .docx
+    AddType application/pdf .pdf
+    AddType application/vnd.ms-access .mdb
+    AddType application/vnd.ms-excel .xla .xls .xlsx .xlt .xlw
+    AddType application/vnd.ms-fontobject .eot
+    AddType application/vnd.ms-powerpoint .pot .pps .ppt .pptx
+    AddType application/vnd.ms-project .mpp
+    AddType application/vnd.ms-write .wri
+    AddType application/vnd.oasis.opendocument.chart .odc
+    AddType application/vnd.oasis.opendocument.database .odb
+    AddType application/vnd.oasis.opendocument.formula .odf
+    AddType application/vnd.oasis.opendocument.graphics .odg
+    AddType application/vnd.oasis.opendocument.presentation .odp
+    AddType application/vnd.oasis.opendocument.spreadsheet .ods
+    AddType application/vnd.oasis.opendocument.text .odt
+    AddType application/x-font-otf .otf
+    AddType application/x-font-ttf .ttf .ttc
+    AddType application/x-gzip .gz .gzip
+    AddType application/x-javascript .js
+    AddType application/x-msdownload .exe
+    AddType application/x-shockwave-flash .swf
+    AddType application/x-tar .tar
+    AddType application/zip .zip
+    AddType audio/midi .mid .midi
+    AddType audio/mpeg .mp3 .m4a
+    AddType audio/ogg .ogg
+    AddType audio/wav .wav
+    AddType audio/wma .wma
+    AddType audio/x-realaudio .ra .ram
+    AddType image/bmp .bmp
+    AddType image/gif .gif
+    AddType image/jpeg .jpg .jpeg .jpe
+    AddType image/png .png
+    AddType image/svg+xml .svg .svgz
+    AddType image/tiff .tif .tiff
+    AddType image/x-icon .ico
+    AddType text/css .css
+    AddType text/html .html .htm
+    AddType text/plain .txt
+    AddType text/richtext .rtf .rtx
+    AddType text/x-component .htc
+    AddType text/xml .xml
+    AddType text/xsd .xsd
+    AddType text/xsl .xsl
+    AddType video/asf .asf .asx .wax .wmv .wmx
+    AddType video/avi .avi
+    AddType video/divx .divx
+    AddType video/mp4 .mp4 .m4v
+    AddType video/mpeg .mpeg .mpg .mpe
+    AddType video/quicktime .mov .qt
+</IfModule>
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType application/java "access plus 1 year"
+    ExpiresByType application/msword "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 year"
+    ExpiresByType application/vnd.ms-access "access plus 1 year"
+    ExpiresByType application/vnd.ms-excel "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    ExpiresByType application/vnd.ms-powerpoint "access plus 1 year"
+    ExpiresByType application/vnd.ms-project "access plus 1 year"
+    ExpiresByType application/vnd.ms-write "access plus 1 year"
+    ExpiresByType application/vnd.oasis.opendocument.chart "access plus 1 year"
+    ExpiresByType application/vnd.oasis.opendocument.database "access plus 1 year"
+    ExpiresByType application/vnd.oasis.opendocument.formula "access plus 1 year"
+    ExpiresByType application/vnd.oasis.opendocument.graphics "access plus 1 year"
+    ExpiresByType application/vnd.oasis.opendocument.presentation "access plus 1 year"
+    ExpiresByType application/vnd.oasis.opendocument.spreadsheet "access plus 1 year"
+    ExpiresByType application/vnd.oasis.opendocument.text "access plus 1 year"
+    ExpiresByType application/x-font-otf "access plus 1 year"
+    ExpiresByType application/x-font-ttf "access plus 1 year"
+    ExpiresByType application/x-gzip "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    ExpiresByType application/x-msdownload "access plus 1 year"
+    ExpiresByType application/x-shockwave-flash "access plus 1 year"
+    ExpiresByType application/x-tar "access plus 1 year"
+    ExpiresByType application/zip "access plus 1 year"
+    ExpiresByType audio/midi "access plus 1 year"
+    ExpiresByType audio/mpeg "access plus 1 year"
+    ExpiresByType audio/ogg "access plus 1 year"
+    ExpiresByType audio/wav "access plus 1 year"
+    ExpiresByType audio/wma "access plus 1 year"
+    ExpiresByType audio/x-realaudio "access plus 1 year"
+    ExpiresByType image/bmp "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 hour"
+    ExpiresByType image/tiff "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType text/css "access plus 1 year"
+	# Disabled by request since TYPO3 html is frequently dynamic
+    # ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType text/plain "access plus 1 hour"
+    ExpiresByType text/richtext "access plus 1 hour"
+    ExpiresByType text/x-component "access plus 1 year"
+    ExpiresByType text/xml "access plus 1 hour"
+    ExpiresByType text/xsd "access plus 1 hour"
+    ExpiresByType text/xsl "access plus 1 hour"
+    ExpiresByType video/asf "access plus 1 year"
+    ExpiresByType video/avi "access plus 1 year"
+    ExpiresByType video/divx "access plus 1 year"
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/mpeg "access plus 1 year"
+    ExpiresByType video/quicktime "access plus 1 year"
+</IfModule>
+<IfModule mod_deflate.c>
+    <IfModule mod_setenvif.c>
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+        BrowserMatch ^Mozilla/4\.0[678] no-gzip
+        BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+        BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+    </IfModule>
+    <IfModule mod_headers.c>
+        Header append Vary User-Agent env=!dont-vary
+    </IfModule>
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon
+    </IfModule>
+</IfModule>
+<FilesMatch "\.(css|js|htc|CSS|JS|HTC)$">
+    <IfModule mod_headers.c>
+        Header set Pragma "public"
+        Header append Cache-Control "public, must-revalidate, proxy-revalidate"
+    </IfModule>
+    FileETag MTime Size
+</FilesMatch>
+<FilesMatch "\.(html|htm|rtf|rtx|svg|svgz|txt|xsd|xsl|xml|HTML|HTM|RTF|RTX|SVG|SVGZ|TXT|XSD|XSL|XML)$">
+    <IfModule mod_headers.c>
+        Header set Pragma "public"
+        Header append Cache-Control "public, must-revalidate, proxy-revalidate"
+    </IfModule>
+    FileETag MTime Size
+</FilesMatch>
+<FilesMatch "\.(asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|eot|exe|gif|gz|gzip|ico|jpg|jpeg|jpe|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|otf|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|svg|svgz|swf|tar|tif|tiff|ttf|ttc|wav|wma|wri|xla|xls|xlsx|xlt|xlw|zip|ASF|ASX|WAX|WMV|WMX|AVI|BMP|CLASS|DIVX|DOC|DOCX|EOT|EXE|GIF|GZ|GZIP|ICO|JPG|JPEG|JPE|MDB|MID|MIDI|MOV|QT|MP3|M4A|MP4|M4V|MPEG|MPG|MPE|MPP|OTF|ODB|ODC|ODF|ODG|ODP|ODS|ODT|OGG|PDF|PNG|POT|PPS|PPT|PPTX|RA|RAM|SVG|SVGZ|SWF|TAR|TIF|TIFF|TTF|TTC|WAV|WMA|WRI|XLA|XLS|XLSX|XLT|XLW|ZIP)$">
+    <IfModule mod_headers.c>
+        Header set Pragma "public"
+        Header append Cache-Control "public, must-revalidate, proxy-revalidate"
+    </IfModule>
+    FileETag MTime Size
+</FilesMatch>
+
+### End: Browser caching of ressource files ###
+
+
+### Begin: Settings for mod_rewrite ###
+# You need rewriting, if you use a URL-Rewriting extension (RealURL, CoolUri, SimulateStatic).
+
+<IfModule mod_rewrite.c>
+
+	# Enable URL rewriting
+	RewriteEngine On
+
+	# Domain redirects example.com to www.example.com
+	# redirect for non-ssl
+	# RewriteCond %{SERVER_PORT} ^80$
+	# RewriteCond %{HTTP_HOST} ^example\.com$ [NC]
+	# RewriteRule ^(.*)$ http://www.example.com/$1 [R=301,L]
+	
+	# redirect for ssl
+	# RewriteCond %{SERVER_PORT} ^443$
+	# RewriteCond %{HTTP_HOST} ^example\.com$ [NC]
+	# RewriteRule ^(.*)$ https://www.example.com/$1 [R=301,L]
+
+	# Change this path, if your TYPO3 installation is located in a subdirectory of the website root.
+	RewriteBase /
+
+	# Rule for versioned static files, configured through:
+	# $TYPO3_CONF_VARS['BE']['versionNumberInFilename'] = 1;
+	# $TYPO3_CONF_VARS['FE']['versionNumberInFilename'] = 1;
+	# IMPORTANT: This rule has to be the very first RewriteCond in order to work!
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.+)\.(\d+)\.(php|js|css|png|jpg|gif|gzip)$ $1.$3 [L]
+
+	# Basic security checks
+	# - Restrict access to deleted files in Recycler directories
+	# - Restrict access to TypoScript files in default templates directories
+	# - Restrict access to Private extension directories
+	# For httpd.conf, use these lines instead of the next ones:
+	# RewriteRule ^/TYPO3root/fileadmin/(.*/)?_recycler_/ - [F]
+	# RewriteRule ^/TYPO3root/fileadmin/templates/.*(\.txt|\.ts)$ - [F]
+	# RewriteRule ^/TYPO3root/typo3conf/ext/[^/]+/Resources/Private/ - [F]
+	RewriteRule ^fileadmin/(.*/)?_recycler_/ - [F]
+	RewriteRule ^fileadmin/templates/.*(\.txt|\.ts)$ - [F]
+	RewriteRule ^typo3conf/ext/[^/]+/Resources/Private/ - [F]
+
+	# Stop rewrite processing, if we are in the typo3/ directory.
+	# For httpd.conf, use this line instead of the next one:
+	# RewriteRule ^/TYPO3root/(typo3/|t3lib/|fileadmin/|typo3conf/|typo3temp/|uploads/|favicon\.ico) - [L]
+	RewriteRule ^(typo3/|t3lib/|fileadmin/|typo3conf/|typo3temp/|uploads/|favicon\.ico) - [L]
+
+	# Redirect http://example.com/typo3 to http://example.com/typo3/index_re.php and stop the rewrite processing.
+	# For httpd.conf, use this line instead of the next one:
+	# RewriteRule ^/TYPO3root/typo3$ /TYPO3root/typo3/index.php [L]
+	RewriteRule ^typo3$ typo3/index_re.php [L]
+
+	# Do not rewrite any static resources
+	# For httpd.conf, you need to prefix each '%{REQUEST_FILENAME}' with '%{DOCUMENT_ROOT}'.
+	RewriteCond %{REQUEST_FILENAME} -f [OR]
+	RewriteCond %{REQUEST_FILENAME} -d [OR]
+	RewriteCond %{REQUEST_FILENAME} -l
+	RewriteRule .* - [L]
+
+	# http://typo3.org/documentation/document-library/extension-manuals/nc_staticfilecache/2.3.4/view/1/3/
+	#------------------------------------------------------------------------------
+	# beginning of static file cache rulesets
+
+	# Set gzip extension into an environment variable if the visitors browser can handle gzipped content.
+	RewriteCond %{HTTP:Accept-Encoding} gzip [NC]
+	RewriteRule .* - [E=TX_NCSTATICFILECACHE_GZIP:.gz]
+
+
+	# Don't cache HTTPS traffic. You may choose to comment out this
+	# option if your site runs fully on https. If your site runs mixed, you will
+	# not want https traffic to be cached in the same typo3temp folder where it can
+	# be requested over http.
+	# Enable this if you use a mixed setup.
+	#RewriteCond %{HTTPS} off
+
+	# We only redirect URI's without query strings
+	RewriteCond %{QUERY_STRING} ^$
+
+	# It only makes sense to do the other checks if a static file actually exists.
+	RewriteCond %{DOCUMENT_ROOT}/typo3temp/tx_ncstaticfilecache/%{HTTP_HOST}/%{REQUEST_URI}index.html%{ENV:TX_NCSTATICFILECACHE_GZIP} -f
+
+	# NO frontend user is logged in. Logged in frontend users may see different
+	# information than anonymous users. But the anonymous version is cached. So
+	# don't show the anonymous version to logged in frontend users.
+	RewriteCond %{HTTP_COOKIE} !nc_staticfilecache [NC]
+
+	# Uncomment the following line if you use MnoGoSearch
+	#RewriteCond %{HTTP:X-TYPO3-mnogosearch} ^$
+
+	# We only redirect GET requests
+	RewriteCond %{REQUEST_METHOD} GET
+
+	# NO backend user is logged in. Please note that the be_typo_user cookie expires at the
+	# end of the browser session. If you have logged out of the TYPO3 backend and are expecting to see cached pages but don't. Please close this browser settion first or remove the cookie manually or use another browser to hit your frontend.
+	RewriteCond %{HTTP_COOKIE} !be_typo_user [NC]
+
+	# Check for Ctrl Shift reload
+	RewriteCond %{HTTP:Pragma} !no-cache
+	RewriteCond %{HTTP:Cache-Control} !no-cache
+
+	# Rewrite the request to the static file.
+	RewriteRule .* typo3temp/tx_ncstaticfilecache/%{HTTP_HOST}/%{REQUEST_URI}/index.html%{ENV:TX_NCSTATICFILECACHE_GZIP} [L]
+
+	# Set proper content type and encoding for gzipped html.
+	<Files *.html.gz>
+		ForceType text/html
+		<IfModule mod_headers.c>
+			Header set Content-Encoding gzip
+		</IfModule>
+	</Files>
+
+	# end of static file cache ruleset
+	#------------------------------------------------------------------------------
+
+	# If the file/symlink/directory does not exist => Redirect to index.php.
+	# For httpd.conf, you need to prefix each '%{REQUEST_FILENAME}' with '%{DOCUMENT_ROOT}'.
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-l
+
+	# Main URL rewriting.
+	# For httpd.conf, use this line instead of the next one:
+	# RewriteRule .* /TYPO3root/index.php [L]
+	RewriteRule .* index.php [L]
+
+</IfModule>
+
+### End: Settings for mod_rewrite ###

@@ -1,0 +1,40 @@
+2009-10-15 Thursday 22:36  mc
+
+	* update CHANGELOG
+
+2009-10-15 Thursday 22:31  mc
+
+	* move extconf to extension; default image zoom on
+
+2009-10-11 Sunday 05:46  mc
+
+	* update CHANGELOG
+
+2009-10-11 Sunday 05:45  mc
+
+	* use movies instead of rgmediaimages
+
+2009-10-11 Sunday 03:17  mc
+
+	* defaults for multibox
+
+2009-10-11 Sunday 03:03  mc
+
+	* Inital import of "pageTSconfig.txt" file
+
+2009-10-11 Sunday 03:02  mc
+
+	* Inital import of "ext_conf_template.txt" file
+
+2009-10-11 Sunday 02:28  mc
+
+	* update CHANGELOG
+
+2009-10-11 Sunday 02:27  mc
+
+	* Inital import of 'icmedia' directory
+
+2009-10-11 Sunday 02:27  mc
+
+	* Initial revision
+

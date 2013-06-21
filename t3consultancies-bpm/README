@@ -1,0 +1,102 @@
+Description
+
+The Solution Locator contains a list of vendors with a description, a web
+address, a logo and contact data. Vendors are organized into
+
+1. elite and preferred providers
+2. categories
+
+Each vendor is either an elite or a preferred solution provider. Each vendor
+may be in one or more category.
+
+The Solution Locator page shows a collage of vendors, by default it shows all
+vendors. At the top there's a select box with categories. Upon selecting a
+category, only vendors that offer services in that particular sphere are shown.
+
+Under the collage there's a list with details about each vendor. For each
+vendor there's a checkbox "Have this vendor contact me". When clicking on the
+button "Contact Me" at the bottom of the page, the user is asked to enter his
+contact information and the question he has to the vendor. Clicking submit will
+send an email to all previously selected vendors, asking the vendor to contact
+the user. Additionally the contact request will be saved in the database for
+later reference.
+
+
+Managing the Solution Locator in the Backend
+
+There are Sponsor, Sponsor Category and Contact Request records. Make sure to
+check the "Show secondary options (palettes)" checkbox at the bottom of the
+page in order for all fields to show.
+
+
+Explanation of Sponsor record
+
+Hide: If checked, unconditionally hide this sponsor in the frontend. Useful if
+sponsor information is not complete yet.
+Start, Stop: You may choose to show a sponsor only starting with a certain
+date, only until a certain date or only in a certain time frame.
+Access: ignore
+Company Title: This is not shown in the frontend. It's used to identify the
+sponsor records in the backend list view.
+Description: The description of the vendors services / products shown in the
+list view in the frontend.
+Website URL: URL of the website of the vendor.
+Contact Email: Email address that contact requests are sent to.
+Contact Name: Name used to address the vendor contact person in the contact
+request email.
+Services offered: List of services / products this vendor offers. See also
+Sponsor Category record below.
+Selected: ignore
+Sorting weight: Preferred or Elite provider. Elite providers are shown first in
+the frontend under the respective heading. No other impact.
+Frontend owner-user: ignore
+Logo: Company logo. Shown in the collage and in the list view in the frontend.
+Should not be too large (concerning both file size and image dimensions)
+
+The rest of the fields can be ignored for now.
+
+
+Explanation of Sponsor Category record
+
+These records contain just one field, "Title". You can rename existing
+categories or add new ones. All categories that are not hidden will appear in
+the category select box in the frontend. Assign categories to sponsors in the
+"Services offered" field in Sponsor records.
+
+
+Explanation of Contact Request record
+
+Contact Request records are not meant to be edited or created in the backend,
+but you may delete them at will. They are created just for reference. They
+contain all user input of the contact form and the vendors this contact request
+went to.
+
+
+Configuration
+
+The Solution Locator provides some configuration parameters concerning
+templates and contact email parameters. They are set as TypoScript records in
+the template record. Look at /BrainStorm Group/BPMInstitute.org/ with the
+Web->Template module and edit the Setup field. At the bottom of the text area
+you will see the following lines:
+
+plugin.tx_t3consultancies_pi1.overrideVendorAddress = rob@bpminstitute.org
+plugin.tx_t3consultancies_pi1.Bcc = 
+
+All parameters have to be prefixed with plugin.tx_t3consultancies_pi1. The
+following parameters exist:
+
+templateFile: pointer to a file with the template for the front-end solution
+locator page
+contactTemplateFile: pointer to a file with the template for the contact form
+page
+thankYouTemplateFile: pointer to a file wiht the template for the thank you
+page
+emailTemplateFile: pointer to a file with the template for the contact email
+overrideVendorAddress: if set, instead of emailing vendors all contact request
+emails are sent to this address instead
+Bcc: if set, send a blind carbon copy of all contact request emails to this
+address. can be set to more than one address, in which case the addresses have
+to be separated by commas. Example: 
+
+plugin.tx_t3consultancies_pi1:Bcc = sales@example.com, marketing@example.com

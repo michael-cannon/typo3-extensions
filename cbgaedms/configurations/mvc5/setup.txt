@@ -1,0 +1,19 @@
+includeLibs.tx_div = EXT:div/class.tx_div.php
+
+# Common configuration
+plugin.tx_cbgaedms_mvc5.configurations < plugin.tx_cbgaedms
+plugin.tx_cbgaedms_mvc5.configurations {
+}
+
+
+includeLibs.tx_cbgaedms_controller_Control_Panel = EXT:cbgaedms/controllers/class.tx_cbgaedms_controller_Control_Panel.php
+
+plugin.tx_cbgaedms.controller_Control_Panel = USER
+plugin.tx_cbgaedms.controller_Control_Panel {
+  userFunc = tx_cbgaedms_controller_Control_Panel->main
+   setupPath = plugin.tx_cbgaedms_mvc5.configurations.
+   configurations < plugin.tx_cbgaedms_mvc5.configurations
+   configurations.defaultAction = Control_Panel_Director
+}
+
+tt_content.list.20.cbgaedms_mvc5 =< plugin.tx_cbgaedms.controller_Control_Panel

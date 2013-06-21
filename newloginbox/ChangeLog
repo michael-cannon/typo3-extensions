@@ -1,0 +1,11 @@
+2004-11-06  Ingmar Schlecht  <ingmar@typo3.org>
+
+	* Fixed spelling mistake in pi1/locallang.php file. Thanks to Glen Gibb for reporting it!
+
+2004-11-06  Ingmar Schlecht  <ingmar@typo3.org>
+
+	* Created hook in pi1 class for dkd_redirect_at_login extension.
+
+2004-11-06  Ingmar Schlecht  <ingmar@typo3.org>
+
+	* Added ChangeLog to newloginbox

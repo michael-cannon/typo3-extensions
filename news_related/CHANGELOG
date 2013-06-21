@@ -1,0 +1,107 @@
+2009-05-18 Monday 05:45  cannon
+
+	* CHANGELOG: update CHANGELOG
+
+2009-04-02 Thursday 23:34  cannon
+
+	* class.tx_newsrelated.php, ext_emconf.php: Acqal branding
+
+2008-09-06 Saturday 20:56  cannon
+
+	* CHANGELOG: post 1.0.0 checking
+
+2008-09-06 Saturday 20:56  cannon
+
+	* ext_emconf.php, ext_icon.gif: update graphic icon; 1.0.0 checkin
+
+2008-09-06 Saturday 20:52  cannon
+
+	* ext_emconf.php: set as beta
+
+2006-08-22 Tuesday 10:38  cannon
+
+	* class.tx_newsrelated.php: ordering by content element
+
+2006-05-29 Monday 11:40  cannon
+
+	* ext_emconf.php: Typo3 extension repository uploading
+
+2006-04-06 Thursday 16:26  cannon
+
+	* class.tx_newsrelated.php: hard code date, desc ordering
+
+2006-03-31 Friday 12:59  cannon
+
+	* class.tx_newsrelated.php: Remove header if no contnet to show
+
+2006-03-31 Friday 12:49  cannon
+
+	* class.tx_newsrelated.php: use listStartId
+
+2006-01-11 Wednesday 11:21  cannon
+
+	* class.tx_newsrelated.php: dec 15; ignore same news item
+
+2005-03-27 Sunday 18:59  cannon
+
+	* CHANGELOG: updatge changelogs
+
+2005-03-27 Sunday 18:34  cannon
+
+	* class.tx_newsrelated.php: space removal
+
+2005-03-23 Wednesday 23:17  cannon
+
+	* CHANGELOG: add CHANGELOG
+
+2005-03-20 Sunday 23:39  cannon
+
+	* class.tx_newsrelated.php: || not && on uid
+
+2005-03-20 Sunday 12:41  cannon
+
+	* class.tx_newsrelated.php: ignore current news item in related. No
+	  news id, return in getRelatedNews
+
+2005-03-17 Thursday 00:32  cannon
+
+	* ext_emconf.php: updated to 0.2.0 for all but userinfo; userinfo
+	  updated to 0.1.0
+
+2005-03-16 Wednesday 17:54  cannon
+
+	* ext_emconf.php: add point of contact
+
+2005-03-14 Monday 01:35  cannon
+
+	* ext_emconf.php: add to T3 repository
+
+2005-03-13 Sunday 00:14  cannon
+
+	* class.tx_newsrelated.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, news_related.tmpl: add limit
+
+2005-03-10 Thursday 13:37  cannon
+
+	* class.tx_newsrelated.php, ext_localconf.php,
+	  ext_typoscript_setup.txt, locallang.php, news_related.tmpl:
+	  baseline no categories; select related news via join; 3rd column
+	  for template
+
+2005-03-10 Thursday 01:52  cannon
+
+	* class.tx_newsrelated.php, ext_emconf.php, ext_icon.gif,
+	  ext_localconf.php, ext_tables.php, ext_tables.sql,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  locallang.php, locallang_db.php, news_related.tmpl,
+	  doc/wizard_form.dat, doc/wizard_form.html: Initial revision
+
+2005-03-10 Thursday 01:52  cannon
+
+	* class.tx_newsrelated.php, ext_emconf.php, ext_icon.gif,
+	  ext_localconf.php, ext_tables.php, ext_tables.sql,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  locallang.php, locallang_db.php, news_related.tmpl,
+	  doc/wizard_form.dat, doc/wizard_form.html (utags: initial):
+	  initial news_related import
+

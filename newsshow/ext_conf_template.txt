@@ -1,0 +1,4 @@
+# cat=basic//0; type=int+; label=TypeNum: The type ID for the XML output.
+typeNum = 9005
+# cat=basic//1; type=int+; label=Blogs Page ID: Page ID for blogs page.
+#blogsID = 208

@@ -1,0 +1,31 @@
+/**
+ * @author Michael Cannon <michael@peimic.com>
+ * @version $Id: setup.txt,v 1.1.1.1 2010/04/15 10:03:39 peimic.comprock Exp $
+ */
+plugin.wt_spamshield {
+	enable.standardMailform = {$plugin.wt_spamshield.enable.standardMailform}
+	redirect.standardMailform = {$plugin.wt_spamshield.redirect.standardMailform}
+	enable.powermail = {$plugin.wt_spamshield.enable.powermail}
+	enable.ve_guestbook = {$plugin.wt_spamshield.enable.ve_guestbook}
+	redirect.ve_guestbook = {$plugin.wt_spamshield.redirect.ve_guestbook}
+	message {
+		session.note1 = Please speed up form entry
+		session.note2 = Please slow down your form entry
+		session.note3 = Please don't clear your sesssion
+		httpcheck = Please don't use more than %s links
+		uniquecheck = Every field should contain its own unique content
+		namecheck = Are your first and last name really the same?
+		akismet = Your spamming on purpose
+		honeypod = Congratulations, you found the honeypot, now begone
+	}
+}
+
+config {
+	spamProtectEmailAddresses = {$config.spamProtectEmailAddresses}
+	spamProtectEmailAddresses_atSubst = {$config.spamProtectEmailAddresses_atSubst}
+	spamProtectEmailAddresses_lastDotSubst = {$config.spamProtectEmailAddresses_lastDotSubst}
+}
+
+[globalVar = LIT:1 = {$https_enforcer.enable}]
+	page.5 < plugin.tx_httpsenforcer_pi1
+[end]

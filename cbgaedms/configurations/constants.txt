@@ -1,0 +1,45 @@
+plugin.tx_cbgaedms {
+	pathToTemplateDirectory = EXT:cbgaedms/templates/
+	pathToLanguageFile = EXT:cbgaedms/locallang.xml
+
+	// folder id of edms records
+	storagePid = 245
+	
+	edmsHomePid = 244
+
+	locationsPid = 250
+	siloPid = 252
+
+	userLocationsPid = 260
+	usersPid = 249
+	usersStoragePid = 106
+	userProfilePid = 133
+
+	documentPid = 248
+	docTypePid = 265
+	reportsPid = 247
+	notificationsPid = 275
+
+	masterAgency = 110
+	
+	uploadPath = uploads/tx_cbgaedms/
+
+	resultsPerView = 25
+
+	phone247us = 1-877-IPG-IPG1 (1-877-474-4741)
+	phone247nonus = +1 443-716-2239
+
+	userToBeAssigned = 4419
+	googleMapApi = ABQIAAAAPFTlxD1tejy-wPHw5rpDhRQkzaIG1xdEGeLEXpdnxETkrNJ-WRRJtNSrLC5_l-vu7VYN3IWEF3AWiA
+
+	helpPidLocationDashboard = 279
+	helpPidLocationEdit = 278
+	helpPidDocumentDetail = 277
+	helpPidNewDocumentVersion = 276
+	helpPidNewDocument = 275
+
+	emailFrom = reports@interpublic.com
+	emailSubject = EDMS Report: 
+
+	locationDocsPerView = 5
+}

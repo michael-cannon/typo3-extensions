@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Language labels for plugin tx_icsugarcrm_pi1</description>
+		<type>module</type>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="error">Error:</label>
+			<label index="noUserLoggedIn">There's no user logged in.</label>
+			<label index="userNotAuthorized">User isn't authorized for SugarCRM portal</label>
+			<label index="abc">xyz</label>
+			<label index="abc">xyz</label>
+			<label index="abc">xyz</label>
+			<label index="abc">xyz</label>
+			<label index="abc">xyz</label>
+			<label index="abc">xyz</label>
+			<label index="abc">xyz</label>
+			<label index="abc">xyz</label>
+		</languageKey>
+	</data>
+</T3locallang>

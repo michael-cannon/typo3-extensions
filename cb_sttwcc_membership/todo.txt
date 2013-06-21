@@ -1,0 +1,75 @@
+x upload excel file
+x convert to parseable format
+
+x separate categories
+x load current categories
+x compare categories
+x save missings categories to table
+
+x load current users
+- separate user
+- compare users
+- save missings users to table
+- pull usergroup 2 from missing users
+
+- load current companies
+- separate companies
+- compare companies
+- save missings companies to table
+- hide missing companies
+
+14 columns data
+name	indivname	address1	address2	city	state	zip	phone1	fax
+	email	website	listing1	listing2	listing3
+
+
+fe_users needs
+4 as pid
+md5( indivname || email ) as username /* used for lookup of entries */
+md5( indivname || email ) as password /* used for lookup of entries */
+'1,2' as usergroup /* newsletter, paid membership */
+indivname as name
+address1 || address2 as address
+phone1 as telephone
+fax
+email
+1 as cruser_id
+city
+state as zone.uid as tx_cbsttwccmembership_state
+zip
+220 as tx_cbsttwccmembership_country
+website as url
+name as company
+1 as module_sys_dmail_category
+1 as module_sys_dmail_html
+
+
+tx_t3consultancies needs
+name as title
+website as url
+email as contact_email
+indivname as contact_name
+220 as cntry
+4 as pid
+1 as cruser_id
+
+
+tx_t3consultancies_cat needs
+1 as cruser_id
+4 as pid
+listing1 as title
+listing2 as title
+listing3 as title
+
+
+tx_t3consultancies_services_mm needs
+tx_t3consultancies.uid as uid_local
+tx_t3consultancies_cat.uid as uid_foreign
+1 as sorting
+
+
+August 14 17:05
+Country listing to city
+List services in detail
+List addressing in detail from fe_user
+Group consultancies best as possible

@@ -1,0 +1,5 @@
+plugin.tx_srfeuserregistersurvey_pi1 {
+
+  # cat=plugin.tx_srfeuserregistersurvey_pi1/file; type=string; label= Template File: HTML-template file 
+  file.templateFile = EXT:sr_feuser_register_survey/templates/survey.tmpl
+}

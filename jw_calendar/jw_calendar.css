@@ -1,0 +1,798 @@
+/****************************/
+/***** T o o l t i p ********/
+/****************************/
+.jwcalendar_olbg { 
+	border: solid 0px #003399; 
+	background-color: #6666CC; 
+}
+
+.jwcalendar_olfg { 
+	border: 0px; 
+	background-color: #EEEEEE; 
+	padding:4px 6px;
+	text-align:left;
+}
+
+.jwcalendar_olcf { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10px; 
+	line-height: 2em; 
+	font-weight: bold; 
+	color: #FFFFFF; 
+}
+
+.jwcalendar_oltf { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10px; 
+	color: #000000; 
+}
+/****************************/
+/***T o o l t i p ** E N D **/
+/****************************/
+
+div.tx-jwcalendar-pi1{
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  text-align: center;
+  color:#193A72;
+}
+
+div.tx-jwcalendar-pi1 img{
+	border:0;
+}
+
+div.tx-jwcalendar-pi1 a, div.tx-jwcalendar-pi1 table a{
+   /* text-decoration:none;*/
+    text-decoration:none;
+	color: #A09A55;
+}
+
+div.tx-jwcalendar-pi1 a:hover,div.tx-jwcalendar-pi1 table a:hover{
+	color: red;
+}
+
+div.tx-jwcalendar-pi1 input{
+  clear:both;
+  background: #FBE29F;
+  border-top:2px #FCF6E5 solid;
+  border-left:2px #FCF6E5 solid;
+  border-right:2px #FECC3C solid;
+  border-bottom:2px #FECC3C solid;
+  text-align:center;
+  margin:10px;
+  padding: 3px 14px; 
+} 
+
+
+div.tx-jwcalendar-pi1 .tx_jw_input_text{
+  width:260px;
+  border:1px #FECC3C solid;
+  padding:3px;
+  height:23px;
+
+}
+div.tx-jwcalendar-pi1 .tx_jw_select{
+  font-size:11px;
+  border:0px;
+}
+
+div.tx-jwcalendar-pi1 .tx_jw_textarea{
+  font-size:12px;
+  height:120px;
+  width:260px;
+  padding:3px;
+  border:1px #FECC3C solid;
+}
+
+div.tx-jwcalendar-pi1 .tx_jw_input_button{
+  font-size:12px;
+  background: #FBE29F;
+  text-align:center;
+  margin:4px 10px;
+  padding:2px 4px;
+}
+
+/********************************************/
+/*****************LIST view ****************/
+/********************************************/
+div.jwcalendar_list{
+  width:100%;
+  background-color:#FFEEBB;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  color:#193A72;
+  border: 1px  #DFBD80 solid;
+  margin:10px 0;
+
+}
+
+div.jwcalendar_list .title{
+  font-size: 18px;
+  font-weight: bold;
+  color:#FFEEBB;
+}
+
+div.jwcalendar_list .prev_items{
+  float:left;
+  font-size: 11px;
+  font-weight: bold;
+  text-align:left;
+  color:#193A72;
+  padding:8px 0 0 16px;
+}
+
+div.jwcalendar_list .next_items{
+  float:right;
+  font-size: 11px;
+  font-weight: bold;
+  text-align:right;
+  color:#193A72;
+  padding:8px 0 0 16px;
+}
+
+div.jwcalendar_list .next_items{
+}
+
+div.jwcalendar_list .itemslist{
+}
+
+div.jwcalendar_list table.items{
+  width:100%;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  text-align:left;
+  line-height:1.4em;
+  empty-cells:show;
+  border-collapse:separate;
+  border-collapse:collapse;
+  border-spacing:0;
+  border: 1px  #DFBD80 solid;
+}
+
+div.jwcalendar_list table.items td.label{
+  background:#FCECC0;
+  vertical-align:top;
+  border: 1px  #DFBD80 solid;
+}
+
+div.jwcalendar_list table.items td.item{
+  background:#FBE29F;
+  border: 1px  #DFBD80 solid;
+  vertical-align:top;
+}
+
+div.jwcalendar_list table.items p{
+   font-size: 11px;
+}
+
+div.jwcalendar_list table.items p{
+   font-size: 11px;
+}
+
+div.jwcalendar_list .submit{
+   clear:both;	
+   font-size: 11px;
+}
+
+/********************************************/
+/*****************WEEK view ****************/
+/********************************************/
+div.jwcalendar_week{
+  width:100%;
+  background-color:#FFEEBB;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  color:#193A72;
+  border: 1px  #DFBD80 solid;
+  margin:10px 0;
+}
+
+div.jwcalendar_week .prev_week{
+    margin:4px 120px 0px 10px;
+	float:left;
+}
+
+div.jwcalendar_week .selector{
+    margin:4px 0 0 0;
+	float:left;
+}
+
+div.jwcalendar_week .next_week{
+    text-align:right;
+    margin:4px 10px 0px 120px;
+}
+
+
+div.jwcalendar_week table.days{
+   clear:both;
+   font-family: Verdana, sans-serif;
+   font-size: 12px;
+   width:100%;
+   line-height:1.4em;
+   border-collapse:collapse;
+   empty-cells:show;
+   border-spacing:0;
+   border:1px solid #DFBD80;
+   margin:8px;
+}
+
+div.jwcalendar_week table.days td.dayname{
+    text-align:right;
+    vertical-align:top;
+    border:1px solid #DFBD80;
+    padding:2px 8px 0 4px;
+}
+
+div.jwcalendar_week table.day_events,div.jwcalendar_week table.times {
+   	background:#FBE29F;
+   	font-family: Verdana, sans-serif;
+   	font-size: 12px;
+   	width:100%;
+   	border-collapse:collapse;
+   	empty-cells:show;
+   	border-spacing:0;
+}
+div.jwcalendar_week table.times {
+   border:1px solid #DFBD80;
+}
+
+div.jwcalendar_week table.times td.time{
+   border-left:2px solid #DFBD80;
+   border-right:2px solid #DFBD80;
+}
+
+div.jwcalendar_week table.days a{
+    text-decoration:none;
+}
+
+div.jwcalendar_week table.days td.time{
+   font-family: Verdana, sans-serif;
+   font-size: 11px;
+   text-align:center;
+}
+
+div.jwcalendar_week table.days td.event_time{
+   height:4px;
+   padding:0;
+   margin: 0px;
+}
+
+div.jwcalendar_week table.days td.event{
+   font-family: Verdana, sans-serif;
+   font-size: 11px;
+   vertical-align:top;
+   padding:4px 2px;
+   margin: 0px;
+}
+
+div.jwcalendar_week table.days td.event a{
+   font-family: Verdana, sans-serif;
+   font-size: 11px;
+}
+
+/********************************************/
+/*****************MONTH view ****************/
+/********************************************/
+
+div.jwcalendar_month{
+  width:100%;
+  background-color:#FFEEBB;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  color:#193A72;
+  border: 1px  #DFBD80 solid;
+  margin:10px 0;
+}
+
+
+
+
+div.jwcalendar_month .title{
+  clear:both;
+  text-align: center;
+  font-size: 14px;
+  font-weight:bold;
+  color: #333;
+  padding:5px 0;
+}
+
+
+div.jwcalendar_month .navi, div.jwcalendar_month .days_view{
+	padding:0 10px;
+}
+
+
+/*******************/
+/*tables navi******/
+/*******************/
+
+div.jwcalendar_month table.navs{
+   width:100%;
+}
+
+div.jwcalendar_month table.months, div.jwcalendar_month table.year{
+   width:100%;
+   font-family: Verdana, sans-serif;
+   font-size: 11px;
+   font-weight:bold;
+   text-align:center;
+   empty-cells:show;
+   border-collapse:separate;
+   border-spacing:10px;
+}
+
+div.jwcalendar_month table.year {
+   font-size: 12px;
+   border-spacing:5px;
+}
+
+div.jwcalendar_month table.months td, div.jwcalendar_month table.year td{
+}
+
+
+
+div.jwcalendar_month table.months td.other_month, div.jwcalendar_month table.year td.last_year, div.jwcalendar_month table.year td.next_year{
+   background: #FFFFFF;
+   border-top:2px #FCF6E5 solid;
+   border-left:2px #FCF6E5 solid;
+   border-right:2px #FECC3C solid;
+   border-bottom:2px #FECC3C solid;
+   padding:15px 5px;
+}
+
+div.jwcalendar_month table.months td.other_month{
+   padding:5px;
+}
+
+div.jwcalendar_month table.months td.current_month{
+   background: #FBE29F;
+   border-right:2px #FCF6E5 solid;
+   border-bottom:2px #FCF6E5 solid;
+   border-top:2px #FECC3C solid;
+   border-left:2px #FECC3C solid;
+   padding:5px;
+}
+
+/*****************/
+/*table days******/
+/*****************/
+
+
+/*div.jwcalendar_month .days_view table{*/
+div.jwcalendar_month table.days{
+   font-family: Verdana, sans-serif;
+   font-size: 11px;
+   width:100%;
+   line-height:1.4em;
+   border-collapse:collapse;
+   empty-cells:show;
+   border-spacing:0;
+   border:1px solid #DFBD80;
+   padding:0;
+}
+
+div.jwcalendar_month table.days a{
+    text-decoration:none;
+}
+
+div.jwcalendar_month table.days td{
+   vertical-align:top;
+   border:solid 1px #DFBD80;
+   padding:4px;
+}
+
+div.jwcalendar_month table.days td.week{
+   background:#FBE29F;
+   font-weight:bold;
+}
+
+div.jwcalendar_month table.days td.dayname{
+   background:#FBE29F;
+   font-weight:bold;
+   text-align:center;
+}
+
+div.jwcalendar_month table.days,
+div.jwcalendar_month table.days td.inside,
+div.jwcalendar_month table.days td.today,
+div.jwcalendar_month table.days td.inside_weekend,
+div.jwcalendar_month table.days td.today_weekend,
+div.jwcalendar_month table.days td.outside_weekend{
+   font-weight:bold;
+}
+
+div.jwcalendar_month table.days a,
+div.jwcalendar_month table.days td.inside a,
+div.jwcalendar_month table.days td.today_inside a,
+div.jwcalendar_month table.days td.inside_weekend a,
+div.jwcalendar_month table.days td.today_weekend a,
+div.jwcalendar_month table.days td.outside_weekend a{
+   font-weight:bold;
+   color:blue;
+}
+
+
+div.jwcalendar_month table.days td.today{
+	background: #F9F4E7;
+    border:solid 2px #CD9705;
+    border:solid 1px #FF9900;
+    
+}
+
+
+div.jwcalendar_month table.days td.outside_weekend,
+div.jwcalendar_month table.days td.outside{
+   background:#EAEAEB;
+   border:solid 1px #F9DF94;
+}
+
+
+div.jwcalendar_month table.days td.inside_weekend{
+   background:#FCECC0;
+}
+
+/**********************/
+/*table singleday******/
+/**********************/
+div.jwcalendar_month table.singleday,
+div.jwcalendar_month table.singleday td,
+div.jwcalendar_month table.singleday td a,
+div.jwcalendar_month table.singleday a{
+   font-weight:bold;
+   font-family: Verdana, sans-serif;
+   font-size: 11px;
+   width:100%;
+   line-height:1.0em;
+   border-collapse:collapse;
+   empty-cells:show;
+   border-spacing:0px;
+   border:0px solid #ddd;
+   padding:0px;
+   margin:0 0 2px 0;
+}
+
+div.jwcalendar_month table.singleday{
+   background: #A09A55;
+   border:1px solid #ddd;
+}
+
+div.jwcalendar_month table.singleday td{
+   border:0px solid #ddd;
+   padding:3px 0;
+}
+
+/*****************/
+/*table dayitem******/
+/*****************/
+div.jwcalendar_month table.dayitem,
+div.jwcalendar_month table.dayitem a{
+   font-weight:normal;
+   font-family: Verdana, sans-serif;
+   font-size: 11px;
+   width:100%;
+   line-height:1.0em;
+   border-collapse:collapse;
+   empty-cells:show;
+   border-spacing:0px;
+   border:1px solid #ddd;
+   padding:0px;
+   margin:1px 0;
+}
+
+div.jwcalendar_month table.dayitem td.item,
+div.jwcalendar_month table.dayitem td.item a{
+  color:#333;
+  text-decoration:none;
+  font-weight:normal;
+  border:0;
+}
+
+div.jwcalendar_month table.dayitem td.itemcat,
+div.jwcalendar_month table.dayitem td.itemcat a{
+  font-weight:normal;
+  color:#333;
+  text-decoration:none;
+   font-size: 8px;
+   padding:0px;
+   Cursor:help;
+   width:2px;
+   border:0;
+}
+
+/********************************************/
+/*****************SINGLE view ****************/
+/********************************************/
+
+div.jwcalendar_single{
+  background-color:#FFEEBB;
+  border: 1px  #DFBD80 solid;
+  padding:10px 10px;
+}
+
+div.jwcalendar_single .content,div.jwcalendar_single .header,div.jwcalendar_single .org{
+    width:100%;
+    clear:both;
+}
+
+div.jwcalendar_single .contentie,div.jwcalendar_single .headerie,div.jwcalendar_single .orgie{
+   float:left;
+   width:100%;
+   text-align:left;
+   border-left: 1px  #DFBD80 solid;
+   border-right: 1px  #DFBD80 solid;
+   border-bottom: 1px  #DFBD80 solid;
+   background:#FCECC0;
+}
+
+div.jwcalendar_single .headerie{
+   border-top: 1px  #DFBD80 solid;
+}
+
+div.jwcalendar_single .contentie{
+   background:#FBE29F;
+}
+
+div.jwcalendar_single .title, div.jwcalendar_single .category{
+    float:left;
+    font-size: 14px;
+	text-align:left;
+	font-weight:bold;	
+	padding:4px 8px 8px 8px;
+}
+div.jwcalendar_single .catcolor{
+    float:none;
+    font-size: 2px;
+	padding:0;
+}    
+
+div.jwcalendar_single .category{
+	float:none;
+    font-size: 12px;
+	font-weight:normal;	
+ 	padding:6px 8px 8px 8px;
+}
+
+
+div.jwcalendar_single .images{
+	float:left;
+    padding:10px 8px;
+    margin:0px;
+}
+
+div.jwcalendar_single .itemtext{
+    margin:8px;
+    
+}
+
+div.jwcalendar_single .itemtitle p:first-letter{
+    font-size: 15px;
+	font-weight:bold;	
+	color:red;
+}
+
+div.jwcalendar_single .itemtitle  p:first-line{
+    font-size: 13px;
+	font-weight:bold;	
+	line-height:1.2em;
+}
+
+div.jwcalendar_single .teaser{
+	font-weight:bold;	
+	font-style:italic;
+	line-height:1.8em;
+}
+div.jwcalendar_single .desc{
+    font-size: 11px;
+}
+
+div.jwcalendar_single .itemlink{
+	line-height:1.8em;
+}
+
+div.jwcalendar_single .label, div.jwcalendar_feEntry .label,div.jwcalendar_feEntry .timelabel{
+    clear:both;
+	float:left;
+	text-align:right;
+	font-weight:bold;	
+	width:33%;
+	padding:4px 8px;
+}
+
+div.jwcalendar_single .item, div.jwcalendar_feEntry .item{
+	text-align:left;
+	padding:4px 4px 4px 32%;
+}
+
+/********************************************/
+/*****************feEntry view ****************/
+/********************************************/
+div.jwcalendar_feEntry{
+  background-color:#FFEEBB;
+  border: 1px  #DFBD80 solid;
+  padding:8px;
+}
+
+
+div.jwcalendar_feEntry .label,div.jwcalendar_feEntry .timelabel{
+    vertical-align:bottom;
+    line-height:1.6em;
+	padding:8px 8px;
+    width:32%;
+}  
+  
+div.jwcalendar_feEntry .timelabel{
+    width:20%;
+}  
+
+div.jwcalendar_feEntry .title{
+  font-size:14px;	
+  font-weight:bold;	
+  color:blue;
+  text-align:left;
+  line-height:1.0em;
+  padding:0px 8px;
+}
+
+div.jwcalendar_feEntry .title p:first-letter{
+  font-size:20px;	
+}
+
+div.jwcalendar_feEntry .item{
+  text-align:left;
+  padding:8px 8px;
+}
+
+div.jwcalendar_feEntry .fileitem{
+  text-align:left;
+  padding:8px 8px;
+  width:30px;
+}
+
+div.jwcalendar_feEntry input{
+  clear:none;
+  background: white;
+  border-top:2px #FCF6E5 solid;
+  border-left:2px #FCF6E5 solid;
+  border-right:2px #FECC3C solid;
+  border-bottom:2px #FECC3C solid;
+  text-align:left;
+  font-size:12px;
+  margin:0;
+  padding: 0; 
+}
+
+div.jwcalendar_feEntry .error ul li{
+  list-style:circle inline;
+  text-align:left;
+  font-size:12px;
+  color:red;
+  margin:4px 40px;
+}
+
+div.jwcalendar_feEntry .error ul li:first-letter{
+  font-size:16px;
+  font-weight:bold;
+}
+
+div.jwcalendar_confirm .error{
+  font-size:12px;
+  color:red;
+  margin:10px;
+}
+
+div.jwcalendar_confirm .conftext{
+  font-size:14px;
+  margin:10px;
+}
+/********************************************/
+/*****************ORGANIZER view ****************/
+/********************************************/
+
+div.jwcalendar_organizer, div.jwcalendar_location{
+  background-color:#FFEEBB;
+  border: 1px  #DFBD80 solid;
+
+}
+
+div.jwcalendar_organizer .content,div.jwcalendar_organizer .header,div.jwcalendar_organizer .org, 
+div.jwcalendar_location .content,div.jwcalendar_location .header,div.jwcalendar_location .org{
+    width:100%;
+    clear:both;
+}
+
+div.jwcalendar_organizer .contentie,div.jwcalendar_organizer .headerie,div.jwcalendar_organizer .orgie,
+div.jwcalendar_location .contentie,div.jwcalendar_location .headerie,div.jwcalendar_location .orgie
+{
+   float:left;
+   width:100%;
+   text-align:left;
+   border-left: 1px  #DFBD80 solid;
+   border-right: 1px  #DFBD80 solid;
+   border-bottom: 1px  #DFBD80 solid;
+   background:#FCECC0;
+}
+
+div.jwcalendar_organizer .headerie,
+div.jwcalendar_location .headerie{
+   border-top: 1px  #DFBD80 solid;
+}
+
+div.jwcalendar_organizer .contentie,
+div.jwcalendar_location .contentie{
+   background:#FBE29F;
+}
+
+div.jwcalendar_organizer .title,
+div.jwcalendar_location .title{
+    float:left;
+    font-size: 14px;
+	text-align:left;
+	font-weight:bold;	
+}
+
+div.jwcalendar_organizer .text,
+div.jwcalendar_location .text{
+    margin:8px;
+}
+
+div.jwcalendar_location .name,
+div.jwcalendar_organizer .name{
+    font-size: 14px;
+	text-align:left;
+	font-weight:bold;	
+    padding:0;
+}
+
+div.jwcalendar_location .name p:first-letter,
+div.jwcalendar_organizer .name p:first-letter{
+    font-size: 15px;
+	font-weight:bold;	
+	color:red;
+}
+
+div.jwcalendar_location .name  p:first-line,
+div.jwcalendar_organizer .name  p:first-line{
+    font-size: 13px;
+	font-weight:bold;	
+	line-height:1.2em;
+}
+div.jwcalendar_location .images,
+div.jwcalendar_organizer .images{
+	float:left;
+    padding:10px 8px;
+    margin:0px;
+}
+
+div.jwcalendar_location .desc,
+div.jwcalendar_organizer .desc{
+    font-size: 11px;
+}
+
+div.jwcalendar_location .label,
+div.jwcalendar_organizer .label{
+    clear:both;
+	float:left;
+	text-align:right;
+	font-weight:bold;	
+	width:33%;
+	padding:4px 4px;
+}
+
+div.jwcalendar_location .item,
+div.jwcalendar_organizer .item{
+	text-align:left;
+	padding:4px 4px 4px 32%;
+}
+
+div.jwcalendar_location .addritem,
+div.jwcalendar_organizer .addritem{
+	text-align:left;
+	padding:4px 4px 0px 32%;
+}
+div.jwcalendar_location .cityitem,
+div.jwcalendar_organizer .cityitem{
+	text-align:left;
+	padding:0px 4px 8px 32%;
+}
+
+

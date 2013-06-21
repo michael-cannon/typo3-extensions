@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+  <title>Listing Template</title>
+</head>
+<body>
+<!--###TEMPLATE_TABLE###-->
+<table border="0" cellpadding="2" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <td valign="top" class="csc-header">&nbsp;</td>
+      <td valign="top" class="csc-header">COURSE NAME</td>
+      <td valign="top" class="csc-header">HOURS</td>
+      <td valign="top" class="csc-header">DATE</td>
+      <td valign="top" class="csc-header">COURSE NUMBER</td>
+    </tr>
+<!--###TEMPLATE_ROW###--> <tr>
+      <td valign="top" class="bodytext">
+      <!--###TEMPLATE_THUMBNAIL###-->
+      <a href="###BASE_URL######CERTIFICATE_LINK###" onclick="showAlert('Choose File -> Page Setup and set it to Landscape at 100% before printing.');">###CERTIFICATE_THUMB###</a>
+      <!--###TEMPLATE_THUMBNAIL###-->
+      </td>
+      <td valign="top" class="bodytext"><a href="###BASE_URL######DETAIL_LINK###">###COURSE_NAME###</a></td>
+      <td valign="top" class="bodytext">###HOURS###</td>
+      <td valign="top" class="bodytext">###DATE###</td>
+      <td valign="top" class="bodytext">###COURSE_NUMBER###</td>
+    </tr>
+<!--###TEMPLATE_ROW###-->
+  </tbody>
+  </table>
+<!--###TEMPLATE_TABLE###-->
+</body>
+</html>

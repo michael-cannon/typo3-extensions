@@ -1,0 +1,142 @@
+config {
+	### For more details, see TSref at: http://typo3.org/documentation/document-library/doc_core_tsref/quot_CONFIG_quot/
+	extTarget = {$config.extTarget}
+	intTarget = {$config.intTarget}
+	fileTarget = {$config.fileTarget}
+	renderCharset = {$config.renderCharset}
+	metaCharset = {$config.metaCharset}
+	doctype = {$config.doctype}
+	xhtmlDoctype = {$config.doctype}
+	xmlprologue = {$config.xmlprologue}
+	htmlTag_langKey = {$config.htmlTag_langKey}
+	typolinkEnableLinksAcrossDomains = {$config.typolinkEnableLinksAcrossDomains}
+	content_from_pid_allowOutsideDomain = {$config.content_from_pid_allowOutsideDomain}
+	meaningfulTempFilePrefix = {$config.meaningfulTempFilePrefix}
+
+	pageTitleFirst = {$config.pageTitleFirst}
+
+	redirectOldLinksToNew = {$config.redirectOldLinksToNew}
+	admPanel = {$config.admPanel}
+
+	xhtml_cleaning = {$config.xhtml_cleaning}
+
+	# for correct links with multiple domains
+	typolinkCheckRootline = {$config.typolinkCheckRootline}
+
+	# Send UTF-8 Notification Email Headers
+	notification_email_charset = {$config.notification_email_charset}
+	notification_email_encoding = {$config.notification_email_encoding}
+	notification_email_urlmode = {$config.notification_email_urlmode}
+
+	index_enable = {$config.index_enable}
+	index_externals = {$config.index_externals}
+
+	language = {$plugin.tx_staticinfotables_pi1.languageCode}
+	disablePrefixComment = {$config.disablePrefixComment}
+	headerComment = {$config.headerComment}
+	sendCacheHeaders = {$config.sendCacheHeaders}
+}
+
+lib {
+	stdheader {
+		# remove extra div wrappers
+		3.headerClass >
+
+		10 {
+			# allow entities in headings
+			setCurrent.htmlSpecialChars = 0
+		}
+
+		# Make sure there're no annoying divs wrapped around hx elements:
+		# alternate csc-header additions
+		stdWrap.dataWrap = {$config.headerDataWrap}
+	}
+
+	parseFunc_RTE {
+		nonTypoTagStdWrap.encapsLines {
+			remapTag.DIV = {$lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.remapTag.DIV}
+			nonWrappedTag = {$lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.nonWrappedTag}
+
+			# Remove 'class="bodytext"' that's bizarrely applied to EVERY <p> by default
+			addAttributes.P.class >
+		}
+
+		# Allow embed (Youtube) HTML tags in the RTE
+		allowTags := addToList(embed,iframe,object,param,script)
+
+		# remove p tags from table cells
+		# important: don't wrap these tags in p
+		externalBlocks := addToList(object,param,embed,script)
+
+		externalBlocks {
+			script < lib.parseFunc_RTE.externalBlocks.ul
+			script.stripNL = 0
+
+			table {
+				# Remove class="contenttable"
+				stdWrap.HTMLparser >
+
+				# allow repeated parsing of table cells - needed for media tags
+				HTMLtableCells.default.callRecursive = 1
+
+				# allow hyperlinks in table cells
+				HTMLtableCells.default.stdWrap.parseFunc {
+					makelinks = 1
+					makelinks.http.keep = scheme,path,query
+					makelinks.mailto.keep = path
+					tags {
+						link = TEXT
+						link {
+							current = 1
+							typolink.parameter.data = parameters : allParams
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+searchresult.rootPidList = {$config.rootPid}
+
+plugin.tx_indexedsearch {
+	search.rootPidList = {$config.rootPid}
+	search.detect_sys_domain_records = 1
+	show.rules = {$config.show.rules}
+	show.advancedSearchLink = {$config.show.advancedSearchLink}
+}
+
+tt_content {
+	stdWrap {
+		dataWrap = {$tt_content.stdWrap.dataWrap}
+		prefixComment = {$tt_content.stdWrap.prefixComment}
+	}
+
+	# show caption only if it exists (prevents empty div with class "csc-textpic-caption")
+	image.20.rendering.div.caption.if.isTrue.field = imagecaption
+
+	menu.20.2.includeNotInMenu = {$config.includeNotInMenu}
+}
+
+TSFE.jumpUrl_transferSession = 1
+
+plugin.tx_templavoila_pi1.disableErrorMessages = {$plugin.tx_templavoila_pi1.disableErrorMessages}
+plugin.tx_templavoila_pi1.disableExplosivePreview = {$plugin.tx_templavoila_pi1.disableExplosivePreview}
+
+styles.content.links.extTarget = {$config.extTarget}
+
+plugin.tx_staticinfotables_pi1 {
+	languageCode = {$plugin.tx_staticinfotables_pi1.languageCode}
+	countryCode = {$plugin.tx_staticinfotables_pi1.countryCode}
+	currencyCode = {$plugin.tx_staticinfotables_pi1.currencyCode}
+}
+
+# remove section_frame wrappers
+tt_content.stdWrap.innerWrap.cObject.1 >
+tt_content.stdWrap.innerWrap.cObject.5 >
+tt_content.stdWrap.innerWrap.cObject.6 >
+tt_content.stdWrap.innerWrap.cObject.10 >
+tt_content.stdWrap.innerWrap.cObject.11 >
+tt_content.stdWrap.innerWrap.cObject.12 >
+tt_content.stdWrap.innerWrap.cObject.20 >
+tt_content.stdWrap.innerWrap.cObject.21 >

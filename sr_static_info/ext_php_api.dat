@@ -1,0 +1,33 @@
+a:2:{s:4:"meta";a:3:{s:5:"title";s:0:"";s:5:"descr";s:0:"";s:7:"options";a:2:{s:10:"usageCount";N;s:19:"includeCodeAbstract";N;}}s:5:"files";a:1:{s:14:"MD5_d1339d4dee";a:4:{s:8:"filename";s:29:"class.tx_srstaticinfo_div.php";s:8:"filesize";i:10121;s:6:"header";a:5:{s:4:"text";s:177:"
+
+
+Class for handling static info tables: countries, and subdivisions, currencies, languages and taxes
+
+$Id: ext_php_api.dat,v 1.1.1.1 2010/04/15 10:04:06 peimic.comprock Exp $
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}s:5:"other";a:4:{i:0;s:43:"@author	Ren� Fritz <r.fritz@colorcube.de>";i:1;s:62:"@co-author	Stanislas Rolland <stanislas.rolland@fructifor.com>";i:2;s:14:"@package TYPO3";i:3;s:27:"@subpackage tx_srstaticinfo";}s:11:"other_index";a:4:{s:7:"@author";a:1:{i:0;s:35:"Ren� Fritz <r.fritz@colorcube.de>";}s:10:"@co-author";a:1:{i:0;s:51:"Stanislas Rolland <stanislas.rolland@fructifor.com>";}s:8:"@package";a:1:{i:0;s:6:"TYPO3 ";}s:11:"@subpackage";a:1:{i:0;s:16:"tx_srstaticinfo ";}}}s:3:"DAT";a:5:{i:1;a:8:{s:6:"header";s:27:"class tx_srstaticinfo_div {";s:5:"class";i:1;s:11:"parentClass";s:19:"tx_srstaticinfo_div";s:4:"cDat";a:3:{s:4:"text";s:269:"
+
+[CLASS/FUNCTION INDEX of SCRIPT]
+
+
+ 114:     function getStaticInfoName($type='COUNTRIES', $code, $country='', $countrySubdivision='')
+ 331:     function initLanguages()
+
+TOTAL FUNCTIONS: 2
+(This index is automatically created/updated by the extension "extdeveval")
+
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"[type]";i:1;s:3:"...";}}s:7:"content";s:0:"";s:12:"content_size";i:2;s:13:"content_lines";i:1;s:6:"atLine";i:48;}i:3;a:7:{s:6:"header";s:91:"function getStaticInfoName($type='COUNTRIES', $code, $country='', $countrySubdivision='')	{";s:11:"parentClass";s:19:"tx_srstaticinfo_div";s:4:"cDat";a:3:{s:4:"text";s:78:"
+
+Getting the name of a country, country subdivision, currency, language, tax
+";s:5:"param";a:4:{i:0;a:2:{i:0;s:6:"string";i:1;s:124:"Defines the type of entry of the requested name: 'COUNTRIES', 'SUBDIVISIONS', 'CURRENCIES', 'LANGUAGES', 'TAXES', 'SUBTAXES'";}i:1;a:2:{i:0;s:6:"string";i:1;s:121:"The ISO alpha-3 code of a country or currency, or the ISO alpha-2 code of a language or the code of a country subdivision";}i:2;a:2:{i:0;s:6:"string";i:1;s:149:"The value of the country code (cn_iso_3) for which a name of type 'SUBDIVISIONS', 'TAXES' or 'SUBTAXES' is requested (meaningful only in these cases)";}i:3;a:2:{i:0;s:6:"string";i:1;s:122:"The value of the country subdivision code for which a name of type 'SUB_TAXES' is requested (meaningful only in this case)";}}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:52:"The name of the object in the language set in init()";}}s:7:"content";s:0:"";s:12:"content_size";i:2568;s:13:"content_lines";i:76;s:6:"atLine";i:59;}i:5;a:7:{s:6:"header";s:26:"function initLanguages()	{";s:11:"parentClass";s:19:"tx_srstaticinfo_div";s:4:"cDat";a:3:{s:4:"text";s:173:"
+
+Getting all languages into an array
+	where the key is the ISO alpha-2 code of the language
+	and where the value are the name of the language in the language set in init()
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:5:"array";i:1;s:30:"An array of names of languages";}}s:7:"content";s:0:"";s:12:"content_size";i:614;s:13:"content_lines";i:18;s:6:"atLine";i:143;}i:7;a:4:{s:6:"header";s:34:"function selectItemsTCA($params) {";s:11:"parentClass";s:19:"tx_srstaticinfo_div";s:4:"cDat";a:3:{s:4:"text";s:70:"
+
+Function to use in own TCA definitions
+Adds additional select items
+";s:5:"param";a:1:{i:0;a:2:{i:0;s:5:"array";i:1;s:24:"itemsProcFunc data array";}}s:6:"return";a:2:{i:0;s:4:"void";i:1;s:0:"";}}s:6:"atLine";i:169;}i:9;a:7:{s:6:"header";s:31:"function getCurrentLanguage() {";s:11:"parentClass";s:19:"tx_srstaticinfo_div";s:4:"cDat";a:3:{s:4:"text";s:105:"
+
+Returns the current language as iso-2-alpha language code _ iso-2-alpha country code (when applicable)
+";s:5:"param";a:0:{}s:6:"return";a:2:{i:0;s:6:"string";i:1;s:25:"'DE', 'EN', 'DK', 'PT_BR'";}}s:7:"content";s:0:"";s:12:"content_size";i:884;s:13:"content_lines";i:28;s:6:"atLine";i:251;}}}}}

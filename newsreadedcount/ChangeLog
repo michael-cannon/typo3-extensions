@@ -1,0 +1,33 @@
+11-05-02 Michael Cannon <mc@aihr.us>
+	* Add MOST_READ_LIST and MOST_READ_LATEST views
+
+10-04-01 Henjo Hoeksma <me@henjohoeksma.nl>
+	* Added dutch Translation
+
+06-01-02 Yannick Pavard <ypavard@infoglobe.ca>
+	* Added %s character in translation for better presentation (OnetimeShown and timesShown)
+	* New translation : OnetimeShown, NoTimeShown and timeShowText
+	* New typoscript propriety (stdWrap) : newsReadedCount.counter, newsReadedCount.countertext and newsReadedCount.countervalue
+	* noSpaceAfterValue typoscript is now deprecated !
+	* It's now possible to hide markers when value is empty with plugin.tt_news.newsReadedCount.ShowNoHits = 0
+	* Translations files are now in XML format
+	* Counter lenght is now 6 characters and range is disabled
+
+06-01-02 Jens Hirschfeld  <Jens.Hirschfeld@KeepOut.de>
+	* Inserted a Space between the Value and the Text (Thanks to Andreas for the Feedback)
+	* Added the possibility to disable this Space.
+	* Updated the manual.sxw
+
+05-12-15 Jens Hirschfeld  <Jens.Hirschfeld@KeepOut.de>
+	* Icon added (Modified one from tt_news)
+	* ArrayKeys putted in quotes
+	* Two 'Debug()' Calls deleted
+
+05-12-10 Jens Hirschfeld  <Jens.Hirschfeld@KeepOut.de>
+	* Some Improvements on the manual.sxw
+
+05-12-09 Jens Hirschfeld  <Jens.Hirschfeld@KeepOut.de>
+	* manual.sxw added
+
+05-12-09 Jens Hirschfeld  <Jens.Hirschfeld@KeepOut.de>
+	* Initial release

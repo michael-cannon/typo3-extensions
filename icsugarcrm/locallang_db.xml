@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'icsugarcrm'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.list_type_pi1">SugarCRM Portal</label>
+			<label index="tx_icsugarcrm.sheet.01">Default Settings</label>
+			<label index="tx_icsugarcrm.sheet.02">Parameters &amp; Variables</label>
+			<label index="tx_icsugarcrm.autoplay">Autoplay video</label>
+			<label index="tx_icsugarcrm.loop">Loop video</label>
+			<label index="tx_icsugarcrm.width">Width (Pixel)</label>
+			<label index="tx_icsugarcrm.height">Height (Pixel)</label>
+			<label index="tx_icsugarcrm.parameters">Additional parameters (Key=Value)</label>
+			<label index="tx_icsugarcrm.variables">Additional variables (Key=Value)</label>
+			<label index="tx_icsugarcrm.scale">Scaleing</label>
+			<label index="tx_icsugarcrm.link">Link when the movie gets clicked</label>
+			<label index="tx_icsugarcrm.previewImage">Preview image</label>
+			<label index="tx_icsugarcrm.scale.showall">Show all (Aspect ratio)</label>
+			<label index="tx_icsugarcrm.scale.noborder">No border (Aspect ratio)</label>
+			<label index="tx_icsugarcrm.scale.exactfit">Exact fit</label>
+			<label index="tx_icsugarcrm.scale.noscale">Original size, no scale</label>
+			<label index="tx_icsugarcrm.pi1.id">ID of the video</label>
+			<label index="tx_icsugarcrm.pi1.rel">Load related videos</label>
+		</languageKey>
+	</data>
+</T3locallang>

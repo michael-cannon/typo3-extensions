@@ -1,0 +1,40 @@
+plugin.tx_jwcalendar_pi1 {
+  templateFile = EXT:jw_calendar/jw_calendar.tmpl
+  wrapColorSingleView = style="background-color:|;float:left;font-size:24px" 
+  wrapColorListView = style="background:|;font-size:4px"
+  wrapColorWeekEvent = |
+  wrapColorExcEvent = background:|;
+  wrapTooltipBegin = |
+  wrapTooltipEnd = |
+  wrapTooltipTitle = <b>|</b>
+  wrapTooltipTeaser = <i>|</i>
+  wrapTooltipDescription = |
+  # caption = title,description,teaser etc.	
+  caption = begin
+  overlibConfig = AUTOSTATUSCAP,HAUTO,VAUTO
+
+  feEntryEntries.image{
+	 mimeInclude = image/gif,image/jpeg, image/pngs
+	 mimeExclude = application/octet-stream
+         extExclude = exe,php,php3
+         extInclude = *
+  }
+
+  typolink{
+    target >
+    extTarget >
+    wrap = |
+  }
+
+  parseFunc{
+   denyTags = 
+   allowTags = * 
+	#h1,h2,h3,h4,h5,b,i,u,a,img,br,div,center,pre,font,hr,sub,sup,p,strong,em,li,ul,ol,blockquote,strike,span
+   links{
+	    extTarget = _top
+	    target = page
+	    wrap = <u>|</u>
+	  }
+	  mail.wrap = <u>|</u>
+  }
+}

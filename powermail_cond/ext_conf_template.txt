@@ -1,0 +1,2 @@
+# cat=basic/enable/010; type=boolean; label= Manual event handler field: Activates field manualEventHandler for every powermail field to add your own JavaScript code to any powermail field
+manualEventHandler = 0

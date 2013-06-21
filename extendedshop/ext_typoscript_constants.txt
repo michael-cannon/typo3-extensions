@@ -1,0 +1,68 @@
+# cat=Webformat Shop System/file/01; type=file[html,htm,tmpl,txt]; label= Template File: This is the template file
+plugin.tx_extendedshop_pi1.file.templateFile = EXT:extendedshop/pi1/shop.html
+
+# cat=Webformat Shop System/file/02; type=file[css]; label= CSS File: This is the style file
+plugin.tx_extendedshop_pi1.file.cssFile = EXT:extendedshop/pi1/stileShop.css
+
+# cat=Webformat Shop System/config/03; type=int; label= Number of decimals
+plugin.tx_extendedshop_pi1.priceDec = 2
+
+# cat=Webformat Shop System/config/04; type=string; label= Decimal separator
+plugin.tx_extendedshop_pi1.priceDecPoint = ,
+
+# cat=Webformat Shop System/config/05; type=string; label= Thousand separator
+plugin.tx_extendedshop_pi1.priceThousandPoint = .
+
+# cat=Webformat Shop System/config/06; type=int; label= Click Enlarge List: Set to 1 if you want to open a popup when the user clicks over the image in the list mode. If 0 the image is a link to the detail of the product
+plugin.tx_extendedshop_pi1.clickEnlargeList = 0
+
+# cat=Webformat Shop System/config/07; type=int; label= Click Enlarge Single: Set to 1 if you want to open a popup when the user clicks over the image in the detail mode.
+plugin.tx_extendedshop_pi1.clickEnlarge = 1
+
+# cat=Webformat Shop System/config/08; type=int; label= List Mode: 0 for the sequential listing, 1 for the table listing.
+plugin.tx_extendedshop_pi1.listMode = 1
+
+# cat=Webformat Shop System/config/09; type=int; label= List Mode: If modeImage==0, this is the max number of items to show in a page.
+plugin.tx_extendedshop_pi1.listMaxItems = 5
+
+# cat=Webformat Shop System/config/10; type=int; label= Table Mode: Min-Width of the column.
+plugin.tx_extendedshop_pi1.columnWidth = 140
+
+# cat=Webformat Shop System/config/11; type=int; label= Table Mode: Number of products for row.
+plugin.tx_extendedshop_pi1.numColumns = 4
+
+# cat=Webformat Shop System/config/12; type=int; label= Table Mode: Number of rows for page.
+plugin.tx_extendedshop_pi1.numRows = 2
+
+# cat=Webformat Shop System/config/13; type=int; label= Pid basket
+plugin.tx_extendedshop_pi1.pidBasket = 2
+
+# cat=Webformat Shop System/config/14; type=int; label= Pid orders
+plugin.tx_extendedshop_pi1.pidOrders = 25
+
+# cat=Webformat Shop System/config/15; type=int; label= Pid delivery
+plugin.tx_extendedshop_pi1.pidDelivery = 25
+
+# cat=Webformat Shop System/config/15; type=int; label= Pid users
+plugin.tx_extendedshop_pi1.pidUsers = 10
+
+# cat=Webformat Shop System/shop/16; type=string; label= Free delivery: Min amount for a free delivery.
+plugin.tx_extendedshop_pi1.freeDelivery = 55,00
+
+# cat=Webformat Shop System/shop/17; type=string; label= Min amount: Min amount for an order.
+plugin.tx_extendedshop_pi1.minAmount = 0,00
+
+# cat=Webformat Shop System/shop/18; type=string; label= Shop Email: order email from.
+plugin.tx_extendedshop_pi1.fromEmail = myShop@mySite.com
+
+# cat=Webformat Shop System/shop/19; type=string; label= Shop Name: order name from.
+plugin.tx_extendedshop_pi1.fromName = myShop
+
+# cat=Webformat Shop System/shop/20; type=string; label= Shop BCC Email: Receiver of the order confiration email (in the bcc field).
+plugin.tx_extendedshop_pi1.bccEmail = myShop@mySite.com
+
+# cat=Webformat Shop System/shop/21; type=int; label= UID WebsiteGroup: uid of the group for new customers.
+plugin.tx_extendedshop_pi1.group_customer = 1
+
+# cat=Webformat Shop System/shop/22; type=int; label= Orders for page: number of orders in a single page in the ORDERSINFO mode.
+plugin.tx_extendedshop_pi1.ordersForPage = 5

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>sugarcases</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<author>Jason Eggers</author>
+	<creationDate>April 2008</creationDate>
+	<authorEmail>eggsurplus@eggsurplus.com</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>(C) 2007 All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<!--  The version string is recorded in the components table -->
+	<version>1.5.2</version>
+	<!-- The description is optional and defaults to the name -->
+	  <description>
+    <![CDATA[Joomla Case portal that interoperates with SugarSuite]]></description> 
+
+
+	
+	<files>
+        <filename>index.html</filename>
+		<filename>sugarcases.php</filename>
+		<filename>sugarcases.html.php</filename>
+        <filename>sugarportal.inc.php</filename>
+        <filename>sugarcases.class.php</filename>
+        <filename>sugarinc/sugarAccount.php</filename>
+        <filename>sugarinc/sugarCase.php</filename>
+        <filename>sugarinc/sugarCommunication.php</filename>
+        <filename>sugarinc/sugarConfiguration.php</filename>
+        <filename>sugarinc/sugarContact.php</filename>
+        <filename>sugarinc/sugarDB.php</filename>
+        <filename>sugarinc/sugarNote.php</filename>
+        <filename>sugarinc/sugarDownload.php</filename>
+        <filename>sugarinc/sugarError.php</filename>
+        <filename>sugarinc/sugarLeads.php</filename>
+        <filename>sugarinc/sugarUser.php</filename>
+        <filename>sugarinc/sugarUtils.php</filename>
+        <filename>sugarinc/sugarBug.php</filename>
+        <filename>sugarapp/sugarApp.php</filename>
+        <filename>sugarapp/sugarAppBug.php</filename>
+        <filename>sugarapp/sugarAppCase.php</filename>
+        <filename>sugarapp/sugarHTML.php</filename>
+	</files>
+  
+	<!-- Install Database Section -->
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.mysql.nonutf8.sql</file>
+		</sql>
+	</install>
+
+	<!-- Uninstall Database Section
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.mysql.nonutf8.sql</file>
+		</sql>
+	</uninstall>
+	-->
+	
+	
+	<administration>
+		<menu>Sugar Cases</menu>
+            <submenu>
+                <menu link="option=com_sugarcases&amp;task=config">Configuration</menu>
+                <menu link="option=com_sugarcases&amp;task=casefields">Field Selection</menu>
+            </submenu>
+		<files folder="admin">
+            <filename>index.html</filename>
+			<filename>admin.sugarcases.php</filename>
+			<filename>admin.sugarcases.html.php</filename>
+			<filename>toolbar.sugarcases.php</filename>
+			<filename>toolbar.sugarcases.html.php</filename>         
+			<filename>install.mysql.nonutf8.sql</filename>
+         	<filename>uninstall.mysql.nonutf8.sql</filename>
+		</files>
+	</administration>
+		
+	<!-- Custom Install Script to execute -->
+    <installfile>install.sugarcases.php</installfile>
+   
+	<!-- Custom Uninstall Script to execute 
+	<uninstallfile>uninstall.sugarcases.php</uninstallfile>
+  -->
+</install>

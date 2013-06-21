@@ -1,0 +1,170 @@
+<html>
+	<head>
+		<title>Templates for Shopping System Extension</title>
+		<style type="text/css">
+			div.code{
+				border:1px solid red;
+				background-color:#ddd;
+				padding:3px;
+			}
+			/* -------------------- */
+			#related_product{
+				color:#9f5971;
+				border:1px solid black;
+				padding:8px;
+				width:160px;
+				text-transform:capitalize;
+			}
+			#related_product #related_header{font-weight:bold;}
+			#related_product a{color:#9f5971}
+		</style>
+	</head>
+	<body>
+		<h1>Related Product template</h1>
+		<div class="code">
+			<!-- ###TEMPLATE_RELATED### begin
+				This is the template for the featured product in article page
+			-->
+			<br />
+			<div style="border:1px solid black;width:154px;font-weight:bold">
+				<div style="background-color:black;color:white;font-size:15px;padding:10px"><a href="/shopping.html" style="color:white">SHOP</a></div>
+				<div style="padding:5px">
+					<div style="overflow:hidden;width:135px"><a href="###PRODUCT_LINK###" target="_blank"><img src="###PRODUCT_IMAGE###" border="0"  /></a></div>
+					<a href="###PRODUCT_LINK###" target="_blank" style="text-decoration:underline;color:#ff9a46">View Item >></a><br />
+					<a href="/shopping.html" style="text-decoration:underline;color:#ff9a46">Shop More >></a>
+				</div>
+			</div>
+					
+			<!-- ###TEMPLATE_RELATED### end -->
+			<div id="related_product" style="border: 1px solid #832A48; padding: 4px; width: 135px">
+				<div id="related_header" style="font-size: 14px; color: #832A48; font-weight: bold">Featured Product</div>
+				<div id="related_title" style="margin-bottom: 4px; margin-top: 4px"><a href="###PRODUCT_LINK###">###PRODUCT_TITLE###</a></div>
+				<div>
+					<div style="text-align:center">
+						<div style="width:135px;height:135px;overflow:hidden">
+							<a href="###PRODUCT_LINK###" target="_blank">
+								<img src="###PRODUCT_IMAGE###" border="0"  />
+							</a>
+						</div>
+					</div>
+					<a href="###PRODUCT_LINK###" target="_blank">					
+					View item&gt;&gt;
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<h1>This is the template for products categories</h1>
+		<div class="code">
+			<!-- ###TEMPLATE_PRODUCTS_CATEGORIES### begin
+				This is the template for products categories
+			-->
+			<div id="products_categories" style="float: left; margin: 9px; padding-left: 15px; width: 150px; height: 200px">
+				<div id="cat_title" style="font-size: 14px; font-weight: bold">###CATEGORY_TITLE###</div>
+				<div id="featured_product_pic" style="width:145px;height:145px;overflow:hidden">###CATEGORY_IMAGE###</div>
+				<div id="featured_product_title" style="font-size:12px;">###CATEGORY_DESCRIPTION###</div>
+			</div>
+			<!-- ###TEMPLATE_PRODUCTS_CATEGORIES### end -->
+		</div>
+
+		<h1>This is the template for products list</h1>
+		<div class="code">
+
+			<!-- ###TEMPLATE_PRODUCTS_LIST_SEARCH### begin -->
+			<table cellspacing="0" cellpadding="2" border="0"  width="100%">
+			<tr>
+			<td colspan="2" align="right">
+			###PRODUCTS_SEARCHBOX###
+			</td>				
+			</tr>
+			<!-- ###TEMPLATE_PRODUCTS_LIST_SEARCH### end -->
+
+			<!-- ###TEMPLATE_PRODUCTS_LIST### begin
+				This is the template for products list
+			-->
+				<!-- ###TEMPLATE_PRODUCT_ROW### -->
+				<tr>	
+					<!-- ###TEMPLATE_SINGLE_PRODUCT### -->
+					<td>
+					<div id="CellPosition">
+						<div id="ThumbPosition">              	
+							###PRODUCT_PIC###
+						</div>
+						<div id="SearchTextPosition">
+						<span class="SearchText"> 
+							<span id="ProductTitle">###PRODUCT_TITLE###</span> 
+							<span id="BrandName">###PRODUCT_BRAND###<br></span> 
+							<span id="Price">$###PRODUCT_PRICE###<br></span> 
+							<span id="MerchantName">###PRODUCT_STORE###<br></span> 
+						</span> 
+						</div>
+					</div>
+					</td>
+					<!-- ###TEMPLATE_SINGLE_PRODUCT### -->
+				</tr>
+				<!-- ###TEMPLATE_PRODUCT_ROW### -->
+			</table>
+			<br />                  		
+			<!-- ###TEMPLATE_PRODUCTS_LIST### end -->
+			
+			<!-- ###TEMPLATE_PRODUCTS_LIST_PAGES### begin -->
+			<div style="clear: both;">###PRODUCT_PAGES###</div>
+			<!-- ###TEMPLATE_PRODUCTS_LIST_PAGES### end -->
+		</div>
+
+		<h1>This is the template for search form and dropdown list with categories</h1>
+		<div class="code">
+			<!-- ###TEMPLATE_SELECT_BOX### begin
+				This is the template for search form and dropdown list with categories
+			-->
+			<div id="shopingSearch">
+				<script type='text/javascript'>
+				function onChangeForm()
+				{	
+					if(document.getElementById('search_input').value == 'Search')
+						document.getElementById('search_input').value = '';					
+					document.getElementById('left_form').submit();
+				}
+				</script>
+				<form method="POST" id="left_form" action="###SEARCH_LINK###" onsubmit="check_search()">
+                <div class="searchfor">SEARCH FOR</div>
+					<div style="margin-bottom: 4px"><input type="text" id="search_input" size="3" name="product" onblur="if(this.value == '') this.value='Search'" onfocus="if(this.value == 'Search') this.value=''" value="Search" style="margin-right: 1px;"/></div>
+                    <div class="searchfor">IN</div>
+					<div>						
+                    
+						<select name="category">
+							<option value="0">All products</option>
+							<!-- ###OPTIONS### -->
+							<option value="###CAT_URL###" ###SELECTED###>###CAT_TITLE###</option>
+							<!-- ###OPTIONS### -->
+													
+						</select>
+					</div>
+                    <div align="center" style="margin-top: 8px;">
+                    <input type="submit" class="btn_search" value="Search" name="submit1" style="width:65px; border:1px solid #52487c;"/>
+                    </div>
+                    
+                    <hr class="purplehr" />
+                        <div class="browse-section">
+                        <div class="searchfor">BROWSE</div>
+                    
+                            <select name="category-browse" onchange="onChangeForm()">
+                            <option value="0">Select a category</option>
+                            <!-- ###OPTIONS_BROWSE### -->
+                            <option value="###CAT_URL_BROWSE###">###CAT_TITLE_BROWSE###</option>
+                            <!-- ###OPTIONS_BROWSE### -->
+                                                    
+                        </select>
+                        </div>
+				</form>
+                
+			</div>
+            
+
+			<br />
+			<!-- ###TEMPLATE_SELECT_BOX### end -->
+		</div>
+
+
+	</body>
+</html>

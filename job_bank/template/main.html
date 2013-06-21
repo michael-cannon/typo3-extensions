@@ -1,0 +1,530 @@
+<!-- ###JOBBANK_HEADER### -->
+
+<style type="text/css">
+.test {
+	background-repeat:repeat-x;
+	background-image: url(###STYLE_TEMPLATE_TEST###);
+	
+}
+.test1 {
+	background-repeat:repeat-x;
+	background-image: url(###STYLE_TEMPLATE_TEST1###);
+}
+.detailinfo{
+	background:#C7C7C7;
+	text-decoration: none;
+	width: 100%;
+}
+.detailinfoinner{
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+}
+label {
+margin: 0;
+padding:0.2em;
+margin-top:0.3em;
+margin-right:0.9em;
+margin-bottom:0.8em;
+text-align:right;
+width:120px;
+float:left;
+}
+
+fieldset {
+  
+  border:solid 0 #fff; /* Opera doesn't get border:none or border:0 on fieldsets */
+  width:100%;
+  }
+  
+legend {
+	width:194px;
+	height:30px;
+	color:#fff;
+	font-size:2em;
+	padding-left:0.5em;
+	position:relative;
+	top:-1em;
+	letter-spacing:-1px;
+	
+}
+
+.job_hidden{
+	visibility:hidden;
+}
+
+.job_show{
+	visibility:visible;
+}
+</style>
+<SCRIPT LANGUAGE="JavaScript" src="###SCRIPTNAME###"></SCRIPT>
+<script language="JavaScript" src="###SCRIPTNAME_DATEFUNCTIONS###"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+var formName='###FORMNAMEEXTENSIONJS###joblisting';
+###DYANAMIC_JS###
+
+function validateForm(frmName)
+{
+	var dateFormat="###DATEFORMATCALENDARJS###";
+	var starttmArr=frmName.starttime.value.split('/');
+	var endtmArr=frmName.endtime.value.split('/');
+	var splitFormat="###SPLITFORMAT###";
+	var arrsplitFormat=splitFormat.split(',');
+	var y=starttmArr[arrsplitFormat[0]];
+	var m=starttmArr[arrsplitFormat[1]];
+	var d=starttmArr[arrsplitFormat[2]];
+	var y1=endtmArr[arrsplitFormat[0]];
+	var m1=endtmArr[arrsplitFormat[1]];
+	var d1=endtmArr[arrsplitFormat[2]];
+	var date1Compare=new Date(y,m,d);
+	var date2Compare=new Date(y1,m1,d1);
+	if(frmName.occupation.value=='')
+	{
+		alert('Please Enter a Position Title');
+		frmName.starttime.focus();
+		return false;
+	}
+	if(frmName.starttime.value=='')
+	{
+		alert('Please Enter Opening Date');
+		frmName.starttime.focus();
+		return false;
+	}
+	if(frmName.endtime.value=='')
+	{
+		alert('Please Enter Closing Date');
+		frmName.endtime.focus();
+		return false;
+	}
+	if(date2Compare<date1Compare)
+	{
+		alert('Closing Date should be greater than Opening Date');
+		frmName.endtime.focus();
+		return false;
+	}
+	return true;
+}
+
+function checkall()
+{
+	var frm=eval("document."+formName);
+
+	var displ='';
+	
+	for(i=0;i<frm.elements.length;i++)
+	{
+		if(frm.elements[i].type=='checkbox')
+		{
+			displ+=frm.elements[i].name+'\n';
+			frm.elements[i].checked=frm.selectall.checked;
+		}
+	}
+	
+}
+
+function checkIndustry(industryName)
+{
+	var frm=eval("document."+formName);
+
+	if(industryName=='oth')
+	{
+		frm.industry_oth.className='job_show';
+	}
+	else
+	{
+		frm.industry_oth.value='';
+		frm.industry_oth.className='job_hidden';
+	}
+	
+}
+
+function changeMenu(optionName)
+{
+	var frm=eval("document."+formName);
+
+	var d=frm.location;
+	deleteOptions(d);
+	try{
+	var selectedMenu=eval("Menu"+optionName+"Menu");
+	
+	for(var i=0;i<selectedMenu.length;i++)
+		d.options[i]=new Option(selectedMenu[i][0],selectedMenu[i][1]);
+	}
+	catch(e){
+		d.options[0]=new Option('Select a country','');
+	}
+	
+} 
+
+function deleteOptions(xDropDown) {
+
+	var tot = xDropDown.options.length;
+	
+	for (i=0; i < tot ; i++) {
+	
+		xDropDown.options[i]=null;
+	}
+	
+	xDropDown.options.length=0;
+}
+
+function selectMenu(selectedOption,optionType)
+{
+	
+		var frm=eval("document."+formName+".zone_location");
+		var frm2=eval("document."+formName+".location");
+		if(optionType==1)
+		{
+			for(var i=0;i<frm.options.length;i++)
+			{
+				if(frm.options[i].value==selectedOption)
+					frm.options[i].selected=true;
+			}
+		}
+		else
+		{
+			for(var i=0;i<frm2.options.length;i++)
+			{
+				if(frm2.options[i].value==selectedOption)
+					frm2.options[i].selected=true;
+			}
+		}
+}
+
+function newDateEnd(dateValStart)
+{
+	var frm=eval("document."+formName);
+	var enddt=new Date(dateAdd('d',60,dateValStart));
+	var mnth=enddt.getMonth()+1;
+	var mDay=(enddt.getDate()>9)?enddt.getDate():"0"+enddt.getDate();
+	var mMnth=(mnth>9)?mnth:"0"+mnth;
+	frm.endtime.value=mMnth+"/"+mDay+"/"+enddt.getFullYear();
+	
+}
+</SCRIPT>
+<H2>Job Bank for ###SPONSOR_NAME###</H2>
+<table style="width: 100%; height: 22px;" class="jobbank_jobbank_repeatx"
+ background="images/bgmenu.gif" border="0" cellpadding="0" cellspacing="0">
+    <tr align="center">
+     <!-- <td class="jobbank_menuborder1 test jobbank_toplinks"
+ onmouseover="this.className='jobbank_menuborder1 test1 jobbank_toplinks'"
+ onmouseout="this.className='jobbank_menuborder1 test jobbank_toplinks'"  height="22" width="50%">
+      ###LISTINGS_LINK###
+      </td> -->
+	  <td class="jobbank_menuborder1 test jobbank_toplinks"
+height="22" width="50%">
+      </td>
+      <td class="jobbank_menuborder1 test jobbank_toplinks"
+ onmouseover="this.className='jobbank_menuborder1 test1 jobbank_toplinks'"
+ onmouseout="this.className='jobbank_menuborder1 test jobbank_toplinks'" height="22" width="50%">
+      ###ADD_LINK###
+      </td>
+    </tr>
+</table>
+<!-- ###JOBBANK_HEADER### -->
+<!--  ###ADD_JOB_PLACEHOLDER### -->
+<script type="text/javascript">
+var ol_textfont = "Courier New, Courier";
+</script>
+
+<script language="JavaScript" src="###SCRIPTNAME_POPUP_HELP_JS###"></script>
+<script language="javascript" type="text/javascript">
+
+	function selectAllItems(){
+	
+	   var intCount = window.document.###FORMNAMEEXTENSION###joblisting.industry.options.length;
+	   for (i = 0; i < intCount; i++)
+	   {
+		window.document.###FORMNAMEEXTENSION###joblisting.industry.options.(i).selected = true;
+	  }
+	}
+
+</script>
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+
+<form method="POST" name="###FORMNAMEEXTENSION###joblisting" onsubmit="return validateForm(this);">
+
+<h1>Company Information</h1>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr valign="top"> 
+    <td width="35%">Company Description <a href="javascript:void(0);" onmouseover="return overlib('This is an opportunity to describe your coprorate culture, etc.', CAPTION, 'HELP TEXT', WRAP, CELLPAD, 10, 5, WIDTH, 350, HEIGHT, 70, FGCOLOR, '#FFCCCC', TEXTFONT, 'Arial');" onmouseout="return nd();">
+	
+	<img src="###HELP_IMAGE###" border="0" height="11" width="11">
+	
+	</a>
+	
+	</td>
+    
+	<td width="76%"><TEXTAREA NAME="company_description" COLS="50" ROWS="3" ></TEXTAREA></td>
+  </tr>
+<tr valign="top"> 
+      <td>Job Description <a href="javascript:void(0);" onmouseover="return overlib('Job description.', CAPTION, 'HELP TEXT', WRAP, CELLPAD, 10, 5, WIDTH, 320, HEIGHT, 70, FGCOLOR, '#FFCCCC', TEXTFONT, 'Arial');" onmouseout="return nd();"><img src="###HELP_IMAGE###" border="0" height="11" width="11"></a> </td>
+      <td><TEXTAREA NAME="joboverview" ROWS="3" COLS="50"></TEXTAREA></td>
+    </tr>
+ <tr valign="top"> 
+    <td>Position Title</td>
+    <td><input name="occupation" value="" type="text" size="40"></td>
+  </tr>
+
+ <!-- <tr valign="top"> 
+    <td>Position <a href="javascript:void(0);" onmouseover="return overlib('Position.', CAPTION, 'HELP TEXT', WRAP, CELLPAD, 10, 5, WIDTH, 320, HEIGHT, 70, FGCOLOR, '#FFCCCC', TEXTFONT, 'Arial');" onmouseout="return nd();"><img src="###HELP_IMAGE###" border="0" height="11" width="11"></a></td>
+    <td><input name="occupation" value="" type="text" size="40"></td>
+  </tr>-->
+  <tr valign="top"> 
+    <td>Listing Start Date</td>
+    <td><INPUT TYPE="text" NAME="starttime" maxlength="10" size="10" onBlur="newDateEnd(this.value);" >
+        <a href="javascript:showCal('Date1')"><IMG SRC="###CALENDARIMAGE0###" WIDTH="16" HEIGHT="16" BORDER=0 ALT=""></a></td>
+  </tr>
+  <tr valign="top"> 
+    <td>Listing End Date</td>
+    <td><INPUT TYPE="text" NAME="endtime" maxlength="10" size="10" >
+        <a href="javascript:showCal('Date2')"><IMG SRC="###CALENDARIMAGE1###" WIDTH="16" HEIGHT="16" BORDER=0 ALT=""></a></td>
+  </tr>
+   <tr valign="top">
+    <td>City</td>
+    <td><INPUT TYPE="text" NAME="city"></td>
+  </tr>
+  <tr valign="top"> 
+    <td>State</td>
+    <td><select name="location">
+          <option>Select a state</option>
+        </select></td>
+  </tr>
+  <tr valign="top"> 
+    <td>Country</td>
+    <td><select name="zone_location" onchange ="changeMenu(this.value)">###JOB_BANK_LOCATION###
+        </select></td>
+  </tr>
+   
+</table>
+<h1>Job Information</h1>
+  <table width="100%" border="0" cellspacing="0" cellpadding="5">
+    
+	<tr valign="top"> 
+      <td>Major Responsibilities <a href="javascript:void(0);" onmouseover="return overlib('Major Responsibilities.', CAPTION, 'HELP TEXT', WRAP, CELLPAD, 10, 5, WIDTH, 320, HEIGHT, 70, FGCOLOR, '#FFCCCC', TEXTFONT, 'Arial');" onmouseout="return nd();"><img src="###HELP_IMAGE###" border="0" height="11" width="11"></a> </td>
+      <td><TEXTAREA NAME="major_responsibilities" ROWS="3" COLS="50"></TEXTAREA></td>
+    </tr>
+	<tr valign="top"> 
+      <td>Additional Requirements <a href="javascript:void(0);" onmouseover="return overlib('Additional Requirements.', CAPTION, 'HELP TEXT', WRAP, CELLPAD, 10, 5, WIDTH, 320, HEIGHT, 70, FGCOLOR, '#FFCCCC', TEXTFONT, 'Arial');" onmouseout="return nd();"><img src="###HELP_IMAGE###" border="0" height="11" width="11"></a></td>
+      <td><TEXTAREA NAME="additional_requirement" COLS="50" ROWS="3" ></TEXTAREA></td>
+    </tr>
+<!--<tr valign="top"> 
+      <td width="35%">Area of Expertise</td>
+      <td width="81%"><select name=industry[] size="5" multiple onChange="checkIndustry(this.value)";>###JOB_INDUSTRY### 
+           <option value="Clicks" onClick="selectAllItems()">Control Clicks</option>
+		  <option value="oth" >Others1</option>
+        </select> <input type="text" class="job_hidden" name="industry_oth"></td>
+    </tr> -->
+<tr valign="top"> 
+      <td width="35%">Area of Expertise</td>
+      <td width="81%"><TEXTAREA NAME="industry" ROWS="3" COLS="50"></TEXTAREA></td>
+    </tr>
+
+    <tr valign="top"> 
+      <td>Job Type</td>
+      <td><select name="status">###STATUS###
+           </select></td>
+    </tr>
+    <tr valign="top"> 
+      <td>Career Level</td>
+      <td><SELECT name="clevel">
+	   ###CAREERLEVEL###
+	    </SELECT></td>
+    </tr>
+    <tr valign="top"> 
+      <td>Educational Requirements</td>
+      <td><SELECT NAME="qualification">
+	  ###QUALIFICATION###
+	    </SELECT></td>
+    </tr>
+    <tr valign="top">
+      <td>Pause</td>
+	   <td ><input type="checkbox" name="hidden" value="1"></td>
+    </tr>
+	 <tr valign="top">
+      <td>Position filled</td>
+	   <td ><input type="checkbox" name="position_filled" id="position_filled" value="1" ></td>
+    </tr>
+    <tr valign="top"> 
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr valign="top"> 
+      <td colspan="2"><input type="submit" value="Save" name="###FORMNAMEEXTENSIONJOB###[action]"> &nbsp; 
+        <input name="reset" type="reset" value="Reset"></td>
+    </tr>
+  </table>
+<input type="hidden" name="sponsor_id" value="###SPONSOR_ID###">
+</form>
+<script>
+addCalendar("Date1", "Select Date", "starttime", "###FORMNAMEEXTENSIONJOB###joblisting");
+addCalendar("Date2", "Select Date", "endtime", "###FORMNAMEEXTENSIONJOB1###joblisting");
+setWidth(90, 1, 15, 1);
+setColor("#cccccc", "#cccccc", "#ffffff", "#ffffff", "#333333", "#cccccc", "#333333");
+setFormat("###DATEFORMATCALENDAR###");
+changeMenu('USA');
+</script>
+<!--  ###ADD_JOB_PLACEHOLDER### -->
+
+<!--  ###EDIT_JOB_PLACEHOLDER### -->
+<script type="text/javascript">
+var ol_textfont = "Courier New, Courier";
+</script>
+<script language="JavaScript" src="###SCRIPTNAME_POPUP_HELP_JS###"></script>
+
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<form method="POST" name="###FORMNAMEEXTENSION###joblisting" onsubmit="return validateForm(this);">
+<h1>Company Information</h1>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr valign="top"> 
+    <td width="35%">Company Description <a href="javascript:void(0);" onmouseover="return overlib('This is an opportunity to describe your coprorate culture, etc.', CAPTION, 'HELP TEXT', WRAP, CELLPAD, 10, 5, WIDTH, 320, HEIGHT, 70, FGCOLOR, '#FFCCCC', TEXTFONT, 'Arial');" onmouseout="return nd();"><img src="###HELP_IMAGE###" border="0" height="11" width="11"></a></td>
+    <td width="76%"><TEXTAREA NAME="company_description" COLS="50" ROWS="3" id="company_description">###COMPANY_DESCRIPTION###</TEXTAREA></td>
+  </tr>
+  <tr valign="top"> 
+      <td>Job Description</td>
+      <td><TEXTAREA NAME="joboverview" COLS="50" ROWS="3" id="joboverview">###JOB_OVERVIEW###</TEXTAREA></td>
+    </tr>
+  <tr valign="top"> 
+    <td>Position Title</td>
+    <td><input name="occupation" type="text" id="occupation" value="###OCCUPATIONNAME###" size="40" ></td>
+  </tr>
+  <tr valign="top"> 
+    <td>Listing Start Date</td>
+    <td><INPUT NAME="starttime" TYPE="text" id="starttime" value="###JOB_STARTTIME###" size="10" maxlength="10">
+        <a href="javascript:showCal('Date1')"><IMG SRC="###CALENDARIMAGE0###" WIDTH="16" HEIGHT="16" BORDER=0 ALT=""></a> Please use calendar for proper formatting</td>
+  </tr>
+  <tr valign="top"> 
+    <td>Listing End Date</td>
+    <td><INPUT NAME="endtime" TYPE="text" id="endtime" value="###JOB_CLOSETIME###" size="10" maxlength="10" >
+        <a href="javascript:showCal('Date2')"><IMG SRC="###CALENDARIMAGE1###" WIDTH="16" HEIGHT="16" BORDER=0 ALT=""></a> Please use calendar for proper formatting</td>
+  </tr>
+  <tr valign="top">
+    <td>City</td>
+    <td><INPUT NAME="city" TYPE="text" id="city" value="###JOB_BANK_CITY###"></td>
+  </tr>
+   <tr valign="top"> 
+    <td>State</td>
+    <td><select name="location">
+          <option>Select a country</option>
+        </select></td>
+  </tr>
+  <tr valign="top"> 
+    <td>Country</td>
+    <td><select name="zone_location" onchange ="changeMenu(this.value)">###JOB_BANK_LOCATION###
+        </select></td>
+  </tr>
+   
+</table>
+<h1>Job Information</h1>
+  <table width="100%" border="0" cellspacing="0" cellpadding="5">
+   
+	<tr valign="top"> 
+      <td>Major Responsibilities</td>
+      <td><TEXTAREA NAME="major_responsibilities" ROWS="3" COLS="50" id="major_responsibilities">###MAJOR_RESPONSIBILITIES###</TEXTAREA></td>
+    </tr>
+	<tr valign="top"> 
+      <td>Additional Requirements</td>
+      <td><TEXTAREA NAME="additional_requirement" COLS="50" ROWS="3" id="additional_requirement">###ADDITIONAL_REQUIREMENT###</TEXTAREA></td>
+    </tr>
+ 
+<tr valign="top"> 
+      <td width="35%">Area of Expertise</td>
+      <td width="81%">	<TEXTAREA NAME="industry" ROWS="3" COLS="50">###JOB_INDUSTRY###</TEXTAREA>
+  
+        <input name="industry_oth" type="text" class="job_hidden" id="industry_oth" value="###INDUSTRY_OTH###"></td>
+    </tr>
+    <tr valign="top"> 
+      <td>Job Type</td>
+      <td><select name="status" id="status">###STATUS###
+           
+        </select></td>
+    </tr>
+    <tr valign="top"> 
+      <td>Career Level</td>
+      <td><SELECT name="clevel">
+	   ###CAREERLEVEL###
+	    </SELECT></td>
+    </tr>
+    <tr valign="top"> 
+      <td>Educational Requirements</td>
+      <td><SELECT NAME="qualification">
+	  ###QUALIFICATION###
+	    </SELECT></td>
+    </tr>
+	  <tr valign="top">
+      <td>Pause</td>
+	   <td ><input type="checkbox" name="hidden" value="1" id="hidden" ###PAUSE###></td>
+    </tr>
+	 <tr valign="top">
+      <td>Position filled</td>
+	   <td ><input type="checkbox" name="position_filled" value="1" id="position_filled" ###POSITION_FILLED###></td>
+    </tr>
+     <tr valign="top"> 
+      <td colspan="2">&nbsp; 
+     </td>
+    </tr>
+    <tr valign="top"> 
+      <td colspan="2"><input name="tx_jobbank_pi1[action]" type="submit" id="action" value="Update">
+&nbsp;
+        &nbsp; &nbsp; <a href="###BACKPATH###">Cancel Edit</a></td>
+    </tr>
+  </table>
+<input type="hidden" name="uid" value="###JOB_UID###">
+<input type="hidden" name="tx_t3consultancies_cat_uid" value="###TX_T3CONSULTANCIES_CAT_UID###">
+<input type="hidden" name="sponsor_id" value="###SPONSOR_ID###">
+</form>
+</form>
+<script>
+addCalendar("Date1", "Select Date", "starttime", "###FORMNAMEEXTENSIONJOB###joblisting");
+addCalendar("Date2", "Select Date", "endtime", "###FORMNAMEEXTENSIONJOB1###joblisting");
+setWidth(90, 1, 15, 1);
+setColor("#cccccc", "#cccccc", "#ffffff", "#ffffff", "#333333", "#cccccc", "#333333");
+setFormat("###DATEFORMATCALENDAR###");
+changeMenu('###SELECTED_COUNTRY###');
+selectMenu('###SELECTED_STATE###', 3);
+</script>
+
+<!--  ###EDIT_JOB_PLACEHOLDER### -->
+<!--  ###LISTINGS_PLACEHOLDER### -->
+<form method="post" name="###FORMNAMEEXTENSION###joblisting">
+<script language="javascript" type="text/javascript">
+	
+function confirmDelete()
+{
+	var agree=confirm("Are you sure you wish to delete?");
+	if (agree)
+		return true ;
+	else
+		return false ;
+}
+
+</script>
+<table style="width: 100%" border="0" cellpadding="3" cellspacing="0">
+    <tr>
+      <td class="jobbank_menuborderdetails"  valign="top"
+ width="100%">
+      
+    <table
+style="width: 100%;  border="0" cellpadding="3"
+ cellspacing="0">
+          <tr class="detailinfo">
+        ###HEADER_INFO###
+      </tr>
+      <!--###DISPLAY_LIST###-->
+       	###DATARECORDS###    
+          
+      <!--###DISPLAY_LIST###-->
+  </table>
+  </td>
+  </tr>
+  <tr><td>&nbsp;
+  
+  </td></tr>
+  <tr><td>
+  <input type="hidden" name="###FORMNAMEEXTENSION###[action]" value="listingSubmit">
+  <input type="hidden" name="sponsor_id" value="###SPONSOR_ID###">
+  <input type="submit" value="Delete Selected" onclick="return confirmDelete()" >
+  </td></tr>
+</table>  
+</form>
+<!--  ###LISTINGS_PLACEHOLDER### -->

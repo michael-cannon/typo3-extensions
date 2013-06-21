@@ -1,0 +1,16 @@
+plugin.tx_jmquote_pi1 {
+	# cat=jmquote/links; type=int+; label=Sysfolder Page-ID: Where the quotes are located.
+  	pid_list = 0
+  	
+	# cat=jmquote; type=string; label=Cite Wrap
+  	citeWrap = <cite>|</cite>
+
+	# cat=jmquote; type=string; label=Author Wrap
+  	authorWrap = <br />|
+
+	# cat=jmquote; type=string; label=Content Wrap
+  	contentWrap = |
+
+	# cat=jmquote/enable; type=boolean; label=List Mode
+  	listMode = 0
+}

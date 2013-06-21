@@ -1,0 +1,7 @@
+/**
+ * @author Michael Cannon <michael@peimic.com>
+ * @version $Id: constants.txt,v 1.1.1.1 2010/04/15 10:03:37 peimic.comprock Exp $
+ */
+plugin.rtelightbox.lightboxExt = mb
+plugin.ju_multibox.imgtext.captionField = titleText // altText // imagecaption
+plugin.ju_multibox.tt_news.captionField = imagetitletext // imagealttext // imagecaption

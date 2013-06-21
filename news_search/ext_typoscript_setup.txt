@@ -1,0 +1,7 @@
+
+plugin.tx_newssearch_pi1 {
+   pageId = {$plugin.tx_newssearch_pi1.pageId}
+   pagingSize = {$plugin.tx_newssearch_pi1.pagingSize}
+   templateFile = {$plugin.tx_newssearch_pi1.templateFile}
+   SearchCategory = {$plugin.tx_newssearch_pi1.SearchCategory}
+}

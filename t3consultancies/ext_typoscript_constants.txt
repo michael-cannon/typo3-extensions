@@ -1,0 +1,36 @@
+plugin.tx_t3consultancies_pi1 {
+	# cat=plugin.tx_t3consultancies_pi1/file/; type=file[html,htm,tmpl,txt]; label= Template File: Template file. See EXT:t3consultancies/pi1/t3consultancies.html for an example.
+	templateFile = EXT:t3consultancies/pi1/t3consultancies.html
+
+    # cat=plugin.tx_t3consultancies_pi1/links/; type=int+; label= Detail Page PID: PID where detail views are directed to.
+    detailPid =
+
+    # cat=plugin.tx_t3consultancies_pi1/links/; type=int+; label= Category Listing Page: PID of category listing page.
+    categoryListingPage =
+
+    # cat=plugin.tx_t3consultancies_pi1/links/; type=int+; label= Alphabetical Listing Page: PID of alphabetical listing page.
+    alphabeticalListingPage =
+
+    # cat=plugin.tx_t3consultancies_pi1/dims/; type=int+; label= Category Image Width : Maximum width of category image.
+    categoryWidth = 240
+
+    # cat=plugin.tx_t3consultancies_pi1/dims/; type=int+; label= Logo Image Width : Maximum width of logo image.
+    logoWidth = 500
+
+    # cat=plugin.tx_t3consultancies_pi1/dims/; type=int+; label= Coupon Image Width : Maximum width of coupon image.
+    couponWidth = 600
+
+    # cat=plugin.tx_t3consultancies_pi1/dims/; type=int+; label= Featured Logo Image Width : Maximum width of featured logo image.
+    featuredLogoWidth = 120
+
+    # cat=plugin.tx_t3consultancies_pi1/dims/; type=text; label= Title Image Background Color
+	title.backColor = #fff0d3
+    # cat=plugin.tx_t3consultancies_pi1/dims/; type=text; label= Title Image Font Color
+	title.fontColor = #d93028
+    # cat=plugin.tx_t3consultancies_pi1/dims/; type=text; label= Title Image Font File Location
+	title.fontFile = fileadmin/directorypointmarketing.net/assets/ITCKrist.TTF
+    # cat=plugin.tx_t3consultancies_pi1/dims/; type=int+; label= Title Image Font Size
+	title.fontSize = 20
+    # cat=plugin.tx_t3consultancies_pi1/dims/; type=boolean; label= Link Title
+	linkTitle = 0
+}

@@ -1,0 +1,11 @@
+plugin.tt_news.news_lead {
+	send = {$plugin.tt_news.news_lead.send}
+	trackAll = {$plugin.tt_news.news_lead.trackAll}
+	fromName = {$plugin.tt_news.news_lead.fromName}
+	fromEmail = {$plugin.tt_news.news_lead.fromEmail}
+	bcc = {$plugin.tt_news.news_lead.bcc}
+	sitename = {$plugin.tt_news.news_lead.sitename}
+	pid = {$plugin.tt_news.news_lead.pid}
+	timeFramePid = {$plugin.tt_news.news_lead.timeFramePid}
+	templateFile = {$plugin.tt_news.news_lead.templateFile}
+}

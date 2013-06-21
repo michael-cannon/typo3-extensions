@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'shopping_system'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_news.tx_shoppingsystem_related_product">Related product</label>
+			<label index="tt_news.tx_shoppingsystem_product_store">Product Store</label>
+			<label index="tt_news.tx_shoppingsystem_product_brand">Product Brand</label>
+			<label index="tt_news.tx_shoppingsystem_product_fetch_url">Image Fetch URL</label>
+			<label index="tt_news.tx_shoppingsystem_product_merchant_url">Product Merchant URL</label>
+			<label index="tt_news.tx_shoppingsystem_product_image">Product Image</label>
+			<label index="tt_news.tx_shoppingsystem_product_image_small">Product Image (small)</label>
+			<label index="tt_news.tx_shoppingsystem_product_price">Product Price</label>
+			<label index="tt_news_cat.tx_shoppingsystem_featured_product">Featured Product</label>
+			<label index="tt_content.list_type_pi4">Related Product</label>
+			<label index="tt_content.list_type_pi5">Shopping SelectBox</label>
+			<label index="tt_content.list_type_pi6">Shopping menu</label>
+			<label index="tt_content.list_type_pi7">Generate Text Image</label>
+			<label index="tt_content.pi_flexform.sheet_general">Main</label>
+		</languageKey>
+	</data>
+</T3locallang>

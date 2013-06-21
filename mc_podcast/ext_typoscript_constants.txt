@@ -1,0 +1,30 @@
+plugin.mc_podcast {
+	# cat=plugin.podcast//10; type=int+; label=Time to live for this feed in minutes
+	ttl = 50
+	# cat=plugin.podcast//20; type=string; label=Copyright of the podcast feed
+	copyright =
+	# cat=plugin.podcast//20; type=string; label=Title of the podcast feed
+	title =
+	# cat=plugin.podcast//30; type=string; label=Description of the podcast feed
+	description =
+	# cat=plugin.podcast//40; type=string; label=Beseurl for convert all the relative urls to absolute urls
+	link = http://www.example.com/
+	# cat=plugin.podcast//50; type=string; label=Language of the feed, using the standard ISO 639-1 Alpha-2 (www.w3.org/WAI/ER/IG/ert/iso639.htm)
+	language = en-us
+	# cat=plugin.podcast/enable/10; type=boolean; label=This feed is for iTunes? 
+	itunes = 0
+	# cat=plugin.podcast/enable/20; type=boolean; label=iTunes - This feed contains explicit language? 
+	explicit = 0
+	# cat=plugin.podcast//130; type=string; label=iTunes - Summary of the podcast feed
+	summary = 
+	# cat=plugin.podcast//130; type=string; label=iTunes - Subtitle of the podcast feed
+	subtitle =
+	# cat=plugin.podcast//140; type=string; label=iTunes - Author of the podcast feed
+	author =
+	# cat=plugin.podcast//150; type=string; label=iTunes - Author's Email of the podcast feed
+	email =
+	# cat=plugin.podcast/file/160; type=string; label=iTunes -  Logo for this podcast feed, relative path from root of the 'link' param
+	image =
+	# cat=plugin.podcast//160; type=string; label=iTunes - iTunes categories that match whit this feed, put every categories separate broken vertical bar. See http://www.apple.com/itunes/whatson/podcasts/specs.html#categories for options.
+	categories = International|Health|Talk Radio
+}

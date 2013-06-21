@@ -1,0 +1,11 @@
+#
+# MLC 20061203
+#
+plugin.tx_srfeuserregister_pi1.create.defaultValues.tx_commentnotify_global_notify_enabled = 1
+plugin.tx_srfeuserregister_pi1.create.evalValues.tx_commentnotify_global_notify_enabled = 
+plugin.tx_srfeuserregister_pi1.edit.fields = username, password, first_name, last_name, email, city, zone, static_info_country, module_sys_dmail_category, gender, module_sys_dmail_html, tx_smcustomizations_terms_agree, image, tx_smcustomizations_income_range, tx_smcustomizations_education_level, tx_smcustomizations_shopping_frequency, tx_smcustomizations_online_shopping, tx_smcustomizations_how_found, tx_smcustomizations_how_found_text, tx_smcustomizations_age, comments, tx_commentnotify_global_notify_enabled
+plugin.tx_srfeuserregister_pi1.parseValues.tx_commentnotify_global_notify_enabled = 
+plugin.tx_srfeuserregister_pi1._LOCAL_LANG.default {
+	tx_commentnotify_global_notify_enabled = Receive notifications of new comments in discussion threads?
+	missing_tx_commentnotify_global_notify_enabled = Notifications setting is missing.
+}

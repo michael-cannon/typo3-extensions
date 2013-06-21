@@ -1,0 +1,14 @@
+a:4:{s:4:"save";a:3:{s:13:"extension_key";s:9:"cbrealurl";s:18:"print_wop_comments";s:1:"0";s:15:"overwrite_files";a:8:{s:9:"ChangeLog";s:1:"1";s:10:"README.txt";s:1:"1";s:12:"ext_icon.gif";s:1:"1";s:19:"doc/wizard_form.dat";s:1:"1";s:20:"doc/wizard_form.html";s:1:"1";s:14:"ext_tables.php";s:1:"1";s:31:"static/CB_RealURL/constants.txt";s:1:"1";s:27:"static/CB_RealURL/setup.txt";s:1:"1";}}s:6:"emconf";a:1:{i:1;a:7:{s:5:"title";s:32:"Cannonbose RealURL Configuration";s:11:"description";s:42:"Pre-configured RealURL for many extensions";s:8:"category";s:0:"";s:5:"state";s:5:"alpha";s:12:"dependencies";s:7:"realurl";s:6:"author";s:14:"Michael Cannon";s:12:"author_email";s:22:"michael@cannonbose.com";}}s:9:"languages";a:0:{}s:2:"ts";a:1:{i:1;a:3:{s:5:"title";s:10:"CB RealURL";s:9:"constants";s:364:"config {
+    # cat=advanced/enable/; type=boolean; label=Enable Real URL:Un-enable simulateStaticDocuments if enabled
+    tx_realurl_enable = 1
+
+    # cat=advanced/enable/; type=boolean; label=Simulate Static Documents:Un-enable if using Real URL
+    simulateStaticDocuments = 0
+
+    # cat=advanced/enable/; type=boolean; label=No Cache
+    no_cache = 0
+}";s:5:"setup";s:164:"config {
+    tx_realurl_enable = {$config.tx_realurl_enable}
+    simulateStaticDocuments = {$config.simulateStaticDocuments}
+    no_cache = {$config.no_cache}
+}";}}}

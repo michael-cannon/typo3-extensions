@@ -1,0 +1,45 @@
+2009-10-15 Thursday 22:36  mc
+
+	* update CHANGELOG
+
+2009-10-15 Thursday 22:31  mc
+
+	* move extconf to extension; default image zoom on
+
+2009-10-12 Monday 08:25  mc
+
+	* correct icbase/icrealurl path
+
+2009-10-12 Monday 08:22  mc
+
+	* add devURL for baseURL
+
+2009-10-10 Saturday 11:28  mc
+
+	* update CHANGELOG
+
+2009-09-25 Friday 00:30  mc
+
+	* TSconstant (TSc) config.baseURL to siteURL
+
+2009-09-24 Thursday 02:50  mc
+
+	* restore realurl.php to near baseline from realurl ext; remove
+	  excess code; apply headers
+
+2009-09-24 Thursday 02:27  mc
+
+	* Removal of "ext_conf_template.txt"
+
+2009-09-24 Thursday 01:12  mc
+
+	* correct dependencies
+
+2009-09-21 Monday 10:02  mc
+
+	* Inital import of 'icrealurl' directory
+
+2009-09-21 Monday 10:02  mc
+
+	* Initial revision
+

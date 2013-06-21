@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'dam_liteshow'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">Liteshow Gallery</label>
+			<label index="pi1_plus_wiz_description">Adds a image gallery via Liteshow to the page.</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="pi1_title">Liteshow Fotogalerie</label>
+			<label index="pi1_plus_wiz_description">Fuegt der Seite eine Fotogalerie mit Liteshow hinzu.</label>
+		</languageKey>
+	</data>
+</T3locallang>

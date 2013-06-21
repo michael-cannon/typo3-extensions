@@ -1,0 +1,95 @@
+<!-- ###BULLETINHEADER### starts here-->
+
+<h1>bulletin sponsorship</h1>
+<form ACTION="###ACTION###" enctype="multipart/form-data" method="POST">
+        <p>&nbsp;</p>
+         <p>&nbsp;</p>
+        <p><b>Requirements :</b></p>
+        
+        <p></p>
+        <p>Company name as it should appear in text in Bulletin: 
+          <input name="###EXTKEY###[company_name]" type="text" value="###COMPANY_NAME###"> 
+     	</p>
+
+        <p> Text of sponsorship          (no html allowed):<br>
+          <textarea name="###EXTKEY###[description]" cols="50" rows="8">###DESCRIPTION###</textarea>
+        </p>
+        <p>Link for recipients to click: 
+          <input name="###EXTKEY###[link_location]" type="text" value="###LINK_LOCATION###">
+        </p>
+        <p>Text for link (call to action) 
+          <input name="###EXTKEY###[link_text]" type="text" value="###LINK_TEXT###">
+
+</p>
+        <p><b>Default Logo</b> (will be used as shown in example below):</p>
+        ###LOGOOPTION###
+        <p>&nbsp;</p>
+        <p><b>Upload new logo for the Bulletin Sponsorship only</b><br>(all other logos on site will not be affected):</p>
+        <p>
+          <input name="###EXTKEY###[pic]" type="file">
+          <br>
+          <br>
+
+          <input name="###EXTKEY###[insertData]" value="Submit" type="submit">
+</p>
+        <p>&nbsp;</p>
+        <p><b><a name="sample"></a>Sample Sponsorship: </b></p>
+        <p>&nbsp;</p>
+        </form>
+<!-- ###BULLETINHEADER### ends here-->
+        
+<!-- ###LOGOHEADER### starts here -->
+<table border="0" cellpadding="0" cellspacing="0" width="200">
+          <tbody><tr>
+          	<!-- ###LOGOHEADERDATA### starts here -->
+            <td>
+              <input name="###EXTKEY###[default_logo]" value="###DEFAULTPIC###" type="radio" ###CHECKED###>
+            </td>
+            <td>###PIC### &nbsp;&nbsp;###DELETEOPTION###</td>
+
+          </tr>
+          <!-- ###LOGOHEADERDATA### starts here -->
+        
+        </tbody></table>
+<!-- ###LOGOHEADER### ends here -->
+
+<!-- ###SAMPLESPONSERSHIP### starts here -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+
+<td width="1"></td><td class="sectiontitles-red">Sponsored By ###COMPANY_NAME###</td>
+</tr>
+<tr class="td-red">
+<td><img src="http://www.bpminstitute.org/images/spacer.gif" height="2" width="1"></td>
+<td><img src="http://www.bpminstitute.org/images/spacer.gif" height="1" width="1"></td>
+</tr>
+<tr>
+
+<td><img src="http://www.bpminstitute.org/images/spacer.gif" height="8" width="1"></td>
+<td class="smalltext-grey">
+  <p>###IMAGEFILE###</p>
+  <p>###DESCRIPTION###</p>
+  <p><a href="###LINK_LOCATION###" target="_blank">###LINK_TEXT###</a><br>
+  </p>
+</td>
+</tr>
+
+<tr>
+<td><img src="http://www.bpminstitute.org/images/spacer.gif" height="8" width="1"></td>
+<td align="right">&nbsp;</td>
+</tr>
+</tbody></table>
+<!-- ###SAMPLESPONSERSHIP### Ends here -->
+
+<!-- ###UPLOADLOGO### starts here-->
+<form action="###ACTION###" enctype="multipart/form-data" method="POST">
+<h1>Upload logo </h1>
+        <p>&nbsp;</p>
+        <p><b>Upload new logo:</b></p>
+        <p>
+          <input name="###EXTKEY###[pic]" type="file">
+          <input name="###EXTKEY###[redirect_url]" type="hidden" value="###REDIRECTURL###">
+          <br>
+          <input name="###EXTKEY###[insert_logo]" value="Submit" type="submit"> 
+ </form>
+<!-- ###UPLOADLOGO### ends here-->

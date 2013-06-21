@@ -1,0 +1,132 @@
+### No link targets by default
+PAGE_TARGET = 
+content.pageFrameObj = 
+
+config {
+	# cat=icbase/links; type=small; label=External Link Target
+	extTarget = _blank
+
+	# cat=icbase/links; type=small; label=Internal Link Target
+	intTarget = 
+
+	# cat=icbase/links; type=small; label=File Link Target
+	fileTarget = _blank
+
+	# cat=icbase/language; type=small; label=Content Charset
+	renderCharset = utf-8
+
+	# cat=icbase/language; type=string; label=Document Charset: Normally same as renderCharset.
+	metaCharset = utf-8
+
+	# cat=icbase/typo; type=options[,xhtml_trans,xhtml_frames,xhtml_strict,xhtml_basic,xhtml_11,xhtml_2,none]; label=Document Type: Leave blank for HTML 4.0 Transitional
+	doctype = xhtml_trans
+
+	# cat=icbase/typo; type=options[none,xml_10,xml11]; label=Remove XML Prologue: If "none" then no XML prologue is created when "config.doctype" is set to one of the XHTML modes.
+	xmlprologue = none
+
+	# cat=icbase/language; type=string; label=HTML Tag Language: Allows you to set the language value for the attributes "xml:lang" and "lang" in the <html> tag
+	htmlTag_langKey = en
+
+	# cat=icbase/enable; type=boolean; label=Enable Links Across Domains: Post TYPO3 4.2
+	typolinkEnableLinksAcrossDomains = 1
+
+	# cat=icbase/enable; type=boolean; label=Allow Cross Domain Content: Pre TYPO3 4.2
+	content_from_pid_allowOutsideDomain = 1
+
+	# cat=icbase/enable; type=boolean; label=Meaningful Tempfile Prefix:If set it will try to render a meaningful prefix before temporary image files.
+	meaningfulTempFilePrefix = 1
+
+	# cat=icbase/enable; type=boolean; label=Page Title First:If set (and the page title is printed) then the page-title will be printed BEFORE the template title.
+	pageTitleFirst = 1
+
+	# cat=icbase/; type=string; label=Email URL Mode:This option allows you to handle URL's in plain text emails so long URLS of more than 76 chars are not broken. This option can be either empty or "76" or "all".
+	notification_email_urlmode = 76
+
+	# cat=icbase/; type=string; label=Email Encoding:This sets the encoding of plaintext emails.
+	notification_email_encoding = quoted-printable
+
+	# cat=icbase/enable; type=boolean; label=Redirect Old Links to New
+	redirectOldLinksToNew = 1
+
+	# cat=icbase/enable; type=boolean; label=Show Admin Panel:If set, the admin panel appears in the bottom of pages.
+	admPanel = 0
+
+	# cat=icbase/typo; type=options[,all,cached,output]; label=HTML Cleaning:Tries to clean up the output to make it XHTML compliant and a bit more. 
+	xhtml_cleaning = all
+
+	# cat=icbase/; type=int; label=Root PID:Website root page id
+	rootPid = 1
+
+	# cat=icbase/; type=wrap; label=Header Data Wrap
+	headerDataWrap = |
+
+	# cat=icbase/enable; type=boolean; label=Correct Multiple Domain Links
+	typolinkCheckRootline = 1
+
+	# Send UTF-8 Notification Email Headers
+	# cat=icbase/; type=string; label=Notification Email Charset
+	notification_email_charset = utf-8
+
+	# cat=icbase/enable; type=boolean; label=Show Hidden Pages in Site Map
+	includeNotInMenu = 0
+
+	# cat=icbase.search/enable; type=boolean; label=Enable Indexed Search
+	index_enable = 0
+
+	# cat=icbase.search/enable; type=boolean; label=Included Metatags in Search
+	index_metatags = 1
+
+	# cat=icbase.search/enable; type=boolean; label=Enable External Document Search
+	index_externals = 0
+
+	# cat=icbase.search/enable; type=boolean; label=Show Search Rules
+	show.rules = 0
+
+	# cat=icbase.search/enable; type=boolean; label=Show Advanced Search Link
+	show.advancedSearchLink = 0
+
+	# cat=icbase/enable; type=boolean; label=Disable Extension BEGIN/END in HTML
+	disablePrefixComment = 1
+
+	# cat=icbase; type=string; label=HTML Header Custom Comment
+	headerComment =
+
+	# cat=icbase/enable; type=boolean; label=Send Cache Control Headers:Output cache-control headers to the client
+	sendCacheHeaders = 1
+}
+
+tt_content.stdWrap {
+	# cat=icbase/; type=wrap; label=Content Data Wrap
+	dataWrap = <a id="c{field:uid}"></a> |
+
+	# cat=icbase/; type=string; label=Content Comment Prefix
+	prefixComment = 1 | CONTENT ELEMENT, uid:{field:uid}/{field:CType}
+}
+
+lib.parseFunc_RTE {
+	nonTypoTagStdWrap.encapsLines {
+		# cat=icbase/; type=string; label=Remap DIV Tag
+		remapTag.DIV = 
+
+		# cat=icbase/; type=string; label=Non Wrapped Tag Wrapper
+		nonWrappedTag = P
+	}
+}
+
+# Default Header Type: Use h2 headers versus h1
+content.defaultHeaderType = 2
+
+plugin.tx_templavoila_pi1 {
+	# cat=icbase/enable; type=boolean; label=If set, no TemplaVoila error messages will be displayed in the frontend.
+	disableErrorMessages = 1
+
+	# cat=icbase/enable; type=boolean; label=If set, no TemplaVoila preview will be displayed in the frontend.
+	disableExplosivePreview = 1
+}
+
+plugin.tx_staticinfotables_pi1.currencyCode = USD
+plugin.tx_staticinfotables_pi1.countryCode = USA
+plugin.tx_staticinfotables_pi1.languageCode = EN
+
+# Filesize Labels
+styles.content.uploads.filesize.labels = Bytes | KB | MB | GB

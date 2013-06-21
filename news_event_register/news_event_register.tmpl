@@ -1,0 +1,532 @@
+<html>
+<head>
+	<title>New Event Register</title>
+</head>
+<body>
+	<h1>News Event Register Template</h1>
+	<p>The fllowing template markers can be used in news and event templates. Thanks to mbl_events for the ideas.</p>
+	<h3>Markers</h3>
+	<pre>
+###EVENT_TITLE### - News item title
+###EVENT_FROM_DATE### - The start date for the event
+###EVENT_FROM_TIME### - The start time for the event
+###EVENT_TO_DATE### - The end date for the event
+###EVENT_TO_TIME### - The end time for the event
+###EVENT_INFORMATION### - Event information
+###EVENT_INFORMATION_EMAILED### - Event emailed information
+###EVENT_INFORMATION_REGISTERED### - Sponsor offer fulfillment text
+###EVENT_INFORMATION_REGISTERED_EMAILED### - Emailed sponsor offer fulfillment text
+###EVENT_LINK### - The event link
+###EVENT_WEBEXLINK### - The Webex event link
+
+###EVENT_REGISTER_FORM### - registration form
+###EVENT_ACCESS### - Event access information
+###EVENT_FOLLOWUP### - Event followup information
+###EVENT_FOLLOWUP_LINK### - Event followup link
+
+###EVENT_POC### - Point of contact text
+###EVENT_REGISTER_MAGIC### - Combined register or your're registered & noticestext
+
+###EVENT_URL### - URL of news item
+###EVENT_UNREGISTER_FORM### - Unregistration form
+</pre>
+
+<h3>Email monitor markers</h3>
+<pre>
+###EVENT_TODAYS_DATE### - Today's date
+###EVENT_TOTAL_REGISTRANTS### - Total registrants for current round tables
+###EVENT_NEW_REGISTRANTS### - New round table registrants for today
+
+###EVENT_THANK_YOU_EMAILS_SENT### - Thank you emails sent for registrations
+###EVENT_REMINDER_EMAILS_SENT### - Round table reminder
+###EVENT_ACCESS_EMAILS_SENT### - Round table access information
+###EVENT_FOLLOWUP_EMAILS_SENT### - Round table follow up
+</pre>
+
+	<h3>Localizeable Markers (Markers for text strings, that is)</h3>
+	<pre>
+###EVENT_TITLE_REGISTER_TEXT### - "Please register for "
+###EVENT_TITLE_REGISTERED_TEXT### - "Thank you for registering for "
+###EVENT_TITLE_UNREGISTERED_TEXT### - "You've been unregistered for "
+###EVENT_DATE_TEXT### - "Date: "
+###EVENT_FROM_TEXT### - "From "
+###EVENT_TO_TEXT### - " to "
+###EVENT_LINK_TEXT### - "Link: "
+###EVENT_INFORMATION_TEXT### - "Information: "
+###EVENT_REGISTER_NOW_TEXT### - <a href="#register">Register Now</a>
+
+###EVENT_RESERVE_TEXT### - Reserve your seat today
+###EVENT_REGISTER_TEXT### - "Click to register" or "Login to register"
+###EVENT_REGISTERED_TEXT### - "You're already registered"
+###EVENT_NOTICES_TEXT### - "Event reminders will be sent via email.."
+###EVENT_SUBJECT_REGISTERED_TEXT### - Subject of registered email
+###EVENT_BODY_REGISTERED_TEXT### - Body of registered email
+###EVENT_SUBJECT_REGISTERED_ADMIN_TEXT### - Subject of admin for registered email
+###EVENT_BODY_REGISTERED_ADMIN_TEXT### - Body of admin registered email
+
+###EVENT_SUBJECT_REMINDER_TEXT### - Subject of reminder email
+###EVENT_BODY_REMINDER_TEXT### - Body of reminder email
+
+###EVENT_SUBJECT_ACCESS_TEXT### - Subject of access email
+###EVENT_BODY_ACCESS_TEXT### - Body of access email
+###EVENT_ACCESS_TEXT### - Event access information heading
+
+###EVENT_FOLLOWUP_TEXT### - Event followup information heading
+###EVENT_FOLLOWUP_LINK_TEXT### - Event followup link heading
+###EVENT_SUBJECT_FOLLOWUP_TEXT### - Subject of followup email
+###EVENT_BODY_FOLLOWUP_TEXT### - Thank you for having attended our %s event on %s at %s.
+
+###EVENT_POC_TEXT### - Point of Contact: 
+###EVENT_REGISTER_MAGIC_TEXT### - Combined register or your're registered & noticestext
+
+###EVENT_UNREGISTER_TEXT### - "Click to unregister" or "Login to unregister"
+###EVENT_TITLE_ENDED_TEXT### - Event Registration Closed For
+###EVENT_ENDED_TEXT### - As this event has been completed, registration is closed.
+	</pre>
+
+	<hr />
+	<h1>TEMPLATE_ENDED</h1>
+<!-- ###TEMPLATE_ENDED### begin
+	Registration form
+-->
+<table>
+	<tr>
+		<td style="vertical-align: top;">
+			###EVENT_TITLE_ENDED_TEXT### ###EVENT_TITLE###
+		</td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; width: 40%;">
+			###EVENT_ENDED_TEXT###
+		</td>
+	</tr>
+</table>
+<!-- ###TEMPLATE_ENDED### end -->
+
+	<hr />
+	<h1>TEMPLATE_REGISTER</h1>
+<!-- ###TEMPLATE_REGISTER### begin
+	Registration form
+-->
+<table>
+	<tr>
+		<td colspan="2" style="vertical-align: top;">
+			###EVENT_TITLE_REGISTER_TEXT### ###EVENT_TITLE###
+		</td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; width: 40%;">
+			###EVENT_RESERVE_TEXT###
+			###EVENT_REGISTER_TEXT###
+			###EVENT_REGISTER_FORM###
+		</td>
+		<td style="vertical-align: top;">
+			###EVENT_DATE_TEXT### ###EVENT_FROM_DATE### ###EVENT_FROM_TIME### ###EVENT_TO_TEXT### ###EVENT_TO_TIME###
+			###EVENT_LINK_TEXT### ###EVENT_LINK###
+			###EVENT_INFORMATION_TEXT### ###EVENT_INFORMATION###
+		</td>
+	</tr>
+</table>
+<!-- ###TEMPLATE_REGISTER### end -->
+
+	<hr />
+	<h1>TEMPLATE_REGISTERED</h1>
+<!-- ###TEMPLATE_REGISTERED### begin
+	Registered form
+-->
+<table>
+	<tr>
+		<td colspan="2" style="vertical-align: top;">
+			###EVENT_TITLE_REGISTERED_TEXT### ###EVENT_TITLE###
+			###EVENT_UNREGISTER_TEXT###
+			###EVENT_UNREGISTER_FORM###
+		</td>
+	</tr>
+	<tr>
+		<td style="vertical-align: top; width: 50%;">
+			###EVENT_REGISTERED_TEXT###
+			###EVENT_INFORMATION_REGISTERED###
+		</td>
+		<td style="vertical-align: top;">
+			###EVENT_NOTICES_TEXT###
+			###EVENT_BACK###
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="vertical-align: top;">
+			###EVENT_DATE_TEXT### ###EVENT_FROM_DATE### ###EVENT_FROM_TIME### ###EVENT_TO_TEXT### ###EVENT_TO_TIME###
+			###EVENT_LINK_TEXT### ###EVENT_LINK###
+			###EVENT_INFORMATION_TEXT### ###EVENT_INFORMATION###
+		</td>
+	</tr>
+</table>
+<!-- ###TEMPLATE_REGISTERED### end -->
+
+	<hr />
+	<h1>TEMPLATE_REGISTERED_EMAIL</h1>
+<!-- ###TEMPLATE_REGISTERED_EMAIL### begin
+	Thank you for registering email
+-->
+###EVENT_SUBJECT_REGISTERED_TEXT###
+###FIRST_NAME###,
+
+###EVENT_BODY_REGISTERED_TEXT###
+
+###EVENT_FROM_TEXT### ###EVENT_FROM_DATE### ###EVENT_FROM_TIME### ###EVENT_TO_TEXT### ###EVENT_TO_DATE### ###EVENT_TO_TIME###
+###EVENT_LINK_TEXT### ###EVENT_LINK###
+
+###EVENT_INFORMATION_TEXT###
+--------------------
+###EVENT_INFORMATION_EMAILED###
+###EVENT_INFORMATION_REGISTERED_EMAILED###
+
+###EVENT_NOTICES_TEXT###
+
+
+###EVENT_POC_TEXT###
+--------------------
+###EVENT_POC###
+<!-- ###TEMPLATE_REGISTERED_EMAIL### end -->
+
+	<hr />
+	<h1>TEMPLATE_REGISTERED_ADMIN_EMAIL</h1>
+<!-- ###TEMPLATE_REGISTERED_ADMIN_EMAIL### begin
+	Admin notice of registration
+-->
+###EVENT_SUBJECT_REGISTERED_ADMIN_TEXT###
+###EVENT_BODY_REGISTERED_ADMIN_TEXT###
+
+###CONTACT_TEXT###
+--------------------
+###FIRST_NAME_TEXT### ###FIRST_NAME###
+###LAST_NAME_TEXT### ###LAST_NAME###
+###TITLE_TEXT### ###TITLE###
+###COMPANY_TEXT### ###COMPANY###
+###EMAIL_ADDRESS_TEXT### ###EMAIL_ADDRESS###
+###TELEPHONE_TEXT### ###TELEPHONE###
+
+###ADDRESS_TEXT###
+--------------------
+###ADDRESS###
+###CITY###, ###STATE### ###ZIP###
+###COUNTRY###
+<!-- ###TEMPLATE_REGISTERED_ADMIN_EMAIL### end -->
+
+	<hr />
+	<h1>TEMPLATE_REMINDER_EMAIL</h1>
+<!-- ###TEMPLATE_REMINDER_EMAIL### begin
+	Event reminder email
+-->
+###EVENT_SUBJECT_REMINDER_TEXT###
+###FIRST_NAME###,
+
+###EVENT_BODY_REMINDER_TEXT###
+
+###EVENT_FROM_TEXT### ###EVENT_FROM_DATE### ###EVENT_FROM_TIME### ###EVENT_TO_TEXT### ###EVENT_TO_DATE### ###EVENT_TO_TIME###
+###EVENT_LINK_TEXT### ###EVENT_LINK###
+
+###EVENT_INFORMATION_TEXT###
+--------------------
+###EVENT_INFORMATION_EMAILED###
+###EVENT_INFORMATION_REGISTERED_EMAILED###
+
+###EVENT_NOTICES_TEXT###
+
+
+###EVENT_POC_TEXT###
+--------------------
+###EVENT_POC###
+<!-- ###TEMPLATE_REMINDER_EMAIL### end -->
+
+	<hr />
+	<h1>TEMPLATE_ACCESS_EMAIL</h1>
+<!-- ###TEMPLATE_ACCESS_EMAIL### begin
+	Event access and reminder email
+-->
+###EVENT_SUBJECT_ACCESS_TEXT###
+###FIRST_NAME###,
+
+###EVENT_BODY_ACCESS_TEXT###
+
+###EVENT_FROM_TEXT### ###EVENT_FROM_DATE### ###EVENT_FROM_TIME### ###EVENT_TO_TEXT### ###EVENT_TO_DATE### ###EVENT_TO_TIME###
+
+###EVENT_LINK_TEXT### ###EVENT_LINK###
+
+###EVENT_ACCESS_TEXT###
+--------------------
+###EVENT_ACCESS###
+
+###EVENT_INFORMATION_TEXT###
+--------------------
+###EVENT_INFORMATION_EMAILED###
+###EVENT_INFORMATION_REGISTERED_EMAILED###
+
+###EVENT_NOTICES_TEXT###
+
+
+###EVENT_POC_TEXT###
+--------------------
+###EVENT_POC###
+<!-- ###TEMPLATE_ACCESS_EMAIL### end -->
+
+	<hr />
+	<h1>TEMPLATE_FOLLOWUP_EMAIL</h1>
+<!-- ###TEMPLATE_FOLLOWUP_EMAIL### begin
+	Event attendance followup email
+-->
+###EVENT_SUBJECT_FOLLOWUP_TEXT###
+###FIRST_NAME###,
+
+###EVENT_BODY_FOLLOWUP_TEXT###
+
+###EVENT_FOLLOWUP_TEXT###
+--------------------
+###EVENT_FOLLOWUP###
+
+###EVENT_FOLLOWUP_LINK_TEXT###
+--------------------
+###EVENT_FOLLOWUP_LINK###
+
+
+###EVENT_POC_TEXT###
+--------------------
+###EVENT_POC###
+<!-- ###TEMPLATE_FOLLOWUP_EMAIL### end -->
+
+	<hr />
+	<h1>TEMPLATE_POC</h1>
+<!-- ###TEMPLATE_POC### begin
+	Point of Contact
+-->
+###FIRST_NAME### ###LAST_NAME###
+###TITLE_TEXT### ###TITLE###
+###COMPANY_TEXT### ###COMPANY###
+###EMAIL_ADDRESS_TEXT### ###EMAIL_ADDRESS###
+###TELEPHONE_TEXT### ###TELEPHONE###
+<!-- ###TEMPLATE_POC### end -->
+
+	<hr />
+	<h1>TEMPLATE_UNREGISTERED_EMAIL</h1>
+<!-- ###TEMPLATE_UNREGISTERED_EMAIL### begin
+	Unregistering notice email
+-->
+###EVENT_SUBJECT_UNREGISTERED_TEXT###
+###FIRST_NAME###,
+
+###EVENT_BODY_UNREGISTERED_TEXT###
+
+###EVENT_FROM_TEXT### ###EVENT_FROM_DATE### ###EVENT_FROM_TIME### ###EVENT_TO_TEXT### ###EVENT_TO_DATE### ###EVENT_TO_TIME###
+###EVENT_LINK_TEXT### ###EVENT_LINK###
+
+###EVENT_INFORMATION_TEXT###
+--------------------
+###EVENT_INFORMATION_EMAILED###
+
+###EVENT_NOTICES_TEXT###
+
+
+###EVENT_POC_TEXT###
+--------------------
+###EVENT_POC###
+<!-- ###TEMPLATE_UNREGISTERED_EMAIL### end -->
+
+	<hr />
+	<h1>TEMPLATE_UNREGISTERED_ADMIN_EMAIL</h1>
+<!-- ###TEMPLATE_UNREGISTERED_ADMIN_EMAIL### begin
+	Admin notice of unregistration
+-->
+###EVENT_SUBJECT_UNREGISTERED_ADMIN_TEXT###
+###EVENT_BODY_UNREGISTERED_ADMIN_TEXT###
+
+###CONTACT_TEXT###
+--------------------
+###FIRST_NAME_TEXT### ###FIRST_NAME###
+###LAST_NAME_TEXT### ###LAST_NAME###
+###TITLE_TEXT### ###TITLE###
+###COMPANY_TEXT### ###COMPANY###
+###EMAIL_ADDRESS_TEXT### ###EMAIL_ADDRESS###
+###TELEPHONE_TEXT### ###TELEPHONE###
+
+###ADDRESS_TEXT###
+--------------------
+###ADDRESS###
+###CITY###, ###STATE### ###ZIP###
+###COUNTRY###
+<!-- ###TEMPLATE_UNREGISTERED_ADMIN_EMAIL### end -->
+
+	<hr />
+	<h1>TEMPLATE_REGISTERED_EMAIL_HTML</h1>
+<!-- ###TEMPLATE_REGISTERED_EMAIL_HTML### begin
+	Thank you for registering email, HTML version
+-->
+###EVENT_SUBJECT_REGISTERED_TEXT###
+###FIRST_NAME###,
+
+###EVENT_BODY_REGISTERED_TEXT###
+
+###EVENT_FROM_TEXT### ###EVENT_FROM_DATE### ###EVENT_FROM_TIME### ###EVENT_TO_TEXT### ###EVENT_TO_DATE### ###EVENT_TO_TIME###
+###EVENT_LINK_TEXT### ###EVENT_LINK###
+
+###EVENT_INFORMATION_TEXT###
+--------------------
+###EVENT_INFORMATION_EMAILED###
+###EVENT_INFORMATION_REGISTERED_EMAILED###
+
+###EVENT_NOTICES_TEXT###
+
+
+###EVENT_POC_TEXT###
+--------------------
+###EVENT_POC###
+<!-- ###TEMPLATE_REGISTERED_EMAIL_HTML### end -->
+
+	<hr />
+	<h1>TEMPLATE_UNREGISTERED</h1>
+<!-- ###TEMPLATE_UNREGISTERED### begin
+	Unregistered 
+-->
+<table>
+	<tr>
+		<td colspan="2" style="vertical-align: top;">
+			###EVENT_TITLE_UNREGISTERED_TEXT### ###EVENT_TITLE###
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="vertical-align: top;">
+			###EVENT_UNREGISTERED_TEXT###
+			###EVENT_BACK###
+		</td>
+	</tr>
+</table>
+<!-- ###TEMPLATE_UNREGISTERED### end -->
+
+	<hr />
+	<h1>TEMPLATE_ACCESS_EMAIL_HTML</h1>
+<!-- ###TEMPLATE_ACCESS_EMAIL_HTML### begin
+	Thank you for registering email, HTML version
+-->
+###EVENT_SUBJECT_ACCESS_TEXT###
+###FIRST_NAME###,
+
+###EVENT_BODY_ACCESS_TEXT###
+
+###EVENT_FROM_TEXT### ###EVENT_FROM_DATE### ###EVENT_FROM_TIME### ###EVENT_TO_TEXT### ###EVENT_TO_DATE### ###EVENT_TO_TIME###
+
+###EVENT_LINK_TEXT### ###EVENT_LINK###
+
+###EVENT_ACCESS_TEXT###
+--------------------
+###EVENT_ACCESS###
+
+###EVENT_INFORMATION_TEXT###
+--------------------
+###EVENT_INFORMATION_EMAILED###
+###EVENT_INFORMATION_REGISTERED_EMAILED###
+
+###EVENT_NOTICES_TEXT###
+
+
+###EVENT_POC_TEXT###
+--------------------
+###EVENT_POC###
+<!-- ###TEMPLATE_ACCESS_EMAIL_HTML### end -->
+
+	<hr />
+	<h1>TEMPLATE_REMINDER_EMAIL_HTML</h1>
+<!-- ###TEMPLATE_REMINDER_EMAIL_HTML### begin
+	Thank you for registering email, HTML version
+-->
+###EVENT_SUBJECT_REMINDER_TEXT###
+###FIRST_NAME###,
+
+###EVENT_BODY_REMINDER_TEXT###
+
+###EVENT_FROM_TEXT### ###EVENT_FROM_DATE### ###EVENT_FROM_TIME### ###EVENT_TO_TEXT### ###EVENT_TO_DATE### ###EVENT_TO_TIME###
+###EVENT_LINK_TEXT### ###EVENT_LINK###
+
+###EVENT_INFORMATION_TEXT###
+--------------------
+###EVENT_INFORMATION_EMAILED###
+###EVENT_INFORMATION_REGISTERED_EMAILED###
+
+###EVENT_NOTICES_TEXT###
+
+
+###EVENT_POC_TEXT###
+--------------------
+###EVENT_POC###
+<!-- ###TEMPLATE_REMINDER_EMAIL_HTML### end -->
+
+	<hr />
+	<h1>TEMPLATE_FOLLOWUP_EMAIL_HTML</h1>
+<!-- ###TEMPLATE_FOLLOWUP_EMAIL_HTML### begin
+	Thank you for registering email, HTML version
+-->
+###EVENT_SUBJECT_FOLLOWUP_TEXT###
+###FIRST_NAME###,
+
+###EVENT_BODY_FOLLOWUP_TEXT###
+
+###EVENT_FOLLOWUP_TEXT###
+--------------------
+###EVENT_FOLLOWUP###
+
+###EVENT_FOLLOWUP_LINK_TEXT###
+--------------------
+###EVENT_FOLLOWUP_LINK###
+
+
+###EVENT_POC_TEXT###
+--------------------
+###EVENT_POC###
+<!-- ###TEMPLATE_FOLLOWUP_EMAIL_HTML### end -->
+
+<hr />
+<h1>TEMPLATE_REGISTER_SINGLE</h1>
+<!-- ###TEMPLATE_REGISTER_SINGLE### 
+	Single registration form selection area
+-->
+<!-- ###EVENT_REGISTERING_FOR_TEXT### -->
+<input type="hidden"
+	value="###EVENT_UID###"
+	name="###EVENT_REGISTER_FORM_NAME###[]"
+/>
+<!-- ###TEMPLATE_REGISTER_SINGLE### end -->
+
+<hr />
+<h1>TEMPLATE_REGISTER_MULTIPLE</h1>
+<!-- ###TEMPLATE_REGISTER_MULTIPLE### 
+	Multiple registration form selection area
+-->
+###EVENT_MULTIPLE_REGISTER_TEXT###
+<!-- ###CONTENT### begin -->
+<!-- ###EACH### begin -->
+<input type="checkbox"
+	value="###EVENT_UID###"
+	name="###EVENT_REGISTER_FORM_NAME###[]"
+/>
+###EVENT_TITLE###
+<br />
+<!-- ###EACH### end -->
+<!-- ###CONTENT### end -->
+<!-- ###TEMPLATE_REGISTER_MULTIPLE### end -->
+
+<h1>TEMPLATE_MONITOR</h1>
+<!-- ###TEMPLATE_MONITOR### begin
+	Plain text email for monitor summary.
+-->
+Sitename: ###EVENT_NEWS_TITLE### Event Email Monitor
+###EVENT_NEWS_TITLE###
+###EVENT_TODAYS_DATE###
+--------------------
+Total Registrants: ###EVENT_TOTAL_REGISTRANTS###
+New Registrants: ###EVENT_NEW_REGISTRANTS###
+
+Emails Sent
+Thank you: ###EVENT_THANK_YOU_EMAILS_SENT###
+Reminders: ###EVENT_REMINDER_EMAILS_SENT###
+Login instructions: ###EVENT_ACCESS_EMAILS_SENT###
+Follow-up: ###EVENT_FOLLOWUP_EMAILS_SENT###
+<!-- ###TEMPLATE_MONITOR### end -->
+</body>
+</html>

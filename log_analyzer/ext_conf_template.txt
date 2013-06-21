@@ -1,0 +1,26 @@
+# cat=basic; type=string; label=Page UID: Page UID of difference viewer on front-end
+page_uid = 
+
+# cat=basic; type=string; label=Base URL: URL of website with difference viewer
+base_url = http://www.Peimic.com/
+
+# cat=basic; type=string; label=Backend Group Emailed: Name of backend usergroup to send reports to
+be_group = _cli_log_subscribers
+
+# cat=basic; type=string; label=Emailed Log Report From Email
+log_email_from_email = log@Peimic.com
+
+# cat=basic; type=string; label=Emailed Log Report From Name
+log_email_from_name= Peimic.com Change Log
+
+# cat=basic; type=string; label=Emailed Log Report Subject
+log_email_subject = Peimic.com: Site Change Log
+
+# cat=basic; type=string; label=Emailed Log Report Body
+log_email_body = Site change log attached.
+
+# cat=basic; type=string; label=Emailed Log Report Period: Time in seconds
+report_period = 86400
+
+# cat=basic; type=boolean; label=Ignore Cron Changes
+ignore_cron_changes = 1

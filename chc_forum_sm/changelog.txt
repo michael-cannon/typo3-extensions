@@ -1,0 +1,385 @@
+-----------------------------------------------------------------------
+Forum to-do list:
+-----------------------------------------------------------------------
+
+- Add read / write group setting to categories.
+- Add PM ability to user list. Make the fields that appear in the user
+list configurable via the flexform.
+- Give conference moderators the ability to move a thread to a different
+conference.
+- Add polls
+- Moderator groups
+- Pruning seems to be broken?
+- Get the author profile display HTML out of the php code and into a template
+
+-----------------------------------------------------------------------
+CHC_FORUM CHANGELOG
+-----------------------------------------------------------------------
+Version 1.4.4
+- Fixed: 0001972: Forum crash after click on [New Posts]
+- Fixed: 0001790: xhtml validation errors (misplaced semicolon in header template)
+- Fixed: 0001805: International characters overridden in _LOCAL_LANG are displayed incorrectly
+- Fixed: 0001860: Umlauts Š,Ÿ,š are not masked as html-characters
+- Fixed: 0001929: chc_forum 1.4.x: German translation of new messages in toolbar not correct
+- Resolved: 0001859: thread_new.gif is not shown
+- Fixed: 0001857: Checkbox with no description in Flexform
+
+
+Version 1.4.3
+- Fixed new post bug
+
+Version 1.4.2
+- Fixed bug where link to new posts would not display posts
+- Normalized look and feel of lists of threads and lists of posts (used in search, mainly) to match the new look of the site.
+- Fixed bug where link to new posts would result in an must be array php error (sorry about that one ;)!
+- Fixed potential javascript injection flaw in post form -- added more careful validation of user input, especially in img and a tags
+- Added protection against duplicate posts (thanks to Martin Seebach for patch)
+- Added option to not display categories that don't contain visible conferences
+- Fixed problems with methods for counting new posts in a thread
+- added index on crdate in posts table
+
+Version 1.1.1 - 1.4.x
+Bugs fixed:
+0001136    profile -> mail and www deleted when IM prefs changed and cwt_community integration is enabled
+0001135    unable to set alternate template for message_box.tpl
+0001309    Link to edit profile does not work anymore
+0001284    Threads containing hidden posts sometimes show up twice in single_conference view for moderators 
+- Fixed bug with permissions -- read / write and read access should work properly now
+- Added thread enddates (which can also be set on creating new threads in the frontend)
+- Added post ratings
+- Abstracted html code from the php and put it in the templates -- you should now be able to skin the forum in such a way that allows you to change the order of the various boxes in each view
+- Added cwt_community integration. Yay!
+- Made many small modifications to the forum HTML and CSS -- updated the look and feel, modernized the design
+- Switch strftime calls to use typo3 stdwrap for proper time zone handling
+- Completely re-wrote all methods relating to new post tracking. Optimized forum for enterprise usage; forum has now been tested with 10,000+ posts and it performs well.
+- As per above, removed all major speed bottlenecks that I could find.
+- Implemented forum sessions (which will make user tracking possible in the future)
+- Added database indexes to speed things up
+And more (didn't keep very good track this time around)...
+
+
+Version 1.1.1
+- Added update script to deal with expanded authentication methods
+- Admins can now set read and write access to conferences using forumgroups. The new permission system works as follows:
+Anonymous read access: any user, logged in or not, can read messages in the conference.
+Anonymous write access: any user, logged in or not, can read messages in the conference and post messages to the conference.
+Forumgroup read access: any user belonging to any one of the forumgroups assigned to the conference can read (but not write) in the conference.
+Forumgroup write access: any user beloning to any one of the forumgroups assigned to the conference can read and write in the conference.
+- Sub-toolbar
+I've added a box that I'm calling the "sub-toolbar" to the conference and thread view. It will contain buttons that should only show up in these views -- if anyone can think of a better place to put this stuff, let me know.
+- Open thread / Close thread
+If a user is viewing a thread that he/she is allowed to moderate, the option of opening or closing the thread will appear in the sub-toolbar. I'll add the option of making a thread stickyè€ here at some point -- it will be easy now that the foundation has been laid.
+- Watch conference / ignore conference
+These options show up in the sub-toolbar when a user is viewing a conference. Clicking on watch conference adds the conference to the list of conferences that the user wants to follow via email. Clicking on ignore conference will remove the conference from this list.
+- Watch thread / ignore thread
+These options show up in the sub-toolbar when a user is viewing a thread. Clicking on watch thread adds the thread to a list of threads that the user wants to follow via email. Clicking on ignore thread will remove the thread from this list.
+- Updated mailer
+I had to update the mailer to allow thread watching and to handle the new conference permissions system. A lot of people have requested that they can make it so that users only get the first new post in a conference or thread via email until they visit the thread. This functionality has not yet been added, but I'm planning on including it soon.
+- Rewrote all authentication methods
+I completely rewrote how the forum checks whether a user can access conferences, threads, etc. The new version was written with speed in mind -- by my calculations, the optimization that I did should shave at least a few seconds off of page load times.
+- Added post caching
+In previous versions, the forum would run a series of regular expressions on a post every time it was displayed to parse the forumcodes ([quote], [url], etc) and turn them into HTML. This was a waste of resources, so I added an extra field to the post records that cache the results of the forumcode parsing and stores it. When a post is displayed, the forum will check the date of the cached version against the last time the forum was edited via the frontend or the backend. If the cached version is more recent, the forum will use it. By my calculations, this shaved off aproximately 1.5 seconds of load time on pages that displayed 10 posts (eg., thread view).
+- Removed all pi_list_query calls and replaced them with more efficient calls using DB API.
+- Fixed bug that allowed users to post in closed threads.
+- Fixed bug where reply and quote buttons would be included in posts in closed threads
+- Fixed missing label from appearance section of flexform.
+- Rewrote major parts of the backend module so that editing records is done via TYPO3 API (using TCA) -- this makes it much much easier to expand this module in the future, and it makes it easier to add new fields, because they're not hard-coded into the backend mod.
+
+Version 1.0.3-1.0.5
+- Minor bug fixes with author name displaying
+
+Version 1.0.2
+- Fixed bug with GRSP and Starting Point
+- Added ability to sort posts in thread by date ASC or DESC.
+
+Version 1.0.1
+- Merged translations
+
+Version 1.0.0
+- Added "secret word" configuration value to the flexform security tab. This
+word will be used by the forum to create hashes (when necessary), to obscure /
+secure data. See the next entry for an example of how it will be used.
+- Added encode method to the shared library and decode function to the pi1 class.
+When you pass a string to this encode method, the string will add an md5'd secret
+word (see above) to an array containing the string. This is all serialized and
+base64encoded and passed via the post / get data. The forum decodes the information
+and checks whether the secret word is correct. This can be used to obscure data
+sent via the URL -- in this case, I'm using it to encode author UID sent via URL.
+This should prevent somebody from writing a script that could make the forum output
+one username after another by feeding it &author_uid=1, &author_uid=2, etc. This
+is no longer possible, since the $author_uid value needs to be encrypted correctly
+(with the secret word), for the forum to do anything with it.
+- Added a new configuration value to the appearance tab of forum flexform: 
+"extension for template images". The default value is .png, although it could also
+be set to .gif. I removed hardcoded .png extensions from the forum code -- it will
+now get the extension from this value. So, if you wanted to use gifs instead of
+pngs, just set this to "png", and the forum will look for filename.gif instead of
+filename.png. Because I like you guys, I went ahead and added gif versions of the
+default image files. Go crazy templaters!
+- Fixed bug where IE users couldn't attach jpegs (I think -- wasn't able to
+reproduce it).
+- Fixed colspan error in user_list template
+- Fixed user image upload bug where forum failed to check for alternate img path.
+- Fixed bug where user email addresses showed up in user list even though disable
+email was set to true. I added a quick check in the display class to prevent 
+emails from showing up in the user list if disable email is set. However, this is 
+a _quick_ fix, since the email column still shows up. For now, you should just edit 
+this out of the template if you don't want it there -- in the future, I'll come up 
+with a better fix. The user list is still very beta -- once I have some more time / 
+sponsorship, I want to build some community features around the userlist, and I'll 
+probably get rid of the email addresses all-together in favor of private messaging 
+or a forum mailer.
+- Abstracted the '>' divider in the nav path out of the code and into the locallang
+file, as per Brendan Jocson's suggestion.
+- Added some short term caching to the conf and cat read auth methods to try to 
+speed them up. I'm pretty sure that it's the authentication scheme that's slowing
+down the forum. This part of the forum probably needs to be reconceived, but that's
+a project for the next release, I think. Hopefully this fix will help in the mean-
+time.
+- rewrote the methods for dealing with new posts so the forum stores serialized
+arrays of the posts. I'm not sure that this is going to be faster... but it will
+be easy enough to go back to the old method, if necessary.
+- fixed bug (feature?) where new posts link wouldn't display if user profiles were 
+disabled. NOTE: this meant modifying the toolbar template file. Update accordingly.
+- Made the forum PHP5 compatible
+- Changed when the toolbar html is generated -- from now on it gets generated after
+the bulk of the HTML for each view is produced, which means that the new posts count
+will be correct, since it will take the current view into consideration when its 
+calculated.
+- Added "mark read" button to toolbar; marks all posts as read
+- Changed post form submit button text to "edit post" if the user is editing (rather
+than "post message")
+- Added new icons from Ximian project to the post form toolbar.
+- Added emoticons (thanks to Jan Wulff!)
+- Changed quote HTML tags from id attributes to classes (if I understand correctly, 
+xhtml strict can't have more than one tag with the same id attribute).
+- Fixed forum code problems -- mainly by redoing the code, basing it closely on phpBBs
+bbcode.
+- Added new forum code: color, size, email, and code tags!
+- Removed tables from quote view -- replaced with divs
+- Added button for text color
+- Fixed bug where forum mailer preferences would be overwritten when there
+were multiple instances of the forum plugin present on a site.
+- Added a subject field trim option in the last post info cell.
+- abstracted some fcode wrappers out of the PHP and into typoscript setup.
+- abstracted some HTML out of the forum and into typoscript setup.
+- Modified the forum so that it's possible for other scripts to add GETvars
+to the URL of forum links via typoscript -- used for Rupi's forum / tt_news
+connector.
+- Modified templates for this version: tool_bar.tpl, post_form.tpl
+- Made it possible to set forum starting view via TS
+- Fixed backend module access problems for non-admin users
+
+
+Version 0.5.11
+- added "closed sticky" label
+- added extra markers to single post template: author_join_lbl, 
+author_join, author_location_lbl, author_location, author_post_cnt_lbl,
+author_post_cnt. Go ahead and use them in your custom templates.
+- removed hard-coded "wrote: " label from text parsing function in 
+single_post class.
+- added Ralf Sobbe's german translation to backend module.
+- fixed german umlauts in plugin locallang file (I think -- can someone 
+test this?)
+- removed hard coded configuration from mailer and put it in flexform.
+- removed email template from mailer and put it in the flexform. Markers
+that can be used here are: {author_name}, {conference}, {thread}, {text}
+and {link}.
+- updated german translations
+ - fixed some image upload issues...
+
+
+
+Version 0.5.10
+- Fixed incorrect date format string in userlist
+- Modified code so reply and quote buttons don't appear if a user does not 
+have write access to a conference.
+- fixed (I hope) bug where user list would return empty rows from fe_users...
+- fixed new bug where anonymous users could post but registered users couldn't3
+- added rudimentary email obfuscation to $author->return_email_link.
+- integrated Ralf Sobbe's contributions: hot threads, closed threads, thread icons, stickies.
+- added feature that allows users to edit their own posts, if conference is set to allow this
+- updated conference and thread modification form in backend module to reflect new fields.
+- fixed bug that caused the forum to display 0 new posts if the user had never read a post (in other words, 0 posts read was reported as 0 new posts).
+- fixed MAJOR bug where cleaning the forum tables in BE module would delete all posts read from posts_read table. Yikes!
+
+Version 0.5.9
+- removed tabindexes from tmpls
+- fixed missing conf uid in attach auth method bug.
+
+Version 0.5.8
+- fixed anonymous post user name required bug
+- fixed BE mod manage conference incorrectly labeled cancel button
+
+Version 0.5.7
+- fixed search results display as threads bug
+- added russian translations
+
+Version 0.5.6
+- fixed public cat access bug
+
+Version 0.5.1-5
+- added documentation, consolidated translations, and other minor non-
+programatic changes.
+
+########################################################################
+Version 0.5.0
+########################################################################
+Major changes:
+- moved all conf out of the fconf table and into tt_content via a
+flexform. Ultimately, this should cut down on DB queries, since we the
+forum doesn't have to access the fconf table every time a class is
+instantiated.
+- removed configuration option from backend module (see above).
+- added alt_img_field configuration. Allows user to define an alternate
+field in fe_users from which to grab the user image.
+- abandoned starting point field -- forum now uses the "general records
+storage page field" in page header, a la newloginbox.
+- backend module changed to create records on the general records
+storage page of the forum, rather than just on the page in which it
+finds the forum instance.
+- added a "toolbar" with search, profile, user list, and new post view
+-- used icon set from http://www.icon-king.com/ (GPL).
+- got rid of ugly CSS styled buttons and replaced them with icons from
+the icon-king icon set. Should look better now...
+- added search function and results browser
+- added user list and name search -- this is a very new function. I have
+future plans to expand this so that it has some PM capability. This user
+list is just the initial framework...
+- added a edit profile button to toolbar. Removed small edit profile
+link at the bottom of the page; it was just too hard to find.
+- added a total new posts link in toolbar, and the ability to click on
+it to bring a list of threads containing new posts, sorted by most
+recent to least recent.
+- removed users online count for the time being due to unreliable
+counts... if someone wants to figure out how to implement this so that
+it works, be my guest :).
+- Moved BE module from tools section (admin only) to web section.
+
+Minor changes:
+- moved icon_* files from extension top directory to icons folder.
+- added configuration: disable user full name in users online list.
+- added configuration: disable user list.
+- added post configuration option: use username instead of name. This
+will not change the author name for previous posts -- only for future
+posts posted after this configuration option is changed. This is because
+post author names are stored with the post, to speed things up and to
+mitigate against missing relations that might come about if a FEuser
+acct is deleted.
+- added forum title box and corresponding flexform value
+- added configuration: sort conferences by (alpha, reverse aplha, or
+sort according to order in BE list)
+- added configuration: sort categories by (alpha, reverse aplha, or sort
+according to order in BE list)
+- added default configuration values to fconf
+- minor changes made to singlePost styles -- height for author div is
+set in CSS now rather than by using <br /> tags in the HTML template.
+- reorganized configuration options
+- added german, russian translations
+- merged other translations
+
+Bug fixes:
+- Added check to see whether user image file exists before displaying
+it.
+- Added check to see whether user image file exists before unlinking
+(deleting) it in user profile update.
+- Modified user img path in user and author classes so that the forum
+gets the upload folder from global TCA array (which should make the
+forum more compatible with extensions like sr_feuser_reg).
+- Added checks before submitting profile changes -- if email, website,
+im, etc are disabled, they will no longer be deleted on submission.
+- Fixed author post count function (ignored forum PID, among other
+things).
+- Alphabetized userlists in backend module
+- Removed hardcoded submit and cancel button labels from backend module.
+- abstracted image paths from code -- all forum images should now be
+stored in /abs_path_to_templates/img/ -- in other words, this path is
+now based on the template path, which should make skinning the forum a
+bit easier.
+- fixed bug where URLs containing a '?' would not be parsed properly in
+post when wrapped in [URL] tags.
+
+########################################################################
+Version 4.0.*
+########################################################################
+- Added the following fields to user profile: yahoo screen name, aim
+screen name, msn screen name, website url.
+- Added support for file attachments
+- Wrote can_attach authentication function
+- Added validation for file attachments
+- Added additional fields to forum configuration: Allowed file types,
+Allowed mime types, Path to templates
+- Added support for guest users - public conferences now allow any user
+to post (logged in or not). Conferences that aren't public, but don't
+have any forum groups assigned to them, will be accessible to any logged
+in user.
+- Added extension checks for user pic uploads (in addition to mime type
+checks)
+- Moved configuration from mailer to fconf (forum configuration table)
+- Set forum URL in the fconf rather than in the mailer.php file
+- Modified mailer script: Mailer should create correct links back to the
+forum if there are multiple installations of the forum on a site.
+- Added post PID to mail queue table
+- Edited and expanded the manual
+- Add comments (javadoc compatible) to  75-80% of the code and generated
+ext_php_api.dat file.
+- Fixed URL parsing bug.
+- Modified count of total registered users and total users online so
+they only show records that exist in the frontend user storage specified
+in forum count (previous versions counted everything in the feuser
+table, regardless of pid).
+- Cleaned up htmlspecialchars checks - consolidated them in pi1 class.
+- Added more variable validation to pi1 class.
+- Fixed javascript check on submit - users no longer need to enter a
+subject or text before cancelling a post.
+- Auto-fill subject field for replies in a thread with 're:
+thread_subject'.
+- Added indexes to posts_read table and user_conf table.
+- Added support for included pages extension and insert record content
+type - you can use the "Insert Records" content type to mirror the forum
+on multiple pages or, alternately, you can use the included pages
+content type to mirror the forum on multiple pages. This makes it
+possible (in theory) to have multiple forum installations in different
+languages. At this point, it should even be possible to create two
+different forums on the same page (although you can't have two
+difference configurations (via backend module) on the same page, but
+this can be solved using the insert record content type or the included
+pages extension).
+- Added check to display - if a user tries to view a cat, conf, thread,
+or post, but no ID is supplied via get/post, the user gets bumped back
+to all categories view.
+- Added email field to user profile.
+- Added some more validation to profile editing.
+- Added success / fail messages to profile update.
+- Added simulateStaticDocuments compatibility.
+- Converted all links to typolinks - they're created with the
+getTypoLink function now, which should make the forum compatible with
+static docs.
+- Removed some language specific labels, making translation possible.
+- Added successful add, modify, and delete messages to backend module.
+- Added output to clean db function in backend module.
+- Added date / time configuiration to forum configuration page in
+backend module.
+- Fixed typoscript constants error.
+- Small fixes in some of the authentication functions (needed some
+is_array checks before calling the in_array function). Thanks to Klaus
+Holler for noticing this and patching it.
+- Removed all "new tx_chcforum_class" calls and replaced them with typo3
+API compatible calls using t3lib_div::makeInstanceClassName and
+t3lib_div::makeInstance.
+- Fixed error message bug in user profile image uploading.
+- Fixed language localization problem (it didn't work!).
+- Split "is conference public" setting into anonymous read and anonymous
+write access.
+- Improved mailer.php script. Added check log functions.
+- Added pruning ability.
+- Made the forum more configurable via the backend module.
+- Modified attachment display so that it uses typo3 file icons instead
+of custom icons.
+- Incorporated new templates and styles create by Ben van't Ende. Forum
+should now validate as XHTML (not yet tested).
+- Many more changes not listed here.
+
+
+
+

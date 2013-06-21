@@ -1,0 +1,215 @@
+### No link targets by default
+PAGE_TARGET = 
+content.pageFrameObj = 
+
+config {
+	# cat=cbstarter/links; type=small; label=External Link Target
+	extTarget = _blank
+
+	# cat=cbstarter/links; type=small; label=Internal Link Target
+	intTarget = 
+
+	# cat=cbstarter/language; type=small; label=Content Charset
+	renderCharset = utf-8
+
+	# cat=cbstarter/language; type=string; label=Document Charset: Normally same as renderCharset.
+	metaCharset = utf-8
+
+	# cat=cbstarter/typo; type=options[,xhtml_trans,xhtml_frames,xhtml_strict,xhtml_basic,xhtml_11,xhtml_2,none]; label=Document Type: Leave blank for HTML 4.0 Transitional
+	doctype = xhtml_trans
+
+	# cat=cbstarter/typo; type=options[none,xml_10,xml11]; label=Remove XML Prologue: If "none" then no XML prologue is created when "config.doctype" is set to one of the XHTML modes.
+	xmlprologue = none
+
+	# cat=cbstarter/language; type=string; label=HTML Tag Language: Allows you to set the language value for the attributes "xml:lang" and "lang" in the <html> tag
+	htmlTag_langKey = en
+
+	# cat=cbstarter/links; type=string; label=Spam Protect Email Addresses:If set, then all email addresses in typolinks will be encrypted so spam bots cannot detect them.
+	spamProtectEmailAddresses = -3
+
+	# cat=cbstarter/links; type=string; label=Spam Protect At Sign:Substitute label for the at-sign.
+	spamProtectEmailAddresses_atSubst = [at]
+
+	# cat=cbstarter/links; type=string; label=Spam Protect Last Dot:Substitute label for the last dot.
+	spamProtectEmailAddresses_lastDotSubst = [dot]
+
+	# cat=cbstarter/enable; type=boolean; label=Enable Links Across Domains: Post TYPO3 4.2
+	typolinkEnableLinksAcrossDomains = 1
+
+	# cat=cbstarter/enable; type=boolean; label=Allow Cross Domain Content: Pre TYPO3 4.2
+	content_from_pid_allowOutsideDomain = 1
+
+	# cat=cbstarter/enable; type=boolean; label=Meaningful Tempfile Prefix:If set it will try to render a meaningful prefix before temporary image files.
+	meaningfulTempFilePrefix = 1
+
+	# cat=cbstarter/links; type=boolean; label=Page Title in URL
+	simulateStaticDocuments_addTitle = 1
+
+	# cat=cbstarter/links; type=boolean; label=Remove Type From URL
+	simulateStaticDocuments_noTypeIfNoTitle = 1
+
+	# cat=cbstarter/links; type=string; label=Encode URL Parameters
+	simulateStaticDocuments_pEnc = md5
+
+	# cat=cbstarter/links; type=string; label=Encode URL Certain Parameters: A list of variables that may be a part of the md5/base64 encoded part of a simulate_static_document virtual filename.
+	simulateStaticDocuments_pEnc_onlyP = 
+
+	# cat=cbstarter/enable; type=boolean; label=Page Title First:If set (and the page title is printed) then the page-title will be printed BEFORE the template title.
+	pageTitleFirst = 1
+
+	# cat=cbstarter/; type=string; label=Email URL Mode:This option allows you to handle URL's in plain text emails so long URLS of more than 76 chars are not broken. This option can be either empty or "76" or "all".
+	notification_email_urlmode = 76
+
+	# cat=cbstarter/; type=string; label=Email Encoding:This sets the encoding of plaintext emails.
+	notification_email_encoding = quoted-printable
+
+	# cat=cbstarter/enable; type=boolean; label=Redirect Old Links to New
+	redirectOldLinksToNew = 1
+
+	# cat=cbstarter/enable; type=boolean; label=Show Admin Panel:If set, the admin panel appears in the bottom of pages.
+	admPanel = 1
+
+	# cat=cbstarter/typo; type=options[,all,cached,output]; label=HTML Cleaning:Tries to clean up the output to make it XHTML compliant and a bit more. 
+	xhtml_cleaning = all
+
+	# cat=cbstarter/links; type=file; label=Stylesheet Link
+	stylesheet = 
+
+	# cat=basic/; type=int; label=Root PID:Website root page id
+	rootPid = 1
+
+	# cat=cbstarter/; type=wrap; label=Header Data Wrap
+	headerDataWrap = |
+
+	# cat=cbstarter/enable; type=boolean; label=Correct Multiple Domain Links
+	typolinkCheckRootline = 1
+
+	# Send UTF-8 Notification Email Headers
+	# cat=cbstarter/; type=string; label=Notification Email Charset
+	notification_email_charset = utf-8
+
+	# cat=cbstarter/enable; type=boolean; label=Show Hidden Pages in Site Map
+	includeNotInMenu = 0
+
+	# cat=cbstarter.search/enable; type=boolean; label=Enable Indexed Search
+	index_enable = 0
+
+	# cat=cbstarter.search/enable; type=boolean; label=Included Metatags in Search
+	index_metatags = 1
+
+	# cat=cbstarter.search/enable; type=boolean; label=Enable External Document Search
+	index_externals = 0
+
+	# cat=cbstarter.search/enable; type=boolean; label=Show Search Rules
+	show.rules = 0
+
+	# cat=cbstarter.search/enable; type=boolean; label=Show Advanced Search Link
+	show.advancedSearchLink = 0
+
+	# cat=cbstarter/enable; type=boolean; label=Disable Extension BEGIN/END in HTML
+	disablePrefixComment = 0
+
+	# cat=cbstarter; type=string; label=HTML Header Custom Comment
+	headerComment =
+
+	# cat=cbstarter/enable; type=boolean; label=Send Cache Control Headers:Output cache-control headers to the client
+	sendCacheHeaders = 1
+}
+
+tt_content.stdWrap {
+	# cat=cbstarter/; type=wrap; label=Content Data Wrap
+	dataWrap = <a id="c{field:uid}"></a> |
+
+	# cat=cbstarter/; type=string; label=Content Comment Prefix
+	prefixComment = 1 | CONTENT ELEMENT, uid:{field:uid}/{field:CType}
+}
+
+lib.parseFunc_RTE {
+	nonTypoTagStdWrap.encapsLines {
+		# cat=cbstarter/; type=string; label=Remap DIV Tag
+		remapTag.DIV = 
+
+		# cat=cbstarter/; type=string; label=Non Wrapped Tag Wrapper
+		nonWrappedTag = P
+	}
+}
+
+plugin.tt_news {
+	# cat=cbstarter.tt_news/enable; type=boolean; label=Prevent Duplicate News Items on the Same Page
+	excludeAlreadyDisplayedNews = 1
+	# cat=cbstarter.tt_news/enable; type=boolean; label=Use Human Readable Dates in News
+	useHRDates = 1
+	# cat=cbstarter.tt_news/enable; type=boolean; label=Use Human Readable Dates in Single News Views
+	useHRDatesSingle = 0
+	# cat=cbstarter.tt_news/enable; type=boolean; label=Prevent "back-links" in Single News View URL
+	dontUseBackPid = 1
+	# cat=cbstarter.tt_news; type=string; label=Default List Ordering: Fieldname and order
+	listOrderBy = datetime DESC
+	# cat=cbstarter.tt_news; type=string; label=Default Category Menu Ordering: Fieldname and order
+	catOrderBy = title ASC
+	# cat=cbstarter.tt_news/enable; type=boolean; label=Use Pi Base Page Browser
+	usePiBasePagebrowser = 1
+
+	general_stdWrap.parseFunc {
+		nonTypoTagStdWrap.encapsLines {
+			# cat=cbstarter.tt_news; type=string; label=Non Wrapped Tag Wrapper
+			nonWrappedTag = 
+		}
+	}
+	displaySingle {
+		# cat=cbstarter.tt_news; type=string; label=Single News Date Format
+		date_stdWrap.strftime = %A, %B %e, %Y
+		# cat=cbstarter.tt_news; type=string; label=Single News Time Format
+		time_stdWrap.strftime = %l:%M %p %Z
+	}
+
+	displayLatest {
+		# cat=cbstarter.tt_news; type=string; label=Latest News Date Format
+		date_stdWrap.strftime = %B %e, %Y
+		# cat=cbstarter.tt_news; type=string; label=Latest News Time Format
+		time_stdWrap.strftime = %l:%M %p %Z
+		# cat=cbstarter.tt_news; type=string; label=Latest Subheader Crop: Number of characters, break characters replacement, break at whole words only
+		subheader_stdWrap.crop = 300 | ... | 1
+	}
+
+	displayList {
+		# cat=cbstarter.tt_news; type=string; label=List News Date Format
+		date_stdWrap.strftime = %B %e, %Y
+		# cat=cbstarter.tt_news; type=string; label=List News Time Format
+		time_stdWrap.strftime = %l:%M %p %Z
+		# cat=cbstarter.tt_news; type=string; label=List Subheader Crop: Number of characters, break characters replacement, break at whole words only
+		subheader_stdWrap.crop = 300 | ... | 1
+	}
+
+	displayRelated {
+		# cat=cbstarter.tt_news; type=string; label=Related News Date & Time Format
+		strftime = %B %e, %Y %l:%M %p
+	}
+}
+
+# default headers to h2 versus h1
+content.defaultHeaderType = 2
+
+plugin.tx_staticinfotables_pi1 {
+	# cat=cbstarter/language; type=small; label=Default Language Charset
+	languageCode = EN
+	# cat=cbstarter/language; type=small; label=Default ISO-3 Country Code
+	countryCode = USA
+	# cat=cbstarter/language; type=small; label=Default ISO-3 Country Currency Code
+	currencyCode = USD
+}
+
+plugin.tx_templavoila_pi1 {
+	# cat=cbstarter/enable; type=boolean; label=If set, no TemplaVoila error messages will be displayed in the frontend.
+	disableErrorMessages = 1
+}
+
+plugin.tx_srfreecap {
+	backgroundBlur = 0
+	backgroundMorph = 0
+	backgroundType = White with squiggles
+	imageHeight = 80
+	mergeWithBackground = 0
+	morphFactor = 0
+	textColor = 0
+}

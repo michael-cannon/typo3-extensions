@@ -1,0 +1,66 @@
+2009-10-15 Thursday 22:36  mc
+
+	* update CHANGELOG
+
+2009-10-15 Thursday 22:31  mc
+
+	* move extconf to extension; default image zoom on
+
+2009-10-15 Thursday 08:12  mc
+
+	* allow admin login
+
+2009-10-14 Wednesday 21:09  mc
+
+	* no ssl by default
+
+2009-10-10 Saturday 11:28  mc
+
+	* update CHANGELOG
+
+2009-10-10 Saturday 08:54  mc
+
+	* update CHANGELOG
+
+2009-10-10 Saturday 08:54  mc
+
+	* https_enforcer.enable added to prevent no-caching issues
+
+2009-10-10 Saturday 08:29  mc
+
+	* update CHANGELOG
+
+2009-10-10 Saturday 08:29  mc
+
+	* add https_enforcer defaults
+
+2009-10-10 Saturday 08:26  mc
+
+	* Inital import of "CHANGELOG" file
+
+2009-10-10 Saturday 08:24  mc
+
+	* correct constants/setup location; spam protect email; srfreecp
+	  settings
+
+2009-10-10 Saturday 07:58  mc
+
+	* Inital import of "_.htaccess" file
+
+2009-10-10 Saturday 07:58  mc
+
+	* implement security_check and security cookbook suggestions
+
+2009-10-10 Saturday 04:50  mc
+
+	* imp security_check, wt_dooorman, wt_spamshield, captcha; build
+	  out TypoScript
+
+2009-09-25 Friday 01:42  mc
+
+	* Inital import of 'icsecurity' directory
+
+2009-09-25 Friday 01:42  mc
+
+	* Initial revision
+

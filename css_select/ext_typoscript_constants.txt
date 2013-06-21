@@ -1,0 +1,60 @@
+/***************************************************************
+ * Copyright notice
+ *
+ * (c) 2004 macmade.net
+ * All rights reserved
+ *
+ * This script is part of the TYPO3 project. The TYPO3 project is 
+  * free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * The GNU General Public License can be found at
+ * http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This script is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
+
+/**
+ * Default TS constants - Extension 'CSS Select'
+ *
+ * @author		Jean-David Gadina (macmade@gadlab.net)
+ * @version		1.0
+ */
+
+/**
+ * PI1 object - CSS Select
+ */
+
+plugin.tx_cssselect_pi1 {
+	
+	# cat=css_select/enable/0; type=boolean; label=Recursive: Also check for stylesheet(s) on the top pages.
+	recursive = 0
+	
+	# cat=css_select/enable/1; type=boolean; label=Import: Use CSS @import rules. Otherwise, use a <link> tag for each stylesheet.
+	importRules = 1
+	
+	# cat=css_select/enable/2; type=boolean; label=XHTML: Use XHTML rules.
+	xHTML = 1
+	
+	# cat=css_select/enable/3; type=boolean; label=CSS comments: Write CSS comments before stylesheets.
+	cssComments = 1
+	
+	# cat=css_select//0; type=string; label=CSS media: The media of the stylesheet(s).
+	cssMedia = all
+	
+	# cat=css_select//1; type=string; label=CSS type: The type of the stylesheet(s).
+	cssType = text/css
+	
+	# cat=css_select//2; type=string; label=Link rel: Only if importRules is not set. The rel parameter of the <link> tag.
+	linkRel = stylesheet
+	
+	# cat=css_select//3; type=string; label=Link charset: Only if importRules is not set. The charset parameter of the <link> tag.
+	linkCharset = iso-8859-1
+}

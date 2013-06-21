@@ -1,0 +1,822 @@
+<T3DataStructure>
+  <sheets>
+   <sDEF>
+    <ROOT>
+     <TCEforms>
+      <sheetTitle>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery</sheetTitle>
+     </TCEforms>
+     <type>array</type>
+      <el>
+       <refreshGalleryCache>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_refresh_cache</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </refreshGalleryCache>
+       <galleryPath>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_path</label>
+         <config>
+          <type>input</type>
+          <size>30</size>
+          <size>30</size>
+         </config>
+        </TCEforms>
+       </galleryPath>
+       <galleryViewType>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_view_type</label>
+         <config>
+          <type>select</type>
+          <items type="array">
+           <numIndex index="0" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_view_normal</numIndex>
+            <numIndex index="1">normal</numIndex>
+            </numIndex>
+           <numIndex index="1" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_view_sectional</numIndex>
+            <numIndex index="1">sectional</numIndex>
+           </numIndex>
+          </items>
+          <minitems>1</minitems>
+          <maxitems>1</maxitems>
+          <size>1</size>
+         </config>
+        </TCEforms>
+       </galleryViewType>
+       <checkSubGalleries>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_check_subgalleries</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </checkSubGalleries>
+       <galleryImageRows>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_image_rows</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>1000</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </galleryImageRows>
+       <galleryImageCols>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_image_cols</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>100</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </galleryImageCols>
+       <subGalleryPreviewType>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_sub_gal_preview_type</label>
+         <config>
+          <type>select</type>
+          <items type="array">
+           <numIndex index="0" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_none</numIndex>
+            <numIndex index="1">none</numIndex>
+            </numIndex>
+           <numIndex index="1" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_preview</numIndex>
+            <numIndex index="1">preview</numIndex>
+           </numIndex>
+           <numIndex index="2" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_display_all</numIndex>
+            <numIndex index="1">all</numIndex>
+           </numIndex>
+           <numIndex index="3" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_custom</numIndex>
+            <numIndex index="1">custom</numIndex>
+           </numIndex>
+          </items>
+          <minitems>1</minitems>
+          <maxitems>1</maxitems>
+          <size>1</size>
+         </config>
+        </TCEforms>
+       </subGalleryPreviewType>
+       <subGalleryPreviewImgCount>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_sub_gal_preview_img_count</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>1000</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </subGalleryPreviewImgCount>
+       <dispBreadcrumbs>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_gallery_disp_breadcrumbs</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </dispBreadcrumbs>
+       <pages>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:lang/locallang_general.php:LGL.startingpoint</label>
+         <config>
+          <type>group</type>
+          <internal_type>db</internal_type>
+          <allowed>pages</allowed>
+          <size>3</size>
+          <maxitems>22</maxitems>
+          <minitems>0</minitems>
+          <show_thumbs>1</show_thumbs>
+         </config>
+        </TCEforms>
+       </pages>
+      </el>
+     </ROOT>
+    </sDEF>
+   <thumbnails>
+    <ROOT>
+     <TCEforms>
+      <sheetTitle>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_thumbnails</sheetTitle>
+     </TCEforms>
+     <type>array</type>
+      <el>
+       <thumbDimType>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_thumbnails_dim_type</label>
+         <config>
+          <type>select</type>
+          <items type="array">
+           <numIndex index="0" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_none</numIndex>
+            <numIndex index="1">none</numIndex>
+           </numIndex>
+           <numIndex index="1" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_width</numIndex>
+            <numIndex index="1">width</numIndex>
+           </numIndex>
+           <numIndex index="2" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_height</numIndex>
+            <numIndex index="1">height</numIndex>
+           </numIndex>
+          </items>
+          <minitems>1</minitems>
+          <maxitems>1</maxitems>
+          <size>1</size>
+         </config>
+        </TCEforms>
+       </thumbDimType>
+       <thumbDimValue>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_thumbnail_dim_value</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>500</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </thumbDimValue>
+       <isThumbGrayscale>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_thumbnail_convert_grayscale</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </isThumbGrayscale>
+       <dispThumbHighlight>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_thumbnail_disp_highlighting</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </dispThumbHighlight>
+       <thumbHighlightColor>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_thumbnail_highlight_color</label>
+         <config>
+          <type>input</type>
+          <size>7</size>
+         </config>
+        </TCEforms>
+       </thumbHighlightColor>
+       <dispFloatingThumb>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_thumbnail_disp_floating_thumb</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </dispFloatingThumb>
+       <floatingThumbDimType>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_thumbnail_floating_thumb_dim_type</label>
+         <config>
+          <type>select</type>
+          <items type="array">
+           <numIndex index="0" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_none</numIndex>
+            <numIndex index="1">none</numIndex>
+            </numIndex>
+           <numIndex index="1" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_width</numIndex>
+            <numIndex index="1">width</numIndex>
+           </numIndex>
+           <numIndex index="2" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_height</numIndex>
+            <numIndex index="1">height</numIndex>
+           </numIndex>
+          </items>
+          <minitems>1</minitems>
+          <maxitems>1</maxitems>
+          <size>1</size>
+         </config>
+        </TCEforms>
+       </floatingThumbDimType>
+       <floatingThumbDimValue>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_thumbnail_floating_thumb_dim_value</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>500</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </floatingThumbDimValue>
+      </el>
+     </ROOT>
+    </thumbnails>
+   <images>
+    <ROOT>
+     <TCEforms>
+      <sheetTitle>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_images</sheetTitle>
+     </TCEforms>
+     <type>array</type>
+      <el>
+       <imageDimType>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_dim_type</label>
+         <config>
+          <type>select</type>
+          <items type="array">
+           <numIndex index="0" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_none</numIndex>
+            <numIndex index="1">none</numIndex>
+            </numIndex>
+           <numIndex index="1" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_width</numIndex>
+            <numIndex index="1">width</numIndex>
+           </numIndex>
+           <numIndex index="2" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_height</numIndex>
+            <numIndex index="1">height</numIndex>
+           </numIndex>
+          </items>
+          <minitems>1</minitems>
+          <maxitems>1</maxitems>
+          <size>1</size>
+         </config>
+        </TCEforms>
+       </imageDimType>
+       <imageDimValue>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_dim_value</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>500</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </imageDimValue>
+       <imageQuality>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_quality</label>
+         <config>
+          <type>input</type>
+          <size>3</size>
+          <max>3</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>100</upper>
+           <lower>0</lower>
+          </range>
+          <default>75</default>
+         </config>
+        </TCEforms>
+       </imageQuality>
+       <isImageGrayscale>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_convert_grayscale</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </isImageGrayscale>
+       <dispImgExifData>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_disp_exif_data</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </dispImgExifData>
+       <requiredExifData>
+          <TCEforms>
+          <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_req_exif_data</label>
+          <config>
+              <type>select</type>
+              <items type="array">
+                  <numIndex index="0" type="array">
+                      <numIndex index="0">File Name</numIndex>
+                      <numIndex index="1">FileName</numIndex>
+                  </numIndex>
+                  <numIndex index="1" type="array">
+                      <numIndex index="0">File DateTime</numIndex>
+                      <numIndex index="1">FileDateTime</numIndex>
+                  </numIndex>
+                  <numIndex index="2" type="array">
+                      <numIndex index="0">File Size</numIndex>
+                      <numIndex index="1">FileSize</numIndex>
+                  </numIndex>
+                  <numIndex index="3" type="array">
+                      <numIndex index="0">File Type</numIndex>
+                      <numIndex index="1">FileType</numIndex>
+                  </numIndex>
+                  <numIndex index="4" type="array">
+                      <numIndex index="0">Mime Type</numIndex>
+                      <numIndex index="1">MimeType</numIndex>
+                  </numIndex>
+                  <numIndex index="5" type="array">
+                      <numIndex index="0">Sections Found</numIndex>
+                      <numIndex index="1">SectionsFound</numIndex>
+                  </numIndex>
+                  <numIndex index="6" type="array">
+                      <numIndex index="0">COMPUTED</numIndex>
+                      <numIndex index="1">COMPUTED</numIndex>
+                  </numIndex>
+                  <numIndex index="7" type="array">
+                      <numIndex index="0">Image Description</numIndex>
+                      <numIndex index="1">ImageDescription</numIndex>
+                  </numIndex>
+                  <numIndex index="8" type="array">
+                      <numIndex index="0">Make</numIndex>
+                      <numIndex index="1">Make</numIndex>
+                  </numIndex>
+                  <numIndex index="9" type="array">
+                      <numIndex index="0">Model</numIndex>
+                      <numIndex index="1">Model</numIndex>
+                  </numIndex>
+                  <numIndex index="10" type="array">
+                      <numIndex index="0">Orientation</numIndex>
+                      <numIndex index="1">Orientation</numIndex>
+                  </numIndex>
+                  <numIndex index="11" type="array">
+                      <numIndex index="0">X-Resolution</numIndex>
+                      <numIndex index="1">XResolution</numIndex>
+                  </numIndex>
+                  <numIndex index="12" type="array">
+                      <numIndex index="0">Y-Resolution</numIndex>
+                      <numIndex index="1">YResolution</numIndex>
+                  </numIndex>
+              </items>
+              <maxitems>100</maxitems>
+              <size>5</size>
+              <multiple>1</multiple>
+              <selectedListStyle>width:175px</selectedListStyle>
+              <itemListStyle>width:175px</itemListStyle>
+          </config>
+          </TCEforms>
+       </requiredExifData>
+       <dispImgIptcData>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_disp_iptc_data</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </dispImgIptcData>
+       <requiredIptcData>
+          <TCEforms>
+          <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_req_iptc_data</label>
+          <config>
+              <type>select</type>
+              <items type="array">
+                  <numIndex index="0" type="array">
+                      <numIndex index="0">Object Name</numIndex>
+                      <numIndex index="1">object_name</numIndex>
+                  </numIndex>
+                  <numIndex index="1" type="array">
+                      <numIndex index="0">Edit Status</numIndex>
+                      <numIndex index="1">edit_status</numIndex>
+                  </numIndex>
+                  <numIndex index="2" type="array">
+                      <numIndex index="0">Priority</numIndex>
+                      <numIndex index="1">priority</numIndex>
+                  </numIndex>
+                  <numIndex index="3" type="array">
+                      <numIndex index="0">Category</numIndex>
+                      <numIndex index="1">category</numIndex>
+                  </numIndex>
+                  <numIndex index="4" type="array">
+                      <numIndex index="0">Supplementary Category</numIndex>
+                      <numIndex index="1">supplementary_category</numIndex>
+                  </numIndex>
+                  <numIndex index="5" type="array">
+                      <numIndex index="0">Fixture Identifier</numIndex>
+                      <numIndex index="1">fixture_identifier</numIndex>
+                  </numIndex>
+                  <numIndex index="6" type="array">
+                      <numIndex index="0">Keywords</numIndex>
+                      <numIndex index="1">keywords</numIndex>
+                  </numIndex>
+                  <numIndex index="7" type="array">
+                      <numIndex index="0">Release Date</numIndex>
+                      <numIndex index="1">release_date</numIndex>
+                  </numIndex>
+                  <numIndex index="8" type="array">
+                      <numIndex index="0">Release Time</numIndex>
+                      <numIndex index="1">release_time</numIndex>
+                  </numIndex>
+                  <numIndex index="9" type="array">
+                      <numIndex index="0">Special Instructions</numIndex>
+                      <numIndex index="1">special_instructions</numIndex>
+                  </numIndex>
+                  <numIndex index="10" type="array">
+                      <numIndex index="0">Reference Service</numIndex>
+                      <numIndex index="1">reference_service</numIndex>
+                  </numIndex>
+                  <numIndex index="11" type="array">
+                      <numIndex index="0">Reference Date</numIndex>
+                      <numIndex index="1">reference_date</numIndex>
+                  </numIndex>
+                  <numIndex index="12" type="array">
+                      <numIndex index="0">Reference Number</numIndex>
+                      <numIndex index="1">reference_number</numIndex>
+                  </numIndex>
+                  <numIndex index="13" type="array">
+                      <numIndex index="0">Created Date</numIndex>
+                      <numIndex index="1">created_date</numIndex>
+                  </numIndex>
+                  <numIndex index="14" type="array">
+                      <numIndex index="0">Originating Program</numIndex>
+                      <numIndex index="1">originating_program</numIndex>
+                  </numIndex>
+                  <numIndex index="15" type="array">
+                      <numIndex index="0">Program Version</numIndex>
+                      <numIndex index="1">program_version</numIndex>
+                  </numIndex>
+                  <numIndex index="16" type="array">
+                      <numIndex index="0">Object Cycle</numIndex>
+                      <numIndex index="1">object_cycle</numIndex>
+                  </numIndex>
+                  <numIndex index="17" type="array">
+                      <numIndex index="0">Byline</numIndex>
+                      <numIndex index="1">byline</numIndex>
+                  </numIndex>
+                  <numIndex index="18" type="array">
+                      <numIndex index="0">Byline Title</numIndex>
+                      <numIndex index="1">byline_title</numIndex>
+                  </numIndex>
+                  <numIndex index="19" type="array">
+                      <numIndex index="0">Byline Title</numIndex>
+                      <numIndex index="1">byline_title</numIndex>
+                  </numIndex>
+                  <numIndex index="20" type="array">
+                      <numIndex index="0">City</numIndex>
+                      <numIndex index="1">city</numIndex>
+                  </numIndex>
+                  <numIndex index="21" type="array">
+                      <numIndex index="0">Province State</numIndex>
+                      <numIndex index="1">province_state</numIndex>
+                  </numIndex>
+                  <numIndex index="22" type="array">
+                      <numIndex index="0">Country Code</numIndex>
+                      <numIndex index="1">country_code</numIndex>
+                  </numIndex>
+                  <numIndex index="23" type="array">
+                      <numIndex index="0">Country</numIndex>
+                      <numIndex index="1">country</numIndex>
+                  </numIndex>
+                  <numIndex index="24" type="array">
+                      <numIndex index="0">Original Transmission Reference</numIndex>
+                      <numIndex index="1">original_transmission_reference</numIndex>
+                  </numIndex>
+                  <numIndex index="25" type="array">
+                      <numIndex index="0">Headline</numIndex>
+                      <numIndex index="1">headline</numIndex>
+                  </numIndex>
+                  <numIndex index="26" type="array">
+                      <numIndex index="0">Credit</numIndex>
+                      <numIndex index="1">credit</numIndex>
+                  </numIndex>
+                  <numIndex index="27" type="array">
+                      <numIndex index="0">Source</numIndex>
+                      <numIndex index="1">source</numIndex>
+                  </numIndex>
+                  <numIndex index="28" type="array">
+                      <numIndex index="0">Copyright</numIndex>
+                      <numIndex index="1">copyright_string</numIndex>
+                  </numIndex>
+                  <numIndex index="29" type="array">
+                      <numIndex index="0">Caption</numIndex>
+                      <numIndex index="1">caption</numIndex>
+                  </numIndex>
+                  <numIndex index="30" type="array">
+                      <numIndex index="0">Local Caption</numIndex>
+                      <numIndex index="1">local_caption</numIndex>
+                  </numIndex>
+              </items>
+              <maxitems>100</maxitems>
+              <size>5</size>
+              <multiple>1</multiple>
+              <selectedListStyle>width:175px</selectedListStyle>
+              <itemListStyle>width:175px</itemListStyle>
+          </config>
+          </TCEforms>
+       </requiredIptcData>       
+       <watermarkImage>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_watermark</label>
+				<config>
+					<type>group</type>
+					<internal_type>file</internal_type>
+					<allowed>GIF,JPG,JPEG,TIF,BMP,PCX,TGA,PNG</allowed>
+					<max_size>10000</max_size>
+					<uploadfolder>uploads/tx_bahagphotogallery</uploadfolder>
+					<show_thumbs>1</show_thumbs>
+					<maxitems>1</maxitems>
+					<size>1</size>
+					<selectedListStyle>Width:180px</selectedListStyle>
+				</config>
+        </TCEforms>
+       </watermarkImage>
+       <dispImagesInPopup>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_disp_in_popup</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </dispImagesInPopup>
+       <dispImgSizeOption>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_disp_img_size</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </dispImgSizeOption>
+       <dispImgColorsOption>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_disp_img_colors</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </dispImgColorsOption>
+       <dispImgDateOption>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_disp_img_date</label>
+         <config>
+          <type>check</type>
+         </config>
+        </TCEforms>
+       </dispImgDateOption>
+      </el>
+     </ROOT>
+    </images>
+   <downloads>
+    <ROOT>
+     <TCEforms>
+      <sheetTitle>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads</sheetTitle>
+     </TCEforms>
+     <type>array</type>
+      <el>
+       <dwnldImgOption>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_option</label>
+         <config>
+          <type>select</type>
+          <items type="array">
+           <numIndex index="0" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_none</numIndex>
+            <numIndex index="1">none</numIndex>
+            </numIndex>
+           <numIndex index="1" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_scaled</numIndex>
+            <numIndex index="1">scaled</numIndex>
+           </numIndex>
+           <numIndex index="2" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_original</numIndex>
+            <numIndex index="1">original</numIndex>
+           </numIndex>
+           <numIndex index="3" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_all</numIndex>
+            <numIndex index="1">all</numIndex>
+           </numIndex>
+          </items>
+          <minitems>1</minitems>
+          <maxitems>1</maxitems>
+          <size>1</size>
+         </config>
+        </TCEforms>
+       </dwnldImgOption>
+       <dwnldImgDimType>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_image_dim_type</label>
+         <config>
+          <type>select</type>
+          <items type="array">
+           <numIndex index="0" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_none</numIndex>
+            <numIndex index="1">none</numIndex>
+            </numIndex>
+           <numIndex index="1" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_width</numIndex>
+            <numIndex index="1">width</numIndex>
+           </numIndex>
+           <numIndex index="2" type="array">
+            <numIndex index="0">LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_height</numIndex>
+            <numIndex index="1">height</numIndex>
+           </numIndex>
+          </items>
+          <minitems>1</minitems>
+          <maxitems>1</maxitems>
+          <size>1</size>
+         </config>
+        </TCEforms>
+       </dwnldImgDimType>
+       <dwnldImgDimValue1>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_img_dim_value1</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>3000</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </dwnldImgDimValue1>
+       <dwnldImgDimValue2>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_img_dim_value2</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>3000</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </dwnldImgDimValue2>
+       <dwnldImgDimValue3>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_img_dim_value3</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>3000</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </dwnldImgDimValue3>
+       <dwnldImgDimValue4>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_img_dim_value4</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>3000</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </dwnldImgDimValue4>
+       <dwnldImgDimValue5>
+        <TCEforms>
+         <exclude>1</exclude>
+         <label>LLL:EXT:bahag_photogallery/locallang_db.php:tt_content.pi_flexform.sheet_downloads_img_dim_value5</label>
+         <config>
+          <type>input</type>
+          <size>4</size>
+          <max>4</max>
+          <eval>num</eval>
+          <checkbox></checkbox>
+          <range>
+           <upper>3000</upper>
+           <lower>1</lower>
+          </range>
+          <default>0</default>
+         </config>
+        </TCEforms>
+       </dwnldImgDimValue5>
+      </el>
+     </ROOT>
+    </downloads>
+   </sheets>
+ </T3DataStructure>

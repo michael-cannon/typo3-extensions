@@ -1,0 +1,73 @@
+## LOGIN BOX
+plugin.tx_newloginbox_pi1 {
+	detailsPage = 
+	email_from = 
+	email_fromName = 
+	replyTo = 
+	tableParams_details = border="0"
+	welcomescreen = 0
+	
+	// Allowed Referrer-Redirect-Domains:
+	domains =
+}
+plugin.tx_newloginbox_pi1._CSS_DEFAULT_STYLE (
+)
+plugin.tx_newloginbox_pi1._LOCAL_LANG.default {
+}
+plugin.tx_newloginbox_pi1._DEFAULT_PI_VARS {
+}
+
+
+## USER LISTING
+plugin.tx_newloginbox_pi3 {
+    CMD = 
+    pidList = 
+    recursive = 
+	tableParams_details = border="0" cellpadding="1" cellspacing="2" style="width: 90%;"
+}
+
+plugin.tx_newloginbox_pi3.listView {
+	customProcessing {
+		image = IMAGE
+		image.file {
+			import = uploads/pics/
+			import.field = image
+			import.listNum = 0
+			maxW = 200
+			maxH = 300
+		}
+		/* Example for custom processing of username field:
+		username = TEXT
+		username.field = username
+		username.wrap = <b>|</b>
+		*/
+	}
+    results_at_a_time = 50
+    maxPages = 20
+	show.email = 1
+	show.email_in_details = 1
+	show.email_in_details_when_logged_in = 1
+	alwaysPrev=1
+	tableParams_list = 
+}
+
+plugin.tx_newloginbox_pi3.singleView.customProcessing < plugin.tx_newloginbox_pi3.listView.customProcessing
+
+plugin.tx_newloginbox_pi3._CSS_DEFAULT_STYLE (
+	.tx-newloginbox-pi3-listrow TD { background-color:#eeeeee; padding-left: 3px; padding-right: 3px; }
+	.tx-newloginbox-pi3-listrow TR.tx-newloginbox-pi3-listrow-header TD { background-color:#cccccc; }
+	.tx-newloginbox-pi3-listrow TR.tx-newloginbox-pi3-listrow-header TD P { font-weight:bold; }
+	.tx-newloginbox-pi3-listrow TR.tx-newloginbox-pi3-listrow-odd TD { background-color:#f6f6f6; }
+)
+plugin.tx_newloginbox_pi3._LOCAL_LANG.default {
+	# Example for setting the list field header of a column called "date_of_birth":
+	# listFieldHeader_date_of_birth = Date of birth
+}
+plugin.tx_newloginbox_pi3._DEFAULT_PI_VARS {
+}
+
+
+
+
+
+# TYPO3 CVS ID: $Id: ext_typoscript_setup.txt,v 1.1.1.1 2010/04/15 10:03:53 peimic.comprock Exp $

@@ -1,0 +1,22 @@
+plugin.tx_mssurvey_pi1{
+
+_CSS_DEFAULT_STYLE (
+
+.tx-mssurvey-pi1_barcontainer {height: 15px; width: 300px;  border: 1px solid #333; margin: .5em; padding: 0;}
+.tx-mssurvey-pi1_bar {height:15px; margin: 0; padding: 0; background: #FFB8DE; color: #333; }
+.tx-mssurvey-pi1_bartext {z-index:+1;width: 300px; text-align: center;font-size:70%; padding: 1px;}
+
+)
+
+progressBar = {$plugin.tx_mssurvey_pi1.progressBar}
+ignoreAlreadyFilled = {$plugin.tx_mssurvey_pi1.ignoreAlreadyFilled}
+successRedirectPID = {$plugin.tx_mssurvey_pi1.successRedirectPID}
+templateFile = {$plugin.tx_mssurvey_pi1.templateFile}
+allow_anonymous = {$plugin.tx_mssurvey_pi1.allow_anonymous} 
+emailNotification = {$plugin.tx_mssurvey_pi1.emailNotification}
+emailName = {$plugin.tx_mssurvey_pi1.emailName}
+emailFrom = {$plugin.tx_mssurvey_pi1.emailFrom}
+mailSubject = {$plugin.tx_mssurvey_pi1.emailSubject}
+emailBody = {$plugin.tx_mssurvey_pi1.emailBody}
+emailAddHeader = {$plugin.tx_mssurvey_pi1.emailAddHeader}
+}

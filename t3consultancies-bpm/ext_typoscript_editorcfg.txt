@@ -1,0 +1,260 @@
+plugin.tx_t3consultancies_pi1.CSS_editor = Plugin: "tx_t3consultancies_pi1"
+plugin.tx_t3consultancies_pi1.CSS_editor.selector = .tx-t3consultancies-pi1
+plugin.tx_t3consultancies_pi1.CSS_editor.exampleWrap = <HR><strong>Plugin: "tx_t3consultancies_pi1"</strong><HR><DIV class="tx-t3consultancies-pi1"> | </DIV>
+plugin.tx_t3consultancies_pi1.CSS_editor.ch {
+	P = Text
+	P.selector = P
+	P.attribs = BODYTEXT
+	P.example = <P>General text wrapped in &lt;P&gt;:<BR>This is text <A href="#">with a link</A> in it. In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+	P.exampleStop = 1
+	P.ch.links = < CSS_editor.ch.A
+	
+		## LISTING:
+	modeSelector = Mode selector
+	modeSelector.attribs = margin+
+	modeSelector.selector = .tx-t3consultancies-pi1-modeSelector
+	modeSelector.example (
+		<DIV class="tx-t3consultancies-pi1-modeSelector">
+		<select>
+			<option>All countries</option>
+			<option>Denmark</option>
+			<option>...</option>
+		</select>
+		<select>
+			<option>All categories</option>
+			<option>Design</option>
+			<option>Technical</option>
+		</select>
+		</DIV>	
+	)
+	modeSelector.exampleStop = 1
+	modeSelector.exampleStop = 1
+	modeSelector.ch {
+		SELECT = Form fields
+		SELECT.selector = SELECT
+		SELECT.attribs = TEXT,background-color,width
+	}
+	
+	browsebox = Browsing box
+	browsebox.selector = .tx-t3consultancies-pi1-browsebox
+	browsebox.example = <DIV class="tx-t3consultancies-pi1-browsebox"><P>Displaying results <span class="tx-t3consultancies-pi1-browsebox-strong">1 to 3</span> out of <span class="tx-t3consultancies-pi1-browsebox-strong">4</span></P><table><tr><td class="tx-t3consultancies-pi1-browsebox-SCell"><p><A HREF="#">Page 1 (S)</a></p></td><td><p><A HREF="#">Page 2</a></p></td><td><p><A HREF="#">Next ></a></p></td></tr></table></DIV>
+	browsebox.exampleStop = 1
+	browsebox.ch.P < .P
+	browsebox.ch.P.ch.strong = Emphasized numbers
+	browsebox.ch.P.ch.strong {
+	  selector = SPAN.tx-t3consultancies-pi1-browsebox-strong
+	  attribs = TEXT
+	}
+	browsebox.ch.TABLE = Table
+	browsebox.ch.TABLE.selector = TABLE
+	browsebox.ch.TABLE.attribs = TABLE
+	browsebox.ch.TD = Table cells
+	browsebox.ch.TD.selector = TD
+	browsebox.ch.TD.attribs = TD
+	browsebox.ch.TD.ch {
+	  TD = Selected table cells
+	  TD.selector = + .tx-t3consultancies-pi1-browsebox-SCell
+	  TD.attribs = TD
+	}
+	browsebox.ch.TD.ch.P < .P
+	browsebox.ch.TD.ch.TD.ch.P < .P
+
+	searchbox = Search box
+	searchbox.selector = .tx-t3consultancies-pi1-searchbox
+	searchbox.example = <DIV class="tx-t3consultancies-pi1-searchbox"><table><form action="#" method="POST"><tr><td><input type="text" name="tx_t3consultancies_pi1[sword]" value="Search word" class="tx-t3consultancies-pi1-searchbox-sword"></td><td><input type="submit" value="Search" class="tx-t3consultancies-pi1-searchbox-button"></td></tr></form></table></DIV>
+	searchbox.exampleStop = 1
+	searchbox.ch {
+		TABLE = Table
+		TABLE.selector = TABLE
+		TABLE.attribs = TABLE
+		TD = Table cells
+		TD.selector = TD
+		TD.attribs = TD
+		INPUT = Form fields
+		INPUT.selector = INPUT
+		INPUT.attribs = TEXT,background-color,width
+		INPUT.ch {
+			sword = Search word field
+			sword.selector = +.tx-t3consultancies-pi1-searchbox-sword
+			sword.attribs = TEXT,background-color,width
+
+			button = Submit button
+			button.selector = +.tx-t3consultancies-pi1-searchbox-button
+			button.attribs = TEXT,background-color,width
+		}
+	}
+	
+	list = List display
+	list.selector = .tx-t3consultancies-pi1-listrow
+	list.example ( 
+		<DIV class="tx-t3consultancies-pi1-listrow"><table><tr class="tx-t3consultancies-pi1-listrow-header">
+						<td nowrap><P>Company title:</P></td>
+						<td nowrap><P>Country:</P></td>
+						<td nowrap><P>Services offered:</P></td>
+						<td><P>Sites made:</P></td>
+						<td><P>Details:</P></td>
+					</tr><tr>
+						<td valign="top"><P><a href="#">2MHost</a></P></td>
+						<td valign="top"><P>United States</P></td>
+						<td valign="top"><P>Typo3 Webhosting</P></td>
+						<td valign="top" align="center"><P>-</P></td>
+						<td valign="top"><P><A HREF="#">Details</a></P></td>
+						
+					</tr><tr class="tx-t3consultancies-pi1-listrow-odd">
+						<td valign="top"><P><a href="#">bgm business group munich</a></P></td>
+						<td valign="top"><P>Germany</P></td>
+						<td valign="top"><P>Consultants</BR>Typo3 Webhosting</P></td>
+						<td valign="top" align="center"><P>2</P></td>
+						<td valign="top"><P><A HREF="#">Details</a></P></td>
+						
+					</tr><tr>
+						<td valign="top"><P><a href="#">Cablan.net</a></P></td>
+						<td valign="top"><P>Canada</P></td>
+						<td valign="top"><P>Typo3 Webhosting</P></td>
+						<td valign="top" align="center"><P>6</P></td>
+						<td valign="top"><P><A HREF="#">Details</a></P></td>
+						
+					</tr><tr class="tx-t3consultancies-pi1-listrow-odd">
+						<td valign="top"><P><a href="#">Colorcube</a></P></td>
+						<td valign="top"><P>Germany</P></td>
+						<td valign="top"><P>Freelancer</BR>Consultants</P></td>
+						<td valign="top" align="center"><P>4</P></td>
+						<td valign="top"><P><A HREF="#">Details</a></P></td>
+					</tr>
+		</table></DIV>	
+	)
+	list.exampleStop = 1
+	list.ch {
+		TABLE = Table
+		TABLE.selector = TABLE
+		TABLE.attribs = TABLE
+		TD = Table cells
+		TD.selector = TD
+		TD.attribs = TD
+		TD_header = Header row cells
+		TD_header.selector = TR.tx-t3consultancies-pi1-listrow-header TD
+		TD_header.attribs = TD
+		TD_odd = Odd rows cells
+		TD_odd.selector = TR.tx-t3consultancies-pi1-listrow-odd TD
+		TD_odd.attribs = TD
+	}
+	list.ch.TD.ch.P < .P
+	list.ch.TD_header.ch.P < .P
+	list.ch.TD_odd.ch.P < .P
+
+	single = Single display
+	single.selector = .tx-t3consultancies-pi1-singleView
+	single.example (
+		<DIV class="tx-t3consultancies-pi1-singleView">
+				<h2>Curby Soft Multimedia</h2>
+				<table border=0 cellspacing=0 cellpadding=0>
+					<tr>
+						<td valign=top width="95%">
+							<table border=0 cellspacing=2 cellpadding=0 class="tx-t3consultancies-pi1-singleViewField-infoT"><tr>
+						<td nowrap class="tx-t3consultancies-pi1-singleViewField-infoH"><P>Country:</p></td>
+						<td width="95%"><P>Denmark</p></td>
+					</tr><tr>
+						<td nowrap class="tx-t3consultancies-pi1-singleViewField-infoH"><P>Services offered:</p></td>
+						<td width="95%"><P>Freelancer, Consultants</p></td>
+					</tr><tr>
+						<td nowrap class="tx-t3consultancies-pi1-singleViewField-infoH"><P>Contact:</p></td>
+						<td width="95%"><P>Kasper Skårhøj, <A HREF="#">kasper@typo3.com</a></p></td>
+					</tr></table>
+							<P class="tx-t3consultancies-pi1-singleViewField-description">Besides developing Typo3 fulltime I also do freelance work for commercial interests. I take in only Typo3 related freelance work. I prefer development tasks, programming PHP or TypoScript. I'm not a sys-admin and therefore do not make full server installs, but of course I can diagnose install problems, but not necessarily solve them.<br/>Because I'm normally <i>extremely busy</i> I often direct people on to other consultancies unless the task requires my unique knowledge of Typo3.<br/>I charge 130 EUR/hour, working a minimum of 1 hour for non-regular customers. I prefer email contact.</P>
+
+							<div class="tx-t3consultancies-pi1-reflist"><h2>References:</h2>
+								<table border=0 cellpadding=0 cellspacing=0><tr>
+									<td width="95%" valign="top">
+										<h3>March For Jesus, Denmark</h3>
+										<p>March For Jesus is a yearly worldwide happening which local churches are arranging to happen the same day world wide. Basically March For Jesus is a peaceful "demonstration" by christians. It norma... <A HREF="#">[more]</a></p>
+										<p class="tx-t3consultancies-pi1-reflist-url">URL: <a href="#">http://www.marchforjesus.dk</a></p>
+									</td>
+									<td><img src="clear.gif" width=10 height=1></td>
+									<td valign="top"><img src="EXT:t3consultancies/editorconf_ref1.gif" width="100" height="87"  border="0"></td>
+								</tr>
+								<tr>
+									<td colspan=3><img src="clear.gif" width=1 height=5></td>
+								</tr><tr>
+									<td width="95%" valign="top">
+										<h3>Copenhagen Gospel Festival</h3>
+										<p>Copenhagen Gospel Festival has been held each year since 1992 and is a single weekend where up to 800 amateur singers meet to rehearse about 10 gospel songs with 2 or 3 afroamerican instructors. It... <A HREF="#">[more]</a></p>
+										<p class="tx-t3consultancies-pi1-reflist-url">URL: <a href="#">http://gospel.oh-my-god.dk</a></p>
+									</td>
+									<td><img src="clear.gif" width=10 height=1></td>
+									<td valign="top"><img src="EXT:t3consultancies/editorconf_ref2.gif" width="100" height="84"  border="0"></td>
+								</tr>
+								<tr>
+									<td colspan=3><img src="clear.gif" width=1 height=5></td>
+								</tr>
+								</table>
+							</div>
+							
+							<P class="tx-t3consultancies-pi1-singleViewField-fe-owner-user">This record is maintained by the user: <strong>kasper</strong></P>
+						</td>
+						<td>
+							<img src="clear.gif" width="10" height="1">
+						</td>
+						<td valign=top><img src="EXT:t3consultancies/editorconf_logo.png" width="100" height="100"  border="0"><BR><img src="clear.gif" width="100" height="1"></td>
+					</tr>
+				</table><P><A HREF="#">Back</a></P>
+				</DIV>	
+	)
+	single.ch.P < .P
+	single.ch.P.example >
+	single.ch.P.exampleStop = 1
+	single.ch.P.ch {
+		P_1 = Description paragraph
+		P_1.selector = +.tx-t3consultancies-pi1-singleViewField-description
+		P_1.attribs = BODYTEXT
+		P_1.ch.links = < CSS_editor.ch.A
+		
+		P_8 = Owner-user paragraph
+		P_8.selector = +.tx-t3consultancies-pi1-singleViewField-fe-owner-user
+		P_8.attribs = BODYTEXT
+		P_8.ch.links = < CSS_editor.ch.A
+	}
+	single.ch {
+		H2 = Company name header
+		H2.selector = H2
+		H2.attribs = HEADER
+
+		TABLE = Table with details
+		TABLE.selector = TABLE.tx-t3consultancies-pi1-singleViewField-infoT
+		TABLE.attribs = TABLE
+		TABLE.ch {
+			TD = Table cells, generally
+			TD.selector = TD
+			TD.attribs = TD
+			TD_header = Header column cells
+			TD_header.selector = TD.tx-t3consultancies-pi1-singleViewField-infoH
+			TD_header.attribs = TD
+		}
+	}
+	single.ch.TABLE.ch.TD.ch.P  < .P
+	single.ch.TABLE.ch.TD.ch.P.example >
+	single.ch.TABLE.ch.TD_header.ch.P  < .P
+	single.ch.TABLE.ch.TD_header.ch.P.example >
+	
+	single.ch {
+		ref = References list
+		ref.selector = .tx-t3consultancies-pi1-reflist
+		ref.attribs = margin+
+		ref.ch {
+			H2 = 'References' header
+			H2.selector = H2
+			H2.attribs = HEADER
+
+			H3 = Titles
+			H3.selector = H3
+			H3.attribs = HEADER
+		}
+	}
+	single.ch.ref.ch.P < .P
+	single.ch.ref.ch.P.example >
+	single.ch.ref.ch.P.ch {
+		P_8 = URL
+		P_8.selector = +.tx-t3consultancies-pi1-reflist-url
+		P_8.attribs = TEXT
+		P_8.ch.links = < CSS_editor.ch.A
+	}
+}

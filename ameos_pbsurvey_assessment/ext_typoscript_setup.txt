@@ -1,0 +1,94 @@
+config.ameos_pbsurvey_assessment < config.ameos_afstatic_template
+config.ameos_pbsurvey_assessment {
+	
+}
+
+plugin.tx_ameospbsurveyassessment_pi1.piconf < config.ameos_pbsurvey_assessment
+plugin.tx_ameospbsurveyassessment_pi1 {
+	# set score type - points for by total, 10 for by mod10, 5 for by mod5
+	scoretype = 10
+
+	# question count for scoring
+	questioncount = 10
+
+	# show x results
+	resultslimit = 10
+
+	# results ordering
+	resultordering = desc
+
+	# result answer options
+	results {
+		1.title = administration 
+		1.description =
+
+		2.title = evangelism
+		2.description =
+
+		3.title = encouragement 
+		3.description =
+
+		4.title = faith 
+		4.description =
+
+		5.title = giving 
+		5.description =
+
+		6.title = helps 
+		6.description =
+
+		7.title = leadership 
+		7.description =
+
+		8.title = mercy
+		8.description =
+
+		9.title = pastor
+		9.description =
+
+		0.title = teacher 
+		0.description =
+
+	}
+
+	# wraps
+	resultsWrap {
+		title.wrap = <h3>|</h3>
+		weight.wrap = <div class="ameospbsurveyassessment-weight">|</div>
+		description.wrap = <p style="display: none;">|</p>
+	}
+
+	mailform = show
+	sendername = Stonebriar Survey
+	senderemail = survey@stonebriar.org
+	
+	_CSS_DEFAULT_STYLE (
+		.tx-pbsurvey-pi1 .required { color: red; }
+		.tx-pbsurvey-pi1 .matrix { width: 100%; }
+		.tx-pbsurvey-pi1 .matrix .surveyrow_even { background-color: #eeeeee; }
+		.tx-pbsurvey-pi1 .matrix .columnFirst { width: 65%; font-weight: bold; }
+		.tx-pbsurvey-pi1 .matrix .columnNext { text-align: center; }
+	)
+}
+
+plugin.tx_pbsurvey_pi1{
+	_LOCAL_LANG.default {
+		js_required_matrix_radio = Some statements are unanswered, please answer them all
+	}
+}
+plugin.tx_ameospbsurveyassessment_pi1 {
+	_LOCAL_LANG.default {
+		emailSendHeader = <h2>Want These Results Emailed to You?</h2>
+		emailSendBody = <p>Enter your email address and submit to send the results to your email inbox.</p>
+		emailSendButton = Send Results
+
+		emailSentHeader = <h2>Your Results Have Been Emailed</h2>
+		emailSentBody = <p>Would you like to share them?</p>
+
+		emailNotSentHeader = <h2>Results Have Not Been Emailed</h2>
+		emailNotSentBody = <p>Please recheck your email address and try again.</p>
+
+		emailResultsSubject = Stonebriar: Spiritual Gifts Results
+		emailResultsMessage = <p>Please keep these results to see how they fit.</p>
+		emailResultsSurvey = <p>Retake or share the survey at http://www.stonebriar.org%s.</p>
+	}

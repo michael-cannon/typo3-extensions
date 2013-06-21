@@ -1,0 +1,66 @@
+plugin.tx_hldamgallery_pi1 {
+    # Show certain meta data
+    # The handling is allways the same:
+    #   '0': skip entry
+    #   '1': display the appropriate field and leave blank, if empty
+    #   '2': display the appropriate field and use default, if empty
+    #   '3': allways display default
+    #
+    showTitle = 1
+    defaultTitle =
+    showDescription = 1
+    defaultDescription =
+    showCountry = 1
+    defaultCountry =
+    showCity = 1
+    defaultCtiy =
+    showLocDesc = 1
+    defaultLocDesc =
+    showCat = 1
+    defaultCat =
+    showCaption = 1
+    defaultCaption =
+    showKeywords = 1
+    defaultKeywords =
+    showCreator = 1
+    defaultCreator =
+    showPublisher = 1
+    defaultPublisher =
+    showCopyright = 1
+    defaultCopyright =
+    showUsage = 1
+    defaultUsage =
+
+    useIPTC = 1
+    showHits = 1
+
+    # This value is used for empty fields
+    defaultIfEmpty = &nbsp;
+
+    slideShowTimeOut = 0
+
+    _CSS_DEFAULT_STYLE (
+        div.tx-hldamgallery-pi1             { text-align: center; }
+        div.tx_hldamgallery_back_link       { margin-bottom: 1em; }
+        div.tx_hldamgallery_img             {}
+        div.tx_hldamgallery_meta            { margin-top: 1em; }
+        div.tx_hldamgallery_meta_title      {}
+        div.tx_hldamgallery_meta_caption    {}
+
+        div.tx_hldamgallery_meta_desc       {}
+        div.tx_hldamgallery_meta_country    {}
+        div.tx_hldamgallery_meta_city       {}
+        div.tx_hldamgallery_meta_locdesc    {}
+        div.tx_hldamgallery_meta_keywords   {}
+        div.tx_hldamgallery_meta_creator    {}
+        div.tx_hldamgallery_meta_publisher  {}
+        div.tx_hldamgallery_meta_copyright  {}
+        div.tx_hldamgallery_meta_usage      {}
+        div.tx_hldamgallery_meta_category   {}
+
+        div.tx_hldamgallery_navigation      { margin-top: 1em; }
+        span.tx_hldamgallery_nav_prev       { width: 200px; }
+        span.tx_hldamgallery_nav_current    { width: 200px; }
+        span.tx_hldamgallery_nav_next       { width: 200px; }
+    )
+}

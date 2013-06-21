@@ -1,0 +1,5 @@
+plugin.tx_nrdfimport_pi1 {
+  list.templateFile = EXT:n_rdfimport/template/template_list.tmpl
+  detail.templateFile = EXT:n_rdfimport/template/template_detail.tmpl
+  frontPage.templateFile = EXT:n_rdfimport/template/template_frontpage.tmpl
+}

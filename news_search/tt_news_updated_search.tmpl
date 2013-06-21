@@ -1,0 +1,206 @@
+<!-- $Id: tt_news_updated_search.tmpl,v 1.1.1.1 2010/04/15 10:03:56 peimic.comprock Exp $ -->
+<!-- ###SEARCH_HEADER### -->
+<form action="###FORMACTION###" method="POST">
+<TABLE WIDTH="100%" BORDER="0" cellpadding="">
+<tr>
+	<td>Keyword search</td>
+	<td>
+	<input type="text" name="###FORMEXTENSION###[search_text]" value="###SEARCH_TEXT###" size="40"> 
+	</td>
+</tr>
+<tr>
+	<td colspan="2" align="center">
+		<input type="hidden" name="###FORMEXTENSION###[category][]" value="all">
+		<input type="submit" name="###FORMEXTENSION###[search]" value=" Search ">
+	</td>
+</tr>
+<tr>
+	<td colspan="2" align="center">
+		You can use the words AND, OR, and NOT to narrow your search. 
+	</td>
+</tr>
+
+</TABLE>
+</FORM>
+<!-- ###SEARCH_HEADER### -->
+
+
+
+<!-- ###SAVED_SEARCH_RESULT### -->
+<!-- ###SAVED_SEARCH_RESULT### -->
+
+
+<!-- ###SEARCH_RESULT### -->
+<H1>Search Results by Category</H1>
+<br>
+
+<table width="100%" border="0" cellpadding="4" cellspacing="0" >
+	<!-- ###SEARCH_RESULT_DATA_TITLE_1### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_1### -->
+	<!-- ###SEARCH_RESULT_DATA_1### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		###COURTSEY###
+		<br>
+###NEWS_DATE###
+		<br/>
+		<br/>
+
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+
+	<!-- ###SEARCH_RESULT_DATA_1### -->
+	
+	<!-- ###SEARCH_RESULT_DATA_TITLE_2### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_2### -->
+
+	<!-- ###SEARCH_RESULT_DATA_2### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		Featuring: ###COURTSEY###
+		<br>
+###NEWS_DATE###
+		<br/>
+		<br/>
+
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+
+
+	<!-- ###SEARCH_RESULT_DATA_2### -->
+	
+	<!-- ###SEARCH_RESULT_DATA_TITLE_3### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_3### -->
+
+	<!-- ###SEARCH_RESULT_DATA_3### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		###COURTSEY###
+		<br>
+###NEWS_DATE###
+		<br/>
+		<br/>
+		
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+
+	<!-- ###SEARCH_RESULT_DATA_3### -->
+	
+	<!-- ###SEARCH_RESULT_DATA_TITLE_10### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_10### -->
+
+	<!-- ###SEARCH_RESULT_DATA_10### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		###COURTSEY###
+		<br>
+###NEWS_DATE###
+		<br/>
+		<br/>
+	
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_10### -->
+	<!-- ###SEARCH_RESULT_DATA_TITLE_6### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_6### -->
+
+	<!-- ###SEARCH_RESULT_DATA_6### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		###COURTSEY###
+		<br>
+###NEWS_DATE###
+		<br/>
+		<br/>
+	
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_6### -->
+	
+	<!-- ###SEARCH_RESULT_DATA_TITLE_DEFAULT### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_DEFAULT### -->
+
+	<!-- ###SEARCH_RESULT_DATA_DEFAULT### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		###COURTSEY###
+		<br>
+###NEWS_DATE###
+		<br/>
+		<br/>
+		
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_DEFAULT### -->
+</table>
+<form name="savesearchresult" action="###FORMACTION###" method="POST">
+###HIDDEN_FORM_FILEDS###
+<input type='hidden' name='search_name' value=''>
+</form>
+
+###SEARCH_PAGER###
+<!-- ###SEARCH_RESULT### -->
+
+<!-- ###SEARCH_RESULT_NODATA### -->
+<table width="100%">
+	<tr width="100%"> 
+		<td align="center" class="morelink">
+			No results found, please try simplifying your search.
+		</td>
+	</tr>
+</table>
+<!-- ###SEARCH_RESULT_NODATA### -->

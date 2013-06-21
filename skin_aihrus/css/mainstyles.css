@@ -1,0 +1,779 @@
+/****************************************************************
+ * Copyright notice
+ *
+ * (c) 2010 Christian Technology Ministries International Inc.
+ * All rights reserved
+ *
+ * This file is part of the Web-Empowered Church (WEC)
+ * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries
+ * International (http://CTMIinc.org). The WEC is developing TYPO3-based
+ * (http://typo3.org) free software for churches around the world. Our desire
+ * is to use the Internet to help offer new life through Jesus Christ. Please
+ * see http://WebEmpoweredChurch.org/Jesus.
+ *
+ * You can redistribute this file and/or modify it under the terms of the
+ * GNU General Public License as published by the Free Software Foundation;
+ * either version 2 of the License, or (at your option) any later version.
+ *
+ * The GNU General Public License can be found at
+ * http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This file is distributed in the hope that it will be useful for ministry,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * This copyright notice MUST APPEAR in all copies of the file!
+ ****************************************************************/
+
+
+/* @group Reset Styling */
+
+/* --------------------------------------------------------------
+
+   reset.css
+   * Resets default browser CSS.
+
+   Based on work by Eric Meyer:
+   * meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+
+-------------------------------------------------------------- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight:400; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+a img { border: none; }
+
+a:active {
+	outline: none;
+}
+
+a:focus {
+	-moz-outline-style: none;
+}
+
+/* @end Reset Styling */
+
+/* @group Base Styling */
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 17px;
+	color: #333333;
+	font-weight: normal;
+	height: 100%;
+	background:url(images/body-bg.jpg) no-repeat top left  #333633
+}
+
+/* NOTE: Much of the typography styling is handled in rte.css */
+
+
+/* @group Table Styling */
+
+/* NOTE: Table Styling is mostly handled in rte.css */
+table {
+	border-collapse:collapse;
+	/*width: 100%;*/
+}
+
+/* @end Table Styling */
+
+/* @group Additional Tags */
+
+
+pre {
+	margin-bottom: 15px;
+}
+
+code {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+pre code {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+pre,
+code {
+	font-family: 'andale mono', 'monotype.com', 'lucida console', monospace;
+}
+
+
+/* @end Additional Tags */
+
+/* @group TYPO3 General Styling */
+
+div.csc-textpic-center div.csc-textpic-imagewrap,
+div.csc-textpic-left div.csc-textpic-imagewrap,
+div.csc-textpic-right div.csc-textpic-imagewrap {
+    margin-bottom: 0;
+}
+    
+/* @end */
+
+/* @group Forms */
+
+
+form input, form textarea {
+	margin-right: 5px;
+}
+
+form input:focus, form input:hover {
+	color: black;
+}
+
+form select {
+	font-size: 11px;
+}
+
+form option {
+	margin: 0px;
+	margin-left: 5px;
+	margin-right: 10px;
+}
+
+optgroup {
+	font-weight: bold;
+	font-style: italic;
+	margin: 0;
+	margin-top: 5px;
+}
+
+optgroup option {
+	padding-left: 5px;
+}
+
+legend {
+	font-weight: bold;
+	color: black;
+}
+
+
+/* @end Forms */
+
+/* @end Base Styling */
+
+/* @group Common Classes */
+
+.clear {
+	clear: both;
+}
+
+.clearOnly {
+	clear: both;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.outOfSight {
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	float: left;
+}
+
+h1.centralHeadline {
+	margin-top: 0;
+	font-size: 30px;
+}
+
+.csc-firstHeader {
+	/*margin-top: 0px;*/
+}
+
+.graphicTextWrap {
+	overflow: hidden;
+}
+
+.graphicText {
+	line-height: 300px;
+	display: block;
+}
+
+/* @end Common Classes */
+
+/* @group bodyWrap */
+
+#bodyWrap{
+	position:absolute;
+}
+/* @end bodyWrap */
+
+/* @group Layout */
+
+#pageWrap {
+	width: 730px;
+	float: left;
+	background-color: #efeeec;
+	margin: 0;
+	padding: 20px 20px 10px 20px;
+	-moz-border-radius-topright: 7px;
+	-moz-border-radius-bottomright: 7px;
+	-webkit-border-top-right-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	position:relative;
+	z-index:5;
+}
+
+#feature {
+	margin-top: 0;
+	margin-bottom: 0;
+	background: none;
+	padding: 0;
+}
+
+#generatedContent-1 {
+	visibility: hidden;
+	margin: 0;
+	padding:0;
+	height: 0;
+	line-height: 0;
+}
+
+#generatedContent-2 {
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	height: 0;
+	line-height: 0;
+
+}
+#contentBlock-1{
+	padding-top:10px;
+}
+#contentBlock-2, #contentBlock-3{
+	padding-top:10px;
+}
+#f1d #contentBlock-1 {
+}
+
+#f1e #contentBlock-1 {
+}
+
+#f1f #contentBlock-1 {
+}
+
+#f2a #contentBlock-1 {
+	float: left;
+	width: 450px;
+}
+
+#f2a #contentBlock-2 {
+	width: 250px;
+	float: right;
+}
+
+#f2b #contentBlock-1 {
+	float: left;
+	width: 450px;
+}
+
+#f2b #contentBlock-2 {
+	width: 250px;
+	float: right;
+}
+
+#f2c #contentBlock-1 {
+	float: left;
+	width: 450px;
+}
+
+#f2c #contentBlock-2 {
+	width: 250px;
+	float: right;
+}
+
+
+#f2d #contentBlock-1 {
+	float: left;
+	width: 450px;
+}
+
+#f2d #contentBlock-2 {
+	width: 250px;
+	float: right;
+}
+
+#f2e #contentBlock-1 {
+	float: left;
+	width: 450px;
+}
+
+#f2e #contentBlock-2 {
+	width: 250px;
+	float: right;
+}
+
+#f3a #contentBlock-1,
+#f3b #contentBlock-1 {
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+}
+
+#f3a #contentBlock-2,
+#f3b #contentBlock-2 {
+	width: 190px;
+	float: left;
+}
+
+#f3a #contentBlock-3,
+#f3b #contentBlock-3,
+#f3c #contentBlock-3,
+#f3d #contentBlock-3 {
+	width: 190px;
+	float: right;
+}
+
+#f3c #contentBlock-1,
+#f3d #contentBlock-1 {
+	float: left;
+	width: 300px;
+}
+
+#f3c #contentBlock-2,
+#f3d #contentBlock-2 {
+	width: 190px;
+	float: left;
+	margin-right: 20px;
+}
+
+/* @end Layout */
+
+/* @group Header */
+
+#header {
+	position: absolute;
+	left: 770px;
+	top: 0;
+}
+
+#masthead {
+	float: left;
+	margin: 30px 0 0 18px;
+	padding: 0;
+	overflow: hidden;
+}
+
+#masthead h1 {
+	padding-left: 15px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	padding: 0;
+	margin: 0;
+}
+
+#masthead h1 a {
+	color: #e2e2e2;
+	text-shadow: 0 2px 2px #000;
+}
+#masthead h1 a:hover {
+	color: white;
+}
+
+#login {
+	font-size: 11px;
+	margin-top: -15px;
+	margin-bottom: 5px;
+}
+
+#login a {
+	color: #333;
+	font-weight: bold;
+}
+
+#search {
+	margin: 30px 0 0 20px;
+	padding: 0;
+	width: 170px;
+}
+
+#search input{
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+#search #siteSearchInput {
+	padding: 2px;
+	width: 130px;
+}
+
+/* @group Global Menu */
+
+
+#globalMenu {
+	clear: both;
+	margin-left: 0px;
+	padding-top: 20px;
+	font-size: 16px;
+	list-style: none;
+	width: 230px;
+}
+
+#globalMenu ul {
+	margin-top: 5px;
+}
+
+#globalMenu ul li {
+	margin-bottom: 3px;
+}
+
+#globalMenu li {
+	list-style: none;
+	margin-bottom: 10px;
+	font-size: 14px;
+	padding-left: 20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#globalMenu li li{
+	font-size: 12px;
+	padding-left: 0;
+}
+
+#globalMenu li a {
+	color: #ccc;
+}
+
+#globalMenu li a:hover {
+	color: #fff;
+}
+
+#globalMenu li.current a {
+	color: #fff;
+}
+
+#globalMenu li.current li a {
+	color: #ccc;
+}
+#globalMenu li.current a:hover, #globalMenu li.current li a:hover {
+	color: #fff;
+}
+#globalMenu li.current {
+	background: url(images/menu-arrow.png) no-repeat left -1px;
+}
+
+#globalMenu li li.current {
+	margin-left: -40px;
+	padding-left: 40px;
+	background: url(images/menu-arrow.png) no-repeat left -1px;
+}
+
+#globalMenu li li li.current {
+	margin-left: -60px;
+	padding-left: 60px;
+	background: url(images/menu-arrow.png) no-repeat left -1px;
+}
+
+#globalMenu li li li li.current {
+	margin-left: -80px;
+	padding-left: 80px;
+	background: url(images/menu-arrow.png) no-repeat left -1px;
+}
+
+/* @end Global Menu */
+
+#clientRave
+, #shareLinks {
+	clear: both;
+	margin-left: 0px;
+	padding-top: 20px;
+	font-size: 14px;
+	list-style: none;
+	width: 230px;
+	padding-left: 20px;
+}
+
+#clientRave .tx-jmquote-pi1 {
+	color: #ccc;
+}
+
+#clientRave .tx-jmquote-pi1 .quote-author {
+	color: #fff;
+}
+
+/* @end Header */
+
+/* @group Footer */
+
+#footer {
+	padding-top: 10px;
+	margin-top: 40px;
+}
+
+#footerCopyright {
+	float: left;
+	color: #999999;
+	text-align:left;
+	width:60%;
+}
+
+a#footerHomeLink {
+	display: block;
+	float: right;
+	color: #999999;
+	text-align:right;
+	width:30%;
+}
+
+a#footerHomeLink:hover {
+	color: black;
+}
+
+/* @end Footer*/
+
+
+
+/* @group Module Styling */
+
+.moduleHeader {
+	margin: 0;
+	padding: 0 15px 0 0;
+	color: white;
+	background: url(images/right_module_cap.gif) no-repeat right top;
+	font-size: 16px;
+}
+
+.moduleHeader .moduleHeaderInnerWrap {
+	display: block;
+	padding: 5px 0 5px 10px;
+	background: #999999 url(images/left_module_cap.gif) no-repeat left top;
+}
+
+.moduleFooter {
+	height: 15px;
+	margin: 0;
+	padding-right: 15px;
+	background: url(images/right_module_cap.gif) no-repeat right bottom;
+	font-size: 1px;
+	overflow: hidden;
+	line-height: 1em; !important /*it fixes the bug in IE7*/
+}
+
+.moduleFooter span {
+	display: block;
+	height: 15px;
+	background: #999999 url(images/left_module_cap.gif) no-repeat left bottom;
+}
+
+.moduleBody {
+	padding: 15px 10px 10px 10px;
+}
+
+.moduleBodyWrap {
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	background:#F9FBF7;
+	/* Please note that the thickness values on the two border values above will be overridden in the final output. Make sure these values match the constant moduleBodyBorderWidth */
+}
+
+.unframed .moduleBody,
+.unframed .moduleBodyWrap {
+	padding: 0;
+	border: 0;
+}
+
+.unframed .moduleBodyWrap {
+	background:none; 
+} 
+
+.moduleBodyBleed {
+	padding: 0;
+}
+
+.columnGroup {
+	margin-bottom: 10px;
+}
+
+.columnGroupRule {
+	border-bottom: 1px solid #7f7f7f;
+}
+
+.moduleGroup {
+	margin-bottom: 10px;
+	margin-top:5px;
+}
+
+.moduleFeature {
+	margin-bottom: 15px;
+}
+
+/* @end Module Styling */
+
+
+
+/* @group Forms */
+
+.csc-mailform-field label,
+.csc-mailform-field label {
+	display: block;
+}
+
+/* @end */
+
+
+
+/************* Section Menus ********************/
+.sectionMenuWrapper {
+	width: 100%;
+}
+
+.sectionMenu {
+	margin: 0;
+	text-align: left;
+}
+
+.sectionMenu .menuItem {
+	display: inline-block;
+	width: 345px;
+	margin: 0 20px 20px 0;
+	vertical-align: top;
+	zoom: 1; 
+	*display:inline; 
+}
+
+.wrapper {
+	vertical-align: top;
+}
+
+.menuItem > a + .wrapper {
+	margin-left: 120px;
+}
+
+.menuItem > a {
+	float: left;
+	vertical-align: top;
+}
+
+.menuItem h3 {
+	margin: 0;
+}
+
+
+
+/***************** form style ********************/
+
+label {
+display:block;
+font-weight:bold;
+margin-top:10px;
+}
+.instructions {
+font-size:10px;
+line-height:1.1em;
+}
+input[type="text"], input[type="password"], textarea, select {
+background-color:#FFFFFF;
+border:1px solid #BBBBBB;
+margin:5px 0 0;
+}
+input[type="text"]:focus, input[type="password"]:focus textarea:focus, select:focus {
+border-color:#666666;
+}
+input[type="text"], input[type="password"], textarea, select {
+margin:3px 0;
+}
+input[type="text"], input[type="password"] {
+padding:3px;
+}
+textarea {
+height:250px;
+padding:3px;
+width:390px;
+}
+#contentBlock-2 textarea {
+width: 240px;
+}
+input[type="checkbox"], input[type="radio"] {
+position:relative;
+top:0.25em;
+}
+#tx-srfeuserregister-pi1-fe_users_form input[type="checkbox"] + label, #tx-srfeuserregister-pi1-fe_users_form input[type="radio"] + label {
+display:inline;
+font-weight:normal;
+margin-top:0;
+}
+#tx-srfeuserregister-pi1-fe_users_form input[type="checkbox"] + label:after, #tx-srfeuserregister-pi1-fe_users_form input[type="radio"] + label:after {
+clear:both;
+content:".";
+display:block;
+height:0;
+line-height:0;
+visibility:hidden;
+}
+.inline {
+display:inline-block;
+vertical-align:top;
+}
+.error, .notice, .success {
+border:2px solid #DDDDDD;
+margin-bottom:1em;
+padding:0.8em;
+}
+.error {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#FBE3E4 none repeat scroll 0 0;
+border-color:#FBC2C4;
+color:#8A1F11;
+}
+.success {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#E6EFC2 none repeat scroll 0 0;
+border-color:#C6D880;
+color:#264409;
+}
+.notice {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#FFF6BF none repeat scroll 0 0;
+border-color:#FFD324;
+color:#514721;
+}
+form ol, form ul {
+list-style-type:none;
+margin-left:0;
+}
+form hr {
+border-color:#BBBBBB -moz-use-text-color -moz-use-text-color;
+border-style:solid none none;
+border-width:1px medium medium;
+height:1px;
+margin:15px 0;
+}

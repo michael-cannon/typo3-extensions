@@ -1,0 +1,47 @@
+plugin.tt_news.news_event_register {
+    webexLink = {$plugin.tt_news.news_event_register.webexLink}
+    firstReminderSend = {$plugin.tt_news.news_event_register.firstReminderSend}
+    secondReminderSend = {$plugin.tt_news.news_event_register.secondReminderSend}
+    thirdReminderSend = {$plugin.tt_news.news_event_register.thirdReminderSend}
+    accessInformationSend = {$plugin.tt_news.news_event_register.accessInformationSend}
+    templateFile = {$plugin.tt_news.news_event_register.templateFile}
+    registrantPid = {$plugin.tt_news.news_event_register.registrantPid}
+    eventPid = {$plugin.tt_news.news_event_register.eventPid}
+	fromName = {$plugin.tt_news.news_event_register.fromName}
+	fromEmail = {$plugin.tt_news.news_event_register.fromEmail}
+	bcc = {$plugin.tt_news.news_event_register.bcc}
+	adminEmail = {$plugin.tt_news.news_event_register.adminEmail}
+	monitorEmail = {$plugin.tt_news.news_event_register.monitorEmail}
+	sitename = {$plugin.tt_news.news_event_register.sitename}
+	tempGroupsUsed = {$plugin.tt_news.news_event_register.tempGroupsUsed}
+	showUnregister = {$plugin.tt_news.news_event_register.showUnregister}
+	sendHtml = {$plugin.tt_news.news_event_register.sendHtml}
+	reminderDelay = {$plugin.tt_news.news_event_register.reminderDelay}
+	thankyouPid = {$plugin.tt_news.news_event_register.thankyouPid}
+	multipleRegister = {$plugin.tt_news.news_event_register.multipleRegister}
+	removePlainLines = {$plugin.tt_news.news_event_register.removePlainLines}
+	multipleUnregister = {$plugin.tt_news.news_event_register.multipleUnregister}
+	eventUrlPid = {$plugin.tt_news.news_event_register.eventUrlPid}
+	timezoneOffset = {$plugin.tt_news.news_event_register.timezoneOffset}
+	showSurveyOnThankYou = {$plugin.tt_news.news_event_register.showSurveyOnThankYou}
+
+	# content formatting
+	label.wrap = <b>|</b>
+	label.title.wrap = <h1>|
+	label.reserve.wrap = <p style="font-weight: bold;">|</p>
+	label.register.wrap = <p style="font-weight: bold; background: yellow;">|</p>
+	label.registered.wrap = <p style="font-weight: bold; background: yellow;">|</p>
+	label.notice.wrap = <p>|</p>
+	label.to.wrap =
+	label.link.wrap = <br /><b>|</b>
+
+	field.wrap = |<br />
+	field.title.wrap = |</h1>
+	field.start.date.strftime = %a %B %e, %Y
+	field.start.time.strftime = %l:%M %p
+	field.end.date.strftime = %a %B %e, %Y
+	field.end.time.strftime = %l:%M %p
+	field.information.wrap = <p>|</p>
+
+	form.label.wrap = <p style="font-weight: bold;">|</p>
+}

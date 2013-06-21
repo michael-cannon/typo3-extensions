@@ -1,0 +1,28 @@
+
+plugin.tx_sponsorcontentscheduler_pi1 {
+  # cat=plugin.Sponsor Content; type=string label= Site Mapper for Multidomain
+  siteMapper = 
+  # cat=plugin.Sponsor Content; type=string label= Articles Page Id
+  articlesPID= 
+  # cat=plugin.Sponsor Content; type=string label= Presentation Page Id
+  presentationsPID= 
+  # cat=plugin.Sponsor Content; type=string label= Roundtable Page Id
+  roundTablesPID= 
+  # cat=plugin.Sponsor Content; type=string label= Whitepaper Page Id
+  whitePapersPID=
+  # cat=plugin.Sponsor Content; type=string label= Article Categories Id
+  catarticlesPID=
+  # cat=plugin.Sponsor Content; type=string label= Presentations Categories Id
+  catpresentationsPID=
+  # cat=plugin.Sponsor Content; type=string label= Roundtables Categories Id
+  catroundTablesPID=
+  # cat=plugin.Sponsor Content; type=string label= Whitepaper Categories Id
+  whitePapersPID=
+  # cat=plugin.Sponsor Content; type=string label= RoundTable Category Id
+  roundTableCategoryId=
+  # cat=plugin.Sponsor Content; type=string label= RoundTable Category Id
+  roundTableParticipantsPid=
+  # cat=plugin.Sponsor Content; type=string label= Sponsor Login Page Id
+  sponsorLoginPageId=
+ 
+}

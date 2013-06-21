@@ -1,0 +1,219 @@
+#includeLibs.tx_extendedshop_pi1 = EXT:extendedshop/pi1/class.tx_extendedshop_pi1.php
+plugin.tx_extendedshop_pi1= USER
+#plugin.tx_extendedshop_pi1.userFunc = tx_extendedshop_pi1->main
+plugin.tx_extendedshop_pi1{
+
+# The main function
+  userFunc = tx_extendedshop_pi1->main_shop
+
+# Template e CSS file
+  templateFile = {$plugin.tx_extendedshop_pi1.file.templateFile}
+  cssFile = {$plugin.tx_extendedshop_pi1.file.cssFile}
+
+  pid_list.field = pages
+  recursive.field = recursive
+  code.field = select_key
+  limit = 100
+  priceDec = {$plugin.tx_extendedshop_pi1.priceDec}
+  priceDecPoint = {$plugin.tx_extendedshop_pi1.priceDecPoint}
+  priceThousandPoint = {$plugin.tx_extendedshop_pi1.priceThousandPoint}
+
+
+# List mode: 0 for the sequential listing, 1 for the table listing
+  list.modeImage = {$plugin.tx_extendedshop_pi1.listMode}
+# If modeImage==0, this is the max number of items to show in a page
+  list.maxItems = {$plugin.tx_extendedshop_pi1.listMaxItems}
+
+# If modeImage==1
+# Min-Width of the column
+  list.columnWidth = {$plugin.tx_extendedshop_pi1.columnWidth}
+# Number of items in a row
+  list.productsForRow = {$plugin.tx_extendedshop_pi1.numColumns}
+# Number of rows in a page
+  list.productsRowNumbers = {$plugin.tx_extendedshop_pi1.numRows}
+
+# Configuration of the detail image
+  image {
+    file.maxW = 250
+    imageLinkWrap = {$plugin.tx_extendedshop_pi1.clickEnlarge}
+    imageLinkWrap {
+      enable = 1
+      bodyTag = <BODY>
+      wrap = <A href="javascript:close();"> | </A>
+      width = 400
+      #height = 320
+      JSwindow = 1
+      JSwindow.newWindow = 1
+      JSwindow.expand = 17,20
+    }
+  }
+
+# Configuration of the zoom link image (under the detail image)
+  zoomimage {
+    file = EXT:extendedshop/pi1/zoom.gif
+    file.maxW = 50
+    imageLinkWrap = {$plugin.tx_extendedshop_pi1.clickEnlarge}
+  }
+
+# Configuration of the list image
+  listImage {
+    file.maxW = 140
+    file.maxH = 200
+    imageLinkWrap = {$plugin.tx_extendedshop_pi1.clickEnlargeList}
+    imageLinkWrap {
+      enable = 1
+      bodyTag = <BODY>
+      wrap = <A href="javascript:close();"> | </A>
+      width = 400
+      #height = 100
+      JSwindow = 1
+      JSwindow.newWindow = 1
+      JSwindow.expand = 17,20
+    }
+  }
+
+# Configuration of the images in the ordersInfo mode
+  ordersImage {
+    file.maxW = 140
+  }
+  next {
+    file.maxW = 40
+  }
+  previous {
+    file.maxW = 40
+  }
+
+# Configuration of the correlated product image
+  correlatedImage {
+    file.maxW = 100
+    imageLinkWrap = {$plugin.tx_extendedshop_pi1.clickEnlarge_list}
+    imageLinkWrap {
+      enable = 1
+      bodyTag = <BODY>
+      wrap = <A href="javascript:close();"> | </A>
+      width = 400
+      #height = 100
+      JSwindow = 1
+      JSwindow.newWindow = 1
+      JSwindow.expand = 17,20
+    }
+  }
+
+# Fields to search for
+  searchFields = code,title
+
+# Required fields in the personal info page
+  requiredFields =name,address,city,zip,state,phone,email,authorization,conditions
+  requiredFieldsSymbol = *
+
+# Over this amount (shipping and payment excluded) the delivery is free
+  freeDelivery = {$plugin.tx_extendedshop_pi1.freeDelivery}
+
+# Min amount for an order
+  minOrder = {$plugin.tx_extendedshop_pi1.minAmount}
+
+# Uid of the basket page
+  pid_basket = {$plugin.tx_extendedshop_pi1.pidBasket}
+# Uid of the system folder containing the orders
+  pid_orders = {$plugin.tx_extendedshop_pi1.pidOrders}
+# Uid of the system folder containing the delivery address
+  pid_delivery = {$plugin.tx_extendedshop_pi1.pidDelivery}
+# Uid of the system folder containing the website users
+  pid_users = {$plugin.tx_extendedshop_pi1.pidUsers}
+
+# Uid of the group for new customers
+  group_customer = {$plugin.tx_extendedshop_pi1.group_customer}
+
+# Sender of the order confirmation email
+  orderEmail_from = {$plugin.tx_extendedshop_pi1.fromEmail}
+  orderEmail_fromName = {$plugin.tx_extendedshop_pi1.fromName}
+
+# Receiver of the order confiration email (in the bcc field)
+  orderEmail_to = {$plugin.tx_extendedshop_pi1.bccEmail}
+
+#  orderEmail_htmlmail = 1
+#  email_notify_default = 1
+}
+
+plugin.tx_extendedshop_pi1.payment {
+  # Radio
+  radio = 1
+
+  10.title = Bonifico bancario
+  10.message = Per ricevere gli articoli ordinati, è necessario effettuare un bonifico anticipato sul conto:<br /><br />- CC n° 000000000 ABI 0000 - CAB 00000 intestato a Mio nome
+  10.image.file = 
+  10.priceTax = 
+  10.priceNoTax = 
+
+  20.title = Contrassegno (+ 3,00 EURO)
+  20.image.file = 
+  20.priceTax = 3,00
+  20.priceNoTax =  
+
+
+  #Dati per paypal
+  50.title = Credit card with PayPal
+  50.bankcode = paypal
+  50.UICCODE = USD
+  50.ShopLogin = myPayPalLogin
+  50.bankname = PayPal
+  50.banklink = www.paypal.com
+  50.return = http://www.mysite.com/index.php?id=11
+  50.paylink = https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&upload=1
+
+  70.title =Credit card with Banca Sella
+#  70.image.file = fileadmin/template/images/visa_mastercard.gif
+  70.priceTax = 
+  70.priceNoTax =
+  #Dati per bancasella
+  70.bankcode = sella
+  70.IDLANGUAGE = 1
+  70.UICCODE = 242
+  70.ShopLogin =0000000
+  70.bankname = Banca Sella
+  70.banklink = www.sellanet.it
+  70.paylink = https://ecomm.sella.it/gestpay/pagam.asp
+  70.linkError = index.php?id=266
+  70.id_ok = 4
+  70.id_ko = 9
+  70.opt_send = fileadmin/otp/21504__2005_11_5_44.ric
+  70.opt_receive = fileadmin/otp/21504__2005_11_5_54.ris
+
+# Authorize.net
+  80.title = Credit card with Authorize.net
+  80.priceTax = 
+  80.priceNoTax =
+  80.bankcode = authorize
+  80.IDLANGUAGE = 1
+  80.UICCODE = 242
+  80.ShopLogin = 
+  80.TransactionKey = 
+  80.bankname = Authorize.net
+  80.banklink = www.authorize.net
+  80.paylink = https://certification.authorize.net/gateway/transact.dll
+  80.linkError = index.php?id=9
+  80.returnUrl = http://www.return.com/index.php?id=2
+
+}
+
+## EXAMPLE shipping config:
+plugin.tx_extendedshop_pi1.shipping {
+  10.title = ITALIA
+  10.priceTax = 8,00
+#  10.priceNoTax = 
+
+  20.title = FRANCIA
+  20.priceTax = 10,00
+#  20.priceNoTax = 
+
+}
+
+plugin.tx_extendedshop_pi1.ordersInfo {
+  ordersForPage = {$plugin.tx_extendedshop_pi1.ordersForPage}
+}
+
+# This shows the product title in the page title
+config.titleTagFunction = tx_extendedshop_pi1->product_title
+
+includeLibs.tx_extendedshop_pi1 = EXT:extendedshop/pi1/class.tx_extendedshop_pi1.php
+plugin.tx_extendedshop_pi1.userFunc = tx_extendedshop_pi1->main

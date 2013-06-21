@@ -1,0 +1,98 @@
+
+/**
+ * PI1 object - Flash SlideShow
+ */
+
+plugin.tx_newsshow_pi1 {
+
+	// Player width
+	width = {$plugin.tx_newsshow_pi1.width}
+
+	// Player height
+	height = {$plugin.tx_newsshow_pi1.height}
+
+	// Player window mode
+	wmode = {$plugin.tx_newsshow_pi1.wmode}
+
+    darkdesign = {$plugin.tx_newsshow_pi1.darkdesign}
+
+	// The newsshow player
+	jpgrotator = {$plugin.tx_newsshow_pi1.jpgrotator}
+
+	// Flash version
+	version = {$plugin.tx_newsshow_pi1.version}
+
+	// Page ID for XML output
+	xmlPageId = {$extension.newsshow.typeNum}
+
+	// Page ID for blogs href
+	blogsId = {$extension.newsshow.blogsID}
+
+	// Flash object parameters
+	swfParams {
+
+		// Loop animation
+		loop = {$plugin.tx_newsshow_pi1.swfParams.loop}
+
+		// Display menu
+		menu = {$plugin.tx_newsshow_pi1.swfParams.menu}
+
+		// Animation quality
+		quality = {$plugin.tx_newsshow_pi1.swfParams.quality}
+
+		// Scale animation
+		scale = {$plugin.tx_newsshow_pi1.swfParams.scale}
+
+		// Anmimation background color
+		bgcolor = {$plugin.tx_newsshow_pi1.swfParams.bgcolor}
+
+		// Live connect
+		swliveconnect = {$plugin.tx_newsshow_pi1.swfParams.swliveconnect}
+
+	}
+
+	// Player parameters
+	playerParams {
+
+		// Transition to use
+		transition = {$plugin.tx_newsshow_pi1.playerParams.transition}
+
+		// Random play
+		random = {$plugin.tx_newsshow_pi1.playerParams.random}
+
+		my_conrol = {$plugin.tx_newsshow_pi1.playerParams.my_control}
+
+		// Timer
+		timer = {$plugin.tx_newsshow_pi1.playerParams.timer}
+
+		// Navigation menu
+		navigation = {$plugin.tx_newsshow_pi1.playerParams.navigation}
+	}
+
+	// Default CSS styling
+	_CSS_DEFAULT_STYLE (
+		.tx-newsshow-pi1 {
+			text-align: center;
+		}
+	)
+}
+
+/**
+ * Page object - XML output
+ */
+
+newsshow = PAGE
+newsshow {
+
+	// Page type ID
+	typeNum = {$extension.newsshow.typeNum}
+
+	// No cache
+	config.no_cache = 1
+
+	// Page alternate generation script
+	config.pageGenScript = EXT:newsshow/xml_output.php
+
+	// Hide admin panel
+	config.admPanel = 0
+}

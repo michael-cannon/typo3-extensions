@@ -1,0 +1,11 @@
+plugin.tx_memberexpiry_pi1 {
+	preexpiry_notification_interval_1 =  1
+	preexpiry_notification_interval_2 =  9
+	preexpiry_notification_interval_3 = 16
+	postexpiry_notification_interval = 14
+	debug_email_address = 
+	bcc_email_address = 
+    emailFromAddress = member@example.com
+    emailFromName = Member Institute
+	emailReplyToAddress = replyto@example.com
+}

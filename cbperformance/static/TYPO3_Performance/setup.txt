@@ -1,0 +1,26 @@
+config {
+	jumpurl_enable = {$config.jumpurl_enable}
+	jumpurl_mailto_disable = {$config.jumpurl_mailto_disable}
+
+	no_cache = {$config.no_cache}
+	cache_clearAtMidnight = {$config.cache_clearAtMidnight}
+	cache_period  = {$config.cache_period}
+
+	stat = {$config.stat}
+	stat_typeNumList = {$config.stat_typeNumList}
+	stat_titleLen = {$config.stat_titleLen}
+	stat_apache = {$config.stat_apache}
+	stat_apache_logfile = {$config.stat_apache_logfile}
+	stat_mysql = {$config.stat_mysql}
+
+	headerComment = {$config.headerComment}
+	disablePrefixComment = {$config.disablePrefixComment}
+
+	removeDefaultJS = {$config.removeDefaultJS}
+	inlineStyle2TempFile = {$config.inlineStyle2TempFile}
+
+	index_enable = {$config.index_enable}
+	index_externals = {$config.index_externals}
+}
+
+plugin.tt_news.useBidirectionalRelations = {$config.useBidirectionalRelations}

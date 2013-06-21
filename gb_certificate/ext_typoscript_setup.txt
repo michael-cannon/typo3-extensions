@@ -1,0 +1,7 @@
+plugin.tx_gbcertificate_pi1 {
+	fontColor = {$plugin.tx_gbcertificate_pi1.fontColor}
+	fontSizeHeader = {$plugin.tx_gbcertificate_pi1.fontSizeHeader}
+	fontSizeSmall = {$plugin.tx_gbcertificate_pi1.fontSizeSmall}
+	fontSizeBig = {$plugin.tx_gbcertificate_pi1.fontSizeBig}
+	outputPath = {$plugin.tx_gbcertificate_pi1.outputPath}
+}

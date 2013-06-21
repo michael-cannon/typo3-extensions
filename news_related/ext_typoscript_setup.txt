@@ -1,0 +1,8 @@
+plugin.tt_news.news_related {
+	templateFile = {$plugin.tt_news.news_related.templateFile}
+
+	# content formatting
+	label.wrap = <b>|</b>
+	label.title.wrap = <h1>|</h1>
+	stdWrap.wrap = |<br />
+}

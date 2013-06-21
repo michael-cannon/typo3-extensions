@@ -1,0 +1,4 @@
+plugin.tt_news.news_userinfo {
+	# cat=plugin.tt_news.news_userinfo/file/; type=file[html,htm,tmpl,txt]; label= User Template File: See EXT:news_userinfo/news_userinfo.tmpl for an example.
+	templateFile = EXT:news_userinfo/news_userinfo.tmpl
+}

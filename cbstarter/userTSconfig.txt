@@ -1,0 +1,102 @@
+admPanel {
+	enable {
+		all = 1
+		preview = 1
+		cache = 1
+		publish = 1
+		edit = 1
+		tsdebug = 1
+		info = 1
+	}
+
+	hide = 1
+
+	override {
+		preview {
+			showHiddenPages = 1
+			showHiddenRecords = 1
+			simulateDate = 1
+			simulateUserGroup = 1
+		}
+
+		cache {
+			noCache = 1
+			clearCacheLevels = 1
+		}
+
+		edit {
+			# MLC set 0 to 1 to force setting
+			displayIcons = 0
+			displayFieldIcons = 1
+			editFormsOnPage = 0
+			editNoPopup  = 0
+		}
+	}
+}
+
+options {
+	clearCache {
+		pages = 1
+		all = 1
+	}
+	saveDocNew = 1
+
+	# don't clear clipboard
+	saveClipboard = 1
+
+	# Reduces the amount of clipboards from 4 to X:
+	clipboardNumberPads = 2
+
+	shortcutFrame = 1
+	defaultFileUploads = 20
+	
+	# Enable upload field
+	uploadFieldsInTopOfEB = 0
+
+	# Enable folder create
+	createFoldersInEB = 0
+
+	## Set the default spelling ability of the check speller for all users
+	## options: ultra, fast, normal, bad-spellers
+	HTMLAreaPspellMode = normal
+
+	## Enable the personal dictionary feature of the check speller by default for all users
+	enablePersonalDicts = 1
+
+	#show pageID in page tree title
+	pageTree.showPageIdWithTitle = 0
+}
+
+# http://typo3.org/documentation/document-library/core-documentation/doc_core_tsconfig/1.0.0/view/1/2/
+setup.defaults {
+	titleLen = 50
+	thumbnailsByDefault = 1
+	edit_RTE = 1
+	# Makes the BE fields wider
+	edit_wideDocument = 1
+	copyLevels = 9
+	recursiveDelete = 1
+	noOnChangeAlertInTypeFields = 0
+	navFrameResizable = 1
+	neverHideAtCopy = 1
+}
+
+mod.xMOD_alt_doc {
+    disableDocSelector = 1
+    disableCacheSelector = 1
+}
+
+mod.web_list {
+	// edit record just by clicking on title in list-view
+	clickTitleMode = edit
+
+	// alternating colors for records in list-view
+	alternateBgColors = 1
+}
+
+# http://typo3.org/documentation/document-library/extension-manuals/tt_news/2.5.2/view/1/5/
+# This will set the field “hidden” in new created news articles to 0 (=visible)
+# TCAdefaults.tt_news.hidden = 0
+
+# Hide static_info_tables records on the rootpage
+mod.web_list.hideTables = static_template, static_countries, static_country_zones, static_currencies, static_languages, static_territories, static_taxes, static_markets

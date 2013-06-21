@@ -1,0 +1,96 @@
+plugin.tx_news_feedit_pi1 {
+
+  _CSS_DEFAULT_STYLE (
+  /* $Id $/
+  /* Fix to have RTE not have a blank space at top on Firefox */
+    .tx-newsfeedit-pi1 div.editorWrap {
+      float: left;
+    }
+
+    /**** FORM AND PREVIEW STYLES ****/
+    .tx-newsfeedit-pi1-form-label, .tx-newsfeedit-pi1-preview-label {
+      float:left;
+      width:120px;
+    }
+
+    .tx-newsfeedit-pi1-preview-value, .tx-newsfeedit-pi1-form-field {
+      padding-left:120px;
+    }
+
+    .tx-newsfeedit-pi1-preview-row, .tx-newsfeedit-pi1-form-row {
+       clear:left;
+       margin-bottom:10px;
+    }
+
+    .tx-newsfeedit-pi1-form-required-marker {
+      color:red;
+      float:left;
+    }
+
+    .tx-newsfeedit-pi1-form-required-message {
+      color:red;
+      font-size:small;
+    }
+
+    .tx-newsfeedit-pi1-form-error-field {
+      color:red;
+      font-size:small;
+    }
+
+    .tx-newsfeedit-pi1-form-data-title {
+      width: 30em;
+    }
+
+    .tx-newsfeedit-pi1-form-data-short {
+      width: 455px;
+    }
+
+    .tx-newsfeedit-pi1-form-data-author {
+       width: 25em;
+    }
+
+    .tx-newsfeedit-pi1-form-data-author_email {
+      width: 25em;
+    }
+
+
+    /**** ALL ROUND STYLES ****/
+    .tx-newsfeedit-pi1-header {
+      font-size:x-large;
+    }
+
+    .tx-newsfeedit-pi1-link {
+      padding-top:1em;
+    }
+
+    .tx-newsfeedit-pi1-link DIV {
+      display: list-item;
+      list-style: square inside;
+    }
+
+    .tx-newsfeedit-pi1-rte-clearer {
+      margin-bottom:20px;
+    }
+
+    .tx-newsfeedit-pi1-form-help-icon {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    /**** EDITMENU STYLES ****/
+    .tx-newsfeedit-pi1-editmenu-list {
+      padding-top:1em;
+      padding-left:1em;
+     /* display: list-item;*/
+    }
+
+    .tx-newsfeedit-pi1-editmenu-list DIV {
+      display: list-item;
+      list-style: disc inside none;
+    }
+
+
+  )
+}

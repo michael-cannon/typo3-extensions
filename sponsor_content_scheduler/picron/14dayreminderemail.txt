@@ -1,0 +1,11 @@
+Dear ###NAME###,
+
+you have important deadlines in two weeks:
+
+###ROW###
+Title: ###TITLE###
+Due Date: ###DUE_DATE###
+###ROW###
+
+BPMInstitute.org
+

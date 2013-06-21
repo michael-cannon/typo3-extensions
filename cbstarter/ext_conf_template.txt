@@ -1,0 +1,11 @@
+# cat=basic/enable; type=boolean; label=Set PageTSconfig by default: If you are going to use this extension by default in this database then set this flag. In that case you don't need to set specific PageTSconfig for each page, which you have to do otherwise!
+setPageTSconfig = 1
+
+# cat=basic/enable; type=boolean; label=Set UserTSconfig by default: If you are going to use this extension by default in this database then set this flag. In that case you don't need to set specific UserTSconfig for each user/group, which you have to do otherwise!
+setUserTSconfig = 1
+
+# cat=basic/enable; type=boolean; label= Show properties "Start" and "Stop" in page type "Shortcut"
+shortcut.showStartStopField = 1
+
+# cat=basic/enable; type=boolean; label= Show property "Access" in page type "Shortcut"
+shortcut.showAccessField = 1

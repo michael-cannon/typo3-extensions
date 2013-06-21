@@ -1,0 +1,19 @@
+# setup
+# $Id: ext_typoscript_setup.txt,v 1.1.1.1 2010/04/15 10:03:06 peimic.comprock Exp $
+# note: this no longer reflects the actual questions in use as there are 
+# 	different questions for bpm vs. soa.  Therefore the values are being
+#   set in Typo3 templates, such as under member-login.
+plugin.tx_srfeuserregister_pi1._LOCAL_LANG.default {
+	tx_bpmprofile_newsletter1 = The BPM Bulletin (BPM Institute's newsletter)
+	tx_bpmprofile_newsletter2 = Business Rules Newsletter
+	tx_bpmprofile_newsletter3 = Organizational Performance Newsletter
+	tx_bpmprofile_newsletter4 = RFID Newsletter
+	tx_bpmprofile_newsletter5 = SOA Newsletter
+	tx_bpmprofile_newsletter6 = Governance Newsletter
+	tx_bpmprofile_newsletter7 = Enterprise Architecture Bulletin
+	tx_bpmprofile_newsletter8 = Compliance Bulletin
+	tx_bpmprofile_newsletter9 = Government Bulletin
+
+	redemptionCode = Redemption Code
+	missing_redemptionCode = 
+}

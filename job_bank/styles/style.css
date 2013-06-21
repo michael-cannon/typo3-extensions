@@ -1,0 +1,196 @@
+label {
+margin: 0;
+padding:0.2em;
+margin-top:0.3em;
+margin-right:0.9em;
+margin-bottom:0.8em;
+text-align:right;
+width:120px;
+float:left;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+font-weight:bold;
+}
+
+fieldset {
+  
+  border:solid 0 #fff; /* Opera doesn't get border:none or border:0 on fieldsets */
+  width:100%;
+  }
+  
+legend {
+	width:194px;
+	height:30px;
+	color:#fff;
+	font-size:2em;
+	padding-left:0.5em;
+	background: transparent url("graphics/legend_bg.gif") no-repeat;
+	position:relative;
+	top:-1em;
+	text-transform:uppercase;
+	font-weight:bold;
+	letter-spacing:-1px;
+	white-space:pre; /* hack: make sure */
+}
+
+.br {display:none;}  
+
+/*.textfield {
+	font: 10px Verdana, Arial, Helvetica, sans-serif ;
+	color:#333 ;
+	//margin:2px 16px 2px 0px;
+	
+//	border:solid 0 #fff;
+	padding: 1px 8px;
+	width:200px;
+	voice-family: "\"}\""; 
+	voice-family:inherit;
+	width:187px;
+	
+}*/
+
+.bodyclass {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	margin-left:0px;
+	margin-top:0px
+}
+.H1callnow {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #FFFFFF;
+	vertical-align:middle;
+	text-decoration:none;
+	font-weight:bold;
+	height:25px;
+	margin-left:15px
+}
+
+.H1callnow H1 {
+	font: inherit;
+	color: #FFFFFF;
+}
+.text_box {se
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	border: 1px groove #000000;
+}
+#logoid{
+	margin-left:10px;
+	background-repeat:no-repeat;
+
+}
+#chatid{
+	margin-left:10px;
+	margin-top:35px;
+	background-repeat:no-repeat;
+	
+}
+.menuborder {
+
+	border-top: 1px solid #999999;
+	border-right: 1px none #999999;
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #999999;
+}
+.jobbank_menuborder1 {
+border-top: 1px solid #999999;
+border-right: 1px solid #999999;
+border-bottom: 1px solid #999999;
+border-left: 1px solid #999999;
+}
+.jobbank_menuborderdetails {
+border-top: 1px solid #999999;
+border-right: 1px solid #999999;
+border-bottom: 1px solid #999999;
+border-left: 1px solid #999999;
+}
+.menuborderright {
+	border-top: 1px none #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px none #999999;
+	border-left: 1px none #999999;
+}
+.menuborderrightbottom {
+	border-top: 1px none #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	border-left: 1px none #999999;
+}
+.menuborderbottom {
+	border-top: 1px none #999999;
+	border-right: 1px none #999999;
+	border-bottom: 1px solid #999999;
+	border-left: 1px none #999999;
+}
+.menubordertop {
+	border-top: 1px solid #999999;
+	border-right: 1px none #999999;
+	border-bottom: 1px none #999999;
+	border-left: 1px none #999999;
+}
+
+.menuborderleftbottom {
+	border-top: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #999999;
+}
+.menubordertopright {
+	border-top: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px none #999999;
+	border-left: 1px none #999999;
+}
+.jobbank_repeatx {
+	background-repeat:repeat-x
+}
+.jobbank_toplinks {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+}
+.toplinks:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+}
+
+
+.error {
+margin: 5px 0px 5px 0px;
+	color: red;
+}
+
+a {
+	color:#0099CC;
+	text-decoration: underline;
+}
+
+.marooncolorheading{
+	color:#990000;
+}
+
+.skybluelike_a{
+	color:#0099CC;
+}
+
+p.heading {color:#990000}
+
+.detailinfo{
+	background:#C7C7C7;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+}
+.detailinfoinner{
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	text-decoration: none;
+	width: 100%;
+}

@@ -1,0 +1,205 @@
+<style type="text/css">
+<!--
+.sample {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #666666;
+}
+-->
+</style>
+<!--###JOBBANKSEARCH###---> 
+<H1>Job Bank</H1>
+<form action="###FORMACTION###" name="jobSearch" method="POST">
+<h2>Search <input type="text"  name="###FORMEXTENSION###[search_text]"> <input type="submit" name="###FORMEXTENSION###[submit_button]" id="###FORMEXTENSION###[submit_button]" value="Search"></h2>
+</form>
+<br>
+###ADVANCESEARCH_TEXT###
+<!--###JOBBANKSEARCH###--->
+
+<!--###JOBBANKSEARCHADV### begin -->
+
+<H2>Job Bank</H2>
+<form action="###FORMACTION###" method="POST" name="jobSearch">
+
+<script language="javascript" >
+	function populateValueInRadio(a){
+		
+		document.getElementById('###FORMEXTENSION###[search_text_view]').value=a
+		
+		document.getElementById('###FORMEXTENSION###[submit_button]').click();
+		
+	}
+
+</script>
+    <table width="80%" cellpadding="1" cellspacing="1" border="0">
+    <tr>
+      <td colspan="2" height="3"></td>
+      </tr>
+    <tr>
+    	<td width="10%">&nbsp;</td><td width="80%">Keywords&nbsp;&nbsp;&nbsp;<input type="text"  name="###FORMEXTENSION###[search_text_keywords]" value="###SEARCH_TEXT_KEYWORDS_VALUE###"></td>
+    </tr>
+	<tr>
+    	<td width="10%">&nbsp;</td><td width="80%">Job Status ###JOB_STATUS###</td>
+    </tr>
+  <tr>
+    	<td width="10%">&nbsp;</td><td width="80%">&nbsp;</td>
+    </tr>
+    <tr >
+    	<td width="10%">&nbsp;</td><td align="left"><input type="hidden"  value="1" name="###FORMEXTENSION###[search_text_view]" id="###FORMEXTENSION###[search_text_view]"><input type="submit" name="###FORMEXTENSION###[submit_button]" id="###FORMEXTENSION###[submit_button]" value="Search">   <input type="reset" name="###FORMEXTENSION###[reset_button]" value="Reset"></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="1"></td>
+    </tr>
+
+    <input type="hidden" name="action" value="###ACTION###">
+    </table>
+</form>
+<br>
+
+<!--###JOBBANKSEARCHADV### end -->
+
+<!--###JOBBANKSEARCHRESULT###--->
+<h2>Job Listings</h2>
+<!--###JOBBANKSEARCHRESULTRADIOVIEW###--->
+	Result View:<input type="radio"  value="1" name="radio_brief" onClick="populateValueInRadio(this.value)" ###CHECKED_BRIEF### >Brief <input type="radio"  value="2" name="radio_brief" onClick="populateValueInRadio(this.value)" ###CHECKED_DETAIL### > Detailed<br/><NOSCRIPT> <a href="###LINK_BRIEF###">Brief</a> | <a href="###LINK_DETAIL###">Detailed</a></NOSCRIPT>
+<!--###JOBBANKSEARCHRESULTRADIOVIEW###--->
+
+<table width="100%" border="0" cellpadding="1" cellspacing="1" >
+<!--###JOBBANKSEARCHRESULTHEADER###--->
+<tr style="background:#c2c2c2">
+    <td height="22"><strong>&nbsp;Listing Date</strong></td>
+    <td><strong>&nbsp;Position</strong></td>
+	<td><strong>&nbsp;Company</strong></td>
+	<td><strong>&nbsp;Location</strong></td>
+</tr>
+<!--###JOBBANKSEARCHRESULTHEADER###--->
+<tr bgcolor="#EFEFEF">
+  <td colspan="4" height="1"></td>
+  </tr>	
+	<!--###JOBBANKSEARCHRESULTDATA###--->
+	<tr valign="top">
+		<td style="border-bottom: 0 solid #EFEFEF" height="22">&nbsp;###JOBBANK_OPENING###</td>
+		<td style="border-bottom: 0 solid #EFEFEF">&nbsp;###JOBBANK_OCCUPATION###</td>
+		<td style="border-bottom: 0 solid #EFEFEF">&nbsp;###JOBBANK_COMPANY###</td>
+		<td style="border-bottom: 0 solid #EFEFEF">&nbsp;###JOBBANK_LOCATION###</td>
+	</tr>
+	<!--###JOBBANKSEARCHRESULTDATA###--->
+
+<!--###JOBBANKSEARCHRESULTNODATA###--->
+	<tr valign="top">
+		<td height="22" colspan="4" align="center">No Result found</td>
+		
+	</tr>
+<!--###JOBBANKSEARCHRESULTNODATA###--->
+
+</table>
+<!--###JOBBANKSEARCHRESULT###--->
+
+<!--###JOBBANKSEARCHRESULTDETAIL### begin-->
+<h2>Job Listings</h2>
+<!--###JOBBANKSEARCHRESULTRADIOVIEW###--->
+Result View:<input type="radio"  value="1" name="radio_brief" onClick="populateValueInRadio(this.value)" ###CHECKED_BRIEF### >Brief <input type="radio"  value="2" name="radio_brief" onClick="populateValueInRadio(this.value)" ###CHECKED_DETAIL### > Detailed<br/><NOSCRIPT> <a href="###LINK_BRIEF###">Brief</a> | <a href="###LINK_DETAIL###">Detailed</a></NOSCRIPT>
+<!--###JOBBANKSEARCHRESULTRADIOVIEW###--->
+
+
+<table width="100%" cellpadding="1" cellspacing="1" style="border: 0;">
+
+<!--###JOBBANKSEARCHRESULTHEADER###--->
+<tr style="background:#c2c2c2">
+    <td height="22"><strong>&nbsp;Listing Date</strong></td>
+    <td><strong>&nbsp;Position</strong></td>
+	<td><strong>&nbsp;Company</strong></td>
+	<td><strong>&nbsp;Location</strong></td>
+</tr>
+<!--###JOBBANKSEARCHRESULTHEADER###--->
+<tr bgcolor="#EFEFEF">
+  <td colspan="4" height="1"></td>
+  </tr>
+	<!--###JOBBANKSEARCHRESULTDATA###--->
+	<tr valign="top">
+		<td height="22">&nbsp;###JOBBANK_OPENING###</td>
+		<td>&nbsp;###JOBBANK_OCCUPATION###</td>
+		<td>&nbsp;###JOBBANK_COMPANY###</td>
+		<td>&nbsp;###JOBBANK_LOCATION###</td>
+	</tr>
+	<tr valign="top">
+		<td style="border-bottom: 0 solid #EFEFEF" colspan="4"> ###JOB_DETAILS_LINK###</td>
+	</tr>
+
+<tr valign="top">
+		<td style="border-top: 1px solid #EFEFEF" height="22">&nbsp;</td>
+		<td style="border-top: 1px solid #EFEFEF">&nbsp;</td>
+		<td style="border-top: 1px solid #EFEFEF">&nbsp;</td>
+		<td style="border-top: 1px solid #EFEFEF">&nbsp;</td>
+	</tr>
+	<!--###JOBBANKSEARCHRESULTDATA###--->
+<!--###JOBBANKSEARCHRESULTNODATA###--->
+	<tr valign="top">
+		<td height="22" colspan="4" align="center">No Result found</td>
+		
+	</tr>
+<!--###JOBBANKSEARCHRESULTNODATA###--->
+</table>
+<!--###JOBBANKSEARCHRESULTDETAIL### end -->
+
+ 
+ <!--###JOBBANK_COMPANY_DETAILS###--->
+<h1 class="csc-firstHeader">Company Profile </h1>
+<table width="100%" border="0" cellspacing="1" cellpadding="1">
+  <tr valign="TOP" >
+    <td height="22" valign="top">
+	    <table width="99%"  border="0" cellspacing="1" cellpadding="1" >
+	      <tr>
+		<td colspan="2">
+			###JOBBANKINFO_COMPANYNAME###
+			<br/><b>Location</b> ###JOBBANKINFO_CITY### ###JOBBANKINFO_STATE### ###JOBBANKINFO_COUNTRY###
+			###JOBBANKINFO_STATUS###
+		</td>
+	      </tr>
+	      
+	    </table>
+        <br>    
+        <table width="99%"  border="0" cellspacing="1" cellpadding="1" >
+          <tr>
+            <td colspan="2"> ###JOBANKINFO_CONTACTPERSON### ###JOBBANKINFO_PHONE### ###JOBBANKINFO_URL### </td>
+          </tr>
+        </table>
+    </td>
+    <td align="right">
+	<table width="99%" border="0" cellspacing="2" cellpadding="1">
+        <tr> 
+          <td colspan="2" align="right">###JOBBANKINFO_SPONSOR_LOGO###</td>
+        </tr>
+        <tr> 
+	  <td colspan="2">&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+ 
+  <tr valign="TOP"> 
+    <td colspan="2">###JOBBANKINFO_COMPANY_DESCRIPTION###</td>
+  </tr>
+</table>
+<h1 class="csc-firstHeader">Position Details</h1>
+<p>###JOBBANKINFO_POSITION###</p>
+
+<!--This is job description -->
+<p>###JOBBANK_DESCRIPTION###</p>
+
+<p>###MAJOR_RESPONSIBILITIES###</p>
+
+<p>###JOBBANKINFO_ADDITIONAL_REQUIREMENTS###</p>
+
+<p>###JOBBANKINFO_QUALIFICATION###</p>
+
+<p>###JOBBANKINFO_CAREER###</p>
+
+<FORM ACTION="###ACTIONLINK###" METHOD="POST">
+<INPUT TYPE="HIDDEN" NAME="job_id" VALUE="###JOBID###">
+<INPUT TYPE="HIDDEN" NAME=###EXTENSION_KEY###[backPID]" VALUE="###BACKPAGEID###">
+<BR/>
+<INPUT TYPE="submit" VALUE="Apply Now">
+</FORM>
+<BR/>
+<a href="###BACKPID###">Return to Job Bank</a>
+<!--###JOBBANK_COMPANY_DETAILS###--->

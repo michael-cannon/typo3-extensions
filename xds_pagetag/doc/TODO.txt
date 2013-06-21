@@ -1,0 +1,2 @@
+ - Templating of output
+ - Localization implemented throughout

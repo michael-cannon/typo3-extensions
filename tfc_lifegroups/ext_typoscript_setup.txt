@@ -1,0 +1,32 @@
+#Setup
+plugin.tx_tfclifegroups_pi1{
+	altTemplateFile = FILE
+	altTemplateFile {
+		file = {$plugin.tx_tfclifegroups_pi1.altTemplateFile}
+	}
+}
+plugin.tx_tfclifegroups_pi4{
+	altTemplateFile = FILE
+	altTemplateFile {
+		file = {$plugin.tx_tfclifegroups_pi4.altTemplateFile}
+	}
+		# for selecting from draft versions
+	currLabel = {$plugin.tx_tfclifegroups_pi4.currLabel}
+		# for updating the semester of the draft version
+	currSemesterID = {$plugin.tx_tfclifegroups_pi4.currSemesterID}
+		# for updating the label of the draft version
+			# prevents re-editing, and tells the backend user that it's been updated.
+	currLabelUpdated = {$plugin.tx_tfclifegroups_pi4.currLabelUpdated}
+		### for sending to lifegroup leaders ###
+	pids = {$plugin.tx_tfclifegroups_pi4.pids}
+	emailFromEmail = {$plugin.tx_tfclifegroups_pi4.emailFromEmail}
+	emailFromName = {$plugin.tx_tfclifegroups_pi4.emailFromName}
+	emailCC = {$plugin.tx_tfclifegroups_pi4.emailCC}
+	emailSubject = {$plugin.tx_tfclifegroups_pi4.emailSubject}
+	lifegroupEmailDuedate = {$plugin.tx_tfclifegroups_pi4.lifegroupEmailDuedate}
+		### for notifications sent to TFC Staff ###
+	notificationEmailMain = {$plugin.tx_tfclifegroups_pi4.notificationEmailMain}
+	notificationEmailCC = {$plugin.tx_tfclifegroups_pi4.notificationEmailCC}
+		# links like, email all lifegroup leaders.
+	showAdminLinks = 0
+}

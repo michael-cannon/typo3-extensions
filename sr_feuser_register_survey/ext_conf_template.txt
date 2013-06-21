@@ -1,0 +1,2 @@
+  # cat=basic; type=string; label=Survey domain user groups:Enter comma separated ids of valid survey domain user groups.
+surveyDomainUserGroups = 

@@ -1,0 +1,134 @@
+plugin.tx_t3consultancies_pi1 {
+	CMD = 
+	pidList = 
+	recursive = 
+	selectedOnly = 
+	pidList_references = 
+	loginPageId = 
+	t3references_disabled = 
+	sites_made_disabled = 
+	truncate_limit = 1000
+
+	enlargeImage {
+		enable = 1
+		JSwindow = 1
+		JSwindow.newWindow = 1
+		JSwindow.expand = 17,20
+		wrap = <a href="javascript:close();"> | </a>
+		# bodyTag = <body>
+		# width = 
+		# height = 
+	}
+
+	logoImage.file.maxW = {$plugin.tx_t3consultancies_pi1.logoWidth}
+
+	categoryImage.file.maxW = {$plugin.tx_t3consultancies_pi1.categoryWidth}
+
+	featuredLogo.file.maxW = {$plugin.tx_t3consultancies_pi1.featuredLogoWidth}
+
+	coupon.file.maxW = {$plugin.tx_t3consultancies_pi1.couponWidth}
+
+	categoryListingPage = {$plugin.tx_t3consultancies_pi1.categoryListingPage}
+	alphabeticalListingPage = {$plugin.tx_t3consultancies_pi1.alphabeticalListingPage}
+
+	title.backColor = {$plugin.tx_t3consultancies_pi1.title.backColor}
+	title.fontColor = {$plugin.tx_t3consultancies_pi1.title.fontColor}
+	title.fontFile = {$plugin.tx_t3consultancies_pi1.title.fontFile}
+	title.fontSize  = {$plugin.tx_t3consultancies_pi1.title.fontSize}
+	linkTitle = {$plugin.tx_t3consultancies_pi1.linkTitle}
+
+	singleView.infoTableParams = border=0 cellspacing=2 cellpadding=0
+	singleView.mainTableParams = border=0 cellspacing=0 cellpadding=0
+	singleView.showRefList = 1
+	singleView.showRefList {
+		screenDump.file.width=100
+		tableParams = border=0 cellpadding=0 cellspacing=0
+		marginBetweenRefs = 10
+		marginToImg = 10
+		refPage = 
+	}
+	
+	editAdd_enabled=0	
+	selectCountryFirst = 0
+
+	templateFile = {$plugin.tx_t3consultancies_pi1.templateFile}
+	detailPid = {$plugin.tx_t3consultancies_pi1.detailPid}
+}
+
+plugin.tx_t3consultancies_pi1.listView {
+	results_at_a_time = 
+	maxPages = 
+}
+
+  # Example of default set CSS styles (these go into the document header):
+plugin.tx_t3consultancies_pi1._CSS_DEFAULT_STYLE (
+  .tx-t3consultancies-pi1 .tx-t3consultancies-pi1-listrow TD { background-color: #eeeeee;  padding:0px 3px 0px 3px; }
+  .tx-t3consultancies-pi1 .tx-t3consultancies-pi1-listrow TR.tx-t3consultancies-pi1-listrow-header TD { background-color:#cccccc; }
+  .tx-t3consultancies-pi1 .tx-t3consultancies-pi1-listrow TR.tx-t3consultancies-pi1-listrow-header TD P { font-weight:bold; }
+  .tx-t3consultancies-pi1 .tx-t3consultancies-pi1-listrow TR.tx-t3consultancies-pi1-listrow-odd TD { background-color:#e0e0e0; }
+)
+  # Example of how to overrule LOCAL_LANG values for the plugin:
+plugin.tx_t3consultancies_pi1._LOCAL_LANG.default {
+}
+  # Example of how to set default values from TS in the incoming array, $this->piVars of the plugin:
+plugin.tx_t3consultancies_pi1._DEFAULT_PI_VARS {
+}
+
+
+
+
+
+
+plugin.tx_t3consultancies_pi1.fe_adminLib = USER_INT
+plugin.tx_t3consultancies_pi1.fe_adminLib {
+  allowedGroups = 
+  pid = 
+  email.from = 
+  email.fromName = 
+  email.admin = 
+  clearCacheOfPages = 
+
+  
+  userFunc = user_feAdmin->init
+  includeLibs = media/scripts/fe_adminLib.inc
+  table=tx_t3consultancies
+  defaultCmd=create
+#  debug=1
+  delete=1
+
+    // Info-mail setup
+  setfixed=1
+  setfixed.approve {
+    hidden = 0
+    _FIELDLIST = uid,pid,title
+  }
+  setfixed.DELETE = 1
+  setfixed.DELETE._FIELDLIST = uid,pid,title
+
+  
+    // Creating
+  create = 1
+  create.fields = title,description,services,url,contact_email,contact_name,cntry,hidden,logo
+  create.required = title,cntry,contact_email,contact_name
+  create.overrideValues {
+    hidden = 1
+  }
+  create.userFunc_afterSave = tx_t3consultancies_pi1->afterSave
+
+    // Editing:
+  edit < .create
+  edit.fields = title,description,services,url,contact_email,contact_name,cntry,hidden
+  edit.overrideValues {
+    hidden = 1
+  }
+  edit.menuLockPid=1
+
+    // Field parsing and evaluation error messages:
+  parseValues {
+    title = trim
+	logo = files [jpg;jpeg;gif;png;][300]
+  }
+  userFunc_updateArray = tx_t3consultancies_pi1->updateArray
+  no_cache=1
+  email.field = contact_email
+}

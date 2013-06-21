@@ -1,0 +1,4 @@
+plugin.tt_news.aqnewsmeta {
+	# cat=aqnewsmeta; type=string; label=News META Description Crop: Number of characters | break characters replacement | break at whole words only (1 for true, 0 for false)
+	crop = 150 | ... | 1
+}

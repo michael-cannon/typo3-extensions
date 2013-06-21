@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'rgsendnews'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_rgsendnews_stat">Sent news records</label>
+			<label index="tx_rgsendnews_stat.sender">Sender Name</label>
+			<label index="tx_rgsendnews_stat.sendmail">Email</label>
+			<label index="tx_rgsendnews_stat.receiver">Receiver name</label>
+			<label index="tx_rgsendnews_stat.recmail">Email</label>
+			<label index="tx_rgsendnews_stat.newsid">News Element</label>
+			<label index="tx_rgsendnews_stat.comment">Comment</label>
+			<label index="tx_rgsendnews_stat.ip">IP</label>
+			<label index="tx_rgsendnews_stat.crdate">Date</label>
+			<label index="tx_rgsendnews_stat.htmlmail">HTML mail</label>
+			<label index="tt_content.list_type_pi1">Send news</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1">Statistic: Sent news</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.title">Statistic of sent news</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.count">Count x</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.newstitle">Sent news record</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.details">Details</label>			
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.nonewsfound">No news records have been sent until now.</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.sender">Sender</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.receiver">Receiver</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.comment">Comment</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.tstamp">Time</label>
+			
+		</languageKey>
+		
+		<!-- GERMAN -->
+		<languageKey index="de" type="array">
+			<label index="tx_rgsendnews_stat">Verschickte tt_news Datensätze</label>
+			<label index="tx_rgsendnews_stat.sender">Absender Name</label>
+			<label index="tx_rgsendnews_stat.sendmail">Email</label>
+			<label index="tx_rgsendnews_stat.receiver">Empfänger Name</label>
+			<label index="tx_rgsendnews_stat.recmail">Email</label>
+			<label index="tx_rgsendnews_stat.newsid">News Datensatz</label>
+			<label index="tx_rgsendnews_stat.comment">Kommentar</label>
+			<label index="tx_rgsendnews_stat.ip">IP</label>
+			<label index="tx_rgsendnews_stat.crdate">Datum</label>
+			<label index="tx_rgsendnews_stat.htmlmail">HTML Mail</label>
+			<label index="tt_content.list_type_pi1">Versende news-Datensätze</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1">Statistik: Verschickte News</label>		
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.title">Statistik: Verschickte News</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.count">Anzahl</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.newstitle">Verschickter News-Datensatz</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.details">Details</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.nonewsfound">Keine News-Datensätze wurden bisher verschickt.</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.sender">Absender</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.receiver">Empfänger</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.comment">Kommentar</label>
+			<label index="moduleFunction.tx_rgsendnews_modfunc1.tstamp">Zeitpunkt</label>
+		</languageKey>
+		
+	</data>
+</T3locallang>

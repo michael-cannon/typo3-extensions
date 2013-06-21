@@ -1,0 +1,44 @@
+plugin.tx_cbgaedms {
+	pathToTemplateDirectory = {$plugin.tx_cbgaedms.pathToTemplateDirectory}
+	pathToLanguageFile = {$plugin.tx_cbgaedms.pathToLanguageFile}
+
+	storagePid = {$plugin.tx_cbgaedms.storagePid}
+
+	edmsHomePid = {$plugin.tx_cbgaedms.edmsHomePid}
+
+	locationsPid = {$plugin.tx_cbgaedms.locationsPid}
+	siloPid = {$plugin.tx_cbgaedms.siloPid}
+
+	userLocationsPid = {$plugin.tx_cbgaedms.userLocationsPid}
+	usersPid = {$plugin.tx_cbgaedms.usersPid}
+	usersStoragePid = {$plugin.tx_cbgaedms.usersStoragePid}
+	userProfilePid = {$plugin.tx_cbgaedms.userProfilePid}
+
+	documentPid = {$plugin.tx_cbgaedms.documentPid}
+	docTypePid = {$plugin.tx_cbgaedms.docTypePid}
+	reportsPid = {$plugin.tx_cbgaedms.reportsPid}
+	notificationsPid = {$plugin.tx_cbgaedms.notificationsPid}
+
+	masterAgency = {$plugin.tx_cbgaedms.masterAgency}
+
+	uploadPath = {$plugin.tx_cbgaedms.uploadPath}
+
+	resultsPerView = {$plugin.tx_cbgaedms.resultsPerView}
+
+	phone247us = {$plugin.tx_cbgaedms.phone247us}
+	phone247nonus = {$plugin.tx_cbgaedms.phone247nonus}
+
+	userToBeAssigned = {$plugin.tx_cbgaedms.userToBeAssigned}
+	googleMapApi = {$plugin.tx_cbgaedms.googleMapApi}
+
+	helpPidLocationDashboard = {$plugin.tx_cbgaedms.helpPidLocationDashboard}
+	helpPidLocationEdit = {$plugin.tx_cbgaedms.helpPidLocationEdit}
+	helpPidDocumentDetail = {$plugin.tx_cbgaedms.helpPidDocumentDetail}
+	helpPidNewDocumentVersion = {$plugin.tx_cbgaedms.helpPidNewDocumentVersion}
+	helpPidNewDocument = {$plugin.tx_cbgaedms.helpPidNewDocument}
+
+	emailFrom = {$plugin.tx_cbgaedms.emailFrom}
+	emailSubject = {$plugin.tx_cbgaedms.emailSubject}
+
+	locationDocsPerView = {$plugin.tx_cbgaedms.locationDocsPerView}
+}

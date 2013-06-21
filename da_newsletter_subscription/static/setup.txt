@@ -1,0 +1,51 @@
+
+plugin.tx_danewslettersubscription_pi1 {
+	pidList =
+	recursive =
+	sorting_field =
+	sorting_desc =
+	mode =
+	mode.noAuthEmail = 0
+	mode.sendNotificationWhenEmailMode = 1
+	add_unsubscribe = 1
+	email_from =
+	email_fromName =
+	replyTo =
+	emailSubject =
+	emailMessage =
+	hideNewslettersWhenNotAuth = 0
+	tableParams_list = border=0
+
+	formCObject = FORM
+	formCObject {
+	  layout = <tr class="tx-danewslettersubscription-pi1-form-row"><td class="tx-danewslettersubscription-pi1-form-header"><p>###LABEL###</p></td><td><p>###FIELD###</p></td></tr>
+	  REQ = 1
+	  REQ.labelWrap.wrap = <b>|</b>
+	  COMMENT.layout = <tr class="tx-danewslettersubscription-pi1-form-rowcomment"><td colspan=2><p>###LABEL###</p></td></tr>
+	  stdWrap.wrap = <table border=0 cellspacing=0 cellpadding=2>  | </table>
+	  target =
+	  goodMess = All fields are filled in correctly.
+	  badMess = Please fill in the required fields.
+	  data = [WILL BE OVERRULED BY PLUGIN]
+	  arrayReturnMode = 1
+	  wrapFieldName = tx_danewslettersubscription_pi1[DATA][info][  |  ]
+	  type >
+	}
+
+	_static_included = 1
+}
+
+  # Example of default set CSS styles (these go into the document header):
+plugin.tx_danewslettersubscription_pi1._CSS_DEFAULT_STYLE (
+	DIV.tx-danewslettersubscription-pi1 DIV.tx-danewslettersubscription-pi1-listrow TABLE TR TD.tx-danewslettersubscription-pi1-descr P {margin-bottom: 10px;}
+	DIV.tx-danewslettersubscription-pi1 TABLE {padding-bottom: 10px;}
+	DIV.tx-danewslettersubscription-pi1 TABLE TR.tx-danewslettersubscription-pi1-form-row TD {padding-top: 10px;}
+	DIV.tx-danewslettersubscription-pi1 TABLE TR.tx-danewslettersubscription-pi1-form-row TD.tx-danewslettersubscription-pi1-form-header {}
+	DIV.tx-danewslettersubscription-pi1 DIV.tx-danewslettersubscription-pi1-listrow TABLE TR.tx-danewslettersubscription-pi1-listrow-header TD {}
+	DIV.tx-danewslettersubscription-pi1 TABLE TR.tx-danewslettersubscription-pi1-form-row TD P input { FONT-SIZE: 9px; border: 1px solid; border-color: #999999;}
+	DIV.tx-danewslettersubscription-pi1 DIV.tx-danewslettersubscription-pi1-listrow TABLE TR.tx-danewslettersubscription-pi1-listrow-header TD P {color: black;}
+)
+  # Example of how to overrule LOCAL_LANG values for the plugin:
+plugin.tx_danewslettersubscription_pi1._LOCAL_LANG.default {
+}
+

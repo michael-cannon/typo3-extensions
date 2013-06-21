@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'robots'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pages.tx_robots_flags.I.0">Do not index this page</label>
+			<label index="pages.tx_robots_flags.I.1">Do not follow this page</label>
+			<label index="pages.tx_robots_flags">Search Engines Policy:</label>
+		</languageKey>
+	</data>
+</T3locallang>

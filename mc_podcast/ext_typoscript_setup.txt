@@ -1,0 +1,17 @@
+//Rss Podcast General
+plugin.tx_mcpodcast_pi1.ttl = {$plugin.mc_podcast.ttl}
+plugin.tx_mcpodcast_pi1.title = {$plugin.mc_podcast.title}
+plugin.tx_mcpodcast_pi1.copyright = {$plugin.mc_podcast.copyright}
+plugin.tx_mcpodcast_pi1.link = {$plugin.mc_podcast.link}
+plugin.tx_mcpodcast_pi1.language = {$plugin.mc_podcast.language}
+plugin.tx_mcpodcast_pi1.description = {$plugin.mc_podcast.description}
+
+//Itunes
+plugin.tx_mcpodcast_pi1.itunes = {$plugin.mc_podcast.itunes}
+plugin.tx_mcpodcast_pi1.itunes.explicit = {$plugin.mc_podcast.explicit}
+plugin.tx_mcpodcast_pi1.itunes.subtitle = {$plugin.mc_podcast.subtitle}
+plugin.tx_mcpodcast_pi1.itunes.author = {$plugin.mc_podcast.author}
+plugin.tx_mcpodcast_pi1.itunes.summary = {$plugin.mc_podcast.summary}
+plugin.tx_mcpodcast_pi1.itunes.email = {$plugin.mc_podcast.email}
+plugin.tx_mcpodcast_pi1.itunes.image = {$plugin.mc_podcast.image}
+plugin.tx_mcpodcast_pi1.itunes.category = {$plugin.mc_podcast.categories} 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for module &quot;wec_servant&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="title">WEC Servant Reporting</label>
+			<label index="directions">Please generate a report below, download and then delete it afterwards to prevent data theft.</label>
+			<label index="directions.noregistrants">Please choose a page or folder with the WEC Servant records.</label>
+			<label index="directions.ministries">All, some or none of the ministries may be selected for reporting.</label>
+			<label index="directions.dates">You can provide a date range to only select registrant activity during that time.</label>
+			<label index="directions.dates.reference">Date Reference</label>
+			<label index="directions.dates.reference.url">http://tw2.php.net/manual/en/datetime.formats.php</label>
+			<label index="directions.dates.start">Start </label>
+			<label index="directions.dates.stop">Stop </label>
+			<label index="options">Report Options</label>
+			<label index="ministries">Ministries</label>
+			<label index="dateRange">Date Range</label>
+			<label index="startDate">Start Date</label>
+			<label index="endDate">End Date</label>
+			<label index="btnReset">Reset</label>
+			<label index="btnSubmit">Download Report</label>
+			<label index="btnSubmit">Generate Report</label>
+			<label index="reportFilename">wec-servant-report</label>
+			<label index="reportWorksheetTitle">WEC Servant Reporting</label>
+			<label index="reportNoDataFound">No Data Found</label>
+			<label index="reportHeaderDate">Report Date</label>
+			<label index="reportHeaderMinistry">Ministry</label>
+			<label index="reportHeaderOpportunity">Opportunity</label>
+			<label index="reportHeaderReferenceCode">Shelby Opportunity ID</label>
+			<label index="reportHeaderNumberNeeded">Openings Left</label>
+			<label index="reportHeaderNumberFulfilled">Volunteer Count</label>
+			<label index="reportHeaderKidFriendly">Kid Friendly</label>
+			<label index="reportHeaderKidFriendly.yes">Yes</label>
+			<label index="reportHeaderKidFriendly.no">No</label>
+			<label index="reportHeaderShelbyId">Shelby ID</label>
+			<label index="reportHeaderFirstName">First Name</label>
+			<label index="reportHeaderLastName">Last Name</label>
+			<label index="reportHeaderEmail">Email</label>
+			<label index="reportHeaderPhone">Phone</label>
+			<label index="reportHeaderYouth">Youth?</label>
+			<label index="reportHeaderYouth.yes">Yes</label>
+			<label index="reportHeaderYouth.no">No</label>
+			<label index="reportHeaderParentsName">Parent/Guardian Name</label>
+			<label index="reportHeaderSupervisionRequired">Parent/Guardian Required?</label>
+			<label index="reportHeaderSupervisionRequired.yes">Yes</label>
+			<label index="reportHeaderSupervisionRequired.no">No</label>
+			<label index="reportHeaderVolunteerDate">Volunteer Date</label>
+			<label index="reportHeaderWaitlist">Waiting List?</label>
+			<label index="downloadReport">Download the WEC Servant Report</label>
+			<label index="btnDeleteReport">Delete the WEC Servant Report</label>
+			<label index="btnDoMailer">Email Reports by Ministry</label>
+			<label index="email.body">%s volunteer report is attached.</label>
+			<label index="email.subject">WEC Servant Reporter for %s</label>
+			<label index="email.from.name">WEC Servant Reporter</label>
+			<label index="email.from">wec_servant@example.com</label>
+			<label index="mailer.noadmin">wec_servant@example.com</label>
+			<label index="mailer.header">Reports Emailed</label>
+			<label index="mailer.done">%d ministry reports emailed.</label>
+			<label index="mailer.sentto">%s sent to %s</label>
+		</languageKey>
+	</data>
+</T3locallang>

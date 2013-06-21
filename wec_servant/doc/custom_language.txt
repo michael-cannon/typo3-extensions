@@ -1,0 +1,22 @@
+In typo3conf/localconf.php add
+---
+// custom backend language labels
+$TYPO3_CONF_VARS['BE']['XLLfile']['EXT:wec_servant/modfunc1/locallang.xml']='EXT:wec_servant/doc/custom_wec_servant_locallang.xml';
+---
+
+Besure the last line points to a file like the following which contains the custom language labels.
+---
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for module &quot;wec_servant&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="options">Reporting Options</label>
+			<label index="email.from">service@stonebriar.org</label>
+			<label index="mailer.noadmin">service@stonebriar.org</label>
+		</languageKey>
+	</data>
+</T3locallang>

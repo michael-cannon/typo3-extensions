@@ -1,0 +1,339 @@
+<T3DataStructure>    <sheets>	<sDEF>	    <ROOT>		<TCEforms>		    <sheetTitle>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.sheet_general</sheetTitle>		</TCEforms>	    <type>array</type>	    <el>		<viewmode>		    <TCEforms>	        <exclude>0</exclude>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_mode</label>			<config>			    <type>select</type>			    <items type="array">					<numIndex index="0" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_month</numIndex>			    	    <numIndex index="1">MONTH</numIndex>			    	</numIndex>			    	<numIndex index="1" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_list</numIndex>			    	    <numIndex index="1">LIST</numIndex>			    	</numIndex>			    	<numIndex index="3" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_week</numIndex>			    	    <numIndex index="1">WEEK</numIndex>			    	</numIndex>			    	<numIndex index="4" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_day</numIndex>			    	    <numIndex index="1">DAY</numIndex>			    	</numIndex>			    	<numIndex index="5" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_feEntry</numIndex>			    	    <numIndex index="1">FE_ENTRY</numIndex>			    	</numIndex>			    	<numIndex index="6" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_single</numIndex>			    	    <numIndex index="1">SINGLE</numIndex>			    	</numIndex>			    	<numIndex index="7" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_spec</numIndex>			    	    <numIndex index="1">SPEC</numIndex>			    	</numIndex>			    </items>			    <minitems>1</minitems>			    <maxitems>1</maxitems>			    <size>1</size>				<!--<selectedListStyle>width:80px</selectedListStyle>				<itemListStyle>width:80px</itemListStyle>-->			</config>		    </TCEforms>		</viewmode>		 		  <viewmodeSelection>			<TCEforms>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.changeViewMode</label>				<config>					<type>select</type>					<items type="array">					<numIndex index="0" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_month</numIndex>			    	    <numIndex index="1">MONTH</numIndex>			    	</numIndex>			    	<numIndex index="1" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_list</numIndex>			    	    <numIndex index="1">LIST</numIndex>			    	</numIndex>			    	<numIndex index="2" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_week</numIndex>			    	    <numIndex index="1">WEEK</numIndex>			    	</numIndex>			    	<numIndex index="3" type="array">			    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.view_day</numIndex>			    	    <numIndex index="1">DAY</numIndex>			    	</numIndex>					</items>					<minitems>0</minitems>					<maxitems>4</maxitems>					<size>4</size>					<selectedListStyle>width:150px</selectedListStyle>					<itemListStyle>width:150px</itemListStyle>					<allowNonIdValues>1</allowNonIdValues>				</config>			</TCEforms>	  	</viewmodeSelection>		<dateFormat>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.dateFormat</label>				<config>					<type>input</type>			   		<default>%a, %b %d, %Y</default>				   <size>15</size>				   <max>40</max>				</config>			</TCEforms>		</dateFormat>		<timeFormat>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.timeFormat</label>				<config>					<type>input</type>				   <default>%I:%M %p</default>				   <size>15</size>				   <max>40</max>				</config>			</TCEforms>		</timeFormat>		<headerCategories_show>		    <TCEforms>		        <exclude>1</exclude>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.headerCategories_show</label>		        <config>			   <type>check</type>		        </config>		    </TCEforms>		</headerCategories_show>	    <categoryMode>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.select_deselect_categories</label>				<config>					<type>select</type>					<items type="array">						<numIndex index="0" type="array">							<numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.category_selection_showAll</numIndex>							<numIndex index="1">0</numIndex>						</numIndex>						<numIndex index="1" type="array">							<numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.category_selection_showSelected</numIndex>							<numIndex index="1">IN</numIndex>						</numIndex>						<numIndex index="2" type="array">							<numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.category_selection_DontShowSelected</numIndex>							<numIndex index="1">NOT IN</numIndex>						</numIndex>					</items>					<maxitems>1</maxitems>					<size>1</size>				</config>			</TCEforms>	      	</categoryMode>		  <categorySelection>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.category_selection</label>				<config>					<type>select</type>					<items type="array">					</items>					<foreign_table>tx_jwcalendar_categories</foreign_table>					<minitems>0</minitems>					<maxitems>200</maxitems>					<size>5</size>					<selectedListStyle>width:150px</selectedListStyle>					<itemListStyle>width:150px</itemListStyle>					<allowNonIdValues>1</allowNonIdValues>				</config>			</TCEforms>		  </categorySelection>	      <template_file>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.template_file</label>				<config>					<type>group</type>					<internal_type>file</internal_type>					<allowed>tmpl,html</allowed>					<max_size>100</max_size>					<uploadfolder>uploads/tx_jwcalendar</uploadfolder>					<maxitems>1</maxitems>					<size>1</size><!--					<itemListStyle>width:50px</itemListStyle>					<selectedListStyle>Width:50px</selectedListStyle>					<allowNonIdValues>1</allowNonIdValues>-->				</config>			</TCEforms>	      </template_file> 		<pages>		    <TCEforms>			<exclude>1</exclude>			<label>LLL:EXT:lang/locallang_general.php:LGL.startingpoint</label>			<config>			    <type>group</type>			    <internal_type>db</internal_type>			    <allowed>pages</allowed>			    <size>3</size>			    <maxitems>22</maxitems>			    <minitems>0</minitems>			    <show_thumbs>1</show_thumbs>			</config>		    </TCEforms>		</pages>		<recursive>		    <TCEforms>			<label>LLL:EXT:lang/locallang_general.php:LGL.recursive</label>			<config>			    <type>select</type>			    <items type="array">				<numIndex index="0" type="array">				    <numIndex index="0"></numIndex>				    <numIndex index="1"></numIndex>				</numIndex>									<numIndex index="1" type="array">				    <numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.1</numIndex>				    <numIndex index="1">1</numIndex>				</numIndex>				<numIndex index="2" type="array">				    <numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.2</numIndex>				    <numIndex index="1">2</numIndex>				</numIndex>				<numIndex index="3" type="array">				    <numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.3</numIndex>				    <numIndex index="1">3</numIndex>				</numIndex>				<numIndex index="4" type="array">				    <numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.4</numIndex>				    <numIndex index="1">4</numIndex>				</numIndex>				<numIndex index="5" type="array">				    <numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.5</numIndex>				    <numIndex index="1">250</numIndex>				</numIndex>			    </items>			    <minitems>0</minitems>			    <maxitems>1</maxitems>			    <size>1</size>			</config>		    </TCEforms>		</recursive>	    </el>	</ROOT>	    <!-- xXX offset -->	    <!-- unique CSS marker offset -->    </sDEF>    <s_Month_View>	<ROOT>	    <TCEforms>		<sheetTitle>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.sheet_Month_View</sheetTitle>	    </TCEforms>	    <type>array</type>	    <el>		<showWeeksAsRows>		    <TCEforms>		        <exclude>1</exclude>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.showWeeksAsRows</label>		        <config>			   <type>check</type>		        </config>		    </TCEforms>		</showWeeksAsRows>		<onlyDaysofMonth>		    <TCEforms>		        <exclude>1</exclude>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.onlyDaysofMonth</label>		        <config>			   <type>check</type>		        </config>		    </TCEforms>		</onlyDaysofMonth>		<dayFormat>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.dayFormat</label>
+		        <config>
+					<type>input</type>
+				   <default>%d</default>
+				   <size>15</size>
+				   <max>40</max>
+		        </config>
+		    </TCEforms>
+		</dayFormat>
+		<maxDaynameLenght>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.maxDaynameLenght</label>
+		        <config>
+					<type>input</type>
+				   <size>3</size>
+				   <eval>num</eval>
+				   <default>0</default>
+		        </config>
+		    </TCEforms>
+		</maxDaynameLenght>
+		<showEventBegin>
+		    <TCEforms>		        <exclude>1</exclude>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.showEventBegin</label>		        <config>			   <type>check</type>		        </config>		    </TCEforms>		</showEventBegin>		<showWeeksDisabled>		    <TCEforms>		        <exclude>1</exclude>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.showWeeksDisabled</label>		        <config>			   <type>check</type>		        </config>		    </TCEforms>		</showWeeksDisabled>   		<miniMonthView>		    <TCEforms>		        <exclude>1</exclude>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.miniMonthView</label>		        <config>			   <type>check</type>		        </config>		    </TCEforms>		</miniMonthView>		<wrapItem>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.wrapItem</label>				<config>			   <type>check</type>				</config>			</TCEforms>		</wrapItem>		<wrapItemCatLen>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.wrapItemCatLen</label>				<config>					<type>input</type>						<eval>num</eval>						<size>5</size>						<default>8</default>						<range>						<lower>0</lower>						<upper>1024</upper>						</range>				</config>			</TCEforms>		</wrapItemCatLen>	    </el>	</ROOT>    </s_Month_View>    <s_List_View>	<ROOT>	    <TCEforms>		<sheetTitle>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.sheet_List_View</sheetTitle>	    </TCEforms>	    <type>array</type>	    <el>		<entryCount>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.entryCount</label>				<config>					<type>input</type>						<eval>num</eval>						<size>5</size>						<default>8</default>						<range>						<lower>0</lower>						<upper>1024</upper>						</range>				</config>			</TCEforms>		</entryCount>		<startTime>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.startTime</label>				<config>					<type>input</type>			   		<default>24</default>				   <size>12</size>				   <max>20</max>				   <eval>datetime</eval>	   				<checkbox></checkbox>				</config>			</TCEforms>		</startTime><!--		<entryPeriod>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.entryPeriod </label>				<config>					<type>input</type>				   <default></default>				   <size>15</size>				   <max>40</max>				</config>			</TCEforms>		</entryPeriod>-->			    </el>	</ROOT>    </s_List_View>    <s_Week_View>	<ROOT>	    <TCEforms>		<sheetTitle>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.sheet_Week_View</sheetTitle>	    </TCEforms>	    <type>array</type>	    <el>		<start_hour>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.startHour</label>				<config>					<type>input</type>			   		<default>0</default>				   <size>7</size>				   <max>24</max>				</config>			</TCEforms>		</start_hour>		<stop_hour>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.stopHour</label>				<config>					<type>input</type>			   		<default>24</default>				   <size>7</size>				   <max>24</max>				</config>			</TCEforms>		</stop_hour>		<query_empty_weeks>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.queryEmptyWeeks</label>				<config>					<type>input</type>			   		<default>24</default>				   <size>7</size>				   <max>256</max>				</config>			</TCEforms>		</query_empty_weeks>		<max_hours>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.max_hours</label>				<config>					<type>input</type>			   		<default>24</default>				   <size>7</size>				   <max>24</max>				</config>			</TCEforms>		</max_hours>	    </el>	</ROOT>    </s_Week_View>    <s_Day_View>	<ROOT>	    <TCEforms>		<sheetTitle>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.sheet_Day_View</sheetTitle>	    </TCEforms>	    <type>array</type>	    <el>   		<DayviewPluginUid>		    <TCEforms>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.DayviewPluginUid</label>		        <config>			   		<type>group</type>			   		<internal_type>db</internal_type>			   		<allowed>tt_content</allowed>			   		<size>1</size>			   		<maxitems>1</maxitems>			   		<minitems>0</minitems>			   		<show_thumbs>1</show_thumbs>			   		<prepend_tname>0</prepend_tname>			   		<autoSizeMax>1</autoSizeMax>		        </config>		    </TCEforms>		</DayviewPluginUid>		<DayviewPage>		    <TCEforms>		        <exclude>1</exclude>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.DayviewPage</label>		        <config>			   <type>group</type>			   <internal_type>db</internal_type>			   <allowed>pages</allowed>			   <size>1</size>			   <maxitems>1</maxitems>			   <minitems>0</minitems>			   <show_thumbs>0</show_thumbs>		        </config>		    </TCEforms>		</DayviewPage>		<dayDateFormat>			<TCEforms>				<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.dayDateFormat</label>				<config>					<type>input</type>			   		<default>%a, %b %d, %Y</default>				   <size>15</size>				   <max>40</max>				</config>			</TCEforms>		</dayDateFormat><!--		<simpleDayView>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.simpleDayView</label>				<config>			   <type>check</type>				</config>			</TCEforms>		</simpleDayView>-->		<daySingleView>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.daySingleView</label>				<config>			   <type>check</type>				</config>			</TCEforms>		</daySingleView>		<mixedModeDisplay>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.mixedModeDisplay</label>				<config>			   <type>input</type>				<eval>num</eval>				<size>5</size>				<default>0</default>				<range>				<lower>0</lower>				<upper>1024</upper>				</range>				</config>			</TCEforms>		</mixedModeDisplay>		<linkPrevNextDay>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.linkPrevNextDay</label>				<config>			   <type>check</type>				</config>			</TCEforms>		</linkPrevNextDay>		<queryfirstDayFound>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.queryfirstDayFound</label>				<config>			   <type>check</type>				</config>			</TCEforms>		</queryfirstDayFound>		<querySearchDayMax>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.querySearchDayMax</label>				<config>			   <type>input</type>				<eval>num</eval>				<size>5</size>				<default>30</default>				<range>				<lower>0</lower>				<upper>1024</upper>				</range>				</config>			</TCEforms>		</querySearchDayMax>	    </el>	</ROOT>    </s_Day_View>    <s_Single_View>	<ROOT>	    <TCEforms>		<sheetTitle>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.sheet_Single_View</sheetTitle>	    </TCEforms>	    <type>array</type>	    <el>   		<singlePluginUid>		    <TCEforms>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.singlePluginUid</label>		        <config>			   		<type>group</type>			   		<internal_type>db</internal_type>			   		<allowed>tt_content</allowed>			   		<size>1</size>			   		<maxitems>1</maxitems>			   		<minitems>0</minitems>			   		<show_thumbs>1</show_thumbs>			   		<prepend_tname>0</prepend_tname>			   		<autoSizeMax>1</autoSizeMax>		        </config>		    </TCEforms>		</singlePluginUid>		<singlePage>		    <TCEforms>		        <exclude>1</exclude>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.singlePage</label>		        <config>			   <type>group</type>			   <internal_type>db</internal_type>			   <allowed>pages</allowed>			   <size>1</size>			   <maxitems>1</maxitems>			   <minitems>0</minitems>			   <show_thumbs>0</show_thumbs>		        </config>		    </TCEforms>		</singlePage>   		<image_maxWidth>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.image_maxWidth</label>				<config>					<type>input</type>						<eval>num</eval>						<size>5</size>						<default>100</default>						<range>						<lower>0</lower>						<upper>1024</upper>						</range>				</config>			</TCEforms>		</image_maxWidth>   		<organizerTable>			<TCEforms>			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.organizerTable</label>				<config>				    <type>select</type>				    <items type="array">						<numIndex index="0" type="array">				    	    <numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.table_organizer</numIndex>			    		    <numIndex index="1">tx_jwcalendar_organizer</numIndex>			    		</numIndex>			    		<numIndex index="1" type="array">			    	    	<numIndex index="0">LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.table_fe_users</numIndex>			    	    	<numIndex index="1">fe_users</numIndex>			    		</numIndex>				    </items>				    <minitems>1</minitems>				    <maxitems>1</maxitems>				    <size>1</size>				</config>			</TCEforms>		</organizerTable>	    </el>	</ROOT>    </s_Single_View>    <s_FE_Entries>	<ROOT>	    <TCEforms>		<sheetTitle>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.sheet_FE_Entries</sheetTitle>	    </TCEforms>	    <type>array</type>	    <el>		<FE_Entry>		    <TCEforms>		        <exclude>1</exclude>		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Entry</label>		        <config>			   <type>check</type>
+			   <internal_type>db</internal_type>
+			   <allowed>pages</allowed>
+			   <show_thumbs>0</show_thumbs>
+		        </config>
+		    </TCEforms>
+		</FE_Entry>
+		<FE_Pencil>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Pencil</label>
+		        <config>
+				   <type>check</type>
+		        </config>
+		    </TCEforms>
+		</FE_Pencil>
+		<FE_Button>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Button</label>
+		        <config>
+				   <type>check</type>
+		        </config>
+		    </TCEforms>
+		</FE_Button>
+		<FE_Page>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Page</label>
+		        <config>
+			   <type>group</type>
+			   <internal_type>db</internal_type>
+			   <allowed>pages</allowed>
+			   <size>1</size>
+			   <maxitems>1</maxitems>
+			   <minitems>0</minitems>
+			   <show_thumbs>0</show_thumbs>
+		        </config>
+		    </TCEforms>
+		</FE_Page>
+		<FE_storagePid>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_storagePid</label>
+		        <config>
+			   <type>group</type>
+			   <internal_type>db</internal_type>
+			   <allowed>pages</allowed>
+			   <size>1</size>
+			   <maxitems>1</maxitems>
+			   <minitems>0</minitems>
+		        </config>
+		    </TCEforms>
+		</FE_storagePid>
+		<FE_showControlled>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_showControlled</label>
+		        <config>
+			   <type>check</type>
+			    <items type="array">
+				    <item index="0">1</item>
+			    </items>
+			   <default>0</default>
+		        </config>
+		    </TCEforms>
+		</FE_showControlled>
+		<FE_minuteStep>
+		    <TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_minuteStep</label>
+			<config>
+			    <type>select</type>
+			    <items type="array">
+				<numIndex index="0" type="array">
+				    <numIndex index="0">5</numIndex>
+				    <numIndex index="1">5</numIndex>
+				</numIndex>					
+				<numIndex index="1" type="array">
+				    <numIndex index="0">1</numIndex>
+				    <numIndex index="1">1</numIndex>
+				</numIndex>					
+				<numIndex index="2" type="array">
+				    <numIndex index="0">2</numIndex>
+				    <numIndex index="1">2</numIndex>
+				</numIndex>					
+				<numIndex index="3" type="array">
+				    <numIndex index="0">10</numIndex>
+				    <numIndex index="1">10</numIndex>
+				</numIndex>					
+				<numIndex index="4" type="array">
+				    <numIndex index="0">15</numIndex>
+				    <numIndex index="1">15</numIndex>
+				</numIndex>					
+				</items>
+			</config>
+		    </TCEforms>
+	    </FE_minuteStep>
+		<FE_backwardYears>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_backwardYears</label>
+				<config>
+					<type>input</type>
+						<eval>num</eval>
+						<size>5</size>
+						<default>0</default>
+						<range>
+						<lower>0</lower>
+						<upper>20</upper>
+						</range>
+				</config>
+			</TCEforms>
+		</FE_backwardYears>
+		<FE_forwardYears>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_forwardYears</label>
+				<config>
+					<type>input</type>
+						<eval>num</eval>
+						<size>5</size>
+						<default>2</default>
+						<range>
+						<lower>0</lower>
+						<upper>20</upper>
+						</range>
+				</config>
+			</TCEforms>
+		</FE_forwardYears>
+		<FE_Image_alowed>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Image_alowed</label>
+		        <config>
+			   <type>check</type>
+			   <default>0</default>
+		        </config>
+		    </TCEforms>
+		</FE_Image_alowed>
+		<FE_Image_noOverwrite>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Image_noOverwrite</label>
+		        <config>
+			   <type>check</type>
+			   <default>0</default>
+		        </config>
+		    </TCEforms>
+		</FE_Image_noOverwrite>
+		<FE_Image_maxSize>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Image_maxSize</label>
+				<config>
+					<type>input</type>
+						<eval>num</eval>
+						<size>10</size>
+						<default>50000</default>
+						<range>
+						<lower>0</lower>
+						<upper>5000000</upper>
+						</range>
+				</config>
+			</TCEforms>
+		</FE_Image_maxSize>
+		<FE_editFE_Entries>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_editFE_Entries</label>
+		        <config>
+			   <type>check</type>
+			   <default>0</default>
+		        </config>
+		    </TCEforms>
+		</FE_editFE_Entries>
+		<FE_Mail_enabled>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Mail_enabled</label>
+		        <config>
+			   <type>check</type>
+			   <default>0</default>
+		        </config>
+		    </TCEforms>
+		</FE_Mail_enabled>
+		<FE_Mail_recipient>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Mail_recipient</label>
+				<config>
+					<type>input</type>
+					<size>15</size>
+				</config>
+			</TCEforms>
+		</FE_Mail_recipient>
+		<FE_Mail_subject>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Mail_subject</label>
+				<config>
+					<type>input</type>
+					<size>15</size>
+				</config>
+			</TCEforms>
+		</FE_Mail_subject>
+		<FE_Mail_from>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.FE_Mail_from</label>
+				<config>
+					<type>input</type>
+					<size>15</size>
+				</config>
+			</TCEforms>
+		</FE_Mail_from>
+	    </el>
+	</ROOT>
+    </s_FE_Entries>
+
+    <s_toolTip>
+	<ROOT>
+	    <TCEforms>
+		<sheetTitle>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.sheet_Tooltip</sheetTitle>
+	    </TCEforms>
+	    <type>array</type>
+	    <el>
+		<toolTipShow>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.toolTipShow</label>
+		        <config>
+			   <type>check</type>
+			   <default>0</default>
+		        </config>
+		    </TCEforms>
+		</toolTipShow>
+		<timeFormatBegin>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.timeFormatBegin</label>
+				<config>
+					<type>input</type>
+				   <default>From %H:%M</default>
+				   <size>15</size>
+				</config>
+			</TCEforms>
+		</timeFormatBegin>
+		<timeFormatEnd>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.timeFormatEnd</label>
+				<config>
+					<type>input</type>
+				   <default>to %H:%M</default>
+				   <size>15</size>
+				</config>
+			</TCEforms>
+		</timeFormatEnd>
+		<timeFormatBeginMdays>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.timeFormatBeginMdays</label>
+				<config>
+					<type>input</type>
+				   <default>From %H:%M</default>
+				   <size>15</size>
+				</config>
+			</TCEforms>
+		</timeFormatBeginMdays>
+		<timeFormatEndMdays>
+			<TCEforms>
+			<label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.timeFormatEndMdays</label>
+				<config>
+					<type>input</type>
+				   <default>to %H:%M</default>
+				   <size>15</size>
+				</config>
+			</TCEforms>
+		</timeFormatEndMdays>
+		<toolTipTitle>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.toolTipTitle</label>
+		        <config>
+			   <type>check</type>
+			   <default>0</default>
+		        </config>
+		    </TCEforms>
+		</toolTipTitle>
+		<toolTipTeaser>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.toolTipTeaser</label>
+		        <config>
+			   <type>check</type>
+			   <default>0</default>
+		        </config>
+		    </TCEforms>
+		</toolTipTeaser>
+		<toolTipDescription>
+		    <TCEforms>
+		        <exclude>1</exclude>
+		        <label>LLL:EXT:jw_calendar/locallang_tca.php:jw_calendar.pi_flexform.toolTipDescription</label>
+		        <config>
+			   <type>check</type>
+			   <default>0</default>
+		        </config>
+		    </TCEforms>		</toolTipDescription>	    </el>	</ROOT>    </s_toolTip>
+<!--
+    <s_>
+	<ROOT>
+	    <TCEforms>
+		<sheetTitle>title</sheetTitle>
+	    </TCEforms>
+	    <type>array</type>
+	    <el>
+
+	    </el>
+	</ROOT>
+    </s_>
+-->
+  </sheets>
+</T3DataStructure>

@@ -1,0 +1,37 @@
+<?php
+
+########################################################################
+# Extension Manager/Repository config file for ext: "sponsor_content_scheduler"
+# 
+# Auto generated 28-03-2007 11:21
+# 
+# Manual updates:
+# Only the data in the array - anything else is removed by next write
+########################################################################
+
+$EM_CONF[$_EXTKEY] = Array (
+	'title' => 'Sponsor Content Scheduler',
+	'description' => '',
+	'category' => 'plugin',
+	'author' => 'Ritesh Gurung',
+	'author_email' => 'ritesh@srijan.in',
+	'shy' => '',
+	'dependencies' => 'cms,tt_news,t3consultancies,erotea_date2cal',
+	'conflicts' => '',
+	'priority' => '',
+	'module' => '',
+	'state' => 'stable',
+	'internal' => '',
+	'uploadfolder' => 1,
+	'createDirs' => 'uploads/tx_sponsorcontentscheduler/bulletins',
+	'modify_tables' => '',
+	'clearCacheOnLoad' => 1,
+	'lockType' => '',
+	'author_company' => '',
+	'private' => '',
+	'download_password' => '',
+	'version' => '0.0.0',	// Don't modify this! Managed automatically during upload to repository.
+	'_md5_values_when_last_written' => 'a:141:{s:9:"ChangeLog";s:4:"1f62";s:10:"README.txt";s:4:"ee2d";s:21:"ext_conf_template.txt";s:4:"ea33";s:12:"ext_icon.gif";s:4:"1bdc";s:17:"ext_localconf.php";s:4:"99c1";s:14:"ext_tables.php";s:4:"0758";s:14:"ext_tables.sql";s:4:"32a2";s:28:"ext_typoscript_constants.txt";s:4:"1096";s:24:"ext_typoscript_setup.txt";s:4:"7744";s:19:"flexform_ds_pi1.xml";s:4:"dba9";s:50:"icon_tx_sponsorcontentscheduler_featured_weeks.gif";s:4:"475a";s:53:"icon_tx_sponsorcontentscheduler_featured_weeks_mm.gif";s:4:"475a";s:43:"icon_tx_sponsorcontentscheduler_package.gif";s:4:"475a";s:13:"locallang.php";s:4:"d2e3";s:16:"locallang_db.php";s:4:"3957";s:8:"menu.tpl";s:4:"7560";s:9:"script.js";s:4:"0a68";s:7:"tca.php";s:4:"2fe6";s:11:"CVS/Entries";s:4:"a20e";s:14:"CVS/Repository";s:4:"dfcb";s:8:"CVS/Root";s:4:"486b";s:52:"classes/class.tx_sponsorcontentschedular_jobbank.php";s:4:"4e75";s:43:"classes/tx_sponsorcontentschedular_base.php";s:4:"0772";s:19:"classes/CVS/Entries";s:4:"2741";s:22:"classes/CVS/Repository";s:4:"88b5";s:16:"classes/CVS/Root";s:4:"486b";s:52:"pi1/.#class.tx_sponsorcontentscheduler_base.php.1.22";s:4:"a7e9";s:52:"pi1/.#class.tx_sponsorcontentscheduler_pi1.php.1.105";s:4:"07b8";s:45:"pi1/class.tx_sponsorcontentscheduler_base.php";s:4:"3269";s:44:"pi1/class.tx_sponsorcontentscheduler_pi1.php";s:4:"fbbd";s:46:"pi1/class.tx_sponsorcontentscheduler_utils.php";s:4:"81f3";s:21:"pi1/datetimepicker.js";s:4:"1201";s:19:"pi1/insert_link.htm";s:4:"618d";s:20:"pi1/insert_table.htm";s:4:"fb1d";s:27:"pi1/inventory_interface.tpl";s:4:"fbef";s:35:"pi1/inventory_interface_sponsor.tpl";s:4:"968b";s:12:"pi1/jsval.js";s:4:"09fb";s:10:"pi1/lib.js";s:4:"7ff2";s:17:"pi1/locallang.php";s:4:"3993";s:12:"pi1/menu.tpl";s:4:"d077";s:18:"pi1/menu_sales.tpl";s:4:"3f31";s:13:"pi1/multi.htm";s:4:"43af";s:15:"pi1/palette.htm";s:4:"1a91";s:26:"pi1/richtext_compressed.js";s:4:"6e7c";s:20:"pi1/sale_package.tpl";s:4:"3133";s:23:"pi1/sales_interface.tpl";s:4:"bbb0";s:34:"pi1/sales_interface_individual.tpl";s:4:"0db6";s:15:"pi1/CVS/Entries";s:4:"10f6";s:18:"pi1/CVS/Repository";s:4:"58eb";s:12:"pi1/CVS/Root";s:4:"486b";s:22:"pi1/images/bgcolor.gif";s:4:"5b12";s:23:"pi1/images/blackdot.gif";s:4:"be38";s:19:"pi1/images/bold.gif";s:4:"8d01";s:21:"pi1/images/centre.gif";s:4:"8c9b";s:19:"pi1/images/copy.gif";s:4:"51a0";s:18:"pi1/images/cut.gif";s:4:"3e20";s:19:"pi1/images/date.gif";s:4:"c1e5";s:20:"pi1/images/email.gif";s:4:"8fa7";s:17:"pi1/images/hr.gif";s:4:"46a3";s:24:"pi1/images/hyperlink.gif";s:4:"add1";s:20:"pi1/images/image.gif";s:4:"55ed";s:21:"pi1/images/indent.gif";s:4:"753a";s:27:"pi1/images/insert_table.gif";s:4:"ca26";s:21:"pi1/images/italic.gif";s:4:"1881";s:26:"pi1/images/justifyfull.gif";s:4:"4dc6";s:24:"pi1/images/left_just.gif";s:4:"f1b9";s:19:"pi1/images/list.gif";s:4:"d77f";s:28:"pi1/images/numbered_list.gif";s:4:"9ae2";s:22:"pi1/images/outdent.gif";s:4:"5003";s:20:"pi1/images/paste.gif";s:4:"4675";s:19:"pi1/images/redo.gif";s:4:"ee9f";s:25:"pi1/images/right_just.gif";s:4:"996e";s:21:"pi1/images/smiley.gif";s:4:"74c5";s:25:"pi1/images/spellcheck.gif";s:4:"e6b3";s:24:"pi1/images/textcolor.gif";s:4:"7f7c";s:24:"pi1/images/underline.gif";s:4:"4ff4";s:19:"pi1/images/undo.gif";s:4:"7a14";s:22:"pi1/images/CVS/Entries";s:4:"db81";s:25:"pi1/images/CVS/Repository";s:4:"6f72";s:19:"pi1/images/CVS/Root";s:4:"486b";s:48:"templates/create_edit_delete_job_bank_screen.tpl";s:4:"a218";s:46:"templates/create_edit_owner_package_screen.tpl";s:4:"9218";s:48:"templates/create_edit_sponsor_package_screen.tpl";s:4:"8180";s:40:"templates/create_edit_sponsor_screen.tpl";s:4:"21b7";s:45:"templates/create_edit_sponsor_user_screen.tpl";s:4:"4b9a";s:19:"templates/error.tpl";s:4:"8ede";s:31:"templates/mail_package_edit.tpl";s:4:"060c";s:33:"templates/mail_package_update.tpl";s:4:"7fc3";s:33:"templates/mail_sales_template.tpl";s:4:"a887";s:27:"templates/mail_template.tpl";s:4:"1121";s:18:"templates/menu.tpl";s:4:"ede2";s:24:"templates/menu_sales.tpl";s:4:"b513";s:24:"templates/owner_menu.tpl";s:4:"ff5e";s:29:"templates/sales_interface.tpl";s:4:"9d7e";s:27:"templates/sponsored_by.html";s:4:"24b9";s:21:"templates/CVS/Entries";s:4:"2483";s:24:"templates/CVS/Repository";s:4:"d67e";s:18:"templates/CVS/Root";s:4:"486b";s:31:"templates/sponsor/bulletin.html";s:4:"0740";s:40:"templates/sponsor/imgUpload_highRes.html";s:4:"5430";s:46:"templates/sponsor/sponsor_package_contents.tpl";s:4:"f0b3";s:47:"templates/sponsor/sponsor_profile_interface.tpl";s:4:"6377";s:42:"templates/sponsor/sponsor_welcome_note.tpl";s:4:"bbfd";s:29:"templates/sponsor/CVS/Entries";s:4:"fb91";s:32:"templates/sponsor/CVS/Repository";s:4:"e63d";s:26:"templates/sponsor/CVS/Root";s:4:"486b";s:27:"templates/jobbank/main.html";s:4:"cb15";s:29:"templates/jobbank/CVS/Entries";s:4:"7d27";s:32:"templates/jobbank/CVS/Repository";s:4:"0d3b";s:26:"templates/jobbank/CVS/Root";s:4:"486b";s:17:"images/bgmenu.gif";s:4:"30d0";s:23:"images/bgmenu_hover.gif";s:4:"f989";s:14:"images/cal.gif";s:4:"e05d";s:15:"images/help.gif";s:4:"6b2b";s:18:"images/CVS/Entries";s:4:"d83a";s:21:"images/CVS/Repository";s:4:"761f";s:15:"images/CVS/Root";s:4:"486b";s:16:"styles/jsDate.js";s:4:"4bab";s:13:"styles/lib.js";s:4:"58b6";s:17:"styles/overlib.js";s:4:"a29e";s:17:"styles/tooltip.js";s:4:"9919";s:18:"styles/CVS/Entries";s:4:"3537";s:21:"styles/CVS/Repository";s:4:"c8ae";s:15:"styles/CVS/Root";s:4:"486b";s:44:"pi2/class.tx_sponsorcontentscheduler_pi2.php";s:4:"fe76";s:17:"pi2/locallang.php";s:4:"6970";s:15:"pi2/CVS/Entries";s:4:"ec63";s:18:"pi2/CVS/Repository";s:4:"e490";s:12:"pi2/CVS/Root";s:4:"486b";s:24:"pi2/static/editorcfg.txt";s:4:"dfa7";s:22:"pi2/static/CVS/Entries";s:4:"8892";s:25:"pi2/static/CVS/Repository";s:4:"fa77";s:19:"pi2/static/CVS/Root";s:4:"486b";s:28:"picron/0dayreminderemail.txt";s:4:"2c6f";s:29:"picron/14dayreminderemail.txt";s:4:"a551";s:28:"picron/1dayreminderemail.txt";s:4:"8d07";s:28:"picron/7dayreminderemail.txt";s:4:"a9ed";s:50:"picron/class.tx_sponsorcontentscheduler_picron.php";s:4:"3893";s:18:"picron/CVS/Entries";s:4:"3571";s:21:"picron/CVS/Repository";s:4:"6d1c";s:15:"picron/CVS/Root";s:4:"486b";}',
+);
+
+?>

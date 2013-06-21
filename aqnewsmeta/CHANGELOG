@@ -1,0 +1,60 @@
+2009-04-15 Wednesday 00:56  cannon
+
+	* The extension is now version: 1.0.0
+
+2009-04-15 Wednesday 00:55  cannon
+
+	* update company name
+
+2009-04-15 Wednesday 00:53  cannon
+
+	* append CHANGELOG to manual
+
+2009-04-15 Wednesday 00:53  cannon
+
+	* Update manual
+
+2009-04-15 Wednesday 00:41  cannon
+
+	* Removal of "class.tx_ttnews.php"
+
+2009-04-15 Wednesday 00:40  cannon
+
+	* add crop option; add manual; simplify description inclusion
+
+2009-04-15 Wednesday 00:40  cannon
+
+	* Inital import of "doc/manual.sxw" file
+
+2009-04-15 Wednesday 00:09  cannon
+
+	* move to live
+
+2009-04-15 Wednesday 00:02  cannon
+
+	* Inital import of "ext_localconf.php" file
+
+2009-04-15 Wednesday 00:00  cannon
+
+	* Inital import of "class.tx_aqnewsmeta.php" file
+
+2009-04-14 Tuesday 23:41  cannon
+
+	* Inital import of "class.tx_ttnews.php" file
+
+2009-04-14 Tuesday 23:37  cannon
+
+	* Inital import of "CHANGELOG" file
+
+2009-04-14 Tuesday 23:37  cannon
+
+	* Removal of "ChangeLog"
+
+2009-04-14 Tuesday 23:36  cannon
+
+	* Initial aqnewsmeta source import
+
+2009-04-14 Tuesday 23:36  cannon
+
+	* Initial revision
+

@@ -1,0 +1,50 @@
+plugin.tx_newsshow_pi1 {
+
+	# cat=newsshow/enable/1; type=string; label=Loop: Loop the Flash animation (Flash object parameter).
+	swfParams.loop = false
+
+	# cat=newsshow/enable/2; type=string; label=Menu: Allow the Flash menu to be displayed in the animation (Flash object parameter).
+	swfParams.menu = false
+
+	# cat=newsshow/enable/3; type=string; label=SWLiveConnect: Enable the use of LiveConnect (Flash object parameter).
+	swfParams.swliveconnect = false
+
+	# cat=newsshow/enable/4; type=string; label=dark design for flash.
+	darkdesign = false
+
+	# cat=newsshow/enable/5; type=int+; label=Timer: The rotation time of the banner in seconds (2 to 10 looks good).
+	playerParams.timer = 4
+
+	# cat=newsshow/enable/6; type=boolean; label=Random play: Whether the rotation should be random or not.
+	playerParams.random = 0
+
+	# cat=newsshow/enable/7; type=string; label=Transition: The transition type (fade,bgfade,blocks,circles,fluid).
+	playerParams.transition = fade
+
+	# cat=newsshow/enable/8; type=boolean; label=Navigation: Show navigation menu on the SlideShow.
+	playerParams.navigation = 1
+
+	# cat=newsshow/dims/0; type=int+; label=Width: Control the width of the header (used for both the swf file and the replacement picture).
+	width = 512
+
+	# cat=newsshow/dims/1; type=int+; label=Height: Control the height of the header (used for both the swf file and the replacement picture).
+	height = 265
+
+	# cat=newsshow/enable/8; type=string; label=Loop: Loop the Flash animation (Flash object parameter).
+	wmode = opaque
+
+	# cat=newsshow/dims/2; type=string; label=Scale: The scale of the Flash animation (Flash object parameter).
+	swfParams.scale = noscale
+
+	# cat=newsshow/file/0; type=string; label=SlideShow player: The SWF file containing the Flash newsshow player.
+	jpgrotator = EXT:newsshow/pi1/newsrotator.swf
+
+	# cat=newsshow/color/0; type=color; label=BGColor: The background color of the Flash animation.
+	swfParams.bgcolor = #FFFFFF
+
+	# cat=newsshow//0; type=int+; label=Flash version: The version of the Flash plugin required to view the headers.
+	version = 8
+
+	# cat=newsshow//1; type=string; label=Quality: The quality of the Flash animation (Flash object parameter).
+	swfParams.quality = best
+}

@@ -1,0 +1,5 @@
+
+plugin.tx_jobbank_pi1 {
+  # cat=plugin.Job Bank/file; type=file[html,htm,tmpl,txt]; label= Template File: HTML-template file for display of calendar box. See EXT:mc_advcalendar_extended/advcalendar_box.tmpl for an example
+  templateFile = EXT:job_bank/template/main.html
+}

@@ -1,0 +1,64 @@
+pmk_rssnewsexport >
+pmk_rssnewsexport = PAGE
+pmk_rssnewsexport {
+  typeNum = 334
+  config.disableAllHeaderCode = 1
+  config.additionalHeaders = Content-type:text/xml
+  includeLibs.pmk_rssnewsexport = EXT:pmk_rssnewsexport/pi1/class.tx_pmkrssnewsexport_pi1.php
+  10 = USER
+  10 {
+    userFunc = tx_pmkrssnewsexport_pi1->make_xml
+
+    # title of your newsfeed, maximum 100 chars
+    feedTitle = My RSS newsfeed
+
+    # Copyright notice
+    feedCopyright = 2004 My Company
+
+    # Who is the person in charge of the newsfeed-content (email address)
+    feedManagingEditor = editor@mycompany.com
+
+    #  Who is the technical contact for problems with the newsfeed (email address)
+    feedWebMaster = webmaster@mycompany.com
+    
+    #  If you don't want the individal author's names appear in the feed, you can override them here
+    # feedAuthorOverride = info@mycompany.com
+
+    # main URL to include in your newsfeed, maximum 500 chars (just for user information)
+    feedLink = http://www.mycompany.com
+
+    # language in which the information is written, optional for RSS 2.0, required for 0.91
+    # by default from typoscript variable "config.language" - might be overridden
+    # default = en
+    feedLanguage < config.language
+
+    # description of your newsfeed, maximum 500 chars
+    feedDescription = Aktuelle Neuigkeiten der SCP Software GmbH
+
+    # image included in the feed, optional for RSS 2.0, required for RSS 0.91
+    # feedImage = http://www.mycompany.com/fileadmin/template/images/Logo.gif
+
+    # prefix for direct tt_news item links
+    # set up a news details page (code=SINGLE) with an extension template
+    # that sets the correct backPID value to a news overview page!
+    # (simulateStaticDocuments should be on, since &-signs violate RDF charspace!)
+    feedItemLinkPrefix = http://your.domain.tld/newsfeeddetail.html=
+
+    # shorten tt_news short + bodytext to this length in XML item description, default=100, maximum 500 in RSS 0.91
+    feedItemDescLength = 200
+
+    # select news from these tt_news sysfolders, default=all
+    # newsPidList = 
+
+    # which news categories to show, default=all
+    # newsCatList = 1,2,3,5
+
+    # how many items to show in XML feed, default=all, maximum of 15 for RSS 0.91
+    newsItemCount = 5
+
+    # SQL sorting by tt_news field name, default=no ordering
+    newsItemOrderBy = crdate DESC
+
+  }
+
+}

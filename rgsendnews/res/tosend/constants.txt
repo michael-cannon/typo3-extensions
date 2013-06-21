@@ -1,0 +1,15 @@
+# /***************************
+# *  Default TS for the
+# *     EXT rgsendnews
+# * by Ringer Georg (just2b)
+# *   http://www.ringer.it
+# ***************************/  
+plugin.rgsendnews {
+
+	# cat=rgsendnews/enable/e2; type=int; label= Save PID: Page where the records are saved
+	savepid = 344
+
+	# cat=rgsendnews/enable/e2; type=int; label= Send PID: Page where the articles are sent
+	sendpid = 345
+	
+}

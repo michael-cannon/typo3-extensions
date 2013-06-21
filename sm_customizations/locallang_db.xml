@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<!-- $Id: locallang_db.xml,v 1.1.1.1 2010/04/15 10:04:03 peimic.comprock Exp $ -->
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'sm_customizations'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="fe_users.tx_smcustomizations_terms_agree">Terms &amp; Conditions Agreement</label>
+			<label index="fe_users.tx_smcustomizations_income_range">Income Range</label>
+			<label index="fe_users.tx_smcustomizations_education_level">Education Level</label>
+			<label index="fe_users.tx_smcustomizations_shopping_frequency">Shopping Frequency</label>
+			<label index="fe_users.tx_smcustomizations_online_shopping">Online Shopping</label>
+			<label index="fe_users.tx_smcustomizations_how_found">How Found</label>
+			<label index="fe_users.tx_smcustomizations_how_found_text">How Found - Other</label>
+			<label index="fe_users.tx_smcustomizations_age">Age</label>
+		</languageKey>
+	</data>
+</T3locallang>

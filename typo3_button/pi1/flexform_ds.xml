@@ -1,0 +1,34 @@
+<T3DataStructure>
+	<sheets>
+		
+		<default>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:typo3_button/locallang_db.php:tt_content.pi_flexform.buttons</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>	          
+					
+					<button>
+						<TCEforms>
+							<label>Buttons</label>
+							<config>
+								<type>select</type>
+								<items> Array(Array('',0))</items>
+								<fileFolder>EXT:typo3_button/images</fileFolder>
+								<fileFolder_extList>png,jpg,jpeg,gif</fileFolder_extList>
+								<fileFolder_recursions>0</fileFolder_recursions>
+								<selicon_cols>3</selicon_cols>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</button>
+					
+				</el>
+			</ROOT>
+		</default>
+		
+	</sheets>
+</T3DataStructure>

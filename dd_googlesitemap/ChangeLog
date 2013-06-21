@@ -1,0 +1,35 @@
+2009-03-18  Dmitry Dulepov  <dmitry@typo3.org>
+
+	* Fixed problem: doktype and no_search were not available
+	* Released version 1.0.3
+
+2009-03-17  Dmitry Dulepov  <dmitry@typo3.org>
+
+	* Fixed bug #2862: tt_news sitemap should produce a page sitemap
+	* Fixed bug #2704: Shortcut on top level messes up the whole sitemap
+	* Fixed bug #2693: Page type Shortcut adds second entry for page
+	* Fixed bug #2692: Pages of type "Visual menu separator" are included in sitemap
+	* Fixed bug #2867: Exclude 'no search' pages from the sitemap
+	* Released version 1.0.1
+	* Apply 'forceStartPid' to news sitemaps too
+	* Released version 1.0.2
+
+2009-02-25  Dmitry Dulepov  <dmitry@typo3.org>
+
+	* Added an option to skip root line check for news
+	* Added documentation
+	* Clean up before uploading to TER
+	* Released version 1.0.0
+	* Fixed bug #2691: GPvar is deprecated in 4.3
+
+2009-01-12  Dmitry Dulepov  <dmitry@typo3.org>
+
+	* Fixed: missing <url> tag in the news sitemap
+
+2008-12-12  Dmitry Dulepov  <dmitry@typo3.org>
+
+	* Initial code with sitemap for pages
+	* Added news sitemap
+	* Fixed: current page ID was not determined correctly with RealURL
+	* Changed news item sorting in news sitemap (newer items first)
+	* Added check for 0 when validating storage page id

@@ -1,0 +1,61 @@
+<T3DataStructure>
+ <meta>
+       <langDisable>1</langDisable>
+ </meta>
+ <sheets>
+  <sDEF>
+   <ROOT>
+    <TCEforms>
+     <sheetTitle>LLL:EXT:eu_sugarcrm/locallang_db.php:tt_content.pi_flexform.sheet_general</sheetTitle>
+    </TCEforms>
+    <type>array</type>
+    <el>
+     <testparam>
+      <TCEforms>
+       <label>LLL:EXT:eu_sugarcrm/locallang_db.php:tt_content.pi_flexform.testparam</label>
+       <config>
+        <type>input</type>
+        <size>30</size>
+       </config>
+      </TCEforms>
+     </testparam>       
+     <what_to_display>
+       <TCEforms>
+        <label>LLL:EXT:eu_sugarcrm/locallang_db.php:tt_content.pi_flexform.what_to_display</label>
+        <config>
+         <type>select</type>
+         <items type="array">
+          <numIndex index="0" type="array">
+           <numIndex index="0">SERVER_VERSION</numIndex>
+           <numIndex index="1">SERVER_VERSION</numIndex>
+          </numIndex>
+          <numIndex index="1" type="array">
+           <numIndex index="0">LOG_IN</numIndex>
+           <numIndex index="1">LOG_IN</numIndex>
+          </numIndex>
+          <numIndex index="2" type="array">
+           <numIndex index="0">LIST_USERS</numIndex>
+           <numIndex index="1">LIST_USERS</numIndex>
+          </numIndex>
+          <numIndex index="3" type="array">
+           <numIndex index="0">LIST_MODULES</numIndex>
+           <numIndex index="1">LIST_MODULES</numIndex>
+          </numIndex>
+          <numIndex index="4" type="array">
+           <numIndex index="0">LIST_MODULE_DETAILS</numIndex>
+           <numIndex index="1">LIST_MODULE_DETAILS</numIndex>
+          </numIndex>
+         </items>
+         <maxitems>10</maxitems>
+          <size>4</size>
+          <multiple>0</multiple>
+         <selectedListStyle>width:150px</selectedListStyle>
+         <itemListStyle>width:150px</itemListStyle>
+        </config>
+       </TCEforms>
+     </what_to_display>
+    </el>
+   </ROOT>
+  </sDEF>
+ </sheets>
+</T3DataStructure>

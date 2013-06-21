@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'wt_directory'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.list_type_pi1">wt_directory (tt_address list and detail view)</label>
+			<label index="pi_flexform.sheet_mainconfig">Main</label>
+			<label index="pi_flexform.sheet_list">List</label>
+			<label index="pi_flexform.sheet_detail">Detail</label>
+			<label index="pi_flexform.sheet_googlemap">Googlemap</label>
+			<label index="pi_flexform.abc">ABC list</label>
+			<label index="pi_flexform.search">Add search field(s)</label>
+			<label index="pi_flexform.empty">ABC list</label>
+			<label index="pi_flexform.pid">Page with addresses</label>
+			<label index="pi_flexform.target_detail">Page with detail view (empty for same page)</label>
+			<label index="pi_flexform.target_list">Page with list view (empty for same page)</label>
+			<label index="pi_flexform.cat_join">Category usage</label>
+			<label index="pi_flexform.cat_join.0">Show all addresses (no matter which category)</label>
+			<label index="pi_flexform.cat_join.1">Show only addresses from selected groups</label>
+			<label index="pi_flexform.enablecatchoose">Add dropdown for category selection</label>
+			<label index="pi_flexform.category">Categories</label>
+			<label index="pi_flexform.field">Show fields in frontend</label>
+			<label index="pi_flexform.googlemapenable">Enable googlemap links</label>
+			<label index="pi_flexform.googlemap_page">Page with Googlemap (empty for same page)</label>
+			<label index="pi_flexform.empty">Don't show</label>
+			<label index="pi_flexform.enable">Enable</label>
+			<label index="pi_flexform.disable">Disable</label>
+			<label index="pi_flexform.status">Status:</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tt_content.list_type_pi1">wt_directory (tt_address Liste und Detailansicht)</label>
+			<label index="pi_flexform.sheet_mainconfig">Einstellungen</label>
+			<label index="pi_flexform.sheet_list">Liste</label>
+			<label index="pi_flexform.sheet_detail">Detail</label>
+			<label index="pi_flexform.sheet_googlemap">Googlemap</label>
+			<label index="pi_flexform.abc">ABC Liste</label>
+			<label index="pi_flexform.search">Such-Felder hinzufügen</label>
+			<label index="pi_flexform.pid">Seite mit Adressen</label>
+			<label index="pi_flexform.target_detail">Seite mit Detailansicht (Leer für gleiche Seite)</label>
+			<label index="pi_flexform.target_list">Seite mit Listenansicht (Leer für gleiche Seite)</label>
+			<label index="pi_flexform.cat_join">Kategorieverwendung</label>
+			<label index="pi_flexform.cat_join.0">Zeige alle Adressen (Kategorieunabhängig)</label>
+			<label index="pi_flexform.cat_join.1">Zeige nur Adressen aus ausgewählten Gruppen</label>
+			<label index="pi_flexform.enablecatchoose">Dropdown Kategorie Auswahl hinzufügen</label>
+			<label index="pi_flexform.category">Kategorien</label>
+			<label index="pi_flexform.field">Felder im Frontend anzeigen</label>
+			<label index="pi_flexform.googlemapenable">Googlemap Links aktivieren</label>
+			<label index="pi_flexform.googlemap_page">Seite mit Googlemap (Leer für gleiche Seite)</label>
+			<label index="pi_flexform.empty">Nicht anzeigen</label>
+			<label index="pi_flexform.enable">Aktivieren</label>
+			<label index="pi_flexform.disable">Deaktivieren</label>
+			<label index="pi_flexform.status">Status:</label>
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'cbdiningguide'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_address.tx_cbdiningguide_price">Price</label>
+			<label index="tt_address.tx_cbdiningguide_cuisine">Cuisine</label>
+			<label index="tt_address.tx_cbdiningguide_specialty">Specialty</label>
+			<label index="tt_address.tx_cbdiningguide_meals">Meals Served</label>
+			<label index="tt_address.tx_cbdiningguide_neighborhood">Neighborhood</label>
+			<label index="tt_address.tx_cbdiningguide_hours">Hours</label>
+			<label index="tx_cbdiningguide_price">Dining Prices</label>
+			<label index="tx_cbdiningguide_price.price">Price</label>
+			<label index="tx_cbdiningguide_cuisine">Cuisine</label>
+			<label index="tx_cbdiningguide_cuisine.cuisine">Cuisine</label>
+			<label index="tx_cbdiningguide_specialty">Specialty</label>
+			<label index="tx_cbdiningguide_specialty.specialty">Specialty</label>
+			<label index="tx_cbdiningguide_meals">Meals</label>
+			<label index="tx_cbdiningguide_meals.meals">Meals</label>
+			<label index="tx_cbdiningguide_neighborhood">Neighborhood</label>
+			<label index="tx_cbdiningguide_neighborhood.neighborhood">Neighborhood</label>
+		</languageKey>
+	</data>
+</T3locallang>

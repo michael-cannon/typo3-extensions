@@ -1,0 +1,14 @@
+
+plugin.tx_newssearch_pi1 {
+  # cat=plugin.newssearch//; type=string; label= PageId to store search
+pageId=
+
+# cat=plugin.newssearch//; type=int; label= Paging Size
+pagingSize=
+
+# cat=plugin.newssearch//; type=file; label= Template File
+templateFile=
+
+# cat=plugin.newssearch//; type=string; label= Categories to search in News Search
+SearchCategory=
+}

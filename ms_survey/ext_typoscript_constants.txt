@@ -1,0 +1,11 @@
+plugin.tx_mssurvey_pi1.progressBar = 0 
+plugin.tx_mssurvey_pi1.ignoreAlreadyFilled = 0 
+plugin.tx_mssurvey_pi1.allow_anonymous = 1
+plugin.tx_mssurvey_pi1.successRedirectPID = 
+plugin.tx_mssurvey_pi1.templateFile = EXT:ms_survey/pi1/template.tmpl 
+plugin.tx_mssurvey_pi1.emailNotification = 0
+plugin.tx_mssurvey_pi1.emailName =   
+plugin.tx_mssurvey_pi1.emailFrom = 
+plugin.tx_mssurvey_pi1.emailAddHeader = 0
+plugin.tx_mssurvey_pi1.emailSubject = 
+plugin.tx_mssurvey_pi1.emailBody = 

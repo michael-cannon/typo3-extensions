@@ -1,0 +1,17 @@
+#containerShop{
+	width: 100%;
+	background-color: white;
+	color: black;
+	text-align: left;
+/*	clear: both;	*/
+	font-size: 1.2em;
+}
+
+/* BASKET */
+.shop_productBasketContainer {border:1px solid #999999; clear:both}
+.shop_basketImage {float:left}
+.shop_basketImage IMG {margin:10px}
+.shop_basketPrice {float:right}
+
+/* GENERICHE */
+.clear {clear:both}

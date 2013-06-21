@@ -1,0 +1,12 @@
+# /***************************
+# *  Default TS for the
+# *     EXT rgsendnews
+# * by Ringer Georg (just2b)
+# *   http://www.ringer.it
+# ***************************/  
+plugin.rgsendnews {
+
+	# cat=rgsendnews/enable/e2; type=text; label= BaseURL
+	baseurl = http://www.rggooglemap.com/
+	
+}

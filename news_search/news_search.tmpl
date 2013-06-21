@@ -1,0 +1,179 @@
+<!-- ###SEARCH_HEADER### -->
+<form action="###FORMACTION###" method="get">
+<TABLE WIDTH="100%" BORDER="0" cellpadding="">
+<tr>
+	<td>Search : </td>
+	<td>
+	<input type="text" name="###FORMEXTENSION###[search_text]" value="###SEARCH_TEXT###"> 
+	</td>
+</tr>
+<tr valign="TOP">
+	<td>Category :</td>
+	<td>
+	<select name="###FORMEXTENSION###[category][]" multiple size="12">
+		<option value ='all'> ---- Select all ---- </option>
+		###CATEGORY_LIST###
+		</select>
+	<!---<input type="hidden" value="curriculum" name="###FORMEXTENSION###[style]" />--->
+	</td>
+</tr>
+<!--
+<tr>
+	<td>Style : </td>
+	<td>
+	<select name="###FORMEXTENSION###[style]">
+		###STYLE_LIST###
+		</select>
+	</td>
+</tr>
+-->
+<tr>
+	<td colspan="2">
+		<input type="submit" name="###FORMEXTENSION###[search]" value=" Search ">
+	</td>
+</tr>
+
+</TABLE>
+</FORM>
+<!-- ###SEARCH_HEADER### -->
+<!-- ###SAVED_SEARCH_RESULT### -->
+<h3>Saved Search</h3>
+<TABLE WIDTH="100%">
+	<!--###SAVED_SEARCH_DATA###--->
+	<TR WIDTH="100%">
+		<TD>###SAVED_SEARCH_LIST###</TD>
+		<TD>###SAVED_SEARCH_OPTION###</TD>
+	</TR>
+	<!--###SAVED_SEARCH_DATA###--->
+</TABLE>
+<!-- ###SAVED_SEARCH_RESULT### -->
+
+
+<!-- ###SEARCH_RESULT### -->
+<table width="100%">
+<tr width="100%">
+	<td width="98%"><H1>Search Result</H1></td>
+	<td nowrap>###SAVE_SEARCH_TEXT###</td>
+</tr>
+</table>
+
+<table width="100%" border="0" cellpadding="4" cellspacing="0" >
+	<!-- ###SEARCH_RESULT_DATA_TITLE_1### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_1### -->
+	<!-- ###SEARCH_RESULT_DATA_1### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		###COURTSEY###
+		<br>
+		###NEWS_DATE###
+	
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+
+	<!-- ###SEARCH_RESULT_DATA_1### -->
+	
+	<!-- ###SEARCH_RESULT_DATA_TITLE_2### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_2### -->
+
+	<!-- ###SEARCH_RESULT_DATA_2### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		Featuring: ###COURTSEY###
+		<br>
+		###NEWS_DATE###
+		<br/>
+		<br/>
+		<!--
+		###NEWS_TEASER###
+		-->
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+
+
+	<!-- ###SEARCH_RESULT_DATA_2### -->
+	
+	<!-- ###SEARCH_RESULT_DATA_TITLE_3### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_3### -->
+
+	<!-- ###SEARCH_RESULT_DATA_3### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		By: ###COURTSEY###
+		<br/>
+		###NEWS_DATE###
+		<br/>
+		
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+
+	<!-- ###SEARCH_RESULT_DATA_3### -->
+	
+	<!-- ###SEARCH_RESULT_DATA_TITLE_DEFAULT### -->
+	<tr valign="TOP">
+		<td><h3>###CATEGORY_TITLE###</h3>
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_TITLE_DEFAULT### -->
+
+	<!-- ###SEARCH_RESULT_DATA_DEFAULT### -->
+	<tr valign="TOP">
+		<td>###NEWS_TITLE###<br/>
+		###COURTSEY###
+		<br>
+		###NEWS_DATE###
+		<br/>
+		<br/>
+		
+		</td>
+	</tr>
+	<tr> 
+		<td align="right" class="morelink">
+		<!---###MORE_LINK###--->			
+		</td>
+	</tr>
+	<!-- ###SEARCH_RESULT_DATA_DEFAULT### -->
+</table>
+<form name="savesearchresult" action="###FORMACTION###" method="get">
+###HIDDEN_FORM_FILEDS###
+<input type='hidden' name='search_name' value=''>
+</form>
+
+###SEARCH_PAGER###
+<!-- ###SEARCH_RESULT### -->
+
+<!-- ###SEARCH_RESULT_NODATA### -->
+<table width="100%">
+	<tr width="100%"> 
+		<td align="center" class="morelink">
+			No Result.
+		</td>
+	</tr>
+</table>
+<!-- ###SEARCH_RESULT_NODATA### -->

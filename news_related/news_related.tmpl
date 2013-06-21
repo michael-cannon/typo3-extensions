@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>New Related</title>
+</head>
+<body>
+	<h1>News Related Template</h1>
+	<p>The fllowing template markers can be used in sponsor display besides
+	normal tt_news markers</p>
+	<h3>Markers</h3>
+	<pre>
+###RELATED_TITLE_TEXT###
+
+###NEWS_CATEGORY###
+###NEWS_TITLE###
+###NEWS_AUTHOR###
+###NEWS_SUBHEADER###
+###TEXT_FILES###
+###FILE_LINK###
+###LINK_ITEM###
+###MORE###
+	</pre>
+
+	<hr />
+	<h1>TEMPLATE_RELATED</h1>
+<!-- ###TEMPLATE_RELATED### begin
+	Subpart for lead email
+-->
+<table style="width: 100%;">
+	<tr>
+		<td colspan="3" style="vertical-align: top;">
+			###RELATED_TITLE_TEXT###
+		</td>
+	</tr>
+	<!-- ###CONTENT### begin
+		  This is the part of the template substituted with the list of news: 
+	-->
+	<!-- ###NEWS### begin 
+		Template for a single item 
+	-->
+	<tr> 
+		<td style="vertical-align: top;">
+			###NEWS_CATEGORY###
+		</td>
+		<td colspan="2" style="vertical-align: top;">
+			<div style="float: left;"><!--###LINK_ITEM###-->###NEWS_IMAGE###<!--###LINK_ITEM###--></div>
+			<!--###LINK_ITEM###-->###NEWS_TITLE###<!--###LINK_ITEM###-->
+			###NEWS_AUTHOR###
+			###NEWS_SUBHEADER###
+		</td>
+	</tr>
+	<tr> 
+		<td style="vertical-align: top;">
+			&nbsp;
+		</td>
+		<td style="vertical-align: top;">
+			###FILE_LINK###
+		</td>
+		<td style="vertical-align: bottom;">
+			<!--###LINK_ITEM###-->###MORE###<!--###LINK_ITEM###-->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" style="vertical-align: top;">
+			&nbsp;
+		</td>
+	</tr>
+	<!-- ###NEWS### end-->
+	<!-- ###CONTENT###  end -->
+</table>
+<!-- ###TEMPLATE_RELATED### end -->
+</body>
+</html>

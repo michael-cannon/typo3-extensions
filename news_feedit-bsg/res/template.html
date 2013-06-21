@@ -1,0 +1,28 @@
+<!-- ###MENU### begin -->
+	<!-- ###TEMPLATE_EDITMENU### begin -->
+	<div class="tx-newsfeedit-pi1-message tx-newsfeedit-pi1-message-editmenu">List of items</div>
+	<div style="border-bottom:1px solid black;margin:8px">
+	<!-- ###ALLITEMS### begin -->
+	<!-- ###ITEM### begin -->
+		<div style="border-top:1px solid black;clear:both;height:18px;padding:8px">
+			<div style="float:left">
+				Title: <strong>###FIELD_title###</strong><br />
+			</div>
+			<div style="float:right">
+				<a href="###FORM_URL###&rU=###FIELD_uid###&cmd=edit&backURL=###FORM_URL_ENC###%26cmd%3Dedit">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="###FORM_URL###&cmd=delete&backURL=###FORM_URL_ENC###&rU=###FIELD_uid###" onClick="return confirm('Delete?');">Delete</a>
+			</div>
+		</div>
+	<!-- ###ITEM### end -->
+	<!-- ###ALLITEMS### end -->
+	</div>
+	</div>
+	<div class="tx-newsfeedit-pi1-link tx-newsfeedit-pi1-link-editmenu" style='clear:both'><div><a href="###FORM_URL###&cmd=create">Create new record</a></div></div>
+	<!-- ###TEMPLATE_EDITMENU### -->
+
+	<!-- ###TEMPLATE_EDITMENU_NOITEMS### begin -->
+	<div class="tx-newsfeedit-pi1-message tx-newsfeedit-pi1-message-editmenu-noitems">Sorry, there were no items availiable.</div>
+	<div class="tx-newsfeedit-pi1-link tx-newsfeedit-pi1-link-editmenu-noitems"><div><a href="###FORM_URL###&cmd=create">Create new record</a></div></div>
+	<!-- ###TEMPLATE_EDITMENU_NOITEMS### -->
+<!-- ###MENU### end -->
+

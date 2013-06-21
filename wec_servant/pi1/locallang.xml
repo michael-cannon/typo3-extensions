@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Language labels for extension 'wec_servant' pi1</description>
+        <type></type>
+        <csh_table></csh_table>
+        <labelContext type="array">
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="pi1_title">WEC Servant Matcher</label>
+            <label index="pi1_plus_wiz_description">Allow your ministries to connect with people who want to help.</label>
+            <label index="find_by_skills">Search By Skills</label>
+            <label index="find_by_ministry">Search By Ministry</label>
+            <label index="find_by_priority">Search By Need</label>
+            <label index="find_by_dates">Search By Dates</label>
+            <label index="find_by_last_added">Search By Last Added</label>
+            <label index="show_skills_on">click to select by skills</label>
+            <label index="show_skills_off">hide skills list</label>
+            <label index="find_by_ministry_results">Results For Find By Ministry:</label>
+            <label index="find_by_skills_results">Results For Find By Skills:</label>
+            <label index="find_by_needs_results">Results For Find By Needs:</label>
+            <label index="find_by_lastadded_results">Showing Which Were Last Added:</label>
+            <label index="find_by_saved_results">Your Saved Ministry Opportunities:</label>
+            <label index="no_entries_found">No entries were found</label>
+            <label index="find_any_skills_btn">Match Any Skills Selected</label>
+            <label index="find_all_skills_btn">Match ALL Skills Selected</label>
+            <label index="reset_skills_btn">Clear Skills Selected</label>
+            <label index="last_10_added_btn">Find Newest Opportuntities</label>
+            <label index="find_urgent_needs_btn">Find Urgent Needs</label>
+            <label index="form_header_interest">Contact About Your Interest</label>
+            <label index="form_header_commitment">Make A Commitment</label>
+            <label index="form_header_waitlist">Add to Waitlist</label>
+            <label index="form_signup_instructions">Please fill in the following and someone will contact you soon.</label>
+            <label index="form_commitment_text">You are committed to doing the following:</label>
+            <label index="form_waitlist_text">You are adding yourself to the waitlist to doing the following:</label>
+            <label index="form_interest_text">You are interested in doing the following:</label>
+            <label index="form_submit_btn">Signup</label>
+            <label index="form_required_blank">is a required field</label>
+            <label index="form_invalid_field">is an invalid field</label>
+            <label index="form_name_label">Name</label>
+            <label index="form_subject_label">Subject</label>
+            <label index="form_email_label">Email</label>
+            <label index="form_phone_label">Phone</label>
+            <label index="form_message_label">Message</label>
+            <label index="form_address_label">Address</label>
+            <label index="form_city_label">City</label>
+            <label index="form_state_label">State</label>
+            <label index="form_zip_label">Zip Code</label>
+            <label index="form_attachment_label">Attachment</label>
+            <label index="form_youth_label">Check if you're under 18 years old</label>
+            <label index="form_youth_label.short">Youth?</label>
+            <label index="form_youth_label.yes">Yes</label>
+            <label index="form_youth_label.no">No</label>
+            <label index="form_parents_name_label">Parent/Guardian Name</label>
+            <label index="required_text_marker">*</label>
+            <label index="show_required_text">* = required field</label>
+            <label index="title_description">Servant Commitment</label>
+            <label index="email_subject">Servant Signup Notification</label>
+            <label index="email_none_to_send">You did not select any to send.</label>
+            <label index="email_interestedIn">Is Interested In: </label>
+            <label index="email_makeCommitment">Is Committed To: </label>
+            <label index="email_success">Your email has been sent.  You will soon be contacted by the ministry area you selected.</label>
+            <label index="email_failure">Your email could not be sent -- there seems to be a system server error. Please try again later.</label>
+            <label index="email_failure2">We could not send your email [code=no_contacts]</label>
+            <label index="email_at_text"> at: </label>
+            <label index="email_subject_notification">NOTIFICATION:</label>
+            <label index="email_etc_label">=== Other Info ===</label>
+            <label index="email_contact_label">=== Ministry Contact Person ===</label>
+            <label index="interest_btn">I Am Interested</label>
+            <label index="commitment_btn">Make A Commitment</label>
+            <label index="waitlist_btn">Add to Waitlist</label>
+            <label index="edit_btn">Edit</label>
+            <label index="save_button">Save Selected</label>
+            <label index="view_saved_items">View Saved Opportunities</label>
+            <label index="list_saved_items">Print Saved Opportunities</label>
+            <label index="display_more_details">Display more details...</label>
+            <label index="required_group_marker"> (required to select one)</label>
+            <label index="required_group_error">One option needs to be set for group </label>
+            <label index="required_group_none">You need to select other skills beyond those in the required group(s)</label>
+            <label index="get_skills_error_none">You need to select at least one.</label>
+            <label index="preview_title">What Opportunities Are Available?</label>
+            <label index="preview_btn">Find out more</label>
+            <label index="preview_description_etc">...</label>
+            <label index="select_ministry">Select...</label>
+            <label index="priorityLevel0">None</label>
+            <label index="priorityLevel1">Normal</label>
+            <label index="priorityLevel2">Urgent</label>
+            <label index="priorityLevel3">High</label>
+            <label index="priorityLevel4">Low</label>
+            <label index="priorityLevel5">Special</label>
+            <label index="dateFrom">From</label>
+            <label index="dateTo">To</label>
+            <label index="last_added">Last Added</label>
+            <label index="last_added_option0">Select...</label>
+            <label index="last_added_option1">In Past Week</label>
+            <label index="last_added_option2">In Past Month</label>
+            <label index="last_added_option3">In Past 3 Months</label>
+            <label index="last_added_option4">In Past 6 Months</label>
+            <label index="itemlabel_name">Name:</label>
+            <label index="itemlabel_ministry_info">Ministry:</label>
+            <label index="itemlabel_contact_info">Contact:</label>
+            <label index="itemlabel_contact_phone">Phone:</label>
+            <label index="itemlabel_contact_email">Email:</label>
+            <label index="itemlabel_priority">Priority:</label>
+            <label index="itemlabel_reference_code">Shelby Opportunity ID:</label>
+            <label index="itemlabel_description">Description:</label>
+            <label index="itemlabel_location">Location:</label>
+            <label index="itemlabel_times_needed">Time(s) Needed:</label>
+            <label index="itemlabel_misc_description">Misc:</label>
+            <label index="itemlabel_qualifications">Qualifications:</label>
+            <label index="itemlabel_openings">Number of Openings:</label>
+            <label index="itemlabel_openings.zero">None</label>
+            <label index="itemlabel_skills">Skills/Interests Needed:</label>
+            <label index="itemlabel_save_item">Save For Later</label>
+            <label index="itemlabel_datetime">Date/Time:</label>
+            <label index="itemlabel_datetime.ongoing">On going</label>
+            <label index="itemlabel_youth_friendly">Youth Friendly:</label>
+            <label index="itemlabel_youth_friendly.yes">Yes</label>
+            <label index="itemlabel_youth_friendly.no">No</label>
+            <label index="itemlabel_supervision_required">Parent/Guardian Required:</label>
+            <label index="itemlabel_supervision_required.yes">Yes</label>
+            <label index="itemlabel_supervision_required.no">No</label>
+            <label index="admin_menu_link">Admin</label>
+            <label index="admin_my_opps">Show My Opportunities</label>
+            <label index="admin_menu_title">Servant Matcher Admin Menu</label>
+            <label index="adminform_name">Opportunity Name</label>
+            <label index="adminform_ministry">Ministry</label>
+            <label index="adminform_contact">Contact</label>
+            <label index="adminform_reference_code">Shelby Opportunity ID</label>
+            <label index="adminform_description">Description</label>
+            <label index="adminform_location">Location</label>
+            <label index="adminform_times_needed">Time(s) Needed</label>
+            <label index="adminform_priority">Priority</label>
+            <label index="adminform_qualifications">Qualifications</label>
+            <label index="adminform_openings">Number of Openings</label>
+            <label index="adminform_misc_description">Misc Description</label>
+            <label index="adminform_skills_needed">Skills Needed</label>
+            <label index="adminform_ministry_name">Ministry Name</label>
+            <label index="adminform_ministry_description">Ministry Description</label>
+            <label index="adminform_group_type">Type Of Group</label>
+            <label index="adminform_primary_contact">Primary Contact</label>
+            <label index="adminform_contact_name">Contact Name</label>
+            <label index="adminform_datetime">Date/Time</label>
+            <label index="adminform_youth_friendly">Youth Friendly</label>
+            <label index="adminform_youth_friendly.yes">Yes</label>
+            <label index="adminform_youth_friendly.no">No</label>
+            <label index="adminform_supervision_required">Parent/Guardian Required:</label>
+            <label index="adminform_supervision_required.yes">Yes</label>
+            <label index="adminform_supervision_required.no">No</label>
+            <label index="adminform_address">Address</label>
+            <label index="adminform_city">City</label>
+            <label index="adminform_zone">State</label>
+            <label index="adminform_zip">Zipcode</label>
+            <label index="adminform_telephone">Telephone</label>
+            <label index="adminform_email">E-mail</label>
+            <label index="admin_menu_monthly_stats">SERVANT MONTHLY SIGNUP STATS</label>
+            <label index="admin_menu_weekly_stats">SERVANT WEEKLY SIGNUP STATS</label>
+            <label index="admin_total_signups">Total Servant Signups</label>
+            <label index="select_all_ministries">Show All</label>
+            <label index="clearall_button">clear all</label>
+            <label index="selectall_button">select all</label>
+            <label index="custom_ministry">Custom Ministry</label>
+            <label index="admin_email"></label>
+            <label index="no_openings">%s has no openings, please check back later</label>
+            <label index="admin_name">Administrator</label>
+            <label index="no_valid_contact_email">No valid contact email -- forwarding to admin</label>
+            <label index="print_button">Print Page</label>
+            <label index="signup_header">&lt;h1&gt;#NAME# Servant Signup Information&lt;/h1&gt;</label>
+            <label index="signup_thanks">&lt;h3&gt;Thank you for signing up. You will soon be contacted by the ministry area.&lt;/h3&gt;</label>
+            <label index="contact_header">&lt;h2&gt;Your Contact Info&lt;/h2&gt;</label>
+            <label index="servantopp_header">&lt;h2&gt;Your Servant Opportunity&lt;/h2&gt;</label>
+            <label index="print_button_text">Click your browser back button after print</label>
+            <label index="print_button_text2">Click here to exit this page</label>
+            <label index="other_comments">Other Comments</label>
+            <label index="blankEmailFrom">nobody@nowhere.org</label>
+            <label index="find_by_ministries">Search By Ministries</label>
+            <label index="find_all_ministries_btn">Find By Ministries Selected</label>
+            <label index="find_by_ministries_header">Multiple Ministries</label>
+            <label index="show_ministries_on">click to select by ministries</label>
+            <label index="show_ministries_off">hide ministries list</label>
+            <label index="admin_add_opp">Added New Ministry Opportunity</label>
+            <label index="admin_upd_opp">Updated Existing Ministry Opportunity</label>
+            <label index="admin_del_opp">Deleted Ministry Opportunity</label>
+            <label index="admin_add_contact">Added New Contact</label>
+            <label index="admin_upd_contact">Updated Existing Contact</label>
+            <label index="admin_add_ministry">Added New Ministry</label>
+            <label index="admin_upd_ministry">Updated Existing Ministry</label>
+            <label index="admin_stats_month">Month of </label>
+            <label index="admin_stats_week">Week of </label>
+            <label index="admin_stats_active_header">ACTIVE SERVANT OPPORTUNITY STATS</label>
+            <label index="admin_stats_total">Total Servant Signups</label>
+            <label index="admin_stats_pastyear">FOR PAST YEAR</label>
+            <label index="admin_stats_past3months">FOR PAST 3 MONTHS</label>
+            <label index="admin_stats_pastmonth">FOR PAST MONTH</label>
+            <label index="admin_no_entries">No entries found.</label>
+            <label index="admin_back_btn">back</label>
+            <label index="admin_stats_inactive_header">INACTIVE SERVANT OPPORTUNITY STATS</label>
+            <label index="admin_stats_past6months">FOR PAST 6 MONTHS</label>
+            <label index="admin_stats_total_active">Total Active Ministry Opportunities</label>
+            <label index="admin_stats_total_inactive">Total Inactive Ministry Opportunities</label>
+            <label index="view_single_link">View This</label>
+            <label index="view_single_results"></label>
+            <label index="contact_stafflink">Click to view</label>
+            <label index="itemlabel_contact_stafflink">Staff page:</label>
+            <label index="find_by_ministry_results_all">All ministries</label>
+            <label index="errorIncludeStatic">You must include static &quot;WEC Servant Matcher template&quot; in a template to see the output</label>
+            <label index="clickHereToProceed">Click here to proceed.</label>
+            <label index="needBackgroundCheck">You must sign up as a volunteer and pass a background check before ministry opportunity registration.</label>
+            <label index="needBackgroundCheckRenewal">You must renew your background check before ministry opportunity registration.</label>
+            <label index="notKidFriendly">This ministry opportunity is not appropriate for youths. Please volunteer for one that is &quot;Youth Friendly&quot;.</label>
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+        </languageKey>
+        <languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+            <label index="pi1_title">WEC Servant Matcher</label>
+            <label index="pi1_plus_wiz_description">Verbind activiteiten met mensen die willen helpen.</label>
+            <label index="find_by_skills">Zoek op vaardigheden</label>
+            <label index="find_by_ministry">Zoek op activiteit</label>
+            <label index="find_by_priority">Zoek op behoefte</label>
+            <label index="find_by_last_added">Zoek op laatst toegevoegd</label>
+            <label index="show_skills_on">klik om op vaardigheden te selecteren</label>
+            <label index="show_skills_off">verberg vaardigheden lijst</label>
+            <label index="find_by_ministry_results">Resultaten voor zoeken op activiteit:</label>
+            <label index="find_by_skills_results">Resultaten voor zoeken op vaardigheden:</label>
+            <label index="find_by_needs_results">Resultaten voor zoeken op behoefte:</label>
+            <label index="find_by_lastadded_results">Toont welke het laatst zijn toegevoegd:</label>
+            <label index="find_by_saved_results">Je opgeslagen mogelijkheden:</label>
+            <label index="no_entries_found">geen overeenkomsten gevonden</label>
+            <label index="find_any_skills_btn">Zoek op &amp;eacute;&amp;eacute;n van de geselecteerde vaardigheden</label>
+            <label index="find_all_skills_btn">Zoek op alle geselecteerde vaardigheden</label>
+            <label index="reset_skills_btn">Verwijder geselecteerde vaardigheden</label>
+            <label index="last_10_added_btn">Zoek de laatste mogelijkheden</label>
+            <label index="find_urgent_needs_btn">Zoek urgente behoeften</label>
+            <label index="form_header_interest">Contact vanwege je interesse</label>
+            <label index="form_header_commitment">Schrijf je in</label>
+            <label index="form_signup_instructions">Vul het volgende formulier in en er wordt snel contact met je opgenomen.</label>
+            <label index="form_commitment_text">Je schrijft je in voor het volgende:</label>
+            <label index="form_interest_text">Je bent ge&amp;iuml;nteresseerd in:</label>
+            <label index="form_submit_btn">Verzend</label>
+            <label index="form_required_blank">is een verplicht veld</label>
+            <label index="form_invalid_field">is een ongeldig veld</label>
+            <label index="form_name_label">Naam</label>
+            <label index="form_subject_label">Onderwerp</label>
+            <label index="form_email_label">Email</label>
+            <label index="form_phone_label">Telefoon</label>
+            <label index="form_message_label">Bericht</label>
+            <label index="form_address_label">Adres</label>
+            <label index="form_city_label">Plaats</label>
+            <label index="form_state_label">Provincie</label>
+            <label index="form_zip_label">Postcode</label>
+            <label index="form_attachment_label">Bijlage</label>
+            <label index="form_youth_label">Check if you're under 18 years old</label>
+            <label index="form_youth_label.short">Youth?</label>
+            <label index="form_youth_label.yes">Yes</label>
+            <label index="form_youth_label.no">No</label>
+            <label index="required_text_marker">*</label>
+            <label index="show_required_text">* = verplicht veld</label>
+            <label index="title_description">Inschrijving</label>
+            <label index="email_subject">Bericht van inschrijving</label>
+            <label index="email_none_to_send">Je hebt niets geselecteerd om te verzenden.</label>
+            <label index="email_interestedIn">is ge&amp;iuml;nteresseerd in: </label>
+            <label index="email_makeCommitment">Schrijft zich in voor: </label>
+            <label index="email_success">Je email is verzonden. Er wordt snel contact met je opgenomen vanuit de gekozen activiteit.</label>
+            <label index="email_failure">Je bericht kon niet verzonden worden - er is een server fout. Probeer het later nog eens.</label>
+            <label index="email_failure2">We konden je email niet versturen [code=no_contacts]</label>
+            <label index="email_at_text"> at: </label>
+            <label index="email_subject_notification">NOTIFICATIE:</label>
+            <label index="email_etc_label">=== Overige informatie ===</label>
+            <label index="email_contact_label">=== Contactpersoon voor deze activiteit ===</label>
+            <label index="interest_btn">Ik ben ge&amp;iuml;nteresseerd</label>
+            <label index="commitment_btn">Schrijf je in</label>
+            <label index="edit_btn">Bewerk</label>
+            <label index="save_button">Selectie opslaan</label>
+            <label index="view_saved_items">Bekijk opgeslagen mogelijkheden</label>
+            <label index="list_saved_items">Print opgeslagen mogelijkheden</label>
+            <label index="display_more_details">Toon meer details...</label>
+            <label index="required_group_marker"> (verplicht &amp;eacute;&amp;eacute;n te selecteren)</label>
+            <label index="required_group_error">Een optie moet voor een groep worden ingesteld </label>
+            <label index="required_group_none">Je moet meer vaardigheden selecteren dan die in de verplichte groep(en)</label>
+            <label index="get_skills_error_none">Je moet er tenminste &amp;eacute;&amp;eacute;n selecteren.</label>
+            <label index="preview_title">Welke mogelijkheden zijn er?</label>
+            <label index="preview_btn">Lees verder</label>
+            <label index="preview_description_etc">...</label>
+            <label index="select_ministry">Selecteer...</label>
+            <label index="priorityLevel0">Geen</label>
+            <label index="priorityLevel1">Normaal</label>
+            <label index="priorityLevel2">Urgent</label>
+            <label index="priorityLevel3">Hoog</label>
+            <label index="priorityLevel4">Laag</label>
+            <label index="priorityLevel5">Speciaal</label>
+            <label index="last_added">Laatst toegevoegd</label>
+            <label index="last_added_option0">Selecteer...</label>
+            <label index="last_added_option1">In afgelopen week</label>
+            <label index="last_added_option2">In afgelopen maand</label>
+            <label index="last_added_option3">In afgelopen 3 maanden</label>
+            <label index="last_added_option4">In afgelopen 6 maanden</label>
+            <label index="itemlabel_name">Naam:</label>
+            <label index="itemlabel_ministry_info">Activiteit:</label>
+            <label index="itemlabel_contact_info">Contact:</label>
+            <label index="itemlabel_contact_phone">Telefoon:</label>
+            <label index="itemlabel_contact_email">Email:</label>
+            <label index="itemlabel_priority">Prioriteit:</label>
+            <label index="itemlabel_reference_code">Shelby Opportunity ID:</label>
+            <label index="itemlabel_description">Beschrijving:</label>
+            <label index="itemlabel_location">Locatie:</label>
+            <label index="itemlabel_times_needed">Beschikbaarheid:</label>
+            <label index="itemlabel_misc_description">Overig:</label>
+            <label index="itemlabel_qualifications">Kwalificaties:</label>
+            <label index="itemlabel_openings">Number of Openings:</label>
+            <label index="itemlabel_openings.zero">None</label>
+            <label index="itemlabel_skills">Benodigde vaardigheden/interesses:</label>
+            <label index="itemlabel_save_item">Bewaar voor later</label>
+            <label index="itemlabel_datetime">Date/Time:</label>
+            <label index="itemlabel_youth_friendly">Youth Friendly:</label>
+            <label index="itemlabel_youth_friendly.yes">Yes</label>
+            <label index="itemlabel_youth_friendly.no">No</label>
+            <label index="admin_menu_link">Admin</label>
+            <label index="admin_my_opps">Toon mijn mogelijkheden</label>
+            <label index="admin_menu_title">Servant Matcher Admin Menu</label>
+            <label index="adminform_name">Naam mogelijkheid</label>
+            <label index="adminform_ministry">Activiteit</label>
+            <label index="adminform_contact">Contact</label>
+            <label index="adminform_reference_code">Shelby Opportunity ID:</label>
+            <label index="adminform_description">Beschrijving</label>
+            <label index="adminform_location">Locatie</label>
+            <label index="adminform_times_needed">Beschikbaarheid</label>
+            <label index="adminform_priority">Prioriteit</label>
+            <label index="adminform_qualifications">Kwalificaties</label>
+            <label index="adminform_openings">Number of Openings</label>
+            <label index="adminform_misc_description">Overig</label>
+            <label index="adminform_skills_needed">Benodigde vaardigheden</label>
+            <label index="adminform_ministry_name">Naam activiteit</label>
+            <label index="adminform_ministry_description">Beschrijving activiteit</label>
+            <label index="adminform_group_type">Soort groep</label>
+            <label index="adminform_primary_contact">Contactpersoon</label>
+            <label index="adminform_contact_name">Contact Naam</label>
+            <label index="adminform_datetime">Date/Time</label>
+            <label index="adminform_youth_friendly">Youth Friendly</label>
+            <label index="adminform_youth_friendly.yes">Yes</label>
+            <label index="adminform_youth_friendly.no">No</label>
+            <label index="adminform_address">Adres</label>
+            <label index="adminform_city">Plaats</label>
+            <label index="adminform_zone">State</label>
+            <label index="adminform_zip">Postcode</label>
+            <label index="adminform_telephone">Telefoon</label>
+            <label index="adminform_email">Email</label>
+            <label index="select_all_ministries">Toon alle</label>
+            <label index="clearall_button">Verwijder alle</label>
+            <label index="selectall_button">Selecteer alle</label>
+            <label index="custom_ministry">Aangepaste activiteit</label>
+            <label index="admin_email"></label>
+            <label index="no_openings">%s has no openings, please check back later</label>
+            <label index="admin_name">Administrator</label>
+            <label index="no_valid_contact_email">Geen geldig email adres - doorgestuurd naar beheerder</label>
+            <label index="print_button">Print Pagina</label>
+            <label index="signup_header">&lt;h1&gt;#NAME# Inschrijving informatie&lt;/h1&gt;</label>
+            <label index="signup_thanks">&lt;h3&gt;Bedankt voor je inschrijving. Er wordt binnenkort contact met je opgenomen.&lt;/h3&gt;</label>
+            <label index="contact_header">&lt;h2&gt;Jouw contact informatie&lt;/h2&gt;</label>
+            <label index="servantopp_header">&lt;h2&gt;Jouw mogelijkheid&lt;/h2&gt;</label>
+            <label index="print_button_text">Klik op de terug-toets in je browser na het afdrukken</label>
+            <label index="print_button_text2">Klik hier om de pagina te verlaten</label>
+            <label index="other_comments">Overige opmerkingen</label>
+            <label index="blankEmailFrom">nobody@nowhere.org</label>
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+        <languageKey index="ca" type="array">
+        </languageKey>
+        <languageKey index="ba" type="array">
+        </languageKey>
+        <languageKey index="kr" type="array">
+        </languageKey>
+        <languageKey index="eo" type="array">
+        </languageKey>
+        <languageKey index="my" type="array">
+        </languageKey>
+    </data>
+    <orig_hash type="array">
+        <languageKey index="default" type="array">
+            <label index="pi1_title" type="integer">2796460</label>
+            <label index="pi1_plus_wiz_description" type="integer">75270300</label>
+            <label index="find_by_skills" type="integer">34484052</label>
+            <label index="find_by_ministry" type="integer">161407565</label>
+            <label index="find_by_priority" type="integer">51447557</label>
+            <label index="find_by_dates" type="integer">200144793</label>
+            <label index="find_by_last_added" type="integer">258386458</label>
+            <label index="show_skills_on" type="integer">218773970</label>
+            <label index="show_skills_off" type="integer">137591330</label>
+            <label index="find_by_ministry_results" type="integer">183118536</label>
+            <label index="find_by_skills_results" type="integer">50821206</label>
+            <label index="find_by_needs_results" type="integer">223206456</label>
+            <label index="find_by_lastadded_results" type="integer">37175923</label>
+            <label index="find_by_saved_results" type="integer">250866472</label>
+            <label index="no_entries_found" type="integer">136532917</label>
+            <label index="find_any_skills_btn" type="integer">66013266</label>
+            <label index="find_all_skills_btn" type="integer">92395091</label>
+            <label index="reset_skills_btn" type="integer">175143550</label>
+            <label index="last_10_added_btn" type="integer">2828494</label>
+            <label index="find_urgent_needs_btn" type="integer">240615368</label>
+            <label index="form_header_interest" type="integer">128067608</label>
+            <label index="form_header_commitment" type="integer">101933242</label>
+            <label index="form_signup_instructions" type="integer">98431260</label>
+            <label index="form_commitment_text" type="integer">85143738</label>
+            <label index="form_interest_text" type="integer">31677369</label>
+            <label index="form_submit_btn" type="integer">134814142</label>
+            <label index="form_required_blank" type="integer">184490526</label>
+            <label index="form_invalid_field" type="integer">173470388</label>
+            <label index="form_name_label" type="integer">77521672</label>
+            <label index="form_subject_label" type="integer">209228523</label>
+            <label index="form_email_label" type="integer">216575645</label>
+            <label index="form_phone_label" type="integer">197928267</label>
+            <label index="form_message_label" type="integer">79866110</label>
+            <label index="form_address_label" type="integer">232242979</label>
+            <label index="form_city_label" type="integer">92079470</label>
+            <label index="form_state_label" type="integer">74066497</label>
+            <label index="form_zip_label" type="integer">98662484</label>
+            <label index="form_attachment_label" type="integer">245150231</label>
+            <label index="form_youth_label" type="integer">161836498</label>
+            <label index="form_youth_label.short" type="integer">139863339</label>
+            <label index="form_youth_label.yes" type="integer">154974727</label>
+            <label index="form_youth_label.no" type="integer">196073266</label>
+            <label index="form_parents_name_label" type="integer">225327078</label>
+            <label index="required_text_marker" type="integer">54042030</label>
+            <label index="show_required_text" type="integer">52389042</label>
+            <label index="title_description" type="integer">81010213</label>
+            <label index="email_subject" type="integer">3535589</label>
+            <label index="email_none_to_send" type="integer">141372433</label>
+            <label index="email_interestedIn" type="integer">249184227</label>
+            <label index="email_makeCommitment" type="integer">231189601</label>
+            <label index="email_success" type="integer">135440089</label>
+            <label index="email_failure" type="integer">180904574</label>
+            <label index="email_failure2" type="integer">226207077</label>
+            <label index="email_at_text" type="integer">622977</label>
+            <label index="email_subject_notification" type="integer">81011726</label>
+            <label index="email_etc_label" type="integer">46681760</label>
+            <label index="email_contact_label" type="integer">265400159</label>
+            <label index="interest_btn" type="integer">153787226</label>
+            <label index="commitment_btn" type="integer">101933242</label>
+            <label index="edit_btn" type="integer">131916066</label>
+            <label index="save_button" type="integer">267356841</label>
+            <label index="view_saved_items" type="integer">56468757</label>
+            <label index="list_saved_items" type="integer">130923686</label>
+            <label index="display_more_details" type="integer">127325616</label>
+            <label index="required_group_marker" type="integer">195364571</label>
+            <label index="required_group_error" type="integer">115116978</label>
+            <label index="required_group_none" type="integer">2946673</label>
+            <label index="get_skills_error_none" type="integer">52949735</label>
+            <label index="preview_title" type="integer">175764481</label>
+            <label index="preview_btn" type="integer">9695022</label>
+            <label index="preview_description_etc" type="integer">49560386</label>
+            <label index="select_ministry" type="integer">125257565</label>
+            <label index="priorityLevel0" type="integer">112064895</label>
+            <label index="priorityLevel1" type="integer">157332556</label>
+            <label index="priorityLevel2" type="integer">40928613</label>
+            <label index="priorityLevel3" type="integer">106287628</label>
+            <label index="priorityLevel4" type="integer">42798813</label>
+            <label index="priorityLevel5" type="integer">189541205</label>
+            <label index="dateFrom" type="integer">98197902</label>
+            <label index="dateTo" type="integer">236066426</label>
+            <label index="last_added" type="integer">130975350</label>
+            <label index="last_added_option0" type="integer">125257565</label>
+            <label index="last_added_option1" type="integer">122748224</label>
+            <label index="last_added_option2" type="integer">195624259</label>
+            <label index="last_added_option3" type="integer">151202703</label>
+            <label index="last_added_option4" type="integer">115797567</label>
+            <label index="itemlabel_name" type="integer">81871034</label>
+            <label index="itemlabel_ministry_info" type="integer">185044547</label>
+            <label index="itemlabel_contact_info" type="integer">67080102</label>
+            <label index="itemlabel_contact_phone" type="integer">108244482</label>
+            <label index="itemlabel_contact_email" type="integer">111272549</label>
+            <label index="itemlabel_priority" type="integer">6238968</label>
+            <label index="itemlabel_reference_code" type="integer">25589209</label>
+            <label index="itemlabel_description" type="integer">218120871</label>
+            <label index="itemlabel_location" type="integer">199837335</label>
+            <label index="itemlabel_times_needed" type="integer">134208096</label>
+            <label index="itemlabel_misc_description" type="integer">96870832</label>
+            <label index="itemlabel_qualifications" type="integer">250695935</label>
+            <label index="itemlabel_openings" type="integer">27278690</label>
+            <label index="itemlabel_openings.zero" type="integer">112064895</label>
+            <label index="itemlabel_skills" type="integer">109520700</label>
+            <label index="itemlabel_save_item" type="integer">31332236</label>
+            <label index="itemlabel_datetime" type="integer">101224737</label>
+            <label index="itemlabel_datetime.ongoing" type="integer">111233207</label>
+            <label index="itemlabel_youth_friendly" type="integer">208246203</label>
+            <label index="itemlabel_youth_friendly.yes" type="integer">154974727</label>
+            <label index="itemlabel_youth_friendly.no" type="integer">196073266</label>
+            <label index="itemlabel_supervision_required" type="integer">29370179</label>
+            <label index="itemlabel_supervision_required.yes" type="integer">154974727</label>
+            <label index="itemlabel_supervision_required.no" type="integer">196073266</label>
+            <label index="admin_menu_link" type="integer">238747344</label>
+            <label index="admin_my_opps" type="integer">92647630</label>
+            <label index="admin_menu_title" type="integer">160263338</label>
+            <label index="adminform_name" type="integer">69340294</label>
+            <label index="adminform_ministry" type="integer">66149444</label>
+            <label index="adminform_contact" type="integer">196804370</label>
+            <label index="adminform_reference_code" type="integer">98424293</label>
+            <label index="adminform_description" type="integer">190479069</label>
+            <label index="adminform_location" type="integer">216383317</label>
+            <label index="adminform_times_needed" type="integer">35366577</label>
+            <label index="adminform_priority" type="integer">84056429</label>
+            <label index="adminform_qualifications" type="integer">158003309</label>
+            <label index="adminform_openings" type="integer">79766602</label>
+            <label index="adminform_misc_description" type="integer">51128300</label>
+            <label index="adminform_skills_needed" type="integer">207498858</label>
+            <label index="adminform_ministry_name" type="integer">83887560</label>
+            <label index="adminform_ministry_description" type="integer">189844840</label>
+            <label index="adminform_group_type" type="integer">224094018</label>
+            <label index="adminform_primary_contact" type="integer">260784499</label>
+            <label index="adminform_contact_name" type="integer">131061891</label>
+            <label index="adminform_datetime" type="integer">128735770</label>
+            <label index="adminform_youth_friendly" type="integer">157141939</label>
+            <label index="adminform_youth_friendly.yes" type="integer">154974727</label>
+            <label index="adminform_youth_friendly.no" type="integer">196073266</label>
+            <label index="adminform_supervision_required" type="integer">29370179</label>
+            <label index="adminform_supervision_required.yes" type="integer">154974727</label>
+            <label index="adminform_supervision_required.no" type="integer">196073266</label>
+            <label index="adminform_address" type="integer">232242979</label>
+            <label index="adminform_city" type="integer">92079470</label>
+            <label index="adminform_zone" type="integer">74066497</label>
+            <label index="adminform_zip" type="integer">235854055</label>
+            <label index="adminform_telephone" type="integer">187309708</label>
+            <label index="adminform_email" type="integer">32015587</label>
+            <label index="admin_menu_monthly_stats" type="integer">179153599</label>
+            <label index="admin_menu_weekly_stats" type="integer">146861759</label>
+            <label index="admin_total_signups" type="integer">185421445</label>
+            <label index="select_all_ministries" type="integer">147655948</label>
+            <label index="clearall_button" type="integer">154030638</label>
+            <label index="selectall_button" type="integer">252932736</label>
+            <label index="custom_ministry" type="integer">50205004</label>
+            <label index="admin_email" type="integer">222419149</label>
+            <label index="no_openings" type="integer">48171125</label>
+            <label index="admin_name" type="integer">129481765</label>
+            <label index="no_valid_contact_email" type="integer">177017936</label>
+            <label index="print_button" type="integer">63272915</label>
+            <label index="signup_header" type="integer">157244374</label>
+            <label index="signup_thanks" type="integer">20384982</label>
+            <label index="contact_header" type="integer">5139159</label>
+            <label index="servantopp_header" type="integer">11800647</label>
+            <label index="print_button_text" type="integer">104361671</label>
+            <label index="print_button_text2" type="integer">56250675</label>
+            <label index="other_comments" type="integer">222210686</label>
+            <label index="blankEmailFrom" type="integer">151198</label>
+            <label index="find_by_ministries" type="integer">128236532</label>
+            <label index="find_all_ministries_btn" type="integer">86480415</label>
+            <label index="find_by_ministries_header" type="integer">230741579</label>
+            <label index="show_ministries_on" type="integer">10833463</label>
+            <label index="show_ministries_off" type="integer">194090006</label>
+            <label index="admin_add_opp" type="integer">126679679</label>
+            <label index="admin_upd_opp" type="integer">140751060</label>
+            <label index="admin_del_opp" type="integer">213690795</label>
+            <label index="admin_add_contact" type="integer">228258807</label>
+            <label index="admin_upd_contact" type="integer">257784209</label>
+            <label index="admin_add_ministry" type="integer">200313064</label>
+            <label index="admin_upd_ministry" type="integer">123639819</label>
+            <label index="admin_stats_month" type="integer">196583462</label>
+            <label index="admin_stats_week" type="integer">37231151</label>
+            <label index="admin_stats_active_header" type="integer">121080384</label>
+            <label index="admin_stats_total" type="integer">185421445</label>
+            <label index="admin_stats_pastyear" type="integer">184963963</label>
+            <label index="admin_stats_past3months" type="integer">125683740</label>
+            <label index="admin_stats_pastmonth" type="integer">44189012</label>
+            <label index="admin_no_entries" type="integer">181449757</label>
+            <label index="admin_back_btn" type="integer">74038176</label>
+            <label index="admin_stats_inactive_header" type="integer">141792496</label>
+            <label index="admin_stats_past6months" type="integer">240493799</label>
+            <label index="admin_stats_total_active" type="integer">79802606</label>
+            <label index="admin_stats_total_inactive" type="integer">139252398</label>
+            <label index="view_single_link" type="integer">20956785</label>
+            <label index="view_single_results" type="integer">222419149</label>
+            <label index="contact_stafflink" type="integer">12838853</label>
+            <label index="itemlabel_contact_stafflink" type="integer">16884345</label>
+            <label index="find_by_ministry_results_all" type="integer">267913432</label>
+            <label index="errorIncludeStatic" type="integer">16553835</label>
+            <label index="clickHereToProceed" type="integer">89641374</label>
+            <label index="needBackgroundCheck" type="integer">260287565</label>
+            <label index="needBackgroundCheckRenewal" type="integer">255758965</label>
+            <label index="notKidFriendly" type="integer">64899989</label>
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+        </languageKey>
+        <languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+            <label index="pi1_title" type="integer">2796460</label>
+            <label index="pi1_plus_wiz_description" type="integer">75270300</label>
+            <label index="find_by_skills" type="integer">34484052</label>
+            <label index="find_by_ministry" type="integer">161407565</label>
+            <label index="find_by_priority" type="integer">51447557</label>
+            <label index="find_by_last_added" type="integer">258386458</label>
+            <label index="show_skills_on" type="integer">218773970</label>
+            <label index="show_skills_off" type="integer">137591330</label>
+            <label index="find_by_ministry_results" type="integer">183118536</label>
+            <label index="find_by_skills_results" type="integer">50821206</label>
+            <label index="find_by_needs_results" type="integer">223206456</label>
+            <label index="find_by_lastadded_results" type="integer">37175923</label>
+            <label index="find_by_saved_results" type="integer">250866472</label>
+            <label index="no_entries_found" type="integer">136532917</label>
+            <label index="find_any_skills_btn" type="integer">66013266</label>
+            <label index="find_all_skills_btn" type="integer">92395091</label>
+            <label index="reset_skills_btn" type="integer">175143550</label>
+            <label index="last_10_added_btn" type="integer">2828494</label>
+            <label index="find_urgent_needs_btn" type="integer">240615368</label>
+            <label index="form_header_interest" type="integer">128067608</label>
+            <label index="form_header_commitment" type="integer">101933242</label>
+            <label index="form_signup_instructions" type="integer">98431260</label>
+            <label index="form_commitment_text" type="integer">85143738</label>
+            <label index="form_interest_text" type="integer">31677369</label>
+            <label index="form_submit_btn" type="integer">134814142</label>
+            <label index="form_required_blank" type="integer">184490526</label>
+            <label index="form_invalid_field" type="integer">173470388</label>
+            <label index="form_name_label" type="integer">77521672</label>
+            <label index="form_subject_label" type="integer">209228523</label>
+            <label index="form_email_label" type="integer">216575645</label>
+            <label index="form_phone_label" type="integer">197928267</label>
+            <label index="form_message_label" type="integer">79866110</label>
+            <label index="form_address_label" type="integer">232242979</label>
+            <label index="form_city_label" type="integer">92079470</label>
+            <label index="form_state_label" type="integer">74066497</label>
+            <label index="form_zip_label" type="integer">98662484</label>
+            <label index="form_attachment_label" type="integer">245150231</label>
+            <label index="form_youth_label" type="integer">161836498</label>
+            <label index="form_youth_label.short" type="integer">139863339</label>
+            <label index="form_youth_label.yes" type="integer">154974727</label>
+            <label index="form_youth_label.no" type="integer">196073266</label>
+            <label index="required_text_marker" type="integer">54042030</label>
+            <label index="show_required_text" type="integer">52389042</label>
+            <label index="title_description" type="integer">81010213</label>
+            <label index="email_subject" type="integer">3535589</label>
+            <label index="email_none_to_send" type="integer">141372433</label>
+            <label index="email_interestedIn" type="integer">249184227</label>
+            <label index="email_makeCommitment" type="integer">231189601</label>
+            <label index="email_success" type="integer">135440089</label>
+            <label index="email_failure" type="integer">180904574</label>
+            <label index="email_failure2" type="integer">226207077</label>
+            <label index="email_at_text" type="integer">622977</label>
+            <label index="email_subject_notification" type="integer">81011726</label>
+            <label index="email_etc_label" type="integer">46681760</label>
+            <label index="email_contact_label" type="integer">265400159</label>
+            <label index="interest_btn" type="integer">153787226</label>
+            <label index="commitment_btn" type="integer">101933242</label>
+            <label index="edit_btn" type="integer">131916066</label>
+            <label index="save_button" type="integer">267356841</label>
+            <label index="view_saved_items" type="integer">56468757</label>
+            <label index="list_saved_items" type="integer">130923686</label>
+            <label index="display_more_details" type="integer">127325616</label>
+            <label index="required_group_marker" type="integer">195364571</label>
+            <label index="required_group_error" type="integer">115116978</label>
+            <label index="required_group_none" type="integer">2946673</label>
+            <label index="get_skills_error_none" type="integer">52949735</label>
+            <label index="preview_title" type="integer">175764481</label>
+            <label index="preview_btn" type="integer">9695022</label>
+            <label index="preview_description_etc" type="integer">49560386</label>
+            <label index="select_ministry" type="integer">125257565</label>
+            <label index="priorityLevel0" type="integer">112064895</label>
+            <label index="priorityLevel1" type="integer">157332556</label>
+            <label index="priorityLevel2" type="integer">40928613</label>
+            <label index="priorityLevel3" type="integer">106287628</label>
+            <label index="priorityLevel4" type="integer">42798813</label>
+            <label index="priorityLevel5" type="integer">189541205</label>
+            <label index="last_added" type="integer">130975350</label>
+            <label index="last_added_option0" type="integer">125257565</label>
+            <label index="last_added_option1" type="integer">122748224</label>
+            <label index="last_added_option2" type="integer">195624259</label>
+            <label index="last_added_option3" type="integer">151202703</label>
+            <label index="last_added_option4" type="integer">115797567</label>
+            <label index="itemlabel_name" type="integer">81871034</label>
+            <label index="itemlabel_ministry_info" type="integer">185044547</label>
+            <label index="itemlabel_contact_info" type="integer">67080102</label>
+            <label index="itemlabel_contact_phone" type="integer">108244482</label>
+            <label index="itemlabel_contact_email" type="integer">111272549</label>
+            <label index="itemlabel_priority" type="integer">6238968</label>
+            <label index="itemlabel_reference_code" type="integer">25589209</label>
+            <label index="itemlabel_description" type="integer">218120871</label>
+            <label index="itemlabel_location" type="integer">199837335</label>
+            <label index="itemlabel_times_needed" type="integer">134208096</label>
+            <label index="itemlabel_misc_description" type="integer">96870832</label>
+            <label index="itemlabel_qualifications" type="integer">250695935</label>
+            <label index="itemlabel_openings" type="integer">27278690</label>
+            <label index="itemlabel_openings.zero" type="integer">112064895</label>
+            <label index="itemlabel_skills" type="integer">109520700</label>
+            <label index="itemlabel_save_item" type="integer">31332236</label>
+            <label index="itemlabel_datetime" type="integer">101224737</label>
+            <label index="itemlabel_youth_friendly" type="integer">208246203</label>
+            <label index="itemlabel_youth_friendly.yes" type="integer">154974727</label>
+            <label index="itemlabel_youth_friendly.no" type="integer">196073266</label>
+            <label index="admin_menu_link" type="integer">238747344</label>
+            <label index="admin_my_opps" type="integer">92647630</label>
+            <label index="admin_menu_title" type="integer">160263338</label>
+            <label index="adminform_name" type="integer">69340294</label>
+            <label index="adminform_ministry" type="integer">66149444</label>
+            <label index="adminform_contact" type="integer">196804370</label>
+            <label index="adminform_reference_code" type="integer">98424293</label>
+            <label index="adminform_description" type="integer">190479069</label>
+            <label index="adminform_location" type="integer">216383317</label>
+            <label index="adminform_times_needed" type="integer">35366577</label>
+            <label index="adminform_priority" type="integer">84056429</label>
+            <label index="adminform_qualifications" type="integer">158003309</label>
+            <label index="adminform_openings" type="integer">79766602</label>
+            <label index="adminform_misc_description" type="integer">51128300</label>
+            <label index="adminform_skills_needed" type="integer">207498858</label>
+            <label index="adminform_ministry_name" type="integer">83887560</label>
+            <label index="adminform_ministry_description" type="integer">189844840</label>
+            <label index="adminform_group_type" type="integer">224094018</label>
+            <label index="adminform_primary_contact" type="integer">260784499</label>
+            <label index="adminform_contact_name" type="integer">131061891</label>
+            <label index="adminform_datetime" type="integer">128735770</label>
+            <label index="adminform_youth_friendly" type="integer">157141939</label>
+            <label index="adminform_youth_friendly.yes" type="integer">154974727</label>
+            <label index="adminform_youth_friendly.no" type="integer">196073266</label>
+            <label index="adminform_address" type="integer">232242979</label>
+            <label index="adminform_city" type="integer">92079470</label>
+            <label index="adminform_zone" type="integer">74066497</label>
+            <label index="adminform_zip" type="integer">235854055</label>
+            <label index="adminform_telephone" type="integer">187309708</label>
+            <label index="adminform_email" type="integer">32015587</label>
+            <label index="select_all_ministries" type="integer">147655948</label>
+            <label index="clearall_button" type="integer">154030638</label>
+            <label index="selectall_button" type="integer">252932736</label>
+            <label index="custom_ministry" type="integer">50205004</label>
+            <label index="admin_email" type="integer">222419149</label>
+            <label index="no_openings" type="integer">48171125</label>
+            <label index="admin_name" type="integer">129481765</label>
+            <label index="no_valid_contact_email" type="integer">177017936</label>
+            <label index="print_button" type="integer">63272915</label>
+            <label index="signup_header" type="integer">157244374</label>
+            <label index="signup_thanks" type="integer">20384982</label>
+            <label index="contact_header" type="integer">5139159</label>
+            <label index="servantopp_header" type="integer">11800647</label>
+            <label index="print_button_text" type="integer">104361671</label>
+            <label index="print_button_text2" type="integer">56250675</label>
+            <label index="other_comments" type="integer">222210686</label>
+            <label index="blankEmailFrom" type="integer">151198</label>
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+        <languageKey index="ca" type="array">
+        </languageKey>
+        <languageKey index="ba" type="array">
+        </languageKey>
+        <languageKey index="kr" type="array">
+        </languageKey>
+        <languageKey index="eo" type="array">
+        </languageKey>
+        <languageKey index="my" type="array">
+        </languageKey>
+    </orig_hash>
+    <orig_text type="array">
+        <languageKey index="default" type="array">
+        </languageKey>
+        <languageKey index="dk" type="array">
+        </languageKey>
+        <languageKey index="de" type="array">
+        </languageKey>
+        <languageKey index="no" type="array">
+        </languageKey>
+        <languageKey index="it" type="array">
+        </languageKey>
+        <languageKey index="fr" type="array">
+        </languageKey>
+        <languageKey index="es" type="array">
+        </languageKey>
+        <languageKey index="nl" type="array">
+        </languageKey>
+        <languageKey index="cz" type="array">
+        </languageKey>
+        <languageKey index="pl" type="array">
+        </languageKey>
+        <languageKey index="si" type="array">
+        </languageKey>
+        <languageKey index="fi" type="array">
+        </languageKey>
+        <languageKey index="tr" type="array">
+        </languageKey>
+        <languageKey index="se" type="array">
+        </languageKey>
+        <languageKey index="pt" type="array">
+        </languageKey>
+        <languageKey index="ru" type="array">
+        </languageKey>
+        <languageKey index="ro" type="array">
+        </languageKey>
+        <languageKey index="ch" type="array">
+        </languageKey>
+        <languageKey index="sk" type="array">
+        </languageKey>
+        <languageKey index="lt" type="array">
+        </languageKey>
+        <languageKey index="is" type="array">
+        </languageKey>
+        <languageKey index="hr" type="array">
+        </languageKey>
+        <languageKey index="hu" type="array">
+        </languageKey>
+        <languageKey index="gl" type="array">
+        </languageKey>
+        <languageKey index="th" type="array">
+        </languageKey>
+        <languageKey index="gr" type="array">
+        </languageKey>
+        <languageKey index="hk" type="array">
+        </languageKey>
+        <languageKey index="eu" type="array">
+        </languageKey>
+        <languageKey index="bg" type="array">
+        </languageKey>
+        <languageKey index="br" type="array">
+        </languageKey>
+        <languageKey index="et" type="array">
+        </languageKey>
+        <languageKey index="ar" type="array">
+        </languageKey>
+        <languageKey index="he" type="array">
+        </languageKey>
+        <languageKey index="ua" type="array">
+        </languageKey>
+        <languageKey index="lv" type="array">
+        </languageKey>
+        <languageKey index="jp" type="array">
+        </languageKey>
+        <languageKey index="vn" type="array">
+        </languageKey>
+        <languageKey index="ca" type="array">
+        </languageKey>
+        <languageKey index="ba" type="array">
+        </languageKey>
+        <languageKey index="kr" type="array">
+        </languageKey>
+        <languageKey index="eo" type="array">
+        </languageKey>
+        <languageKey index="my" type="array">
+        </languageKey>
+    </orig_text>
+</T3locallang>

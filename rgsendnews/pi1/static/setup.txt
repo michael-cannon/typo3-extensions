@@ -1,0 +1,35 @@
+plugin.tt_news {
+	rgsendnews = 0
+	
+	displaySingle {
+		image.imageLinkWrap = 0
+		image.file.maxW = 150
+	}
+	
+}
+
+sendnews < page
+
+sendnews = PAGE
+sendnews {
+
+	typeNum=3421
+ 	config.doctype = xhtml_trans
+ 	config.xhtml_cleaning = all
+ 	config.disablePrefixComment = 1
+ 	config.meaningfulTempFilePrefix = 100
+ 	config.sendCacheHeaders = 1	
+  config.disableAllHeaderCode = 1
+  config.metaCharset = utf-8
+  config.additionalHeaders = Content-Type:text/xml;charset=utf-8
+  config.xhtml_cleaning = 0
+  config.admPanel = 0
+  config.sendNoCacheHeaders = 1
+  config.no_cache = 1  
+	config.absRefPrefix = http://www.rggooglemap.com/
+
+  10 < plugin.tx_rgsendnews_pi1
+  10.userFunc = tx_rgsendnews_pi1->xmlFunc
+
+
+}

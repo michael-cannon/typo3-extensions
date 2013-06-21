@@ -1,0 +1,98 @@
+2009-10-15 Thursday 22:36  mc
+
+	* update CHANGELOG
+
+2009-10-15 Thursday 22:31  mc
+
+	* move extconf to extension; default image zoom on
+
+2009-10-15 Thursday 01:05  mc
+
+	* update header options
+
+2009-10-15 Thursday 00:55  mc
+
+	* allow section frame
+
+2009-10-14 Wednesday 21:14  mc
+
+	* include icmedia
+
+2009-10-14 Wednesday 21:12  mc
+
+	* swap seo install so that performance updates happen on realurl
+
+2009-10-11 Sunday 05:48  mc
+
+	* update CHANGELOG
+
+2009-10-11 Sunday 02:04  mc
+
+	* remove keepButtonGroupTogether
+
+2009-10-11 Sunday 02:02  mc
+
+	* add fuller RTE button options; clean up allow/remove tag options;
+	  disable RTE context menu; disable FCE header options; show
+	  navigation title in page tree if any; add samples of context menu
+	  and RTE key list options
+
+2009-10-10 Saturday 11:28  mc
+
+	* update CHANGELOG
+
+2009-10-10 Saturday 11:23  mc
+
+	* update CHANGELOG
+
+2009-10-10 Saturday 11:23  mc
+
+	* remove tvp_clipboard & tvp_dragndrop
+
+2009-10-10 Saturday 10:40  mc
+
+	* update CHANGELOG
+
+2009-10-10 Saturday 10:40  mc
+
+	* remove shortcut page type access and date restriction add-ons as
+	  no longer needed
+
+2009-10-10 Saturday 10:22  mc
+
+	* correct static info defaults; rootPid placement
+
+2009-10-10 Saturday 10:04  mc
+
+	* move security and spam options to icsecurity; adjust magic image
+	  sizes; comment out upload disablers; remove section_frame
+	  options; remove dam/tt_news/simulateStatic options
+
+2009-09-30 Wednesday 10:20  mc
+
+	* consolidate TypoScript setup
+
+2009-09-30 Wednesday 10:10  mc
+
+	* modify suggested extensions
+
+2009-09-25 Friday 01:55  mc
+
+	* modify dependencies; update createPageWizard
+
+2009-09-21 Monday 10:54  mc
+
+	* minor cleanups
+
+2009-09-17 Thursday 09:44  mc
+
+	* update CHANGELOG
+
+2009-09-17 Thursday 09:43  mc
+
+	* Inital import of 'icbase' directory
+
+2009-09-17 Thursday 09:43  mc
+
+	* Initial revision
+

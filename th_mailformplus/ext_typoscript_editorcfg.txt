@@ -1,0 +1,206 @@
+plugin.tx_thmailformplus_pi1.CSS_editor = Plugin: "tx_thmailformplus_pi1"
+plugin.tx_thmailformplus_pi1.CSS_editor.selector = .tx-thmailformplus-pi1
+plugin.tx_thmailformplus_pi1.CSS_editor.exampleWrap = <HR><strong>Plugin: "tx_thmailformplus_pi1"</strong><HR><DIV class="tx-thmailformplus-pi1"> | </DIV>
+plugin.tx_thmailformplus_pi1.CSS_editor.ch {
+	P = Text
+	P.selector = P
+	P.attribs = BODYTEXT
+	P.example = <P>General text wrapped in &lt;P&gt;:<BR>This is text <A href="#">with a link</A> in it. In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+	P.exampleStop = 1
+	P.ch.links = < CSS_editor.ch.A
+	
+	H2 = Header 2
+	H2.selector = H2
+	H2.attribs = HEADER
+	H2.example = <H2>Header 2 example <A href="#"> with link</A></H2><P>Bodytext, Et praeessent diei ac nocti et dividerent lucem ac tenebras et vidit Deus quod esset bonum et factum est...</P>
+	H2.ch.links = < CSS_editor.ch.A
+	H2.exampleStop = 1
+	
+	H3 = Header 3
+	H3.selector = H3
+	H3.attribs = HEADER
+	H3.example = <H3>Header 3 example <A href="#"> with link</A></H3><P>Bodytext, Et praeessent diei ac nocti et dividerent lucem ac tenebras et vidit Deus quod esset bonum et factum est...</P>
+	H3.ch.links = < CSS_editor.ch.A
+	H3.exampleStop = 1
+	
+	
+		## LISTING:
+	modeSelector = Mode selector
+	modeSelector.selector = .tx-thmailformplus-pi1-modeSelector
+	modeSelector.example = <DIV class="tx-thmailformplus-pi1-modeSelector"><table><tr><td class="tx-thmailformplus-pi1-modeSelector-SCell"><P><A HREF="#">Mode 1 (S)</a></P></td><td><P><A HREF="#">Mode 2</a></P></td><td><P><A HREF="#">Mode 3</a></P></td></tr></table></DIV>
+	modeSelector.exampleStop = 1
+	modeSelector.ch.P < .P
+	modeSelector.ch.TABLE = Table
+	modeSelector.ch.TABLE.selector = TABLE
+	modeSelector.ch.TABLE.attribs = TABLE
+	modeSelector.ch.TD = Table cells
+	modeSelector.ch.TD.selector = TD
+	modeSelector.ch.TD.attribs = TD
+	modeSelector.ch.TD.ch {
+	  TD = Selected table cells
+	  TD.selector = + .tx-thmailformplus-pi1-modeSelector-SCell
+	  TD.attribs = TD
+	}
+	modeSelector.ch.TD.ch.TD.ch.P < .P
+	
+	
+	browsebox = Browsing box
+	browsebox.selector = .tx-thmailformplus-pi1-browsebox
+	browsebox.example = <DIV class="tx-thmailformplus-pi1-browsebox"><P>Displaying results <span class="tx-thmailformplus-pi1-browsebox-strong">1 to 3</span> out of <span class="tx-thmailformplus-pi1-browsebox-strong">4</span></P><table><tr><td class="tx-thmailformplus-pi1-browsebox-SCell"><p><A HREF="#">Page 1 (S)</a></p></td><td><p><A HREF="#">Page 2</a></p></td><td><p><A HREF="#">Next ></a></p></td></tr></table></DIV>
+	browsebox.exampleStop = 1
+	browsebox.ch.P < .P
+	browsebox.ch.P.ch.strong = Emphasized numbers
+	browsebox.ch.P.ch.strong {
+	  selector = SPAN.tx-thmailformplus-pi1-browsebox-strong
+	  attribs = TEXT
+	}
+	browsebox.ch.TABLE = Table
+	browsebox.ch.TABLE.selector = TABLE
+	browsebox.ch.TABLE.attribs = TABLE
+	browsebox.ch.TD = Table cells
+	browsebox.ch.TD.selector = TD
+	browsebox.ch.TD.attribs = TD
+	browsebox.ch.TD.ch {
+	  TD = Selected table cells
+	  TD.selector = + .tx-thmailformplus-pi1-browsebox-SCell
+	  TD.attribs = TD
+	}
+	browsebox.ch.TD.ch.P < .P
+	browsebox.ch.TD.ch.TD.ch.P < .P
+
+
+	searchbox = Search box
+	searchbox.selector = .tx-thmailformplus-pi1-searchbox
+	searchbox.example = <DIV class="tx-thmailformplus-pi1-searchbox"><table><form action="#" method="POST"><tr><td><input type="text" name="tx_thmailformplus_pi1[sword]" value="Search word" class="tx-thmailformplus-pi1-searchbox-sword"></td><td><input type="submit" value="Search" class="tx-thmailformplus-pi1-searchbox-button"></td></tr></form></table></DIV>
+	searchbox.exampleStop = 1
+	searchbox.ch {
+		TABLE = Table
+		TABLE.selector = TABLE
+		TABLE.attribs = TABLE
+		TD = Table cells
+		TD.selector = TD
+		TD.attribs = TD
+		INPUT = Form fields
+		INPUT.selector = INPUT
+		INPUT.attribs = TEXT,background-color,width
+		INPUT.ch {
+			sword = Search word field
+			sword.selector = +.tx-thmailformplus-pi1-searchbox-sword
+			sword.attribs = TEXT,background-color,width
+
+			button = Submit button
+			button.selector = +.tx-thmailformplus-pi1-searchbox-button
+			button.attribs = TEXT,background-color,width
+		}
+	}
+	list = List display
+	list.selector = .tx-thmailformplus-pi1-listrow
+	list.example = <DIV class="tx-thmailformplus-pi1-listrow"><P>This is regular bodytext in the list display.</P><P>Viditque Deus cuncta quae fecit et erant valde bona et factum est vespere et mane dies sextus.</P></DIV>
+	list.exampleWrap = <DIV class="tx-thmailformplus-pi1-listrow"> | </DIV>
+	list.ch.P < .P
+	list.ch.P.exampleStop = 0
+	list.ch.P.ch {
+		
+		P_0 = [listrowField-email-to]
+		P_0.selector = +.tx-thmailformplus-pi1-listrowField-email-to
+		P_0.attribs = BODYTEXT
+		P_0.example = <P class="tx-thmailformplus-pi1-listrowField-email-to">[listrowField-email-to] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-listrowField-email-to">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_0.exampleStop = 1
+		P_0.ch.links = < CSS_editor.ch.A
+		
+		
+		P_1 = [listrowField-email-subject]
+		P_1.selector = +.tx-thmailformplus-pi1-listrowField-email-subject
+		P_1.attribs = BODYTEXT
+		P_1.example = <P class="tx-thmailformplus-pi1-listrowField-email-subject">[listrowField-email-subject] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-listrowField-email-subject">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_1.exampleStop = 1
+		P_1.ch.links = < CSS_editor.ch.A
+		
+		
+		P_2 = [listrowField-email-sender]
+		P_2.selector = +.tx-thmailformplus-pi1-listrowField-email-sender
+		P_2.attribs = BODYTEXT
+		P_2.example = <P class="tx-thmailformplus-pi1-listrowField-email-sender">[listrowField-email-sender] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-listrowField-email-sender">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_2.exampleStop = 1
+		P_2.ch.links = < CSS_editor.ch.A
+		
+		
+		P_3 = [listrowField-email-redirect]
+		P_3.selector = +.tx-thmailformplus-pi1-listrowField-email-redirect
+		P_3.attribs = BODYTEXT
+		P_3.example = <P class="tx-thmailformplus-pi1-listrowField-email-redirect">[listrowField-email-redirect] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-listrowField-email-redirect">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_3.exampleStop = 1
+		P_3.ch.links = < CSS_editor.ch.A
+		
+		
+		P_4 = [listrowField-email-requiredfields]
+		P_4.selector = +.tx-thmailformplus-pi1-listrowField-email-requiredfields
+		P_4.attribs = BODYTEXT
+		P_4.example = <P class="tx-thmailformplus-pi1-listrowField-email-requiredfields">[listrowField-email-requiredfields] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-listrowField-email-requiredfields">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_4.exampleStop = 1
+		P_4.ch.links = < CSS_editor.ch.A
+		
+		
+		P_5 = [listrowField-email-htmltemplate]
+		P_5.selector = +.tx-thmailformplus-pi1-listrowField-email-htmltemplate
+		P_5.attribs = BODYTEXT
+		P_5.example = <P class="tx-thmailformplus-pi1-listrowField-email-htmltemplate">[listrowField-email-htmltemplate] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-listrowField-email-htmltemplate">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_5.exampleStop = 1
+		P_5.ch.links = < CSS_editor.ch.A
+	}
+	single = Single display
+	single.selector = .tx-thmailformplus-pi1-singleView
+	single.example = <DIV class="tx-thmailformplus-pi1-singleView"><H2>Header, if any:</H2><P>This is regular bodytext in the list display.</P><P>Viditque Deus cuncta quae fecit et erant valde bona et factum est vespere et mane dies sextus.</P><P><a href="#">Back</a></P></DIV>
+	single.exampleWrap = <DIV class="tx-thmailformplus-pi1-singleView"> | </DIV>
+	single.ch.P < .P
+	single.ch.P.exampleStop = 0
+	single.ch.P.ch {
+		
+		P_0 = [singleViewField-email-to]
+		P_0.selector = +.tx-thmailformplus-pi1-singleViewField-email-to
+		P_0.attribs = BODYTEXT
+		P_0.example = <P class="tx-thmailformplus-pi1-singleViewField-email-to">[singleViewField-email-to] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-singleViewField-email-to">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_0.exampleStop = 1
+		P_0.ch.links = < CSS_editor.ch.A
+		
+		
+		P_1 = [singleViewField-email-subject]
+		P_1.selector = +.tx-thmailformplus-pi1-singleViewField-email-subject
+		P_1.attribs = BODYTEXT
+		P_1.example = <P class="tx-thmailformplus-pi1-singleViewField-email-subject">[singleViewField-email-subject] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-singleViewField-email-subject">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_1.exampleStop = 1
+		P_1.ch.links = < CSS_editor.ch.A
+		
+		
+		P_2 = [singleViewField-email-sender]
+		P_2.selector = +.tx-thmailformplus-pi1-singleViewField-email-sender
+		P_2.attribs = BODYTEXT
+		P_2.example = <P class="tx-thmailformplus-pi1-singleViewField-email-sender">[singleViewField-email-sender] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-singleViewField-email-sender">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_2.exampleStop = 1
+		P_2.ch.links = < CSS_editor.ch.A
+		
+		
+		P_3 = [singleViewField-email-redirect]
+		P_3.selector = +.tx-thmailformplus-pi1-singleViewField-email-redirect
+		P_3.attribs = BODYTEXT
+		P_3.example = <P class="tx-thmailformplus-pi1-singleViewField-email-redirect">[singleViewField-email-redirect] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-singleViewField-email-redirect">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_3.exampleStop = 1
+		P_3.ch.links = < CSS_editor.ch.A
+		
+		
+		P_4 = [singleViewField-email-requiredfields]
+		P_4.selector = +.tx-thmailformplus-pi1-singleViewField-email-requiredfields
+		P_4.attribs = BODYTEXT
+		P_4.example = <P class="tx-thmailformplus-pi1-singleViewField-email-requiredfields">[singleViewField-email-requiredfields] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-singleViewField-email-requiredfields">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_4.exampleStop = 1
+		P_4.ch.links = < CSS_editor.ch.A
+		
+		
+		P_5 = [singleViewField-email-htmltemplate]
+		P_5.selector = +.tx-thmailformplus-pi1-singleViewField-email-htmltemplate
+		P_5.attribs = BODYTEXT
+		P_5.example = <P class="tx-thmailformplus-pi1-singleViewField-email-htmltemplate">[singleViewField-email-htmltemplate] text <A href="#">with a link</A> in it.</P><P class="tx-thmailformplus-pi1-singleViewField-email-htmltemplate">In principio creavit Deus caelum et terram terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus...</P>
+		P_5.exampleStop = 1
+		P_5.ch.links = < CSS_editor.ch.A
+	}
+}

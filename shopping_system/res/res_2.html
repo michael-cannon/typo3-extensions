@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<title>Templates for Shopping System Extension</title>
+		<style type="text/css">
+			div.code{
+				border:1px solid red;
+				background-color:#ddd;
+				padding:3px;
+			}
+			/* -------------------- */
+			#related_product{
+				color:#9f5971;
+				border:1px solid black;
+				padding:8px;
+				width:160px;
+				text-transform:capitalize;
+			}
+			#related_product #related_header{font-weight:bold;}
+			#related_product a{color:#9f5971}
+		</style>
+	</head>
+	<body>
+		<h1>Related Product template</h1>
+		<div class="code">
+			<!-- ###TEMPLATE_RELATED### begin
+				This is the template for the featured product in article page
+			-->
+			<div id="related_product" style="">
+				<div id="related_header">Related product</div>
+				<div id="related_title"><a href="###PRODUCT_LINK###">###PRODUCT_TITLE###</a></div>
+				<div>
+					<a href="###PRODUCT_LINK###">
+						<img src="###PRODUCT_IMAGE###" border="0" /><br />
+						View item &gt;&gt;
+					</a>
+				</div>
+			</div>
+			<!-- ###TEMPLATE_RELATED### end -->
+		</div>
+
+		<h1>This is the template for products categories</h1>
+		<div class="code">
+			<!-- ###TEMPLATE_PRODUCTS_CATEGORIES### begin
+				This is the template for products categories
+			-->
+			<div id="products_categories" style="float: left; margin: 9px; width: 150px; height: 200px">
+				<div id="cat_title" style="font-size: 14px; font-weight: bold">###CATEGORY_TITLE###</div>
+				<div id="featured_product_pic">###FEATURED_PIC###</div>
+				<div id="featured_product_title">###FEATURED_TITLE###</div>
+			</div>
+			<!-- ###TEMPLATE_PRODUCTS_CATEGORIES### end -->
+		</div>
+
+
+		<h1>This is the template for products list</h1>
+		<div class="code">
+			<!-- ###TEMPLATE_PRODUCTS_LIST### begin
+				This is the template for products list
+			-->
+			<table width="100%" cellspacing="0" cellpadding="2" border="0">
+				<!-- ###TEMPLATE_PRODUCT_ROW### -->
+				<tr>
+					<!-- ###TEMPLATE_SINGLE_PRODUCT### -->
+					<div id="CellPosition">
+						<div id="ThumbPosition">              	
+							<a href="">###PRODUCT_PIC###<br></a>
+						</div>
+						<div id="SearchTextPosition">
+						<span class="SearchText"> 
+							<span id="ProductTitle"><a href="">###PRODUCT_TITLE###<br></a></span> 
+							<span id="BrandName">###PRODUCT_BRAND###<br></span> 
+							<span id="Price">$###PRODUCT_PRICE###<br></span> 
+							<span id="MerchantName">###PRODUCT_STORE###<br></span> 
+						</span> 
+						</div>
+					</div>
+					<!-- ###TEMPLATE_SINGLE_PRODUCT### -->
+				</tr>
+				<!-- ###TEMPLATE_PRODUCT_ROW### -->
+			</table>
+			<br />                  		
+			<!-- ###TEMPLATE_PRODUCTS_LIST### end -->
+			
+			<!-- ###TEMPLATE_PRODUCTS_LIST_PAGES### begin -->
+			<div style="clear: both;">###PRODUCT_PAGES###</div>
+			<!-- ###TEMPLATE_PRODUCTS_LIST_PAGES### end -->
+		</div>
+
+
+
+		<h1>This is the template for search form and dropdown list with categories</h1>
+		<div class="code">
+			<!-- ###TEMPLATE_SELECT_BOX### begin
+				This is the template for search form and dropdown list with categories
+			-->
+			<div id="shopingSearch">
+				<form method="get" action="###SEARCH_LINK###">
+					<div><input type="text" size="3" name="product" style="margin-right: 1px;"/><input type="submit" class="btn" style="" value="go" name="submit"/></div>
+					<div style="margin-top: 4px">						
+						<select name="category">
+							<option value="0">All products</option>
+							<!-- ###OPTIONS### -->
+							<option value="###CAT_URL###" ###SELECTED###>###CAT_TITLE###</option>
+							<!-- ###OPTIONS### -->
+						</select>
+					</div>
+				</form>
+			</div>
+			<!-- ###TEMPLATE_SELECT_BOX### end -->
+		</div>
+
+
+	</body>
+</html>

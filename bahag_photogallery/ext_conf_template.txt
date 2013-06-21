@@ -1,0 +1,2 @@
+  # cat=basic; type=string; label=Image IPTC data items:Enter comma separated IPTC tags to be used for images.
+requiredIptcData = object_name, edit_status, priority, category, supplementary_category, fixture_identifier, keywords, release_date, release_time, special_instructions, reference_service, reference_date, reference_number, created_date, originating_program, program_version, object_cycle, byline, byline_title, city, province_state, country_code, country, original_transmission_reference, headline, credit, source, copyright_string, caption, local_caption

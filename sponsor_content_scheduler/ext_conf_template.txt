@@ -1,0 +1,50 @@
+# cat=basic; type=int; label=Sponsor Users PID
+sponsorUsersPID=
+
+# cat=basic; type=int; label=Job Bank PID
+jobBankPID=
+
+# cat=basic; type=int; label=Sponsors PID
+sponsorsPID=
+
+# cat=basic; type=int; label=White Papers PID
+whitePapersPID=
+
+# cat=basic; type=int; label=Round Tables PID
+roundTablesPID=
+
+# cat=basic; type=int; label=Articles PID
+articlesPID=
+
+# cat=basic; type=int; label=Presentations PID
+presentationsPID=
+
+# cat=basic; type=int; label=Item Categories PID
+itemCategoriesPID=
+
+# cat=basic; type=int; label=Maximum Number of Featured White Papers
+maxFeaturedWhitePapers=
+
+# cat=basic; type=int; label=Maximum Number of Featured Round Tables
+maxFeaturedRoundTables=
+
+# cat=basic; type=int; label=Maximum Number of Featured Articles
+maxFeaturedArticles=
+
+# cat=basic; type=int; label=Maximum Number of Featured Presentations
+maxFeaturedPresentations=
+
+# cat=basic; type=string; label=Directory for uploaded logos
+logoDirectory=
+
+# cat=basic; type=string; label=Directory for files related to news items
+relatedFilesDirectory=
+
+# cat=basic; type=int; label=Sponser Group ID to be used while creating sponsor users
+sponsorGroupID=
+
+# cat=basic; type=int; label=Sales Group ID
+salesGroupID=
+
+# cat=basic; type=string; label=New Sponsor Usergroups
+newSponsorGroupIDs=

@@ -1,0 +1,9 @@
+plugin.tx_typo3button_pi1 {
+	templateFile 	= {$plugin.tx_typo3button_pi1.templateFile}
+	url				= {$plugin.tx_typo3button_pi1.url}
+	target			= {$plugin.tx_typo3button_pi1.target}
+	altText			= {$plugin.tx_typo3button_pi1.altText}
+	titleText		= {$plugin.tx_typo3button_pi1.titleText}
+	demoMode 		= {$plugin.tx_typo3button_pi1.demoMode}
+	align			= {$plugin.tx_typo3button_pi1.align}
+}

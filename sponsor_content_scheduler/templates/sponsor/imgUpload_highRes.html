@@ -1,0 +1,44 @@
+<!-- ###UPLOFILEHEADER### starts here-->
+<h1>Upload High Resolution Logos</h1>
+<form action="###ACTIONDELETE###" method="POST">	
+	###UPLOADFILECONTENT###
+	
+</form>
+	
+<!-- ###UPLOFILEHEADER### starts here-->
+
+<!-- ###FILEUPLOAD### starts here-->
+	<h1>Upload New File</h1>
+	<form action="###ACTION###" method="POST" enctype="multipart/form-data">
+	<input type="file" name = "###EXTKEY###[pic]">
+	<input type=hidden name='MAX_FILE_SIZE' value=200000>
+	<input type=hidden name="redirect_url" value="###REDIRECTURL###">
+	&nbsp;<input type="submit" value="Upload">
+	</form>
+	
+	<br/><br/>
+<!-- ###FILEUPLOAD### ends here-->
+
+
+<!-- ###FILEUPLOADDATA### starts here-->
+		<h1>Current files </h1>
+        <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+
+          <tbody>
+            <tr>
+              <td style="font-weight: bold; text-decoration: underline;" width="55%"> Filename </td>
+              <td style="font-weight: bold; text-decoration: underline;" width="30%">Date</td>
+            </tr>
+            <!-- ###FILEUPLOADDATAINNER### starts here-->
+            <tr>
+              <td><input type="checkbox" name="###EXTKEY###[pic][]" value="###UID###"> &nbsp;###FILENAME###</td>
+
+              <td>###DATED###</td>
+            </tr>
+            <!-- ###FILEUPLOADDATAINNER### ends here-->
+            <tr>
+            	<td colspan="2"><INPUT type="submit" value="Delete Selected"><input type=hidden name="redirect_url" value="###REDIRECTURL###"></td>
+            </tr>
+          </tbody>
+        </table>
+	<!-- ###FILEUPLOADDATA### ends here-->

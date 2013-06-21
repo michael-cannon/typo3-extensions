@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_wtdirectory_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="wtdirectory_ttaddress_tx_cbdiningguide_cuisine">Cuisine</label>
+			<label index="wtdirectory_ttaddress_tx_cbdiningguide_specialty">Specialty</label>
+			<label index="wtdirectory_ttaddress_tx_cbdiningguide_meals">Meals</label>
+			<label index="wtdirectory_ttaddress_tx_cbdiningguide_neighborhood">Neighborhood</label>
+			<label index="wtdirectory_ttaddress_tx_cbdiningguide_price">Price</label>
+			<label index="wtdirectory_ttaddress_tx_cbdiningguide_hours">Hours</label>
+			<label index="wtdirectory_special_backlink_label">Back to the Restaurant Guide</label>
+			<label index="wtdirectory_special_detaillink_label">Read more</label>
+			<label index="wtdirectory_googlemaplink_label">Show in map</label>
+			<label index="wtdirectory_ttaddress_uid">UID</label>
+			<label index="wtdirectory_ttaddress_pid">Page ID</label>
+			<label index="wtdirectory_ttaddress_tstamp">Modification time</label>
+			<label index="wtdirectory_ttaddress_hidden">Hidden</label>
+			<label index="wtdirectory_ttaddress_name">Restaurant</label>
+			<label index="wtdirectory_ttaddress_gender">Gender</label>
+			<label index="wtdirectory_ttaddress_first_name">First Name</label>
+			<label index="wtdirectory_ttaddress_middle_name">Middle Name</label>
+			<label index="wtdirectory_ttaddress_last_name">Last Name</label>
+			<label index="wtdirectory_ttaddress_birthday">Birthday</label>
+			<label index="wtdirectory_ttaddress_title">Title</label>
+			<label index="wtdirectory_ttaddress_email">Email</label>
+			<label index="wtdirectory_ttaddress_phone">Phone</label>
+			<label index="wtdirectory_ttaddress_mobile">Mobile</label>
+			<label index="wtdirectory_ttaddress_www">WWW</label>
+			<label index="wtdirectory_ttaddress_address">Address</label>
+			<label index="wtdirectory_ttaddress_building">Building</label>
+			<label index="wtdirectory_ttaddress_room">Room</label>
+			<label index="wtdirectory_ttaddress_company">Company</label>
+			<label index="wtdirectory_ttaddress_city">City</label>
+			<label index="wtdirectory_ttaddress_zip">ZIP Code</label>
+			<label index="wtdirectory_ttaddress_region">State</label>
+			<label index="wtdirectory_ttaddress_country">Country</label>
+			<label index="wtdirectory_ttaddress_image">Image</label>
+			<label index="wtdirectory_ttaddress_fax">Fax</label>
+			<label index="wtdirectory_ttaddress_description">Description</label>
+			<label index="wtdirectory_ttaddress_addressgroup">Address Group</label>
+			<label index="wtdirectory_error_nodetail">No detail view available, please go back.</label>
+			<label index="wtdirectory_error_nolist">No restaurants found.</label>
+			<label index="wtdirectory_search_submitbutton">Search</label>
+			<label index="wtdirectory_search_title">Restaurant Search</label>
+			<label index="wtdirectory_cat_title">Category filter:</label>
+			<label index="wtdirectory_ll_choosecat">Choose category</label>
+			<label index="wtdirectory_ll_pagebrowser_page">Page</label>
+			<label index="wtdirectory_ll_pagebrowser_upto">to</label>
+			<label index="wtdirectory_ll_pagebrowser_within">of</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="wtdirectory_special_backlink_label">Zurück zur Listenansicht</label>
+			<label index="wtdirectory_special_detaillink_label">mehr...</label>
+			<label index="wtdirectory_googlemaplink_label">Zeige in Karte</label>
+			<label index="wtdirectory_ttaddress_uid">UID</label>
+			<label index="wtdirectory_ttaddress_pid">Seiten ID</label>
+			<label index="wtdirectory_ttaddress_tstamp">Änderungszeit</label>
+			<label index="wtdirectory_ttaddress_hidden">Deaktiviert</label>
+			<label index="wtdirectory_ttaddress_name">Voller Name</label>
+			<label index="wtdirectory_ttaddress_gender">Geschlecht</label>
+			<label index="wtdirectory_ttaddress_first_name">Vorname</label>
+			<label index="wtdirectory_ttaddress_middle_name">Zweitname</label>
+			<label index="wtdirectory_ttaddress_last_name">Nachname</label>
+			<label index="wtdirectory_ttaddress_birthday">Geburtstag</label>
+			<label index="wtdirectory_ttaddress_title">Titel</label>
+			<label index="wtdirectory_ttaddress_email">E-Mail Adresse</label>
+			<label index="wtdirectory_ttaddress_phone">Telefonnummer</label>
+			<label index="wtdirectory_ttaddress_mobile">Mobiltelefonnummer</label>
+			<label index="wtdirectory_ttaddress_www">Homepage</label>
+			<label index="wtdirectory_ttaddress_address">Addresse</label>
+			<label index="wtdirectory_ttaddress_building">Gebäude</label>
+			<label index="wtdirectory_ttaddress_room">Raum</label>
+			<label index="wtdirectory_ttaddress_company">Firma</label>
+			<label index="wtdirectory_ttaddress_city">Stadt</label>
+			<label index="wtdirectory_ttaddress_zip">Postleitzahl</label>
+			<label index="wtdirectory_ttaddress_region">Region</label>
+			<label index="wtdirectory_ttaddress_country">Land</label>
+			<label index="wtdirectory_ttaddress_image">Bild</label>
+			<label index="wtdirectory_ttaddress_fax">Faxnummer</label>
+			<label index="wtdirectory_ttaddress_description">Beschreibung</label>
+			<label index="wtdirectory_ttaddress_addressgroup">Addressgruppe</label>
+			<label index="wtdirectory_error_nodetail">Die Detailansicht zum gewählten Datensatz ist nicht verfügbar. Bitte wechseln Sie auf die zuletzt betrachtete Seite.</label>
+			<label index="wtdirectory_error_nolist">Keine Adressen gefunden.</label>
+			<label index="wtdirectory_search_submitbutton">Suche starten</label>
+			<label index="wtdirectory_search_title">Adresssuche:</label>
+			<label index="wtdirectory_cat_title">Kategorieauswahl:</label>
+			<label index="wtdirectory_ll_choosecat">Kategoriewahl</label>
+			<label index="wtdirectory_ll_pagebrowser_page">Seite</label>
+			<label index="wtdirectory_ll_pagebrowser_upto">von</label>
+			<label index="wtdirectory_ll_pagebrowser_within">von insgesamt</label>
+		</languageKey>
+	</data>
+</T3locallang>

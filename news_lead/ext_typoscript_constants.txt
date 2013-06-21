@@ -1,0 +1,28 @@
+plugin.tt_news.news_lead {
+	# cat=plugin.tt_news.news_lead//1; type=boolean; label= Alert Sponsor: If enabled, prevents direct linking of files and sends sponsor (author_email) a note of download
+	send = 0
+
+	# cat=plugin.tt_news.news_lead//5; type=boolean; label= Track All Downloads: If enabled and user is logged in, all file link downloads are tracked
+	trackAll = 1
+
+	# cat=plugin.tt_news.news_lead//2; type=string; label= From Name: From name for sponsor lead
+	fromName = Sponsor Alert
+
+	# cat=plugin.tt_news.news_lead//3; type=string; label= From Email: From email address for sponsor lead
+	fromEmail = root
+
+	# cat=plugin.tt_news.news_lead//4; type=string; label= Bcc: Bcc email address for sponsor lead
+	bcc = Sponsor Alert <root>
+
+	# cat=plugin.tt_news.news_lead//6; type=string; label= Sitename: Name of website 
+	sitename = Your Site ( http://example.com )
+
+	# cat=plugin.tt_news.news_lead/links/1; type=int+; label= Leads PID: The page id where your leads are located.
+	pid =
+
+	# cat=plugin.tt_news.news_lead/links/2; type=int+; label= Leads Time Frame PID: The page id where your lead time frames are located.
+	timeFramePid =
+
+	# cat=plugin.tt_news.news_lead/file/; type=file[html,htm,tmpl,txt]; label= Lead Template File: Lead email template file. See EXT:news_lead/news_lead.tmpl for an example.
+	templateFile = EXT:news_lead/news_lead.tmpl
+}

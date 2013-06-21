@@ -1,0 +1,67 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>General Configuration</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+  				<el>
+					<semester>
+  						<TCEforms>
+  							<label>Semester:</label>
+  							<config>
+								<type>group</type>
+  								<internal_type>db</internal_type>
+  								<allowed>tx_tfclifegroups_semesters</allowed>
+  								<foreign_table>tx_tfclifegroups_semesters</foreign_table>
+								<foreign_table_where>
+									ORDER BY title
+								</foreign_table_where>
+  								<size>1</size>
+  								<maxitems>1</maxitems>
+  								<minitems>0</minitems>
+  							</config>
+  						</TCEforms>
+  					</semester>
+  					<view_mode>
+  						<TCEforms>
+  							<label>View Mode:</label>
+  							<config>
+  								<type>select</type>
+  								<items type="array">
+  									<numIndex index="0" type="array">
+  										<numIndex index="0">Search Box</numIndex>
+  										<numIndex index="1">0</numIndex>
+  									</numIndex>
+  									<numIndex index="1" type="array">
+  										<numIndex index="0">Search Results</numIndex>
+  										<numIndex index="1">1</numIndex>
+  									</numIndex>
+  								</items>
+  								<size>1</size>
+  								<maxitems>1</maxitems>
+  								<minitems>0</minitems>
+  							</config>
+  						</TCEforms>
+  					</view_mode>
+  					<action>
+  						<TCEforms>
+  							<exclude>1</exclude>
+  							<label>Search Results Page:</label>
+  							<config>
+  								<type>group</type>
+  								<internal_type>db</internal_type>
+  								<allowed>pages</allowed>
+  								<size>1</size>
+  								<maxitems>1</maxitems>
+  								<minitems>1</minitems>
+  								<show_thumbs>0</show_thumbs>
+  							</config>
+  						</TCEforms>
+  					</action>
+  				</el>
+  			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

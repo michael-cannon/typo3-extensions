@@ -1,0 +1,13 @@
+plugin.tt_news.news_sponsor {
+	# cat=plugin.tt_news.news_sponsor/dims/3; type=int+; label= Logo-image max width: Max width for an image displayed
+	logoMaxW = 150
+
+	# cat=plugin.tt_news.news_sponsor/dims/4; type=int+; label= Logo-image max height: Max height for an image displayed
+	logoMaxH = 150
+
+	# cat=plugin.tt_news.news_sponsor/file/; type=file[html,htm,tmpl,txt]; label= Sponsor Template File: Sponsor template file. See EXT:news_sponsor/news_sponsor.tmpl for an example.
+	templateFile = EXT:news_sponsor/news_sponsor.tmpl
+
+	# cat=plugin.tt_news.news_sponsor//; type=string; label= Site URL: Website URL.
+	baseUrl = 
+}

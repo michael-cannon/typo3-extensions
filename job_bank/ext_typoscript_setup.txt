@@ -1,0 +1,4 @@
+
+plugin.tx_jobbank_pi1 {
+   templateFile = {$plugin.tx_jobbank_pi1.templateFile}
+}

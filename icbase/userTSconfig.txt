@@ -1,0 +1,95 @@
+options {
+	clearCache {
+		pages = 1
+		all = 1
+	}
+
+	saveDocNew = 1
+
+	# don't clear clipboard
+	saveClipboard = 1
+
+	# Reduces the amount of clipboards from 4 to X:
+	clipboardNumberPads = 2
+
+	shortcutFrame = 1
+	defaultFileUploads = 20
+	
+	# Enable upload field
+	uploadFieldsInTopOfEB = 1
+
+	# Enable folder create
+	createFoldersInEB = 1
+
+	## Set the default spelling ability of the check speller for all users
+	## options: ultra, fast, normal, bad-spellers
+	HTMLAreaPspellMode = normal
+
+	## Enable the personal dictionary feature of the check speller by default for all users
+	enablePersonalDicts = 1
+
+	#show pageID in page tree title
+	pageTree.showPageIdWithTitle = 0
+
+	# show navigation title in page tree if any
+	pageTree.showNavTitle = 1
+
+	# options.contextMenu.pageTree.disableItems = history,edit_access,move_wizard,new_wizard,db_list,tx_impexp_clickmenu,info,perms, versioning
+
+	options.RTEkeyList = *
+	# options.RTEkeyList = formatblock, bold, italic, orderedlist, unorderedlist, outdent, indent, link, unlink, blockstylelabel, blockstyle, textstylelabel, textstyle
+}
+
+# http://typo3.org/documentation/document-library/core-documentation/doc_core_tsconfig/1.0.0/view/1/2/
+setup {
+	default {
+		copyLevels = 9
+
+		# hide the file upload option
+		# edit_docModuleUpload = 0
+
+		edit_RTE = 1
+		edit_showFieldHelp = 0
+
+		# Makes the BE fields wider
+		# edit_wideDocument = 1
+
+		navFrameResizable = 1
+		neverHideAtCopy = 1
+		noOnChangeAlertInTypeFields = 0
+		recursiveDelete = 1
+		startModule = web_layout
+		thumbnailsByDefault = 1
+		titleLen = 50
+	}
+
+	override {
+		# hide the file upload option
+		# edit_docModuleUpload = 0
+	}
+}
+
+mod.xMOD_alt_doc {
+	# If set, the document selector is disabled
+    disableDocSelector = 1
+
+	# If set, the cache/save/close selector is disabled
+    disableCacheSelector = 0
+}
+
+mod.web_list {
+	# edit record just by clicking on title in list-view
+	clickTitleMode = edit
+
+	# alternating colors for records in list-view
+	alternateBgColors = 1
+
+	itemsLimitPerTable = 20
+	itemsLimitSingleTable = 100
+
+	# Limit new record types
+	# allowedNewTables = pages, tt_news, tt_news_cat
+}
+
+# Hide static_info_tables records on the rootpage
+mod.web_list.hideTables = static_template, static_countries, static_country_zones, static_currencies, static_languages, static_territories, static_taxes, static_markets

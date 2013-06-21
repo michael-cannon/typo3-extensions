@@ -1,0 +1,20 @@
+01/22/2005
+
+* fixed bug that prevented default checkbox values from being saved
+* fixed username anon
+
+01/17/2005
+
+* fixed security flaw that enables anon users to fill in non-anon surveys
+* fixed path error with the template file in flexform (needs nicer solution)
+* added TS constant ignoreAlreadyFilled which, if true, makes it possible to
+  fill in the same survey more than once
+* CSV export now includes the timestamp of the record
+
+0.2.0 01/10/2005
+
+* added FlexForm configuration, progress bar with default CSS
+* fixed a bug that made the survey form break framesets
+* removed emailTemplateFile hack, instead have emailSubject and emailBody
+* fixed BE module to properly sort items, added cleaning function for SPSS
+* extended documentation a lot

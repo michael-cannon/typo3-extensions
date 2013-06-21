@@ -1,0 +1,4 @@
+plugin.tt_news.news_related {
+	# cat=plugin.tt_news.news_related/file/; type=file[html,htm,tmpl,txt]; label= Related News Template File: Related news template file. See EXT:news_related/news_related.tmpl for an example.
+	templateFile = EXT:news_related/news_related.tmpl
+}

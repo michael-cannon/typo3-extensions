@@ -1,0 +1,25 @@
+#Constants
+plugin.tx_tfclifegroups_pi1{
+	altTemplateFile = EXT:tfc_lifegroups/pi1/template.tpl.html
+}
+
+plugin.tx_tfclifegroups_pi4{
+	altTemplateFile = EXT:tfc_lifegroups/pi4/template.tpl.html
+	currLabel = Fall 2006
+	currLabelUpdated = Fall 2006 Updated
+	currSemesterID = 3
+		### for sending to lifegroup leaders ###
+	pids = 673,656,638
+	emailFromEmail = lifegroups@tfchurch.org
+	emailFromName = Lifegroup Admin
+	emailCC = lifegroups@tfchurch.org
+	#emailCC = nadavoid@hotmail.com
+	emailSubject = Lifegroup Directory Card
+	lifegroupEmailDuedate = July 21st
+		### for notifications sent to TFC Staff ###
+	#notificationEmailMain = nadavoid@gmail.com
+	notificationEmailMain = lifegroups@tfchurch.org
+	#notificationEmailCC = nadavoid@yahoo.com
+	notificationEmailCC = beckymiles@tfchurch.org, nadavoid@gmail.com
+}
+

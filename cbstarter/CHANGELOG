@@ -1,0 +1,1108 @@
+2010-02-16 Tuesday 19:12  mc
+
+	* reasonable max files and upload options
+
+2009-10-15 Thursday 22:51  mc
+
+	* misc updates
+
+2009-05-04 Monday 02:42  cannon
+
+	* add realistic magic insert image sizes
+
+2009-04-23 Thursday 02:43  cannon
+
+	* Remove shortcutIcon
+
+2009-04-21 Tuesday 02:01  cannon
+
+	* correct notification_email_* constants
+
+2009-04-17 Friday 07:58  cannon
+
+	* type wrap
+
+2009-04-16 Thursday 11:44  cannon
+
+	* adjust srfreecap defaults
+
+2009-04-16 Thursday 11:35  cannon
+
+	* correct static info
+
+2009-04-13 Monday 23:21  cannon
+
+	* add sendCacheHeaders
+
+2009-04-12 Sunday 22:45  cannon
+
+	* disable shortcut till fixed
+
+2009-04-12 Sunday 07:53  cannon
+
+	* add shortcutIcon
+
+2009-04-10 Friday 13:00  cannon
+
+	* The extension is now version: 1.3.2
+
+2009-04-10 Friday 12:59  cannon
+
+	* update CHANGELOG
+
+2009-04-10 Friday 12:59  cannon
+
+	* correct comments and default header comment
+
+2009-04-10 Friday 12:59  cannon
+
+	* update description
+
+2009-04-10 Friday 10:11  cannon
+
+	* The extension is now version: 1.3.1
+
+2009-04-10 Friday 10:10  cannon
+
+	* update CHANGELOG
+
+2009-04-10 Friday 10:10  cannon
+
+	* remove BE check
+
+2009-04-10 Friday 08:14  cannon
+
+	* The extension is now version: 1.3.0
+
+2009-04-10 Friday 08:11  cannon
+
+	* update CHANGELOG
+
+2009-04-10 Friday 08:11  cannon
+
+	* update manual
+
+2009-04-10 Friday 07:28  cannon
+
+	* update CHANGELOG
+
+2009-04-10 Friday 07:18  cannon
+
+	* increase workspace relations limits
+
+2009-04-10 Friday 07:02  cannon
+
+	* edit record just by clicking on title in list-view
+
+2009-04-10 Friday 06:59  cannon
+
+	* sys_template and static_template adminOnly disable
+
+2009-04-09 Thursday 00:29  cannon
+
+	* add translate and disable prepends
+
+2009-04-08 Wednesday 04:19  cannon
+
+	* append unzip
+
+2009-04-02 Thursday 23:48  cannon
+
+	* update CHANGELOG
+
+2009-04-02 Thursday 23:45  cannon
+
+	* Acqal branding
+
+2009-04-02 Thursday 23:34  cannon
+
+	* Acqal branding
+
+2009-03-17 Tuesday 03:31  cannon
+
+	* correct plugin to config
+
+2009-03-17 Tuesday 03:09  cannon
+
+	* update CHANGELOG
+
+2009-03-17 Tuesday 03:09  cannon
+
+	* add headerComment and disablePrefixComment
+
+2009-03-12 Thursday 00:01  cannon
+
+	* spacing; removeFromList() use
+
+2009-03-11 Wednesday 00:05  cannon
+
+	* update CHANGELOG
+
+2009-03-11 Wednesday 00:05  cannon
+
+	* post 1.1.0 checkin
+
+2009-03-11 Wednesday 00:04  cannon
+
+	* update icon
+
+2009-03-11 Wednesday 00:02  cannon
+
+	* update CHANGELOG
+
+2009-03-11 Wednesday 00:02  cannon
+
+	* Manual update
+
+2009-03-11 Wednesday 00:01  cannon
+
+	* cbstarter.tt_news grouping
+
+2009-03-10 Tuesday 23:50  cannon
+
+	* update CHANGELOG
+
+2009-03-10 Tuesday 23:47  cannon
+
+	* CB to Acqal
+
+2009-03-10 Tuesday 23:47  cannon
+
+	* update CHANGELOG
+
+2009-03-10 Tuesday 23:46  cannon
+
+	* Acqal branding update
+
+2009-03-10 Tuesday 23:41  cannon
+
+	* Acqal branding update
+
+2009-03-10 Tuesday 23:36  cannon
+
+	* options cleanup
+
+2009-03-08 Sunday 03:28  cannon
+
+	* enable media tags in table cells
+
+2009-03-02 Monday 20:31  cannon
+
+	* add tt_news.usePiBasePagebrowser
+
+2009-02-25 Wednesday 10:04  cannon
+
+	* remove default DAM; pages is done in cbperformance
+
+2009-02-21 Saturday 01:20  cannon
+
+	* update CHANGELOG
+
+2009-02-21 Saturday 01:20  cannon
+
+	* add script to RTE
+
+2009-02-16 Monday 22:31  cannon
+
+	* don't replace RTE defaults, but supplement them for classes
+
+2009-02-09 Monday 03:15  cannon
+
+	* add iframe to RTE includes
+
+2009-01-25 Sunday 22:31  cannon
+
+	* add embed code for Youtube
+
+2009-01-20 Tuesday 22:14  cannon
+
+	* hide file upload in RTE; enable spell check
+
+2009-01-19 Monday 09:12  cannon
+
+	* revise TS defaults
+
+2009-01-14 Wednesday 23:49  cannon
+
+	* remove div/splash/script ctypes
+
+2009-01-09 Friday 14:10  cannon
+
+	* add dam defaults
+
+2009-01-09 Friday 13:30  cannon
+
+	* remove image uploads
+
+2009-01-09 Friday 13:22  cannon
+
+	* use dam tabs
+
+2009-01-06 Tuesday 10:09  cannon
+
+	* clean up classes and allowed blocks
+
+2009-01-05 Monday 11:50  cannon
+
+	* adjust classes
+
+2009-01-05 Monday 03:48  cannon
+
+	* add default CSS from base template stylesheet
+
+2009-01-05 Monday 03:00  cannon
+
+	* add indexed_search options
+
+2009-01-05 Monday 02:54  cannon
+
+	* adjust RTE; display duplicate news
+
+2008-12-18 Thursday 00:55  cannon
+
+	* WEC updates
+
+2008-09-10 Wednesday 20:22  cannon
+
+	* add TYPO3 basics shortcut page time and access settings
+
+2008-08-25 Monday 12:29  cannon
+
+	* category news ordering
+
+2008-08-19 Tuesday 12:07  cannon
+
+	* label index enabling
+
+2008-08-19 Tuesday 11:41  cannon
+
+	* adjust stying; include indexing
+
+2008-08-18 Monday 12:30  cannon
+
+	* correct content dataWrap; remove excess header and p tag stylings
+
+2008-06-19 Thursday 12:17  cannon
+
+	* add TYPO3 4.2 cross domain link content
+
+2008-06-17 Tuesday 12:55  cannon
+
+	* Version 1.0.3 TYPO3 Extension upload
+
+2008-06-17 Tuesday 12:51  cannon
+
+	* changelog update
+
+2008-06-17 Tuesday 12:51  cannon
+
+	* update manual
+
+2008-06-17 Tuesday 12:44  cannon
+
+	* changelog update
+
+2008-06-17 Tuesday 12:43  cannon
+
+	* list/latest subheader cropping; related news date format; php5
+	  and utf-8 updates
+
+2008-06-07 Saturday 09:00  cannon
+
+	* add access list checkboxes, remove pre-4.2 page and branch
+	  versioning
+
+2008-06-07 Saturday 08:52  cannon
+
+	* add access list checkboxes, remove pre-4.2 page and branch
+	  versioning
+
+2008-04-08 Tuesday 16:46  cannon
+
+	* post 1.0.2 checkin
+
+2008-04-08 Tuesday 16:45  cannon
+
+	* update manual changelog
+
+2008-04-08 Tuesday 16:40  cannon
+
+	* update changelog with news revisions
+
+2008-04-08 Tuesday 16:38  cannon
+
+	* update manual with tt_news constants
+
+2008-04-08 Tuesday 16:17  cannon
+
+	* add listOrderBy
+
+2008-04-03 Thursday 23:03  cannon
+
+	* post 1.0.1 checking
+
+2008-04-03 Thursday 23:01  cannon
+
+	* manual image update
+
+2008-04-02 Wednesday 19:17  cannon
+
+	* Post 1.0.0 checkin
+
+2008-04-02 Wednesday 19:16  cannon
+
+	* manual updates; constants page cleanup
+
+2008-04-02 Wednesday 19:13  cannon
+
+	* clean up constants inclusions
+
+2008-04-02 Wednesday 18:52  cannon
+
+	* remove page types default
+
+2008-04-02 Wednesday 18:02  cannon
+
+	* Inital import of "doc" directory
+
+2008-04-02 Wednesday 16:01  cannon
+
+	* remove stat items; create cbstarter.tt_news constants page
+
+2008-03-03 Monday 17:58  cannon
+
+	* refine performance; give cbstarter own section in TS Constants
+
+2008-02-20 Wednesday 11:41  cannon
+
+	* non-leading zero hours 1-12
+
+2008-02-20 Wednesday 11:37  cannon
+
+	* add tt_news date formatting
+
+2008-02-20 Wednesday 10:25  cannon
+
+	* hide admin panel, but show field edit icons
+
+2008-02-20 Wednesday 10:20  cannon
+
+	* move performance components to cbperformance
+
+2008-02-20 Wednesday 09:48  cannon
+
+	* pull out cbperformance parts
+
+2008-02-20 Wednesday 09:24  cannon
+
+	* version update
+
+2008-02-14 Thursday 13:11  cannon
+
+	* remove c from href#
+
+2007-12-08 Saturday 17:30  cannon
+
+	* changelog update
+
+2007-12-08 Saturday 17:29  cannon
+
+	* remove realurl configuration
+
+2007-12-08 Saturday 17:26  cannon
+
+	* Remoal of "scripts/realurl.php"
+
+2007-09-20 Thursday 10:44  cannon
+
+	* post 0.9.10 check-in
+
+2007-09-20 Thursday 10:41  cannon
+
+	* tidy_path -wrap correction; don't flush RealURLs unset;
+	  addWhereClause deleted change
+
+2007-07-09 Monday 10:40  cannon
+
+	* Add language static info language inputs
+
+2007-07-06 Friday 14:56  cannon
+
+	* add sitemap.xml
+
+2007-07-01 Sunday 10:05  cannon
+
+	* post 0.9.9 checkin
+
+2007-07-01 Sunday 10:03  cannon
+
+	* make pageNotFound_handling optional
+
+2007-06-22 Friday 17:48  cannon
+
+	* post 0.9.8 check in
+
+2007-06-22 Friday 12:24  cannon
+
+	* update manual
+
+2007-06-22 Friday 12:18  cannon
+
+	* comment updates for disabling localconf; remove rtehtmlarea
+	  dependency
+
+2007-06-21 Thursday 21:25  cannon
+
+	* spam protect via JavaScript
+
+2007-06-11 Monday 19:46  cannon
+
+	* add news_search params
+
+2007-06-11 Monday 19:41  cannon
+
+	* add in interfaces, combine, sitename, and cs_utils into preset
+	  blocks
+
+2007-06-11 Monday 19:37  cannon
+
+	* move curl to filepath clobk; reordre blocks
+
+2007-06-11 Monday 17:09  cannon
+
+	* utf8 off by default
+
+2007-06-11 Monday 17:04  cannon
+
+	* replace comment tags with if true/false
+
+2007-06-06 Wednesday 12:38  cannon
+
+	* post 0.9.7 check-in
+
+2007-06-06 Wednesday 12:37  cannon
+
+	* pre 0.9.7 check-in
+
+2007-06-06 Wednesday 12:31  cannon
+
+	* allow persistant connections
+
+2007-06-06 Wednesday 11:39  cannon
+
+	* correct MySQL utf8; TV dislikes pconnect
+
+2007-06-04 Monday 19:08  cannon
+
+	* post 0.9.6 check-in
+
+2007-06-04 Monday 19:08  cannon
+
+	* pre 0.9.6 check-in
+
+2007-06-04 Monday 18:32  cannon
+
+	* remove cHash; use month numbers
+
+2007-05-31 Thursday 10:30  cannon
+
+	* 0.9.5 check in; language correction
+
+2007-05-31 Thursday 09:10  cannon
+
+	* Update ChangeLog
+
+2007-05-31 Thursday 09:06  cannon
+
+	* rearrange news URL; add linklist, cal, and download URLs; add
+	  more languages; Add news URL date constants
+
+2007-04-23 Monday 13:38  cannon
+
+	* 0.9.4 check in
+
+2007-04-23 Monday 13:35  cannon
+
+	* Remove default Stylesheet Link
+
+2007-04-23 Monday 12:35  cannon
+
+	* adjust TYPO3_CONF_VARS['SYS']['setDBinit'] for utf8
+
+2007-04-19 Thursday 18:55  cannon
+
+	* changelog update
+
+2007-04-16 Monday 23:00  cannon
+
+	* Post 0.9.1 check-in
+
+2007-04-16 Monday 22:59  cannon
+
+	* comment out troublesome localconf settings; switch from
+	  rtehtmlarea RTE config to tinyrte
+
+2007-04-15 Sunday 21:32  cannon
+
+	* 0.9.0 post-check in
+
+2007-04-15 Sunday 21:10  cannon
+
+	* remove dependencies
+
+2007-04-15 Sunday 21:08  cannon
+
+	* update changelog format; add changelog to doc
+
+2007-04-15 Sunday 20:57  cannon
+
+	* update changelog
+
+2007-04-14 Saturday 10:02  cannon
+
+	* enable to booelan fixes; add cache_period, xhtmlDoctype, reorder
+	  xhtml
+
+2007-04-06 Friday 18:09  cannon
+
+	* remove header_layout revisions
+
+2007-04-06 Friday 15:38  cannon
+
+	* add hide in menu sitemap show option
+
+2007-03-25 Sunday 21:24  cannon
+
+	* expiration; page not found; don't require rtehtmlarea
+
+2007-02-01 Thursday 22:11  cannon
+
+	* expireDays 1095; autoUpdate off
+
+2007-02-01 Thursday 22:01  cannon
+
+	* expire in 365 days
+
+2007-01-29 Monday 12:44  cannon
+
+	* comment warranty
+
+2007-01-26 Friday 00:25  cannon
+
+	* 0.8.5 post-check
+
+2007-01-26 Friday 00:24  cannon
+
+	* 0.8.5 pre-check
+
+2007-01-26 Friday 00:22  cannon
+
+	* revert to 1.25; news page
+
+2007-01-22 Monday 12:28  cannon
+
+	* post 0.8.4 checkin
+
+2007-01-22 Monday 12:28  cannon
+
+	* pre 0.8.4 checkin
+
+2007-01-22 Monday 12:27  cannon
+
+	* remove server warning
+
+2007-01-22 Monday 04:15  andyyaro
+
+	* Add tx_ttnews[page] parameter (Article paging for SavvyMiss)
+
+2007-01-12 Friday 22:50  cannon
+
+	* remove sitemap TS
+
+2007-01-10 Wednesday 11:53  cannon
+
+	* 0.8.3 checkin
+
+2007-01-10 Wednesday 11:51  cannon
+
+	* wrapItemAndSub sitemap correction
+
+2007-01-10 Wednesday 11:21  cannon
+
+	* post 0.8.2 checkin
+
+2007-01-10 Wednesday 11:20  cannon
+
+	* pre 0.8.2 checkin
+
+2007-01-10 Wednesday 11:17  cannon
+
+	* Remoal of "ChangeLog"
+
+2007-01-10 Wednesday 11:16  cannon
+
+	* Inital import of "CHANGELOG" file
+
+2007-01-10 Wednesday 11:14  cannon
+
+	* add in cache_clearAtMidnight
+
+2007-01-07 Sunday 00:58  cannon
+
+	* no internal link tracking per jumpurl_enable
+
+2007-01-07 Sunday 00:39  cannon
+
+	* enable most fields by default; a name
+
+2007-01-04 Thursday 22:43  cannon
+
+	* 0.8.1
+
+2007-01-04 Thursday 22:36  cannon
+
+	* pre 0.8.1 save
+
+2007-01-04 Thursday 22:36  cannon
+
+	* remove non 1 rootpid setting
+
+2006-12-30 Saturday 23:48  cannon
+
+	* tx_hldamgallery_pi1 realurl
+
+2006-12-22 Friday 14:53  cannon
+
+	* better allow for cross domain linking
+
+2006-12-21 Thursday 00:28  cannon
+
+	* default root pid 1
+
+2006-12-20 Wednesday 20:16  cannon
+
+	* 0.8.0 update
+
+2006-12-15 Friday 21:46  cannon
+
+	* 0.8.0
+
+2006-12-15 Friday 21:44  cannon
+
+	* 0.7.1 prep
+
+2006-12-15 Friday 21:41  cannon
+
+	* include baseline localconf.php by default
+
+2006-12-15 Friday 21:33  cannon
+
+	* chash off
+
+2006-12-15 Friday 21:31  cannon
+
+	* more localconf defaults
+
+2006-12-15 Friday 21:18  cannon
+
+	* put localconf on own
+
+2006-12-15 Friday 21:17  cannon
+
+	* Inital import of "scripts/localconf.php" file
+
+2006-12-15 Friday 21:08  cannon
+
+	* remove metatags DC
+
+2006-12-15 Friday 21:04  cannon
+
+	* add default localconf
+
+2006-12-15 Friday 12:38  cannon
+
+	* 0.7.0 checkin
+
+2006-12-15 Friday 12:35  cannon
+
+	* update
+
+2006-12-11 Monday 04:15  tanja
+
+	* Added fileadmin/images/blue_logosmaller.jpg for pdf and print
+	  article page.  Added plugin  List of all editors.
+
+2006-12-05 Tuesday 12:44  cannon
+
+	* utf-8
+
+2006-12-03 Sunday 10:59  cannon
+
+	* add metatags and static_info_tables reqs
+
+2006-12-03 Sunday 10:51  cannon
+
+	* No Dublin core tags
+
+2006-12-01 Friday 20:16  cannon
+
+	* set default static_info_tables
+
+2006-11-30 Thursday 15:46  cannon
+
+	* remove X off bits
+
+2006-11-30 Thursday 15:41  cannon
+
+	* reenable RTE
+
+2006-11-30 Thursday 12:04  cannon
+
+	* page title first
+
+2006-11-24 Friday 14:10  cannon
+
+	* add news-year and -month
+
+2006-11-24 Friday 01:02  tanja
+
+	* Added new flash.
+
+2006-11-17 Friday 09:32  cannon
+
+	* cap TYPO3; remove 100 heading swapout; enable admin
+
+2006-11-04 Saturday 20:30  cannon
+
+	* page options
+
+2006-11-04 Saturday 16:28  cannon
+
+	* reenable desc,keyword,emails
+
+2006-09-14 Thursday 11:17  cannon
+
+	* add backURL, cmd
+
+2006-08-28 Monday 23:17  cannon
+
+	* _blank external target
+
+2006-08-25 Friday 14:45  cannon
+
+	* unrequire tt_news
+
+2006-08-25 Friday 14:44  cannon
+
+	* require tt_news
+
+2006-08-25 Friday 14:44  cannon
+
+	* add
+	  plugin.tt_news.general_stdWrap.parseFunc.nonTypoTagStdWrap.encapsLines.nonWrappedTag
+
+2006-08-10 Thursday 23:43  cannon
+
+	* cbstarter 0.5.2
+
+2006-08-10 Thursday 23:41  cannon
+
+	* remove php/typo3 dependencies
+
+2006-08-10 Thursday 23:25  cannon
+
+	* cbstater 0.5.1
+
+2006-08-10 Thursday 23:17  cannon
+
+	* updated em_conf
+
+2006-08-10 Thursday 23:11  cannon
+
+	* updated ChangeLog
+
+2006-08-07 Monday 21:42  cannon
+
+	* read title as realurl prior to nav title
+
+2006-08-07 Monday 21:35  cannon
+
+	* default headers to h2 versus h1
+
+2006-07-28 Friday 10:19  cannon
+
+	* sitemap default
+
+2006-07-20 Thursday 16:10  cannon
+
+	* add piap_appnote
+
+2006-06-12 Monday 11:05  cannon
+
+	* upload update
+
+2006-06-02 Friday 23:47  cannon
+
+	* reset baseURL
+
+2006-05-30 Tuesday 22:23  cannon
+
+	* notification_email constants
+
+2006-05-30 Tuesday 22:16  cannon
+
+	* notification_email update
+
+2006-05-29 Monday 11:40  cannon
+
+	* Typo3 extension repository uploading
+
+2006-05-11 Thursday 19:16  cannon
+
+	* add typolinkCheckRootline
+
+2006-05-04 Thursday 21:20  cannon
+
+	* remove columnproperties
+
+2006-05-04 Thursday 21:17  cannon
+
+	* try columnproperties
+
+2006-05-04 Thursday 10:16  cannon
+
+	* include realurl
+
+2006-05-03 Wednesday 15:25  cannon
+
+	* hide admin panel
+
+2006-04-27 Thursday 23:51  cannon
+
+	* update domain examples
+
+2006-04-27 Thursday 22:55  cannon
+
+	* add uid to url for Google uniquness
+
+2006-04-26 Wednesday 15:32  cannon
+
+	* encaps error for bodytext
+
+2006-04-26 Wednesday 15:21  cannon
+
+	* default vs override
+
+2006-04-25 Tuesday 19:53  cannon
+
+	* xhtml clean
+
+2006-04-25 Tuesday 19:09  cannon
+
+	* clean up, condense selections
+
+2006-04-25 Tuesday 19:04  cannon
+
+	* remove making editors the same
+
+2006-04-25 Tuesday 14:11  cannon
+
+	* same content/news RTE
+
+2006-04-24 Monday 17:52  cannon
+
+	* force lib.parseFunc_RTE
+
+2006-04-24 Monday 11:07  cannon
+
+	* div remap
+
+2006-04-19 Wednesday 21:10  cannon
+
+	* add lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.remapTag and
+	  nonWrappedTag
+
+2006-04-19 Wednesday 21:04  cannon
+
+	* add tt_content.stdWrap.dataWrap and .prefixComment
+
+2006-04-19 Wednesday 14:02  cannon
+
+	* remove built in classes
+
+2006-04-19 Wednesday 13:51  cannon
+
+	* add allowTagsOutside & remapParagraphTag
+
+2006-04-17 Monday 02:33  cannon
+
+	* site name first in title
+
+2006-04-10 Monday 19:02  cannon
+
+	* admin panel
+
+2006-04-07 Friday 09:24  cannon
+
+	* widen up page tree frame
+
+2006-04-05 Wednesday 18:53  cannon
+
+	* default user settings
+
+2006-03-24 Friday 00:55  cannon
+
+	* update forced admPanel; clear cache
+
+2006-03-23 Thursday 14:22  cannon
+
+	* allow table, uploads
+
+2006-03-14 Tuesday 14:31  cannon
+
+	* bahag urls
+
+2006-03-08 Wednesday 11:46  cannon
+
+	* enable textpic as TV uses it
+
+2006-03-06 Monday 11:29  cannon
+
+	* contenttable
+
+2006-03-06 Monday 11:26  cannon
+
+	* revise RTE layout
+
+2006-03-01 Wednesday 20:47  cannon
+
+	* mod stdWrap
+
+2006-03-01 Wednesday 20:44  cannon
+
+	* remove csc-header of headers
+
+2006-02-24 Friday 23:47  cannon
+
+	* require rtehtmlarea
+
+2006-02-24 Friday 23:46  cannon
+
+	* readd format block
+
+2006-02-20 Monday 09:45  cannon
+
+	* add image
+
+2006-02-20 Monday 09:28  cannon
+
+	* remove dup req
+
+2006-02-11 Saturday 01:25  cannon
+
+	* remove comments; article
+
+2006-02-10 Friday 23:21  cannon
+
+	* header data wrap remover
+
+2006-02-09 Thursday 19:13  cannon
+
+	* update sitemap
+
+2006-02-09 Thursday 09:25  cannon
+
+	* enable edit/info
+
+2006-02-08 Wednesday 19:51  cannon
+
+	* content type
+
+2006-02-08 Wednesday 19:40  cannon
+
+	* b allowedAttribs
+
+2006-02-08 Wednesday 19:17  cannon
+
+	* P.class bodytext removal
+
+2006-02-08 Wednesday 19:10  cannon
+
+	* RTE Holy Grail?
+
+2006-02-08 Wednesday 17:39  cannon
+
+	* Update for BSG; simplify RTE
+
+2006-02-07 Tuesday 01:48  cannon
+
+	* update
+
+2006-02-02 Thursday 15:11  cannon
+
+	* allowedAttribs for allowedTags
+
+2006-02-02 Thursday 11:34  cannon
+
+	* - to _ space character; no RTE link images
+
+2006-01-26 Thursday 17:45  cannon
+
+	* longer title length
+
+2006-01-26 Thursday 12:53  cannon
+
+	* add tx_realurl_pathcache to clear all cache
+
+2006-01-25 Wednesday 20:41  cannon
+
+	* clear bodytext
+
+2006-01-25 Wednesday 18:15  cannon
+
+	* allow page mode, no cache
+
+2006-01-22 Sunday 23:54  cannon
+
+	* remove realurl from tables; e
+
+2006-01-18 Wednesday 17:15  cannon
+
+	* update
+
+2006-01-18 Wednesday 03:16  cannon
+
+	* cb_starter to cbstarter
+
+2006-01-18 Wednesday 00:39  cannon
+
+	* enable real url by default
+
+2006-01-18 Wednesday 00:38  cannon
+
+	* add realurl.php
+
+2006-01-17 Tuesday 23:21  cannon
+
+	* Update constants
+
+2006-01-17 Tuesday 20:21  cannon
+
+	* Enable constant setters
+
+2006-01-17 Tuesday 19:09  cannon
+
+	* rename and move typoscript files
+
+2006-01-17 Tuesday 18:48  cannon
+
+	* page ts constant comments
+
+2006-01-17 Tuesday 18:04  cannon
+
+	* Inital import of 'cbstarter/' directory
+
+2006-01-17 Tuesday 18:04  cannon
+
+	* Initial revision
+

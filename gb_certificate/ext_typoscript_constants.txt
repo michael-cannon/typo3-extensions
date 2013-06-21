@@ -1,0 +1,16 @@
+plugin.tx_gbcertificate_pi1 {
+    # cat=plugin.tx_gbcertificate_pi1//; type=color; label = Font color
+	fontColor =  #00008B
+
+    # cat=plugin.tx_gbcertificate_pi1//; type=string; label = Size for smaller font
+	fontSizeSmall = 11.5
+
+    # cat=plugin.tx_gbcertificate_pi1//; type=string; label = Size for bigger font
+	fontSizeBig = 16
+
+    # cat=plugin.tx_gbcertificate_pi1//; type=string; label = Size for header font
+	fontSizeHeader = 45
+
+    # cat=plugin.tx_gbcertificate_pi1//; type=string; label = Directory path relative to TYPO3 root for image storage
+	outputPath = typo3temp
+}

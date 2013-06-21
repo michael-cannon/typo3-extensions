@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title></title>
+</head>
+<body>
+<big><big><big><b>Gallery
+View Template<br>
+<br>
+</b></big></big><i>Marker
+Description:<br>
+<br>
+</i></big>GALLERY_IMAGE_COUNT
+- Number of images in current gallery<br>
+IMAGE_SRC - Path to gallery image<br>
+IMAGE_SOURCE - Source/Provider of gallery image<br>
+IMAGE_COMMENT - Comment for gallery image<br>
+IMAGE_RESOLUTION - Resolution of gallery image<br>
+IMAGE_FORMAT - Format of image like JPEG, GIF, PNG<br>
+IMAGE_SIZE - Size of image in KB<br>
+IMAGE_INFO_LINK - Link to info page of the gallery image<br>
+NORMAL_DOWNLOAD - Download link for gallery image<br>
+ZIPPED_DOWNLOAD -&nbsp;Download link for compressed (zip) gallery
+image<br>
+<br>
+<br>
+<br>
+<!--###GALLERY_VIEW_TEMPLATE###-->
+
+<!--EXTLINKS_EXCLUDE_START--><br>
+
+<!--###GALLERY_IMAGE_COUNT_TEMPLATE###-->
+
+<p>###GALLERY_IMAGE_COUNT###&nbsp;Picture(s)
+Available
+</p>
+<!--###GALLERY_IMAGE_COUNT_TEMPLATE###--><b><!--###IMAGE_DETAILS_TEMPLATE###--></b>
+<table border="0" cellpadding="0" cellspacing="0" width="444">
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="1" align="left" valign="top" width="1%">
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td><a href="###FULL_IMAGE_LINK###"><img
+ src="###IMAGE_SRC###" border="0"></a>
+            </td>
+          </tr>
+<!--###IMAGE_PROVIDER_TEMPLATE###--> <tr>
+            <td align="center">(Quelle:
+###IMAGE_PROVIDER###)</td>
+          </tr>
+<!--###IMAGE_PROVIDER_TEMPLATE###-->
+        </tbody>
+      </table>
+      <br>
+      </td>
+      <td width="20"></td>
+      <td colspan="1" rowspan="1" align="left" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+<!--###IMAGE_COMMENT_TEMPLATE###--> <tr>
+            <td colspan="2" rowspan="1" valign="top" width="40%"><b>###IMAGE_COMMENT###</b><br>
+            </td>
+          </tr>
+          <tr>
+<!--###IMAGE_COMMENT_TEMPLATE###--> <td><span>Resolution</span></td>
+            <td nowrap="nowrap"><span>:</span>
+###IMAGE_RESOLUTION###</td>
+          </tr>
+          <tr>
+            <td><span>Format</span></td>
+            <td nowrap="nowrap">:
+###IMAGE_FORMAT###</td>
+          </tr>
+          <tr>
+            <td><span>Size</span></td>
+            <td nowrap="nowrap">:
+###IMAGE_SIZE### KB</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+<!--###IMAGE_INFO_LINK_TEMPLATE###--> <tr>
+            <td colspan="2" rowspan="1" nowrap="nowrap" valign="top"><a
+ href="###IMAGE_INFO_LINK###">Opinion in Screen Resolution &raquo; </a></td>
+          </tr>
+<!--###IMAGE_INFO_LINK_TEMPLATE###--> <tr>
+            <td valign="top">Download<br>
+            </td>
+            <td>:
+###NORMAL_DOWNLOAD### ###ZIPPED_DOWNLOAD###</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<b><br>
+<br>
+
+<!--###IMAGE_DETAILS_TEMPLATE###-->
+
+<table>
+###SUB_GALLERY###
+</table><br>
+
+<a href="###BACK###">Back</a>
+
+<!--EXTLINKS_EXCLUDE_STOP-->
+
+<!--###GALLERY_VIEW_TEMPLATE###--><br>
+</b>
+</body>
+</html>

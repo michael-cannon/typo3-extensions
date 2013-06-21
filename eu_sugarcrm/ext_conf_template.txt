@@ -1,0 +1,11 @@
+# cat=basic/enable; type=string; label=SugarCRM User ID
+userID = USER
+
+# cat=basic/enable; type=string; label=SugarCRM User Password
+userPW = PWD
+
+# cat=basic/enable; type=string; label=SugarCRM  SOAP URL
+URL = http://localhost/soap.php
+
+# cat=basic/enable; type=boolean; label=use proxy server
+useProxy = 0

@@ -1,0 +1,50 @@
+# Common configuration
+plugin.tx_cbgaedms_mvc2.configurations < plugin.tx_cbgaedms
+plugin.tx_cbgaedms_mvc2.configurations {
+}
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+includeLibs.tx_lib_switch = EXT:lib/class.tx_lib_switch.php
+includeLibs.tx_cbgaedms_controller_User = EXT:cbgaedms/controllers/class.tx_cbgaedms_controller_User.php
+
+# The controller switch
+plugin.tx_cbgaedms.controllerSwitch = USER
+plugin.tx_cbgaedms.controllerSwitch {
+    userFunc = tx_lib_switch->main
+
+    User = USER
+    User {
+       userFunc = tx_cbgaedms_controller_User->main
+       setupPath = plugin.tx_cbgaedms_mvc2.configurations.
+       configurations < plugin.tx_cbgaedms_mvc2.configurations
+       configurations.defaultAction = FE_Users_List
+		configurations.validationRules {
+			10 {
+				field = first_name
+				pattern = /^\X+/
+				message = %%%first_nameMissingError%%%
+			}
+			20 {
+				field = last_name
+				pattern = /^\X+/
+				message = %%%last_nameMissingError%%%
+			}
+			23 {
+				field = title
+				pattern = /^\X+/
+				message = %%%titleMissingError%%%
+			}
+			30 {
+				field = email
+				pattern = /^\X+@\X+\.\X{2,4}/
+				message = %%%emailMissingError%%%
+			}
+			40 {
+				field = officephone
+				pattern = /^\+?[\d\X]+/
+				message = %%%officephoneMissingError%%%
+			}
+		}
+    }
+}
+tt_content.list.20.cbgaedms_mvc2 =< plugin.tx_cbgaedms.controllerSwitch

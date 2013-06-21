@@ -1,0 +1,13 @@
+config {
+	absRefPrefix = {$config.absRefPrefix}
+	baseURL = {$config.baseURL}
+	content_from_pid_allowOutsideDomain = {$config.content_from_pid_allowOutsideDomain}
+	prefixLocalAnchors = {$config.prefixLocalAnchors}
+	redirectOldLinksToNew = {$config.redirectOldLinksToNew}
+	typolinkCheckRootline = {$config.typolinkCheckRootline}
+	typolinkEnableLinksAcrossDomains = {$config.typolinkEnableLinksAcrossDomains}
+	uniqueLinkVars = {$config.uniqueLinkVars}
+    no_cache = {$config.no_cache}
+    simulateStaticDocuments = {$config.simulateStaticDocuments}
+    tx_realurl_enable = {$config.tx_realurl_enable}
+}

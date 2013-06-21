@@ -1,0 +1,461 @@
+<html>
+	<body>
+
+		<table class="tx-jwcalendar-pi1" border="0" width="100%">
+
+<!-- ###upcomingEvents### begin -->
+		<table border="0" width="100%" style="border:2px solid #DFBD80" cellpadding="0" cellspacing="0">
+      		<tr><td bgcolor="#A09A55" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#FFEEBB; font-weight:bold">
+			###listTitle###<br />###categoryTitle###</td></tr>
+      		<tr><td>
+        		<table border="0" width="100%" cellpadding="0" cellspacing="0">
+        		<!-- ###items### begin -->
+	        	<!-- ###item### begin -->
+					<tr><td bgcolor="#DFBD80" height="1"></td></tr>				
+	    			<tr> 
+	          			<td bgcolor="#FFEEBB" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#A09A55; font-weight:bold; text-align:left">&nbsp;
+					<b>###dateBegin###</b>
+	            			<!--&nbsp;###timeBegin###-->
+	            			<!--<br />###category###-->
+	          			</td>
+						</tr>
+						<tr><td bgcolor="#DFBD80" height="1"></td></tr>
+						<tr>
+	          			<td height="35" style="background:#FFFFFF" style="text-align:left; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000;">
+	            			&nbsp;<b>###title###</b>
+	          			</td>
+						</tr>
+						<tr>
+	          			<td align="right" style="background:#FFFFFF" style="text-align:left; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000;">
+	            			<table border="0" width="60%" cellpadding="0" cellspacing="0" style="border-top:1px solid #DFBD80;border-left:1px solid #A09A55">
+							<tr><td>&nbsp;
+							###readMore###
+							</td></tr></table>
+	          			</td>
+						</tr>						  
+	        		<!-- ###item### end -->
+        			<!-- ###items### end -->
+        		</tr></table>  
+      		</td></tr>
+			<!--<tr><td>
+      		<div class="prev_items">###Prev_Events###</div>
+      		<div class="next_items">###Next_Events###</div>
+      		<!-- ###CUT_submitEvent### begin  -->
+	  		<!--div class="submit">###submitEvent###</div>
+      		<!-- ###CUT_submitEvent### end  -->
+	  		<!--div class="submit">&nbsp;</div>
+			<!--/td></tr>-->
+			</td></tr>
+		</table>
+<!-- ###upcomingEvents### end -->
+
+<!-- ###singleEvent### begin -->
+		<table border="0" width="100%" style="border:2px solid #DFBD80" cellpadding="0" cellspacing="0">
+   			<!--<div class="header">
+	   			<div class="headerie">
+				<div class="catcolor" ###color###>&nbsp;</div>
+	        		<div class="title">###viewTitle###:</div>
+   				<div class="category">###category###</div>
+	   			</div>
+   			</div>-->
+			<tr><td bgcolor="#A09A55" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#FFEEBB; font-weight:bold"> 
+			###title### </td></tr>
+			<tr><td bgcolor="#DFBD80" height="1"></td></tr>
+			<tr><td>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFEEBB">
+   				<!--div class="orgie"-->
+		        <tr><td align="left">&nbsp;###organiserLabel###:<br/>
+		        <span>&nbsp;<strong>###organiser### <br /></strong></span></td></tr>
+		        <tr><td align="left">&nbsp;###locationLabel###:<br/>
+				<span>&nbsp;<strong>###location###</strong></span></td></tr>
+		        <tr><td align="left">&nbsp;###beginLabel###:</td></tr>
+		        <tr><td align="left">&nbsp;<strong>###begin###</strong></td></tr>
+	    	  	<!-- ###CUT_end### begin -->
+	        	<tr><td align="left">&nbsp;###endLabel###:</td></tr>
+		        <tr><td align="left">&nbsp;<strong>###end###</strong></td></tr>
+		       	<!-- ###CUT_end### end -->
+				<!--/div-->
+			</table>
+			</td></tr>
+			<tr><td bgcolor="#DFBD80" height="1"></td></tr>			
+			<tr><td height="10"></td></tr>							
+   			<tr><td align="left">
+   				<div>
+	     		 <!--  ###CUT_image### begin -->
+   				 <div align="center">###image###</div>
+	          	<!--  ###CUT_image### end -->
+					<div style="padding:5px">
+					<!--  ###CUT_teaser### begin -->
+					###teaser###<br />
+					<!--  ###CUT_teaser### end -->
+					###description###
+					<!-- ###CUT_link### begin -->
+					###link###
+					<!-- ###CUT_link### end -->
+					</div>
+        	   </div>
+        	</td></tr>
+			<tr><td class="submit">###submit###</td></tr>
+	    </table>
+<!-- ###singleEvent### end -->
+
+
+<!-- ###feEntryForm### begin -->
+		<div class="jwcalendar_feEntry">
+          <div class="title"><p>###viewTitle###</p></div>
+        <!-- ###CUT_errors### begin -->
+          <div class="error">###errors###</div>
+        <!-- ###CUT_errors### end -->
+          <div class="timelabel">###beginLabel###&nbsp;*</div>
+          <div class="item"><b>###beginInput###</b></div>
+          <div class="timelabel">###endLabel###&nbsp;&nbsp;</div>
+          <div class="item"><b>###endInput###</b></div>
+          <div class="label">###categoryLabel###</div>
+          <div class="item">###categoryInput###</div>
+          <div class="label">###titleLabel###&nbsp;*</div>
+          <div class="item">###titleInput###</div>
+          <div class="label">###teaserLabel###&nbsp;&nbsp;</div>
+          <div class="item">###teaserInput###</div>
+          <div class="label">###descriptionLabel###&nbsp;*</div>
+          <div class="item">###descriptionInput###</div>
+       <!--  ###CUT_image### begin -->
+          <div class="label">###imageLabel###&nbsp;&nbsp;</div>
+          <div class="item">###imageInput###</div>
+       <!--  ###CUT_image### end -->
+          <div class="label">###linkLabel###&nbsp;&nbsp;</div>
+          <div class="item">###linkInput###</div>
+          <div class="label">###locationLabel###&nbsp;*</div>
+          <div class="item">###locationInput###</div>
+          <div class="label">###organiserLabel###&nbsp;*</div>
+          <div class="item">###organiserInput###</div>
+          <div class="label">###emailLabel###&nbsp;*</div>
+          <div class="item">###emailInput###</div>
+          <div class="submit">###submit###</div>
+        </div>  
+<!-- ###feEntryForm### end -->
+
+<!-- ###confirmForm### begin -->
+<div class="jwcalendar_confirm">
+        <!-- ###CUT_dberror### begin -->
+	   		<div class="errors">###dbError###</div>
+        <!-- ###CUT_dberror### end -->
+        <!-- ###CUT_success### begin -->
+	   		<div class="conftext">###thxForEntryMessage###</div>
+        <!-- ###CUT_success### end -->
+   		<div class="submit">###confirmEntry###</div>
+</div>   		
+<!-- ###confirmForm### end -->
+
+
+<!-- ###MONTH_VIEW### begin -->
+	<div class="jwcalendar_month">
+			<div class="title">###VIEW_TITLE### - ###TIME_INFO###</div>
+			<div class="selector">###CATEGORYTITLE###</div>
+		<div class="navi">
+    				<table class="navs">
+	       			<tr>
+          			<!-- ###GO_LAST_YEAR### begin  -->
+          	 		<td>
+		   		<table class="year" cellspacing="10">
+	    	      			<tr><td class="last_year">###DATA###</td></tr>
+	   				</table>
+          	 		</td>
+	      			<!-- ###GO_LAST_YEAR### end  -->
+          	 		<td>
+	    		    <table class="months" cellspacing="10">
+	       			<!-- ###MONTH_NAVI### begin -->
+	       			<!-- ###MONTH_ROW### begin -->
+	       			<tr>
+	      			<!-- ###MONTHS### begin  -->
+	           		<!-- ###CURRENT_MONTH### begin  -->
+	       			<td class="current_month">###DATA###</td>
+	       			<!-- ###CURRENT_MONTH### end  -->
+	       			<!-- ###OTHER_MONTH### begin  -->
+	      			<td class="other_month">###DATA###</td>
+	       			<!-- ###OTHER_MONTH### end  -->
+	       			<!-- ###MONTHS### end  -->
+	       			</tr>
+	          		<!-- ###MONTH_ROW### end -->
+	       			<!-- ###MONTH_NAVI### end -->
+	   				</table>
+	       			</td>
+					<!-- ###GO_NEXT_YEAR### begin  -->
+          	 		<td>
+		   				<table class="year" cellspacing="10">
+			          		<tr><td class="next_year">###DATA###</td></tr>
+	   					</table>
+          	 		</td>
+	          		<!-- ###GO_NEXT_YEAR### end  -->
+	       			</tr>
+   				   </table>
+   		</div>
+		<div class="days_view">
+	        <!-- ###CALENDAR_TABLE### begin -->
+	          	<table class="days">
+	            	<!-- ###TABLE### begin  -->
+	            	<!-- ###DAYNAMES### begin  -->
+	            	<tr>
+
+				<!-- ###CORNER### begin  -->
+				<td class="dayname">KW</td>
+				<!-- ###CORNER### end  -->
+				<!-- ###DAYNAME### begin  -->
+	              		<td class="dayname">###DATA###</td>
+	              		<!-- ###DAYNAME### end  -->
+
+	            	</tr>
+	            	<!-- ###DAYNAMES### end  -->
+	            	<!-- ###WEEKS### begin  -->
+	            	<tr>
+	              		<td class="week">&nbsp;</td>
+	              		<!-- ###WEEK### begin  -->
+                		<td class="week">###DATA###</td>
+	              		<!-- ###WEEK### end  -->
+	            	</tr>
+	            	<!-- ###WEEKS### end  -->
+	            	<!-- ###WEEKDAYS### begin  -->
+	            	<tr>
+	              		<!-- ###WEEK### begin  -->
+	                		<td class="week">###DATA###</td>
+	              		<!-- ###WEEK### end  -->
+				<!-- ###DAYNAME### begin  -->
+	              			<td class="dayname">###DATA###</td>
+				<!-- ###DAYNAME### end  -->
+	              		<!-- ###DAYS### begin  -->
+	                	<!-- ###DAY_INSIDE_MONTH### begin  -->
+	                	<td class="inside"###COLOR###>
+						<div style="border:1px solid #DFBD80; background:#FFEEBB;">
+						###DATA###
+						</div>
+						</td>
+	                	<!-- ###DAY_INSIDE_MONTH### end  -->
+	                	<!-- ###DAY_OUTSIDE_MONTH### begin -->
+	                	<td class="outside"###COLOR###>
+						<div style="border:1px solid #DFBD80; background:#FFEEBB;">
+						###DATA###
+						</div>						
+						</td>
+	                	<!-- ###DAY_OUTSIDE_MONTH### end  -->
+	                	<!-- ###TODAY### begin  -->
+	                	<td class="today"###COLOR###>
+						<div style="border:1px solid #DFBD80; background:#FFEEBB;">
+						###DATA###
+						</div>
+						</td>
+	                	<!-- ###TODAY### end  -->
+	              		<!-- ###DAYS### end  -->
+	            	</tr>
+	            	<!-- ###WEEKDAYS### end  -->
+	            	<!-- ###WEEKEND### begin  -->
+	            	<tr>
+	              		<!-- ###WEEK### begin  -->
+	                		<td class="week">###DATA###</td>
+	              		<!-- ###WEEK### end  -->
+				<!-- ###DAYNAME### begin  -->
+	              			<td class="dayname">###DATA###</td>
+				<!-- ###DAYNAME### end  -->
+	              		<!-- ###DAYS### begin  -->
+	                	<!-- ###DAY_INSIDE_MONTH### begin  -->
+	                	<td class="inside_weekend"###COLOR###>###DATA###</td>
+	                	<!-- ###DAY_INSIDE_MONTH### end  -->
+	                	<!-- ###DAY_OUTSIDE_MONTH### begin  -->
+	                	<td class="outside_weekend"###COLOR###>###DATA###</td>
+	                	<!-- ###DAY_OUTSIDE_MONTH### end  -->
+	                	<!-- ###TODAY### begin  -->
+	                	<td class="today_weekend"###COLOR###>###DATA###</td>
+	                	<!-- ###TODAY### end  -->
+	              		<!-- ###DAYS### end  -->
+	            	</tr>
+	            	<!-- ###WEEKEND### end  -->
+	        	<!-- ###TABLE### end  -->
+			</table>
+	        <!-- ###CALENDAR_TABLE### end -->
+	       </div> 
+	<!-- ###SUBMIT_EVENT### begin -->
+      		<!-- ###CUT_submitEvent### begin  -->
+			<div class="submit">###submitEvent###</div>
+		<!-- ###CUT_submitEvent### end  -->
+      		<!-- ###CUT_submitEvent_no### begin  -->
+  			<div class="submit">&nbsp;</div>
+      		<!-- ###CUT_submitEvent_no### end  -->
+	<!-- ###SUBMIT_EVENT### end -->
+		</div>
+<!-- ###MONTH_VIEW### end -->
+
+
+<!-- ###WEEK_VIEW### begin -->
+	<div class="jwcalendar_week">
+		<div class="title"><b>###VIEW_TITLE### </b><br /> ###TIME_INFO###</div>
+		<div class="prev_week">###PREW_WEEK###</div>
+		<div class="selector">###CATEGORYTITLE###</div>
+		<div class="next_week">###NEXT_WEEK###</div>
+		<div class="days_view">
+	        <!-- ###WEEK_TABLE### begin -->
+	          <table class="days">
+	      			<!-- ###TIMES### begin  -->
+						<tr>
+						<td class="dayname" width="###WIDTH###%">&nbsp;</td>
+						<td><table class="times">
+					  	<tr>
+   	          			<!-- ###TIME### begin  -->
+							<td class="time" width="###WIDTH###%">###DATA###</td>
+   	          			<!-- ###TIME### end  -->
+					  	</tr>
+						</table></td>
+						</tr>
+	      			<!-- ###TIMES### end  -->
+			        <!-- ###DAY### begin -->
+					<tr>
+					   <td class="dayname">###WEEK_DAY###</td>
+	              	    <td>
+						<table class="day_events">
+						<!-- ###EVENTS### begin  -->
+							<tr>
+								<!-- ###EVENT_TIME### begin  -->
+									<td class="event_time" ###STYLE###> ###DATA###</td>
+	              				<!-- ###EVENT_TIME### end  -->
+							</tr>
+							<tr>
+								<!-- ###EVENT### begin  -->
+									<td class="event" colspan="###COLSPAN###" ###STYLE###> ###DATA###</td>
+	              				<!-- ###EVENT### end  -->
+							</tr>
+	              		<!-- ###EVENTS### end  -->
+					  	</table>
+						</td>
+					</tr>
+		        	<!-- ###DAY### end -->
+			</table>
+	        <!-- ###WEEK_TABLE### end -->
+	       </div> 
+	</div>
+<!-- ###WEEK_VIEW### end -->
+
+
+<!-- ###SINGLE_DAY### begin -->
+	<table class="singleday">
+		<tr>
+		<td class="dayitem">
+			###DAY###
+		</td>
+		<td class="dayitem">
+			###IMG###
+		</td>
+		</tr>
+	</table>
+<!-- ###SINGLE_DAY### end -->
+
+<!-- ###SINGLE_ITEM1### begin -->
+		<table class="dayitem">
+			<tr>
+				<td class="itemcat"###CATCOLOR###>
+				###CAT###
+				</td>
+				<td class="item">
+				###ITEM###
+				</td>
+			</tr>
+		</table>
+<!-- ###SINGLE_ITEM1### end -->
+
+<!-- ###SINGLE_ITEM### begin -->
+		<table class="dayitem" border="1">
+			<tr>
+				<td class="itemcat"###CATCOLOR###>
+					###CAT###
+				</td>
+			</tr>
+			<tr>
+				<td class="item">
+				###ITEM###
+				</td>
+			</tr>
+		</table>
+<!-- ###SINGLE_ITEM### end -->
+
+
+<!-- ###ORGANIZER### begin -->
+		<table style="border:2px solid #DFBD80" cellpadding="0" cellspacing="0" width="100%">
+		<tr><td>
+   			<div>
+	   			<div>
+	        		<div align="left">&nbsp;###title### :</div>
+	   			</div>
+   			</div>
+   			<!--<div class="content">
+   				<div class="contentie">
+	     		 <!--  ###CUT_image### begin -->
+   				 <!--div class="images">###image###</div>
+	          	<!--  ###CUT_image### end -->
+	     		<!--div class="text">
+					<span class="name">###name###</span><br />
+	          		<span class="desc">###description###</span>
+	        	</div>
+        	<!--/div>-->
+        	</div>
+			<div>
+   				<div style="background:#FFEEBB">
+	        	<div align="left">&nbsp;<strong>###address_label### :</strong></div>
+		        <div align="left">&nbsp;###addr_name###<br />###street###</div>
+		        <div align="left">&nbsp;</div><div align="left"> ###zip###  ###city###</div>
+	        	<div align="left"><strong>&nbsp;###phone_label###:</strong></div>
+		        <div align="left">&nbsp;###phone###</div>
+	          	<!-- ###CUT_email### begin -->
+	        		<div align="left">&nbsp;<strong>###email_label###:</strong></div>
+		        	<div align="left">&nbsp;###email###</div>
+	          	<!-- ###CUT_email### end -->
+	          	<!-- ###CUT_link### begin -->
+        			<div align="left">&nbsp;<strong>###link_label###:</strong></div>
+		        	<div align="left">&nbsp;###link###</div>
+	          	<!-- ###CUT_link### end -->
+				</div>
+			</div>
+			<div class="back">###back###</div>
+			</td></tr>
+	    </table>
+<!-- ###ORGANIZER### end -->
+
+<!-- ###LOCATION### begin -->
+		<div style="border:1px solid #DFBD80;">
+   			<div class="header">
+	   			<div class="headerie">
+	        		<div class="title">###title###:</div>
+	   			</div>
+   			</div>
+   			<div class="content">
+   				<div class="contentie">
+	     		 <!--  ###CUT_image### begin -->
+   				 <div class="images">###image###</div>
+	          	<!--  ###CUT_image### end -->
+	     		<div class="text">
+					<span class="name">###location###</span><br />
+	          		<span class="desc">###description###</span>
+	        	</div>
+        	</div>
+        	</div>
+			<div class="org">
+			<div class="orgie" style="background:#FFEEBB">
+	        	<div align="left">&nbsp;<strong>###address_label###:</strong></div>
+		        <div align="left">&nbsp;###name###<br />&nbsp;###street###</div>
+
+		        <div align="left">&nbsp;</div><div align="left"> ###zip###  ###city###</div>
+	        	<div align="left"><strong>&nbsp;###phone_label###:</strong></div>
+		        <div align="left">&nbsp;###phone###</div>
+	          	<!-- ###CUT_email### begin -->
+	        		<div align="left">&nbsp;<strong>###email_label###:</strong></div>
+		        	<div align="left">&nbsp;###email###</div>
+	          	<!-- ###CUT_email### end -->
+	          	<!-- ###CUT_link### begin -->
+        			<div align="left">&nbsp;<strong>###link_label###:</strong></div>
+		        	<div align="left">&nbsp;###link###</div>
+	          	<!-- ###CUT_link### end -->
+				</div>
+			</div>
+			<div class="back">###back###</div>
+	    </div>
+<!-- ###LOCATION### end -->
+</table>
+
+        	<!-- ###CUT_EMPTY_ROW### end  -->
+</body>
+</html>

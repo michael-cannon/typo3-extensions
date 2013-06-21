@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'cbgaedms'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_cbgaedms_doctype">Document Type</label>
+			<label index="tx_cbgaedms_doctype.doctype">Document Type</label>
+			<label index="tx_cbgaedms_doctype.description">Description</label>
+			<label index="tx_cbgaedms_doctype.required">Required</label>
+			<label index="tx_cbgaedms_doctype.agency">Master Location</label>
+			<label index="tx_cbgaedms_doc">Document</label>
+			<label index="tx_cbgaedms_doc.doc">Name</label>
+			<label index="tx_cbgaedms_doc.doctype">Document Type</label>
+			<label index="tx_cbgaedms_doc.description">Description</label>
+			<label index="tx_cbgaedms_doc.version">Version</label>
+			<label index="tx_cbgaedms_doc.feuser">Created By</label>
+			<label index="tx_cbgaedms_docversion">Document Versions</label>
+			<label index="tx_cbgaedms_docversion.versiontitle">Version Title</label>
+			<label index="tx_cbgaedms_docversion.docversion">Document Version</label>
+			<label index="tx_cbgaedms_docversion.filename">Document Filename</label>
+			<label index="tx_cbgaedms_docversion.file">Document File</label>
+			<label index="tx_cbgaedms_docversion.description">Description</label>
+			<label index="tx_cbgaedms_docversion.feuser">Created By</label>
+			<label index="tx_cbgaedms_agency">Location</label>
+			<label index="tx_cbgaedms_agency.agency">Location</label>
+			<label index="tx_cbgaedms_agency.agencysilo">Company Silo</label>
+			<label index="tx_cbgaedms_agency.country">Country</label>
+			<label index="tx_cbgaedms_agency.address">Address</label>
+			<label index="tx_cbgaedms_agency.address2">Address 2</label>
+			<label index="tx_cbgaedms_agency.city">City</label>
+			<label index="tx_cbgaedms_agency.state">State</label>
+			<label index="tx_cbgaedms_agency.postalcode">Postal Code</label>
+			<label index="tx_cbgaedms_agency.numberofemployees">Number of Employees</label>
+			<label index="tx_cbgaedms_agency.officephone">Office Phone</label>
+			<label index="tx_cbgaedms_agency.officefax">Office Fax</label>
+			<label index="tx_cbgaedms_agency.administrator">Administrators</label>
+			<label index="tx_cbgaedms_agency.parentagency">Parent Agency</label>
+			<label index="tx_cbgaedms_agency.documents">Documents</label>
+			<label index="tx_cbgaedms_agency.incidentmanager">Incident Manager</label>
+			<label index="tx_cbgaedms_agency.viewers">Viewers</label>
+			<label index="tx_cbgaedms_agency.alternateincidentmanagers">Alt. Incident Managers</label>
+			<label index="tx_cbgaedms_agency.buildingpoc">Building POC</label>
+			<label index="tx_cbgaedms_agency.buildingpocphone">Building POC Phone</label>
+			<label index="tx_cbgaedms_agency.buildingpocphoneafterhours">Building POC Phone After Hours</label>
+			<label index="tx_cbgaedms_agency.buildingalternatepoc">Building Alternate POC</label>
+			<label index="tx_cbgaedms_agency.buildingalternatepocphone">Building Alternate POC Phone</label>
+			<label index="tx_cbgaedms_agency.buildingalternatepocphoneafterhours">Building Alternate POC Phone After Hours</label>
+			<label index="tx_cbgaedms_agency.emergencycall">Emergency Call in Number/Hotline</label>
+			<label index="tx_cbgaedms_agency.emergencybridgeline">Emergency Bridgeline</label>
+			<label index="tx_cbgaedms_agency.passcode">Passcode</label>
+			<label index="tx_cbgaedms_agency.chairpasscode">Chairperson Passcode</label>
+			<label index="tx_cbgaedms_agency.securityphone">Security Phone</label>
+			<label index="tx_cbgaedms_agency.receptionphone">Reception Phone</label>
+			<label index="tx_cbgaedms_agency.phone247us">24/7 Notification Center in the U.S</label>
+			<label index="tx_cbgaedms_agency.phone247nonus">24/7 Notification Center outside the U.S.</label>
+			<label index="tx_cbgaedms_agency.feuser">Created By</label>
+			<label index="tx_cbgaedms_silo">Business Silo</label>
+			<label index="tx_cbgaedms_silo.silo">Business Silo</label>
+			<label index="tx_cbgaedms_silo.description">Description</label>
+			<label index="tx_cbgaedms_silo.agency">Master Location</label>
+			<label index="fe_users.tx_cbgaedms_mobilephone">Mobile Phone</label>
+			<label index="fe_users.tx_cbgaedms_homephone">Home Phone</label>
+			<label index="tt_content.list_type_pi1">EDMS: Locations</label>
+			<label index="flexform.controllerSelection">Select subcontroller</label>
+			<label index="flexform.controllerSelection.Location">Location</label>
+			<label index="flexform.controllerSelection.Business_Silo">Business Silo</label>
+			<label index="tt_content.list_type_pi2">EDMS: Users</label>
+			<label index="flexform.controllerSelection.User">User</label>
+			<label index="tt_content.list_type_pi3">EDMS: Documents</label>
+			<label index="flexform.controllerSelection.Document">Document</label>
+			<label index="flexform.controllerSelection.Document_Type">Document Type</label>
+			<label index="tt_content.list_type_pi4">EDMS: Reporting</label>
+			<label index="flexform.controllerSelection.Reporting">Reporting</label>
+			<label index="flexform.controllerSelection.Report_Notifications">Report_Notifications</label>
+			<label index="tt_content.list_type_pi5">EDMS: Control Panel</label>
+			<label index="tx_cbgaedms_reports">Report Notifications</label>
+			<label index="tx_cbgaedms_reports.report">Report Notifications</label>
+			<label index="tx_cbgaedms_reports.report.I.0">Locations</label>
+			<label index="tx_cbgaedms_reports.report.I.1">Document Types</label>
+			<label index="tx_cbgaedms_reports.report.I.2">Document Changes</label>
+			<label index="tx_cbgaedms_reports.frequency">Frequency</label>
+			<label index="tx_cbgaedms_reports.frequency.I.0">Daily</label>
+			<label index="tx_cbgaedms_reports.frequency.I.1">Weekly</label>
+			<label index="tx_cbgaedms_reports.frequency.I.2">Monthly</label>
+			<label index="tx_cbgaedms_reports.frequency.I.3">Quarterly</label>
+			<label index="tx_cbgaedms_reports.frequency.I.4">Semi-annually</label>
+			<label index="tx_cbgaedms_reports.frequency.I.5">Annually</label>
+			<label index="tx_cbgaedms_reports.recipients">Recipients</label>
+			<label index="tx_cbgaedms_reports.parentagency">Parent Agency</label>
+			<label index="tx_cbgaedms_reports.messagebody">Message Body</label>
+			<label index="tx_cbgaedms_reports.reporton">Report On</label>
+		</languageKey>
+		<languageKey index="ch" type="array">
+			<label index="tx_cbgaedms_doctype">&amp;#25991;&amp;#20214;&amp;#31867;</label>
+			<label index="tx_cbgaedms_doc">&amp;#25991;&amp;#20214;</label>
+			<label index="tx_cbgaedms_agency">&amp;#22788;</label>
+		</languageKey>
+	</data>
+</T3locallang>

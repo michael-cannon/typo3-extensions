@@ -1,0 +1,33 @@
+plugin.tx_newsfeedit_pi1.mthfeedit {
+  table=tt_news
+  fe_cruser_id = tx_newsfeedit_fe_cruser_id
+  fe_crgroup_id = tx_newsfeedit_fe_crgroup_id
+
+    // Creating
+  create.fields = title,datetime,image,imagecaption,imagealttext,imagetitletext,related,short,bodytext,author,author_email,category,news_files,links,type,keywords,archivedate,ext_url,hidden
+  create.show_fields = title,bodytext,short,datetime,author,author_email,image,category
+  create.overrideValues {
+    hidden = 1
+  }
+  create.evalValues {
+    title = required
+  }
+
+    // Editing
+  edit < .create
+
+    // EvalError Messages
+  evalErrors.title {
+    required = You need to have a title
+  }
+
+    // Field parsing
+  parseValues {
+    title = trim
+  }
+
+   // Info-mail setup
+  setfixed.approve._FIELDLIST = uid,pid,title
+  setfixed.DELETE._FIELDLIST = uid,pid,title
+
+}

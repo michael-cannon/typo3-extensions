@@ -1,0 +1,68 @@
+a:3:{s:4:"save";a:3:{s:13:"extension_key";s:13:"cbperformance";s:18:"print_wop_comments";s:1:"0";s:15:"overwrite_files";a:8:{s:9:"ChangeLog";s:1:"1";s:10:"README.txt";s:1:"1";s:12:"ext_icon.gif";s:1:"1";s:14:"ext_tables.php";s:1:"1";s:19:"doc/wizard_form.dat";s:1:"1";s:20:"doc/wizard_form.html";s:1:"1";s:38:"static/TYPO3_Performance/constants.txt";s:1:"1";s:34:"static/TYPO3_Performance/setup.txt";s:1:"1";}}s:6:"emconf";a:1:{i:1;a:7:{s:5:"title";s:28:"Cannonbose TYPO3 Performance";s:11:"description";s:56:"A compilation of various TYPO3 performance enhancements.";s:8:"category";s:4:"misc";s:5:"state";s:5:"alpha";s:12:"dependencies";s:0:"";s:6:"author";s:14:"Michael Cannon";s:12:"author_email";s:22:"michael@peimic.com";}}s:2:"ts";a:1:{i:1;a:3:{s:5:"title";s:17:"TYPO3 Performance";s:9:"constants";s:1937:"config {
+	# cat=performance/enable; type=boolean; label=Jump URL Enable: Jumpurl is a concept where external links are redirected from the index_ts.php script, which first logs which url it was.
+	jumpurl_enable = 0
+
+	# cat=performance/enable; type=boolean; label=Jump Mailto Disable: Disables the use of jumpUrl when linking to email-adresses.
+	jumpurl_mailto_disable = 1
+
+	# cat=performance/enable; type=boolean; label=Stat Logging
+	stat = 0
+
+	# cat=performance/enable; type=boolean; label=Apache Logging
+	stat_apache = 0
+
+	# cat=performance/enable; type=boolean; label=MySQL Logging
+	stat_mysql = 0
+
+	# cat=performance/links; type=string; label=Remove Header JavaScript:If set, the default JavaScript in the header will be removed.
+	removeDefaultJS = external
+
+	# cat=performance/enable; type=boolean; label=Link to TYPO3 CSS:If set, the inline styles TYPO3 controls in the core are written to a file.
+	inlineStyle2TempFile = 1
+
+	# cat=performance/enable; type=boolean; label=Meaningful Tempfile Prefix:If set it will try to render a meaningful prefix before temporary image files.
+	meaningfulTempFilePrefix = 1
+
+	# cat=performance/enable; type=boolean; label=No Cache
+	no_cache = 0
+
+	# cat=performance/enable; type=boolean; label=Clear Cache at Midnight
+	cache_clearAtMidnight = 1
+
+	# cat=performance; type=int; label=Clear Lifetime in seconds:Set to 15 minutes (60*60*15)
+	cache_period = 54000
+
+	# cat=performance/enable; type=boolean; label=Indexed Search
+	index_enable = 0
+
+	# cat=performance/enable; type=boolean; label=External Document Search
+	index_externals = 0
+
+	# cat=performance; type=string; label=Header Comment
+	headerComment =
+
+	# cat=performance/enable; type=boolean; label=Disable Prefix Comment:If set, the stdWrap property "prefixComment" will be disabled, thus preventing any revealing and space consuming comments in the HTML source code.
+	disablePrefixComment = 0
+}
+";s:5:"setup";s:704:"config {
+	removeDefaultJS = {$config.removeDefaultJS}
+	inlineStyle2TempFile = {$config.inlineStyle2TempFile}
+	meaningfulTempFilePrefix = {$config.meaningfulTempFilePrefix}
+
+	jumpurl_enable = {$config.jumpurl_enable}
+	jumpurl_mailto_disable = {$config.jumpurl_mailto_disable}
+
+	no_cache = {$config.no_cache}
+	cache_clearAtMidnight = {$config.cache_clearAtMidnight}
+	cache_period  = {$config.cache_period}
+
+	stat = {$config.stat}
+	stat_apache = {$config.stat_apache}
+	stat_mysql = {$config.stat_mysql}
+
+	headerComment = {$config.headerComment}
+	disablePrefixComment = {$config.disablePrefixComment}
+
+	index_enable = {$config.index_enable}
+	index_externals = {$config.index_externals}
+}";}}}

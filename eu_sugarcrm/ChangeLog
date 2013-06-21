@@ -1,0 +1,11 @@
+(add new changes on top of this file)
+
+08-02-14 Christian Lerrahn <christian.lerrahn@cerebrum.com.au>
+	
+	* test plugin now allows for running different kinds of tests
+	  (connection, server version, login, module list, etc.) separately
+	* added flexforms to configure test plugin
+
+05-08-29 Norman Seibert  <seibert@entios.de>
+
+	* Initial release

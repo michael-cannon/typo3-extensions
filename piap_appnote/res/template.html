@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>Application Note Templates</title>
+</head>
+<body>
+<div id="singleview">
+<!-- ###SINGLEVIEW### begin -->
+<h1 class="csc-firstHeader">Application Note Detail View</h1>
+<table>
+        <tr><td><p class="bodytext"><b>Number:</b></p></td><td><p class="bodytext"><b>###NUMBER###</b></p></td></tr>
+	    <tr><td colspan="2" class="grayline"><br></td></tr>
+        <tr><td><p class="bodytext"><b>Title:</b></p></td><td><p class="bodytext">###TITLE###</p></td></tr>
+        <tr><td><p class="bodytext"><b>Author:</b></p></td><td><p class="bodytext">###AUTHOR###</p></td></tr>
+        <tr><td><p class="bodytext"><b>Date published:</b></p></td><td><p class="bodytext">###DATE_PUBLISHED### ###TIME_PUBLISHED###</p></td></tr>
+        <tr><td><p class="bodytext"><b>Last updated:</b></p></td><td><p class="bodytext">###LAST_UPDATED_DATE### ###LAST_UPDATED_TIME###</p></td></tr>
+        <tr><td><p class="bodytext"><b>Description:</b></p></td><td><p class="bodytext">###DESCRIPTION###</p></td></tr>
+	    <tr><td colspan="2" class="grayline"><br></td></tr>
+        <tr><td><p class="bodytext"><b>PDF:</b></p></td><td><p class="bodytext"><a href="###PDF_URL###" target="_blank">###PDF_FILENAME### ###PDF_SIZE### (###PDF_DOWNLOADS###)</a></p></td></tr>
+        <tr><td><p class="bodytext"><b>ZIPs:</b></p></td><td><p class="bodytext">
+                        <!-- ###ZIP_FILES### begin -->
+                        <a href="###ZIP_URL###">###ZIP_FILENAME### ###ZIP_SIZE### (###ZIP_DOWNLOADS###)</a><br/>
+                        <!-- ###ZIP_FILES### end -->
+				</p>
+        </td></tr>
+	    <tr><td colspan="2" class="grayline"><br></td></tr>
+        <tr><td valign="top"><p class="bodytext"><b>Categories:</b></p></td><td><p class="bodytext">
+		<ul>
+                        <!-- ###CATEGORIES### begin -->
+                        <li>###CATEGORY###</li>
+                        <!-- ###CATEGORIES### end -->
+		</ul></p>
+        </td></tr>
+        <tr><td valign="top"><p class="bodytext"><b>Target Device Family:</b></p></td><td><p class="bodytext">
+		<ul>
+                        <!-- ###DEVICES### begin -->
+                        <li><a href="###DEVICE_URL###">###DEVICE_TITLE###</a></li>
+                        <!-- ###DEVICES### end -->
+		</ul></p>
+        </td></tr>
+        <tr><td valign="top"><p class="bodytext"><b>SW version:</b></p></td><td><p class="bodytext">###SOFTWARE_VERSION###</p></td></tr>
+	    <tr><td colspan="2" class="grayline"><br></td></tr>
+ 	    <tr><td valign="top"><p class="bodytext"><b>Related Notes:</b></p></td><td><p class="bodytext">
+		<ul>
+			<!-- ###RELATED_NOTES### begin -->
+			<li><a href="###RELATEDNOTE_URL###">###RELATEDNOTE_ID###</a>: ###RELATEDNOTE_TITLE###</li>
+			<!-- ###RELATED_NOTES### end -->
+		</ul></p>
+	</td></tr>
+</table>
+<p class="bodytext"><b><a href="###BACKLINK_URL###">Back to list</a></b></p>
+<!-- ###SINGLEVIEW### end -->
+</div>
+<div>
+<!-- ###LISTVIEW### begin -->
+<h1 class="csc-firstHeader">Application Note Listing</h1>
+<table cellpadding="4" width="100%">
+        <tr bgcolor="#eeeeee">
+                <td><p class="bodytext"><b><a href="###SORT_BY_NUMBER_URL###">Number</a></b></p></th>
+                <td><p class="bodytext"><b><a href="###SORT_BY_TITLE_URL###">Title</a></b></p></th>
+                <td><p class="bodytext"><b><a href="###SORT_BY_AUTHOR_URL###">Author</a></b></p></th>
+                <td nowrap><p class="bodytext"><b><a href="###SORT_BY_DATE_PUBLISHED_URL###">Date published</a></b></p></th>
+        </tr>
+		<!-- ###LIST_ITEM### begin -->
+        <!-- ###EVEN_ROW### begin -->
+        <tr>
+                <td class="grayline" style="width:10%"><p class="bodytext"><a href="###SINGLEVIEW_URL###">###NUMBER###</a><br></p></td>
+                <td class="grayline" ><p class="bodytext">###TITLE###<br></p></td>
+                <td class="grayline" ><p class="bodytext">###AUTHOR###<br></p></td>
+                <td class="grayline" nowrap><p class="bodytext">###DATE_PUBLISHED###<br></p></td>
+        </tr>
+        <!-- ###EVEN_ROW### end -->                
+        <!-- ###ODD_ROW### begin -->
+        <tr>
+                <td class="whiteline" style="width:10%"><p class="bodytext"><a href="###SINGLEVIEW_URL###">###NUMBER###</a><br></p></td>
+                <td class="whiteline" ><p class="bodytext">###TITLE###<br></p></td>
+                <td class="whiteline" ><p class="bodytext">###AUTHOR###<br></p></td>
+                <td class="whiteline" nowrap><p class="bodytext">###DATE_PUBLISHED###<br></p></td>
+        </tr>
+        <!-- ###ODD_ROW### end -->
+        <!-- ###LIST_ITEM### end -->
+	<!-- ###EMPTY_LIST### begin -->
+	<tr>
+		<td colspan="16" align="center"><p class="bodytext"><br><b>No application notes found</b></p></td>
+	</tr>
+	<!-- ###EMPTY_LIST### end -->
+</table>
+###NAVIGATION_BAR###
+<!-- ###SIMPLE_SEARCH_FORM### begin -->
+<br>
+<table cellpadding="4" bgcolor="#eeeeee">
+<form action="###SIMPLE_SEARCH_ACTION###" method="get">
+	<input type="hidden" name="tx_piapappnote_pi1[pointer]" value="0"/>
+	<input type="hidden" name="tx_piapappnote_pi1[typeS][noteid]" value="Y"/>
+	<input type="hidden" name="tx_piapappnote_pi1[typeS][author]" value="Y"/>
+	<input type="hidden" name="tx_piapappnote_pi1[typeS][title]" value="Y"/>
+	<input type="hidden" name="tx_piapappnote_pi1[typeS][description]" value="Y"/>
+	<tr><td><p class="bodytext">Search:</td>
+		<td><input type="text" name="tx_piapappnote_pi1[sword]" value="###SWORD###"/>
+        	<td><input type="submit"/></td></tr>
+</form>
+</table>
+<p class="bodytext"><b><a href="###ADVANCED_SEARCH_URL###">Advanced Search</a></b></p>
+
+<!-- ###SIMPLE_SEARCH_FORM### end -->
+<!-- ###ADVANCED_SEARCH_FORM### begin -->
+<br>
+<table cellpadding="4" bgcolor="#eeeeee">
+<form action="###ADVANCED_SEARCH_ACTION###" method="get">
+	<input type="hidden" name="tx_piapappnote_pi1[pointer]" value="0"/>
+	<tr><td valign="top"><p class="bodytext"><b>Search:</b></p></td>
+		<td nowrap><p class="bodytext"><input type="text" name="tx_piapappnote_pi1[sword]" value="###SWORD###" size="40"/>
+				<br>in &nbsp;
+			<label><input type="checkbox" name="tx_piapappnote_pi1[typeS][noteid]" value="Y"###NOTEID_CHECKED###/> Number</label>
+			<label><input type="checkbox" name="tx_piapappnote_pi1[typeS][author]" value="Y"###AUTHOR_CHECKED###/> Author</label>
+			<label><input type="checkbox" name="tx_piapappnote_pi1[typeS][title]" value="Y"###TITLE_CHECKED###/> Title</label>
+			<label><input type="checkbox" name="tx_piapappnote_pi1[typeS][description]" value="Y"###DESCRIPTION_CHECKED###/> Description</label>
+		</p></td>	
+	</tr>
+	<tr>
+		<td valign="top"><p class="bodytext">Category:</p></td>
+		<td><select name="tx_piapappnote_pi1[typeS][categories][]" multiple="multiple" size="10" style="width:200">
+			<!-- ###CATEGORIES### begin -->
+			<option value="###VALUE###"###SELECTED###>###NAME###</option>
+			<!-- ###CATEGORIES### end -->
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top"><p class="bodytext">Software Version:</p></td>
+		<td><select name="tx_piapappnote_pi1[typeS][versions][]" multiple="multiple" size="10"  style="width:200">
+			<!-- ###VERSIONS### begin -->
+			<option value="###VALUE###"###SELECTED###>###NAME###</option>
+			<!-- ###VERSIONS### end -->
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top"><p class="bodytext">Device:</p></td>
+		<td><select name="tx_piapappnote_pi1[typeS][devices][]" multiple="multiple" size="10"  style="width:200">
+			<!-- ###DEVICES### begin -->
+			<option value="###VALUE###"###SELECTED###>###NAME###</option>
+			<!-- ###DEVICES### end -->
+			</select>
+		</td>	
+	</tr>
+	<tr><td></td>
+		<td>
+		     <input type="submit"/>
+		</td>
+	</tr>
+</form>
+</table>	
+<br>
+<p class="bodytext"><a href="###SIMPLE_SEARCH_URL###">Simple Search</a></p>
+<!-- ###ADVANCED_SEARCH_FORM### end -->
+<!-- ###LISTVIEW### end -->
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+2009-05-18 Monday 04:42  cannon
+
+	* ext_icon.gif: update icon
+
+2009-04-02 Thursday 23:34  cannon
+
+	* class.tx_newssponsor.php, ext_emconf.php: Acqal branding
+
+2006-05-29 Monday 11:40  cannon
+
+	* ext_emconf.php: Typo3 extension repository uploading
+
+2005-04-21 Thursday 16:06  cannon
+
+	* ext_tables.php, locallang_db.php: enable sponsor offer and
+	  fulfillment fields for web and email views
+
+2005-04-05 Tuesday 23:06  cannon
+
+	* class.tx_newssponsor.php, ext_typoscript_setup.txt,
+	  locallang.php, news_sponsor.tmpl: add break to image title
+
+2005-03-27 Sunday 18:59  cannon
+
+	* CHANGELOG: updatge changelogs
+
+2005-03-25 Friday 13:19  cannon
+
+	* class.tx_newssponsor.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt: add baseurl for logos; enable HTML
+	  email sending; add EMAIL_HTML markers
+
+2005-03-23 Wednesday 23:17  cannon
+
+	* CHANGELOG: add CHANGELOG
+
+2005-03-17 Thursday 00:32  cannon
+
+	* class.tx_newssponsor.php, ext_emconf.php: updated to 0.2.0 for
+	  all but userinfo; userinfo updated to 0.1.0
+
+2005-03-16 Wednesday 17:54  cannon
+
+	* ext_tables.sql: add point of contact
+
+2005-03-16 Wednesday 13:03  cannon
+
+	* class.tx_newssponsor.php: add userinfo; pull user info from
+	  leads; update template fields
+
+2005-03-14 Monday 01:35  cannon
+
+	* ext_emconf.php: add to T3 repository
+
+2005-03-13 Sunday 02:29  cannon
+
+	* class.tx_newssponsor.php: hmm
+
+2005-03-10 Thursday 13:37  cannon
+
+	* class.tx_newssponsor.php, news_sponsor.tmpl: formatting
+
+2005-03-10 Thursday 00:18  cannon
+
+	* class.tx_newssponsor.php, ext_emconf.php, ext_tables.php,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  news_sponsor.tmpl: enable SPONSOR code; update emconf
+
+2005-03-09 Wednesday 23:12  cannon
+
+	* class.tx_newssponsor.php, ext_emconf.php, ext_localconf.php,
+	  ext_tables.php, ext_typoscript_setup.txt: use stdWrap for
+	  template contents
+
+2005-03-09 Wednesday 14:09  cannon
+
+	* ext_emconf.php: update emconf
+
+2005-03-09 Wednesday 14:07  cannon
+
+	* class.tx_newssponsor.php, news_sponsor.tmpl: remove last line
+	  break
+
+2005-03-08 Tuesday 13:07  cannon
+
+	* class.tx_newssponsor.php, ext_emconf.php, ext_localconf.php,
+	  doc/wizard_form.html: comment out XCLASS
+
+2005-03-08 Tuesday 12:56  cannon
+
+	* class.newssponsor.php, class.tx_newssponsor.php: Move
+	  "class.newssponsor.php" to "class.tx_newssponsor.php"
+
+2005-03-08 Tuesday 12:46  cannon
+
+	* news_sponsor.tmpl: add template sample
+
+2005-03-08 Tuesday 12:29  cannon
+
+	* ext_emconf.php, doc/wizard_form.dat, doc/wizard_form.html: Naeem
+	  to Michael
+
+2005-03-06 Sunday 02:53  cannon
+
+	* class.newssponsor.php, class.newssponsor2.php,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  locallang.php, locallang_db.php: no show for no sponsor; add
+	  logo; add logo H/W parameters; parse country; parse services;
+	  list multiple services
+
+2005-03-06 Sunday 00:00  cannon
+
+	* class.newssponsor.php, class.newssponsor2.php, ext_emconf.php,
+	  ext_icon.gif, ext_localconf.php, ext_tables.php, ext_tables.sql,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  locallang.php, locallang_db.php, doc/wizard_form.dat,
+	  doc/wizard_form.html: Initial revision
+
+2005-03-06 Sunday 00:00  cannon
+
+	* class.newssponsor.php, class.newssponsor2.php, ext_emconf.php,
+	  ext_icon.gif, ext_localconf.php, ext_tables.php, ext_tables.sql,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  locallang.php, locallang_db.php, doc/wizard_form.dat,
+	  doc/wizard_form.html (utags: initial): initial source import
+

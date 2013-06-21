@@ -1,0 +1,365 @@
+ <!---###JOBBANKRESUME###--->
+ <SCRIPT LANGUAGE="JavaScript">
+var formName='###FORMNAMEEXTENSIONJS###jobbankresume';
+###DYANAMIC_JS###
+ function changeMenu(optionName)
+{
+	var frm=eval("document."+formName);
+	var d=frm.location;
+	
+	deleteOptions(d);
+	try{
+	var selectedMenu=eval("Menu"+optionName+"Menu");
+	
+	for(var i=0;i<selectedMenu.length;i++)
+		d.options[i]=new Option(selectedMenu[i][0],selectedMenu[i][1]);
+	}
+	catch(e){
+		d.options[0]=new Option('Select a country','');
+	}
+	
+} 
+
+function deleteOptions(xDropDown) {
+
+	var tot = xDropDown.options.length;
+	
+	for (i=0; i < tot ; i++) {
+	
+		xDropDown.options[i]=null;
+	}
+	
+	xDropDown.options.length=0;
+}
+
+function selectMenu(selectedOption,optionType)
+{
+		var frm=eval("document.###FORMNAMEEXTENSIONJS###jobbankresume.zone_location");
+		var frm2=eval("document.###FORMNAMEEXTENSIONJS###jobbankresume.location");
+		if(optionType==1)
+		{
+			for(var i=0;i<frm.options.length;i++)
+			{
+				if(frm.options[i].value==selectedOption)
+					frm.options[i].selected=true;
+			}
+		}
+		else
+		{
+			for(var i=0;i<frm2.options.length;i++)
+			{
+				if(frm2.options[i].value==selectedOption){
+						frm2.options[i].selected=true;
+						
+					}
+			}
+		}
+}
+</SCRIPT>
+<FORM METHOD=POST name='###FORMNAMEEXTENSIONJS###jobbankresume' ACTION="###FORMACTION###" enctype="multipart/form-data">
+ 
+<h1 class="csc-firstHeader">Send your Resume to ###SPONSORNAME###</h1>
+<p>You're applying for ###JOBNAME###</p>
+<table width="100%"  border="0" cellspacing="2" cellpadding="2">
+  <tr> 
+    <td colspan="2"  bgcolor="#CCCCCC" height="22">&raquo;&nbsp;Contact Information provided to ###SPONSORNAME###</td>
+  </tr>
+  <tr>
+    <td colspan="2"  bgcolor="#CCCCCC" height="1"></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">First Name</td>
+    <td valign="top"> 
+      <input type="text" name="fname" value="###FIELD_first_name###"></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">Last Name</td>
+    <td> 
+     <input type="text" name="lastname" value="###FIELD_last_name###"></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">Company</td>
+    <td valign="top">
+     <input type="text" name="organisation" value="###FIELD_company###"></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">Title</td>
+    <td valign="top">
+    <input type="text" name="title" value="###FIELD_title###"></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">Address</td>
+    <td valign="top">
+    <textarea name="address" cols="50" rows="3">###FIELD_address###</textarea></td>
+  </tr>
+   
+  <tr valign="top"> 
+    <td height="22">City</td>
+    <td valign="top">
+	
+      <input type="text" name="city" value="###FIELD_city###"></td>
+  </tr>
+
+  <tr valign="top"> 
+    <td  height="22">State</td>
+    <td><select name="location">
+          <option value="">Select a state</option>
+        </select></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">Zip</td>
+    <td valign="top">
+	
+      <input type="text" name="zip" value="###FIELD_zip###">
+    </td>
+  </tr>
+<!--  <tr valign="top"> 
+    <td height="22">zone_location</td>
+    <td valign="top">
+      ###FIELD_country###</td>
+  </tr>-->
+ <tr valign="top"> 
+    <td>Country</td>
+    <td><select name="zone_location" onchange ="changeMenu(this.value)">###FIELD_country###
+        </select></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">Phone</td>
+    <td valign="top">
+	
+      <input type="text" name="phone" value="###FIELD_telephone###"></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">Fax</td>
+    <td valign="top">
+	
+      <input type="text" name="fax" value="###FIELD_fax###"></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">Website</td>
+    <td valign="top">
+      <input type="text" name="website" value="###FIELD_www###"></td>
+  </tr>
+  <tr valign="top"> 
+    <td height="22">Email</td>
+    <td valign="top">
+      <input type="text" name="email" value="###FIELD_email###"></td>
+  </tr> 
+  <tr valign="top"> 
+    <td height="22">Include your introductory<br/> letter or comments here.</td>
+    <td valign="top">
+      <TEXTAREA NAME="job_bank_comments" COLS="50" ROWS="3" ></TEXTAREA>
+      </td>
+  </tr>
+  <tr valign="top">
+    <td height="22">Attach Resume</td>
+    <td valign="top">
+      <input type="file" name="resume"></td>
+  </tr>
+</table>
+<div align="center"><br>
+  <INPUT TYPE="hidden" NAME="sponsor_name" VALUE="###SPONSORNAME###"> 
+  <INPUT TYPE="hidden" NAME="job_id" VALUE="###JOBID###">
+  <INPUT TYPE="hidden" NAME="sponsor_id" VALUE="###SPONSORID###">
+  <INPUT TYPE="hidden" NAME="action" VALUE="preview_mail_form">
+  <INPUT TYPE="submit" name="applyJob" VALUE="Preview">
+</div>
+</FORM>
+<script>
+changeMenu('###SELECTED_COUNTRY###');
+selectMenu('###SELECTED_STATE###', 3);
+</script>
+
+<!---###JOBBANKRESUME###--->
+
+<!---###RESUMEPREVIEW###--->
+<FORM METHOD=POST ACTION="###FORMACTION###" enctype="multipart/form-data">
+
+<table width="80%"  border="0" cellspacing="3" cellpadding="3" >
+ 
+  <tr>
+	<td >
+		<H2>You're applying for ###JOB_TITLE###.</H2>	
+		
+	</td>
+	
+ </tr>
+ 
+  <tr>
+    <td >
+		<b>First name</b> ###FIRST_NAME###<br />
+		<b>Last name</b> ###LAST_NAME###<br />
+		<b>Company</b> ###ORGANISATION###<br />
+		<b>Title</b> ###TITLE###<br />
+		<b>Adress</b> ###ADDRESS###<br />
+		<b>City</b> ###CITY###<br />
+		<b>State</b> ###STATE###<br />
+		<b>ZIP</b> ###ZIP###<br />
+		<b>Country</b> ###COUNTRY###<br />
+		<b>Phone</b> ###PHONE###<br />
+		<b>Fax</b> ###FAX###<br />
+		<b>Website</b> ###WEBSITE###<br />
+		<b>Email</b> ###EMAIL###
+  
+    </td>
+  <tr>
+    <td>&nbsp;</td>
+  
+  </tr>
+  <tr>
+    <td><H1>Introductory Letter or Comments</H1></td>
+    
+  </tr>
+  <tr>
+    <td>###COMMENTS###</td>
+  
+  </tr>
+<tr>
+    <td>&nbsp;</td>
+  
+  </tr>
+   <tr>
+    <td><H1>Your Attachment
+</H1></td>
+    
+  </tr>
+  <tr>
+    <td>###ATTACHED_FILE_LINK###</td>
+  
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  
+  </tr>
+   <tr>
+
+    <td>
+	 <INPUT TYPE="hidden" NAME="sponsor_name" VALUE="###SPONSORNAME###"> 
+	<INPUT TYPE="hidden" NAME="resume_manager_user_job_id" VALUE="###RESUME_MANAGER_USER_JOB_ID###">
+        <INPUT TYPE="hidden" NAME="job_id" VALUE="###JOB_ID###">
+	 <INPUT TYPE="hidden" NAME="job_title" VALUE="###JOB_TITLE###">
+	 <INPUT TYPE="hidden" NAME="file_name" VALUE="###FILE_NAME###">
+	 <INPUT TYPE="hidden" NAME="destination_file" VALUE="###DESTINATION_FILE###">
+
+     <INPUT TYPE="hidden" NAME="action" VALUE="sendMail">
+    <INPUT TYPE="submit" name="submit" VALUE="Submit">&nbsp;&nbsp;
+    <INPUT TYPE="button" name="edit" VALUE="Edit" onClick=###GOBACK###></td>
+  
+  </tr>
+</table>
+</FORM>
+
+
+<!---###RESUMEPREVIEW###--->
+
+<!---###MAILFORMAT###--->
+<TABLE width="100%" BORDER="0" cellpadding="1" CELLSPACING="1" >
+  
+ <tr>
+	<td >
+		
+		<img src='###FILE_PATH###BPMlogo_300x40[1].gif' border='0'>
+	</td>
+	
+ </tr>
+ 
+ <tr>
+	<td >
+		<h2>This is a resume submission for ###JOB_TITLE### from ###SITE_NAME###</h2>
+		
+	</td>
+	
+ </tr>
+
+<tr>
+    <td>&nbsp;</td>
+  </tr>
+
+  
+  <tr>
+    <td >
+		<b>First name</b> ###FIRST_NAME###<br />
+		<b>Last name</b> ###LAST_NAME###<br />
+		<b>Organisation</b> ###ORGANISATION###<br />
+		<b>Title</b> ###TITLE###<br />
+		<b>Address</b> ###ADDRESS###<br />
+		<b>Country</b> ###COUNTRY###<br />
+		<b>State</b> ###STATE###<br />
+		<b>City</b> ###CITY###<br />
+		<b>ZIP</b> ###ZIP###<br />
+		<b>Phone</b> ###PHONE###<br />
+		<b>Fax</b> ###FAX###<br />
+		<b>Website</b> ###WEBSITE###<br />
+		<b>Email</b> ###EMAIL###
+  
+    </td>
+  <tr>
+    <td>&nbsp;</td>
+  
+  </tr>
+  <tr>
+    <td><b><font color= "red">Introductory Letter or Comments</font></b></td>
+    
+  </tr>
+  <tr>
+    <td>###COMMENTS###</td>
+  
+  </tr>
+<tr>
+    <td>&nbsp;</td>
+  
+  </tr>
+</TABLE>
+<!---###MAILFORMAT###--->
+
+<!---###MAIL_SENT_STATUS###--->
+<H2>Your submission has been sent</H2>
+<TABLE width="100%" BORDER="0" cellpadding="1" CELLSPACING="1">
+
+ 
+ 
+ <tr>
+	<td >
+		&nbsp;
+		
+	</td>
+	
+ </tr>
+ <tr>
+	<td >
+		BPMinstitute only acts as a facilitator and in no means guarantees a job position.
+		<br/><br/><br/>
+		###JOB_LISTING_PAGE_LINK###
+		&nbsp;&nbsp;&nbsp;###JOB_TITLE_PAGE_LINK###
+	</td>
+	
+ </tr>
+
+</TABLE>
+<!---###MAIL_SENT_STATUS###--->
+
+<!---###MAIL_NOTSENT_STATUS###--->
+
+<H1>Mail Status </H1>
+<TABLE width="100%" BORDER="0" cellpadding="1" CELLSPACING="1">
+ 
+ 
+ <tr>
+	<td >
+		&nbsp;
+		
+	</td>
+	
+ </tr>
+ <tr>
+	<td >
+		Mail couldnot be sent
+		
+	</td>
+	
+ </tr>
+
+</TABLE>
+<!---###MAIL_NOTSENT_STATUS###--->
+
+

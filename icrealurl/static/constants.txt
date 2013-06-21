@@ -1,0 +1,30 @@
+/**
+ * @author Michael Cannon <michael@peimic.com>
+ * @version $Id: constants.txt,v 1.1.1.1 2010/04/15 10:03:39 peimic.comprock Exp $
+ */
+
+# cat=icbase/links; type=string; label=Website URL:Website URL without end /. Example: http://example.com
+siteURL = 
+
+# cat=icbase/links; type=string; label=Website Development URL:Website Development URL without end / and HTTP protocol. Example: example.com
+devURL = 
+
+config {
+	# cat=icrealurl/links; type=string; label=Absolute Reference Prefix: For multiple domain must use /. Otherwise / or same as config.baseURL.
+	absRefPrefix = /
+
+    # cat=icrealurl/enable/; type=boolean; label=Enable Real URL:Un-enable simulateStaticDocuments if enabled
+    tx_realurl_enable = 1
+
+    # cat=icrealurl/enable/; type=boolean; label=Redirect Old Links to New
+    redirectOldLinksToNew = 1
+
+    # cat=icrealurl/enable/; type=boolean; label=Simulate Static Documents:Un-enable if using Real URL
+    simulateStaticDocuments = 0
+
+    # cat=icrealurl/enable/; type=boolean; label=No Cache
+    no_cache = 0
+
+	# cat=icrealurl/typo/; type=string; label=Prefix Local Anchors:If set to one of the keywords, the content will have all local anchors in links prefixed with the path of the script.
+	prefixLocalAnchors = all
+}

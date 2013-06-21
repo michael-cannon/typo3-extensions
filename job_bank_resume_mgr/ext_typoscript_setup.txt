@@ -1,0 +1,10 @@
+
+plugin.tx_jobbankresumemgr_pi1 {
+  templateFile = {$plugin.tx_jobbankresumemgr_pi1.templateFile} 
+  email_admin = {$plugin.tx_jobbankresumemgr_pi1.email_admin} 
+  name_admin = {$plugin.tx_jobbankresumemgr_pi1.name_admin} 
+  email_subject = {$plugin.tx_jobbankresumemgr_pi1.email_subject} 
+  storagePID = {$plugin.tx_jobbankresumemgr_pi1.storagePID} 
+  siteName = {$plugin.tx_jobbankresumemgr_pi1.siteName}
+  jobBankPageId = {$plugin.tx_jobbankresumemgr_pi1.jobBankPageId}
+}

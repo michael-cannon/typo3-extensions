@@ -1,0 +1,8 @@
+plugin.tt_news.news_userinfo {
+	templateFile = {$plugin.tt_news.news_userinfo.templateFile}
+
+	# content formatting
+	label.wrap = <b>|</b>
+	field.wrap = |<br />
+	field.address.wrap = |
+}

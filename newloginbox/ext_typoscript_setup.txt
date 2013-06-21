@@ -1,0 +1,50 @@
+## LOGIN BOX
+plugin.tx_newloginbox_pi1 {
+	detailsPage = 
+	email_from = 
+	email_fromName = 
+	replyTo = 
+	tableParams_details = border="0"
+	pid =
+	redirect_url =
+}
+plugin.tx_newloginbox_pi1._CSS_DEFAULT_STYLE (
+)
+plugin.tx_newloginbox_pi1._LOCAL_LANG.default {
+}
+plugin.tx_newloginbox_pi1._DEFAULT_PI_VARS {
+}
+
+
+## USER LISTING
+plugin.tx_newloginbox_pi3 {
+    CMD = 
+    pidList = 
+    recursive = 
+	tableParams_details = border="0" cellpadding="1" cellspacing="2" style="width: 90%;"
+}
+plugin.tx_newloginbox_pi3.listView {
+    results_at_a_time = 50
+    maxPages = 20
+	show.email = 1
+	show.email_in_details = 1
+	show.email_in_details_when_logged_in = 1
+	alwaysPrev=1
+	tableParams_list = 
+}
+plugin.tx_newloginbox_pi3._CSS_DEFAULT_STYLE (
+	.tx-newloginbox-pi3-listrow TD { background-color:#eeeeee; padding-left: 3px; padding-right: 3px; }
+	.tx-newloginbox-pi3-listrow TR.tx-newloginbox-pi3-listrow-header TD { background-color:#cccccc; }
+	.tx-newloginbox-pi3-listrow TR.tx-newloginbox-pi3-listrow-header TD P { font-weight:bold; }
+	.tx-newloginbox-pi3-listrow TR.tx-newloginbox-pi3-listrow-odd TD { background-color:#f6f6f6; }
+)
+plugin.tx_newloginbox_pi3._LOCAL_LANG.default {
+}
+plugin.tx_newloginbox_pi3._DEFAULT_PI_VARS {
+}
+
+
+
+
+
+# TYPO3 CVS ID: $Id: ext_typoscript_setup.txt,v 1.1.1.1 2010/04/15 10:03:52 peimic.comprock Exp $

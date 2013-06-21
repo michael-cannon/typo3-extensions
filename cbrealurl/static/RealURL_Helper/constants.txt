@@ -1,0 +1,35 @@
+config {
+	# cat=basic/links; type=string; label=Base URL:Example: http://example.com
+	baseURL = 
+
+	# cat=basic/links; type=string; label=Absolute Reference Prefix: For multiple domain might use /. Otherwise, same as config.baseURL.
+	absRefPrefix =
+
+    # cat=url/enable; type=boolean; label=Enable Real URL:Un-enable simulateStaticDocuments if enabled
+    tx_realurl_enable = 1
+
+    # cat=url/enable; type=boolean; label=Redirect Old Links to New
+    redirectOldLinksToNew = 1
+
+    # cat=url/enable; type=boolean; label=Simulate Static Documents:Un-enable if using Real URL
+    simulateStaticDocuments = 0
+
+    # cat=url/enable; type=boolean; label=No Cache
+    no_cache = 0
+
+	# cat=url/typo; type=options[,all,cached,output]; label=Prefix Local Anchors:If set to one of the keywords, the content will have all local anchors in links prefixed with the path of the script.
+	prefixLocalAnchors = all
+
+	# cat=url/links; type=boolean; label=Enable Links Across Domains: Post TYPO3 4.2
+	typolinkEnableLinksAcrossDomains = 1
+
+	# cat=url/links; type=boolean; label=Allow Cross Domain Content: Pre TYPO3 4.2
+	content_from_pid_allowOutsideDomain = 1
+
+	# cat=url/enable; type=boolean; label=Unique Link Vars: Prevent links with the same parameter more than once.
+	uniqueLinkVars = 1
+
+	# cat=url/enable; type=boolean; label=Correct Multiple Domain Links
+	typolinkCheckRootline = 1
+
+}

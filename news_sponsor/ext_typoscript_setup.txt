@@ -1,0 +1,17 @@
+plugin.tt_news.news_sponsor {
+	logoMaxW = {$plugin.tt_news.news_sponsor.logoMaxW}
+	logoMaxH = {$plugin.tt_news.news_sponsor.logoMaxH}
+	templateFile = {$plugin.tt_news.news_sponsor.templateFile}
+	baseUrl = {$plugin.tt_news.news_sponsor.baseUrl}
+
+	# content formatting
+	label.wrap = <b>|</b>
+	label.title.wrap = <h1>|
+	label.image.title.wrap = <b>|</b><br />
+	field.wrap = |<br />
+	field.title.wrap = |</h1>
+	field.message.wrap = |<br />
+	field.description.wrap = <p>|</p>
+	field.services.outer.wrap = <ul>|</ul>
+	field.services.inner.wrap = <li>|</li>
+}

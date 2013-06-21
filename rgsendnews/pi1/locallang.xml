@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_rgsendnews_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="error-sendname">Your name is empty!</label>
+			<label index="error-sendemail">Your email address is empty!</label>
+			<label index="error-sendemailwrong">Your email address is not correct!</label>
+			<label index="error-recname">The receiver's name is empty!</label>
+			<label index="error-recemail">The receiver's email address is empty!</label>
+			<label index="error-recemailwrong">The receiver's email address is not correct!</label>
+			<label index="error-spamdouble">You are not allowed to send the same article to the same friend that often!</label>
+			<label index="error-spamdoublegeneral">You are not allowed to send so many mails, SPAM control!</label>
+			<label index="error-captcha">Your captcha is wrong!</label>
+			
+			<label index="mailsent">This article has been sent to %s (%s)!</label>
+			<label index="mailsenterror">An error occured while trying to send the article to %s (%s)!</label>			
+			<label index="ll_sendlink">Send this news to a friend</label>
+			<label index="ll_recname">Friend's name</label>			
+			<label index="ll_recemail">Friend's email</label>
+			<label index="ll_sendemail">Your email</label>
+			<label index="ll_sendname">Your name</label>
+			<label index="ll_text">Comment</label>			
+			<label index="ll_html">HTML Mail</label>
+			<label index="ll_submit">Send it</label>
+			<label index="ll_reset">Reset</label>
+			<label index="ll_header">Send this article</label>
+			<label index="ll_close">Close</label>
+			<label index="ll_captcha">Captcha</label>			
+		</languageKey>
+
+		<!-- GERMAN -->
+		<languageKey index="de" type="array">
+			<label index="error-sendname">Dein Name ist leer!</label>
+			<label index="error-sendemail">Deine Emailadresse ist leer!</label>
+			<label index="error-sendemailwrong">Deine Emailadresse ist nicht korrekt!</label>
+			<label index="error-recname">Der Empfängername ist leer!</label>
+			<label index="error-recemail">Die Emailadresse des Empfängers ist leer!</label>
+			<label index="error-recemailwrong">Die Emailadresse des Empfängers ist nicht korrekt!</label>
+			<label index="error-spamdouble">Es ist nicht erlaubt, den gleichen Artikel so oft an die gleiche Person zu senden!</label>
+			<label index="error-spamdoublegeneral">Es ist nicht erlaubt, so oft einen Artikel zu versenden (SPAM?)!</label>
+			<label index="error-captcha">Die Captcha-Eingabe ist fehlerhaft!</label>
+
+			<label index="mailsent">Der Artikel wurde an %s (%s) verschickt!</label>
+			<label index="mailsenterror">Ein Fehler trat beim Versenden des Artikels an %s (%s) auf!</label>			
+			<label index="ll_sendlink">Sende diesen Artikel an einen Freund</label>
+			<label index="ll_recname">Empf&amp;auml;nger Name</label>
+			<label index="ll_recemail">Empf&amp;auml;nger Email</label>
+			<label index="ll_sendemail">Deine Email</label>
+			<label index="ll_sendname">Dein Name</label>
+			<label index="ll_text">Kommentar</label>			
+			<label index="ll_html">HTML Email</label>
+			<label index="ll_submit">Abschicken</label>
+			<label index="ll_reset">Zur&amp;uuml;cksetzen</label>
+			<label index="ll_header">Versende diesen Artikel</label>
+			<label index="ll_close">Schlie&amp;szlig;en</label>
+			<label index="ll_captcha">Captcha</label>
+		</languageKey>
+
+
+	</data>
+</T3locallang>

@@ -1,0 +1,91 @@
+###
+# This is the default TS-setup for tq_seo
+#
+# (see Section Reference in the manual for more options & parameters)
+#
+###
+
+## include libs
+includeLibs.tx_tqseo_pagetitle = EXT:tq_seo/lib/class.pagetitle.php
+includeLibs.tx_tqseo_metatags = EXT:tq_seo/lib/class.metatags.php
+includeLibs.tx_tqseo_pagefooter = EXT:tq_seo/lib/class.pagefooter.php
+
+## title tag changer
+config.titleTagFunction = user_tqseo_pagetitle->main
+
+## metatags
+page {
+  headerData.84113002 = USER
+  headerData.84113002 {
+    userFunc = user_tqseo_metatags->main
+  }
+
+  84113002 = USER
+  84113002 {
+    userFunc = user_tqseo_pagefooter->main
+  }
+}
+
+## link parser changer
+#tt_content.search.20.renderObj.10.typolink.userFunc = user_tqseo_linkparser->main
+#lib.parseFunc.tags.link.typolink.userFunc = user_tqseo_linkparser->main
+#lib.parseFunc_RTE.tags.link.typolink.userFunc = user_tqseo_linkparser->main
+#plugin.tx_indexedsearch.result_link_target.stdWrap.typolink.userFunc = user_tqseo_linkparser->main
+
+
+plugin.tq_seo {
+  pageTitle {
+    applySitetitleToPagetitle = {$plugin.tq_seo.pageTitle.applySitetitleToPagetitle}
+    applySitetitleToPrefixSuffix = {$plugin.tq_seo.pageTitle.applySitetitleToPrefixSuffix}
+  }
+
+  metaTags {
+    enableDC = {$plugin.tq_seo.metaTags.enableDC}
+    description = {$plugin.tq_seo.metaTags.description}
+    keywords = {$plugin.tq_seo.metaTags.keywords}
+    copyright = {$plugin.tq_seo.metaTags.copyright}
+    email = {$plugin.tq_seo.metaTags.email}
+    author = {$plugin.tq_seo.metaTags.author}
+    language = {$plugin.tq_seo.metaTags.language}
+    distribution = {$plugin.tq_seo.metaTags.distribution}
+    rating = {$plugin.tq_seo.metaTags.rating}
+    revisit = {$plugin.tq_seo.metaTags.revisit}
+
+    robotsIndex = {$plugin.tq_seo.metaTags.robotsIndex}
+    robotsFollow = {$plugin.tq_seo.metaTags.robotsFollow}
+    robotsArchive = {$plugin.tq_seo.metaTags.robotsArchive}
+
+    geoPositionLatitude = {$plugin.tq_seo.metaTags.geoPositionLatitude}
+    geoPositionLongitude = {$plugin.tq_seo.metaTags.geoPositionLongitude}
+    geoRegion = {$plugin.tq_seo.metaTags.geoRegion}
+    geoPlacename = {$plugin.tq_seo.metaTags.geoPlacename}
+
+    googleVerification = {$plugin.tq_seo.metaTags.googleVerification}
+    msnVerification = {$plugin.tq_seo.metaTags.msnVerification}
+    yahooVerification = {$plugin.tq_seo.metaTags.yahooVerification}
+
+    picsLabel = {$plugin.tq_seo.metaTags.picsLabel}
+
+    useLastUpdate = {$plugin.tq_seo.metaTags.useLastUpdate}
+    useDetectLanguage = {$plugin.tq_seo.metaTags.useDetectLanguage}
+    useCanonical = {$plugin.tq_seo.metaTags.useCanonical}
+
+    conf {
+      description_page.field = description
+      keywords_page.field = keywords
+      title_page.field = title
+      author_page.field = author
+      email_page.field = author_email
+
+      lastUpdate_page {
+        data = page:lastUpdated
+        date = c
+        data = register : SYS_LASTCHANGED
+      }
+    }
+  }
+
+  services {
+    googleAnalytics = {$plugin.tq_seo.services.googleAnalytics}
+  }
+}

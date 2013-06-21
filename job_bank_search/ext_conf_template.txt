@@ -1,0 +1,14 @@
+# cat=basic; type=string; label= Date Format for Calendar
+dateFormatCalendar=dd/mm/yyyy
+
+# cat=basic; type=string; label= Template File
+templateFile=
+
+# cat=basic; type=string; label= Resume Page
+resumePId=
+
+# cat=basic; type=integer; label= Maximum Records to show in paging
+pagingRecordsPerPage=
+
+# cat=basic; type=string; label=Directory for uploaded logos
+logoDirectory=

@@ -1,0 +1,7 @@
+plugin.tt_news.news_default_image {
+	# cat=plugin.tt_news.news_default_image//1; type=boolean; label= Use Category Image : Use category image as news if no news image.
+	useCategoryImage = 1
+
+	# cat=plugin.tt_news.news_default_image//2; type=text; label= Category Image Params : Use category image as news if no news image.
+	categoryImageParams = class="img-black-border"
+}

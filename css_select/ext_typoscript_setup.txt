@@ -1,0 +1,63 @@
+/***************************************************************
+ * Copyright notice
+ *
+ * (c) 2004 macmade.net
+ * All rights reserved
+ *
+ * This script is part of the TYPO3 project. The TYPO3 project is 
+  * free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * The GNU General Public License can be found at
+ * http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This script is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
+
+/**
+ * Default TS setup - Extension 'CSS Select'
+ *
+ * @author		Jean-David Gadina (macmade@gadlab.net)
+ * @version		1.0
+ */
+
+/**
+ * PI1 object - CSS Select
+ */
+
+plugin.tx_cssselect_pi1 {
+	
+	// Recursive option
+	recursive = {$plugin.tx_cssselect_pi1.recursive}
+	
+	// Use import commands
+	importRules = {$plugin.tx_cssselect_pi1.importRules}
+	
+	// Use XHTML rules
+	xHTML = {$plugin.tx_cssselect_pi1.xHTML}
+	
+	// CSS media
+	cssMedia = {$plugin.tx_cssselect_pi1.cssMedia}
+	
+	// Link type parameter
+	cssType = {$plugin.tx_cssselect_pi1.cssType}
+	
+	// Link rel parameter
+	linkRel = {$plugin.tx_cssselect_pi1.linkRel}
+	
+	// Link charset parameter
+	linkCharset = {$plugin.tx_cssselect_pi1.linkCharset}
+	
+	// CSS comments
+	cssComments = {$plugin.tx_cssselect_pi1.cssComments}
+}
+
+// Page header data
+page.headerData.9000 < plugin.tx_cssselect_pi1

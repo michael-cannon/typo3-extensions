@@ -1,0 +1,973 @@
+2009-05-18 Monday 05:44  cannon
+
+	* class.tx_newseventregister.php, ext_emconf.php, ext_icon.gif:
+	  unrequire ms_survey; self-contain main class from cb_cogs
+
+2009-04-02 Thursday 23:34  cannon
+
+	* class.tx_newseventregister.php, ext_emconf.php,
+	  modfunc1/class.tx_newseventregister_modfunc1.php: Acqal branding
+
+2009-03-11 Wednesday 02:46  cannon
+
+	* class.tx_newseventregister.php: enable visitor auto-register
+
+2008-02-18 Monday 15:43  cannon
+
+	* class.tx_newseventregister.php: i for minutes
+
+2007-11-15 Thursday 16:49  cannon
+
+	* class.tx_newseventregister.php: update monitor date
+	  this->timezoneOffset
+
+2007-10-24 Wednesday 12:20  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt:
+	  send access 4 hours prior; spacing
+
+2007-10-18 Thursday 16:11  cannon
+
+	* class.tx_newseventregister.php: show materials an hour before
+
+2007-10-18 Thursday 13:14  cannon
+
+	* ext_emconf.php, locallang.php: ended and follow up verbiage
+	  updates
+
+2007-10-18 Thursday 11:51  cannon
+
+	* class.tx_newseventregister.php: time offset correction
+
+2007-10-16 Tuesday 13:04  cannon
+
+	* class.tx_newseventregister.php: apply canned RT materials hiding;
+	  3 state reserve, reserved, reg closed status; correct timezone
+	  offset
+
+2007-09-19 Wednesday 12:38  cannon
+
+	* class.tx_newseventregister.php: line up visitor login with
+	  acessinofsend
+
+2007-06-20 Wednesday 19:10  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: remove excess
+	  Results column
+
+2006-11-29 Wednesday 09:32  cannon
+
+	* ext_typoscript_constants.txt: send accessInformationSend 6 hours
+	  ahead
+
+2006-11-17 Friday 20:14  evgeniy
+
+	* class.tx_newseventregister.php: spacing
+
+2006-11-09 Thursday 15:23  evgeniy
+
+	* class.tx_newseventregister.php: overzealous line join
+
+2006-11-09 Thursday 15:22  evgeniy
+
+	* class.tx_newseventregister.php: added category count division
+
+2006-11-02 Thursday 05:18  cannon
+
+	* class.tx_newseventregister.php:  * For sending access emails and
+	  activating users, select events that start
+	     within the next 24 hours OR are still running. Explanation:
+	     When visitors register for an event, their user is activated
+	  for some 3 to 7
+	     minutes. It is then activated again when access emails are
+	  sent out (24 hrs
+	     before start of event). Visitors that register within 24 hrs
+	  before the start
+	     of the event, get their access email at the next cron run (was
+	  every 30
+	     minutes, will be changing that to every 10 minutes). Visitors,
+	  that register
+	     in the time frame between the last cron run before the start
+	  of the event and
+	     the start of the event neither got the access email nor have
+	  their visitors
+	     been activated. This is because the access-email-sending
+	  selected events that
+	     start within the next 24 hours. This does not include events
+	  that started
+	     just now.
+
+2006-10-03 Tuesday 08:16  evgeniy
+
+	* class.tx_newseventregister.php: Added selecting of categories in
+	  monitor email.  Now if RT in BMP & SOA - it's monitored by SOA &
+	  BPM monitors, if RT only in SOA - it's monitored by SOA only, if
+	  RT only in BPM - it's monitored by BPM only.
+
+2006-09-29 Friday 07:41  evgeniy
+
+	* class.tx_newseventregister.php, clearOptions.js, ext_tables.sql,
+	  modfunc1/class.tx_newseventregister_modfunc1.php: Fixed problem
+	  with monitor email sending.  Removed not right parameter of
+	  function sendEmail in moniutor section
+
+2006-09-28 Thursday 04:09  evgeniy
+
+	* CHANGELOG, class.tx_newseventregister.php, clearOptions.js,
+	  ext_tables.sql, modfunc1/class.tx_newseventregister_modfunc1.php:
+	  Added visitors activation
+
+2006-09-21 Thursday 09:18  cannon
+
+	* class.tx_newseventregister.php:  * Comment correction
+
+2006-09-21 Thursday 05:28  cannon
+
+	* class.tx_newseventregister.php, ext_tables.php, ext_tables.sql,
+	  ext_typoscript_setup.txt, locallang_db.php: Added canned field to
+	  round table, template changing
+
+2006-09-06 Wednesday 10:35  cannon
+
+	* class.tx_newseventregister.php, ext_emconf.php: remove excess p
+	  tags
+
+2006-06-20 Tuesday 21:54  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: add username
+
+2006-06-15 Thursday 01:56  markus
+
+	* doc/manual.sxw:  * Add first version of manual. Contains only TS
+	  reference so far.
+
+2006-06-06 Tuesday 03:45  jaspreet
+
+	* class.tx_newseventregister.php: Not using no_cache in the created
+	  URLs anymore.
+
+2006-05-29 Monday 11:40  cannon
+
+	* ext_emconf.php: Typo3 extension repository uploading
+
+2006-04-10 Monday 10:36  cannon
+
+	* clearOptions.js: Inital import of "clearOptions.js" file
+
+2006-04-10 Monday 10:35  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: put clearoption
+	  inside
+
+2006-04-09 Sunday 21:28  cannon
+
+	* class.tx_newseventregister.php, news_event_register.tmpl: no
+	  processing
+
+2006-04-09 Sunday 20:58  cannon
+
+	* class.tx_newseventregister.php: add webex linking per news and
+	  global
+
+2006-04-09 Sunday 19:39  cannon
+
+	* ext_tables.php, ext_tables.sql, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, locallang_db.php: add Webex link box
+
+2006-04-07 Friday 20:45  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: don't display
+	  user selection
+
+2006-02-14 Tuesday 14:16  cannon
+
+	* class.tx_newseventregister.php: enable no_cache
+
+2006-02-11 Saturday 15:07  cannon
+
+	* class.tx_newseventregister.php: "
+
+2006-02-09 Thursday 16:39  cannon
+
+	* class.tx_newseventregister.php: remove ?
+
+2005-11-09 Wednesday 10:42  cannon
+
+	* class.tx_newseventregister.php: ensure active members
+
+2005-11-09 Wednesday 10:35  cannon
+
+	* class.tx_newseventregister.php: disable
+
+2005-11-09 Wednesday 10:33  cannon
+
+	* class.tx_newseventregister.php: temp disable/deleted
+
+2005-11-05 Saturday 16:27  cannon
+
+	* class.tx_newseventregister.php: use HTTP_HOST
+
+2005-09-02 Friday 07:07  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: Added
+	  modification to clear all selected options upon clicking the
+	  Clear Options button instead of resetting to default. (js)
+
+2005-08-25 Thursday 08:47  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: Added remember
+	  options (remembers the options the user selected in a form)
+	  (js)..
+
+2005-08-09 Tuesday 12:16  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: header cleanup;
+	  iso_cn_3 removal
+
+2005-08-03 Wednesday 19:10  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: sort by title
+	  then date
+
+2005-08-03 Wednesday 19:08  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: mod textarea
+	  and news item display
+
+2005-07-27 Wednesday 14:06  cannon
+
+	* class.tx_newseventregister.php: check for event_information
+	  content
+
+2005-07-18 Monday 13:30  cannon
+
+	* modfunc1/locallang.php: Please
+
+2005-07-01 Friday 17:43  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: multiline
+	  matching
+
+2005-07-01 Friday 16:52  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: add input at
+	  page top; array_fill
+
+2005-06-22 Wednesday 18:09  cannon
+
+	* class.tx_newseventregister.php: live
+
+2005-06-22 Wednesday 18:08  cannon
+
+	* class.tx_newseventregister.php: test to me
+
+2005-06-22 Wednesday 18:07  cannon
+
+	* class.tx_newseventregister.php: try to prevent fluff
+
+2005-06-22 Wednesday 10:16  cannon
+
+	* class.tx_newseventregister.php: make live
+
+2005-06-22 Wednesday 10:15  cannon
+
+	* class.tx_newseventregister.php: dayStart
+
+2005-06-22 Wednesday 10:12  cannon
+
+	* class.tx_newseventregister.php: use between versus ending
+
+2005-06-21 Tuesday 13:09  cannon
+
+	* ext_tables.php: don't require survey by default
+
+2005-06-16 Thursday 03:46  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: grab single
+	  news row for gathering questions
+
+2005-06-16 Thursday 02:20  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: column headers
+	  by title, not question
+
+2005-06-15 Wednesday 02:31  cannon
+
+	* class.tx_newseventregister.php: test off
+
+2005-06-15 Wednesday 02:29  cannon
+
+	* class.tx_newseventregister.php: no exit
+
+2005-06-15 Wednesday 02:22  cannon
+
+	* class.tx_newseventregister.php: test and check emailed content
+
+2005-06-15 Wednesday 02:10  cannon
+
+	* class.tx_newseventregister.php, locallang_db.php: test heading
+	  swap outs
+
+2005-06-14 Tuesday 16:36  cannon
+
+	* class.tx_newseventregister.php: enable San Francisco
+
+2005-06-14 Tuesday 13:25  cannon
+
+	* ext_tables.php, locallang_db.php: Enable editing of survey items
+	  from within news
+
+2005-06-14 Tuesday 13:10  cannon
+
+	* class.tx_newseventregister.php, locallang.php: Modify/Simplify
+	  save routine; recall array selections; Place emails on news
+	  template; Back-end field name changes
+
+2005-06-13 Monday 18:57  cannon
+
+	* class.tx_newseventregister.php: send to all
+
+2005-06-13 Monday 18:57  cannon
+
+	* class.tx_newseventregister.php: enable sending monitor email
+	  immediately after access emails being sent
+
+2005-06-13 Monday 18:20  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: handle default
+	  @ and checkbox cases
+
+2005-06-13 Monday 17:32  cannon
+
+	* class.tx_newseventregister.php, locallang.php: enable thank you
+	  page optional survey
+
+2005-06-13 Monday 16:18  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, locallang_db.php: begin survey on thank
+	  you feature
+
+2005-06-08 Wednesday 12:27  cannon
+
+	* class.tx_newseventregister.php: check surveyOn before saving
+	  survey results
+
+2005-06-07 Tuesday 15:15  cannon
+
+	* class.tx_newseventregister.php: enable grabbing templates
+	  specific to news items
+
+2005-06-07 Tuesday 08:20  cannon
+
+	* modfunc1/: class.tx_newseventregister_modfunc1.php,
+	  locallang.php: append survey data to participant download
+
+2005-06-07 Tuesday 02:27  cannon
+
+	* modfunc1/: class.tx_newseventregister_modfunc1.php,
+	  locallang.php: Require module to be on a page with participants
+	  or leads
+
+2005-06-07 Tuesday 02:03  cannon
+
+	* locallang.php: Update title
+
+2005-06-06 Monday 04:36  cannon
+
+	* class.tx_newseventregister.php: remove pco from user input;
+	  enable optional/require survey questions
+
+2005-06-06 Monday 04:19  cannon
+
+	* class.tx_newseventregister.php, ext_tables.php, locallang.php:
+	  add option; begin username to fe_cruser_id conversion; add error
+	  checking; save single entry
+
+2005-06-05 Sunday 19:02  cannon
+
+	* class.tx_newseventregister.php, locallang.php: begin displaying
+	  survey items on front-end
+
+2005-06-05 Sunday 00:12  cannon
+
+	* class.tx_newseventregister.php: display test survey code on page
+
+2005-06-04 Saturday 15:25  cannon
+
+	* ext_emconf.php, ext_tables.php, ext_tables.sql, locallang_db.php:
+	  begin adding survey code
+
+2005-06-03 Friday 19:34  cannon
+
+	* class.tx_newseventregister.php, news_event_register.tmpl: correct
+	  yesterday to midnight; send to monitorEmail
+
+2005-06-03 Friday 18:12  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, news_event_register.tmpl: add in email
+	  monitoring script
+
+2005-05-29 Sunday 18:21  cannon
+
+	* class.tx_newseventregister.php: remove cbPrint2
+
+2005-05-29 Sunday 18:20  cannon
+
+	* class.tx_newseventregister.php: remove marker space
+
+2005-05-29 Sunday 18:13  cannon
+
+	* news_event_register.tmpl: check for Luican
+
+2005-05-29 Sunday 18:01  cannon
+
+	* class.tx_newseventregister.php: mail test
+
+2005-05-29 Sunday 17:55  cannon
+
+	* class.tx_newseventregister.php, news_event_register.tmpl: Manual
+	  counts of sent and such
+
+2005-05-29 Sunday 15:14  cannon
+
+	* class.tx_newseventregister.php, ext_tables.php,
+	  news_event_register.tmpl: begin adding sendMonitor
+
+2005-05-25 Wednesday 14:03  cannon
+
+	* class.tx_newseventregister.php: remove second enableFields
+
+2005-05-22 Sunday 23:29  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: load zone long
+	  name if available
+
+2005-05-20 Friday 18:06  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: rm AND
+	  z.zn_code = u.zone
+
+2005-05-11 Wednesday 13:04  cannon
+
+	* class.tx_newseventregister.php: only show current events for
+	  multiple register and unregister; don't show check box text if no
+	  events
+
+2005-04-26 Tuesday 18:35  cannon
+
+	* class.tx_newseventregister.php: set event info header; keep
+	  offer/fulfillment together; blank offer text if none
+
+2005-04-21 Thursday 16:20  cannon
+
+	* ext_tables.php: set subheader into own block
+
+2005-04-21 Thursday 16:06  cannon
+
+	* class.tx_newseventregister.php, ext_tables.php, ext_tables.sql,
+	  locallang_db.php, news_event_register.tmpl: enable sponsor offer
+	  and fulfillment fields for web and email views
+
+2005-04-20 Wednesday 20:33  cannon
+
+	* locallang_db.php: email sending is...
+
+2005-04-20 Wednesday 20:29  cannon
+
+	* ext_tables.php, ext_typoscript_constants.txt, locallang_db.php:
+	  group tab selections; label enhancements
+
+2005-04-20 Wednesday 19:41  cannon
+
+	* ext_tables.php: uncheck first/third reminder
+
+2005-04-16 Saturday 02:06  cannon
+
+	* class.tx_newseventregister.php: add no endtime handlers
+
+2005-04-16 Saturday 00:47  cannon
+
+	* modfunc1/: class.tx_newseventregister_modfunc1.php,
+	  locallang.php: add display button to downloads
+
+2005-04-12 Tuesday 00:41  cannon
+
+	* class.tx_newseventregister.php: debug to off; remove sent
+
+2005-04-12 Tuesday 00:37  cannon
+
+	* class.tx_newseventregister.php: remove continue; debug to
+
+2005-04-11 Monday 22:59  cannon
+
+	* class.tx_newseventregister.php: failed to uid display
+
+2005-04-11 Monday 22:52  cannon
+
+	* class.tx_newseventregister.php: add 5 minute time limit
+
+2005-04-11 Monday 22:31  cannon
+
+	* class.tx_newseventregister.php: bail if no to
+
+2005-04-11 Monday 22:05  cannon
+
+	* class.tx_newseventregister.php: allow to flow
+
+2005-04-11 Monday 21:59  cannon
+
+	* class.tx_newseventregister.php: debug to for multiple sends;
+	  return sent
+
+2005-04-07 Thursday 01:41  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: drop leads
+	  dups; swap group/order positions
+
+2005-04-05 Tuesday 23:35  cannon
+
+	* class.tx_newseventregister.php: don't show multiples if none
+
+2005-04-05 Tuesday 22:27  cannon
+
+	* class.tx_newseventregister.php: reminder delay after thank you
+
+2005-04-05 Tuesday 21:05  cannon
+
+	* class.tx_newseventregister.php: check for array
+
+2005-04-01 Friday 13:49  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt,
+	  modfunc1/class.tx_newseventregister_modfunc1.php: add in timezone
+	  offset; descending order of event selections
+
+2005-04-01 Friday 11:24  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: comment out
+	  nc.title to prevent dups; join on zone code if available to
+	  prevent dups
+
+2005-03-31 Thursday 18:28  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: show
+	  involvement other text only when such exists
+
+2005-03-31 Thursday 18:25  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: add
+	  zone/country translations; add bpm involvement to leads
+
+2005-03-31 Thursday 17:57  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: Add download
+	  buttons to top; rearrange download options
+
+2005-03-31 Thursday 17:54  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: Correct hour
+	  tag; put news at top of download; dates at end
+
+2005-03-31 Thursday 17:45  cannon
+
+	* class.tx_newseventregister.php: close form if past event end
+
+2005-03-31 Thursday 17:40  cannon
+
+	* class.tx_newseventregister.php, locallang.php,
+	  news_event_register.tmpl: add event registration closed marker
+
+2005-03-30 Wednesday 21:37  cannon
+
+	* locallang.php: spell check
+
+2005-03-30 Wednesday 20:53  cannon
+
+	* class.tx_newseventregister.php: revise adminEmail from conf
+
+2005-03-30 Wednesday 20:23  cannon
+
+	* class.tx_newseventregister.php: spacing cleanup
+
+2005-03-30 Wednesday 18:26  cannon
+
+	* class.tx_newseventregister.php: spacing
+
+2005-03-30 Wednesday 16:39  cannon
+
+	* class.tx_newseventregister.php, locallang.php,
+	  news_event_register.tmpl: correct double registration bug
+
+2005-03-30 Wednesday 04:43  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt: add ->conf[ 'eventUrlPid' ]
+
+2005-03-30 Wednesday 04:36  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_setup.txt: get
+	  multiple registration working
+
+2005-03-30 Wednesday 01:26  cannon
+
+	* class.tx_newseventregister.php, news_event_register.tmpl: begin
+	  using template for single/multiple registrations
+
+2005-03-29 Tuesday 22:29  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_setup.txt,
+	  locallang.php: LINK_ITEM to EVENT_URL
+
+2005-03-29 Tuesday 21:56  cannon
+
+	* modfunc1/class.tx_newseventregister_modfunc1.php: add involvement
+	  to download if exists
+
+2005-03-29 Tuesday 21:38  cannon
+
+	* news_event_register.tmpl: add HTML email markers
+
+2005-03-29 Tuesday 21:33  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt: add in plain text message line chop
+	  code
+
+2005-03-29 Tuesday 13:36  cannon
+
+	* class.tx_newseventregister.php: add return on
+	  multipleUnregisterInput if no user
+
+2005-03-27 Sunday 18:59  cannon
+
+	* CHANGELOG: updatge changelogs
+
+2005-03-27 Sunday 18:14  cannon
+
+	* class.tx_newseventregister.php: enable multipleUnregisterInput
+
+2005-03-27 Sunday 17:54  cannon
+
+	* class.tx_newseventregister.php, ext_emconf.php,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  locallang.php: multipleRegisterInput enabled
+
+2005-03-25 Friday 20:02  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, locallang.php,
+	  news_event_register.tmpl: add in ThankYou page landing for stand
+	  alone register/unregister ops
+
+2005-03-25 Friday 19:05  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt: enable delay between reminder mailings
+
+2005-03-25 Friday 14:41  cannon
+
+	* class.tx_newseventregister.php: use cbHtml2Str
+
+2005-03-25 Friday 14:25  cannon
+
+	* class.tx_newseventregister.php, cronjob.tx_newseventregister.php:
+	  convert HTML to plain text
+
+2005-03-25 Friday 13:19  cannon
+
+	* class.tx_newseventregister.php, ext_emconf.php: add baseurl for
+	  logos; enable HTML email sending; add EMAIL_HTML markers
+
+2005-03-25 Friday 11:18  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, news_event_register.tmpl: begin
+	  sendHtml conversion; still need to actually send html email
+
+2005-03-25 Friday 01:08  cannon
+
+	* class.tx_newseventregister.php: prepend submit with space
+
+2005-03-25 Friday 01:02  cannon
+
+	* class.tx_newseventregister.php: add sendUnregistered(); enable
+	  unregister code in MAGIC
+
+2005-03-25 Friday 00:38  cannon
+
+	* class.tx_newseventregister.php, locallang.php,
+	  news_event_register.tmpl: add unregistered template markers; add
+	  unregister(ed) language
+
+2005-03-23 Wednesday 23:17  cannon
+
+	* CHANGELOG: add CHANGELOG
+
+2005-03-22 Tuesday 22:05  cannon
+
+	* modfunc1/: class.tx_newseventregister_modfunc1.php,
+	  locallang.php: enable participant download
+
+2005-03-21 Monday 17:45  cannon
+
+	* modfunc1/: class.tx_newseventregister_modfunc1.php,
+	  locallang.php: remove filename and nonsent; Leads to Particpants
+
+2005-03-21 Monday 17:34  cannon
+
+	* ext_tables.php, locallang_db.php: iniital add of download
+
+2005-03-20 Sunday 12:07  cannon
+
+	* ext_tables.sql: remove default from auto_increment
+
+2005-03-19 Saturday 19:25  cannon
+
+	* ext_tables.sql: add key
+
+2005-03-19 Saturday 19:04  cannon
+
+	* class.tx_newseventregister.php, cronjob.tx_newseventregister.php,
+	  locallang.php: reverse email send order; enable backend template
+	  and language file grabbing
+
+2005-03-18 Friday 21:23  cannon
+
+	* class.tx_newseventregister.php, cronjob.tx_newseventregister.php:
+	  need to resolve fileResource issues for cron side
+
+2005-03-18 Friday 20:23  cannon
+
+	* class.tx_newseventregister.php, ext_tables.php, ext_tables.sql,
+	  locallang_db.php, news_event_register.tmpl: add SEND_FOLLOW_UP,
+	  SEND_ACCESS, SEND_REMINDERS options; enable sendFollup()
+
+2005-03-18 Friday 19:45  cannon
+
+	* class.tx_newseventregister.php: add emailSelectConf
+
+2005-03-18 Friday 19:41  cannon
+
+	* class.tx_newseventregister.php, cronjob.tx_newseventregister.php,
+	  ext_tables.php, ext_tables.sql, locallang.php, locallang_db.php,
+	  news_event_register.tmpl: add sendReminderEmails; enable
+	  sendReminders; remove tt_news level period sent items
+
+2005-03-18 Friday 17:08  cannon
+
+	* class.tx_newseventregister.php, cronjob.tx_newseventregister.php:
+	  create config and grab conf for news
+
+2005-03-17 Thursday 18:02  cannon
+
+	* cronjob.tx_newseventregister.php: try creating TSFE
+
+2005-03-17 Thursday 17:54  cannon
+
+	* class.tx_newseventregister.php, cronjob.tx_newseventregister.php,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt: try to
+	  debug starting up a fresh shell level typo3 instance
+
+2005-03-17 Thursday 15:35  cannon
+
+	* class.tx_newseventregister.php, cronjob.tx_newseventregister.php,
+	  ext_tables.php, ext_tables.sql, locallang_db.php: add reminder
+	  date sent to back-end
+
+2005-03-17 Thursday 14:58  cannon
+
+	* ext_tables.php, ext_tables.sql, locallang_db.php: add access and
+	  follow date sent fields to back-end
+
+2005-03-17 Thursday 14:24  cannon
+
+	* class.tx_newseventregister.php: enable isTempRegistered
+
+2005-03-17 Thursday 14:01  cannon
+
+	* class.tx_newseventregister.php, ext_tables.php, ext_tables.sql,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  locallang_db.php, tca.php: rename news to news_id; rename member
+	  to fe_user_id; add isTempRegistered
+
+2005-03-17 Thursday 00:32  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_setup.txt,
+	  news_event_register.tmpl: updated to 0.2.0 for all but userinfo;
+	  userinfo updated to 0.1.0
+
+2005-03-16 Wednesday 18:40  cannon
+
+	* class.tx_newseventregister.php: succes fix
+
+2005-03-16 Wednesday 18:31  cannon
+
+	* class.tx_newseventregister.php: debug poc contents
+
+2005-03-16 Wednesday 17:54  cannon
+
+	* class.tx_newseventregister.php, ext_tables.php, ext_tables.sql,
+	  locallang_db.php: add point of contact
+
+2005-03-16 Wednesday 17:31  cannon
+
+	* locallang.php, news_event_register.tmpl: add POC; lengthen ---
+
+2005-03-16 Wednesday 13:46  cannon
+
+	* class.tx_newseventregister.php, news_event_register.tmpl: work
+	  phone to telephone; enable userinfo parsing on events
+
+2005-03-16 Wednesday 13:03  cannon
+
+	* ext_emconf.php: add userinfo; pull user info from leads; update
+	  template fields
+
+2005-03-16 Wednesday 11:54  cannon
+
+	* class.tx_newseventregister.php, locallang.php,
+	  news_event_register.tmpl: parse thank you; begin user parsing
+
+2005-03-16 Wednesday 11:31  cannon
+
+	* class.tx_newseventregister.php: rm sitename debug; call
+	  uniqueId()
+
+2005-03-16 Wednesday 11:29  cannon
+
+	* ext_typoscript_constants.txt, ext_typoscript_setup.txt: add
+	  sitename to constants
+
+2005-03-16 Wednesday 11:24  cannon
+
+	* class.tx_newseventregister.php: comment
+
+2005-03-16 Wednesday 11:23  cannon
+
+	* class.tx_newseventregister.php: add uniqueId; add sendEmail
+
+2005-03-15 Tuesday 20:46  cannon
+
+	* class.tx_newseventregister.php: debug templateFile
+
+2005-03-15 Tuesday 20:35  cannon
+
+	* class.tx_newseventregister.php: debug template, subpart
+
+2005-03-15 Tuesday 20:30  cannon
+
+	* class.tx_newseventregister.php: debug body
+
+2005-03-15 Tuesday 20:22  cannon
+
+	* class.tx_newseventregister.php: debug registerIds
+
+2005-03-15 Tuesday 16:45  cannon
+
+	* class.tx_newseventregister.php: close marker cache
+
+2005-03-15 Tuesday 16:20  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt: send user thank you and registration
+	  notice to admin
+
+2005-03-15 Tuesday 16:01  cannon
+
+	* class.tx_newseventregister.php, news_event_register.tmpl: parse
+	  subjects
+
+2005-03-15 Tuesday 15:37  cannon
+
+	* class.tx_newseventregister.php: add unregister code
+
+2005-03-15 Tuesday 15:24  cannon
+
+	* class.tx_newseventregister.php: ensure un/registerIds is array
+
+2005-03-15 Tuesday 15:16  cannon
+
+	* class.tx_newseventregister.php: register single or multiple
+
+2005-03-15 Tuesday 15:00  cannon
+
+	* class.tx_newseventregister.php: language, register, and leads
+	  changes
+
+2005-03-14 Monday 19:06  cannon
+
+	* class.tx_newseventregister.php: begin register code
+
+2005-03-14 Monday 18:46  cannon
+
+	* class.tx_newseventregister.php, ext_tables.sql,
+	  ext_typoscript_setup.txt, locallang.php,
+	  news_event_register.tmpl: add isRegistered; 've to 're; notice
+	  wrap
+
+2005-03-14 Monday 17:38  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_setup.txt,
+	  locallang.php, news_event_register.tmpl: add reserve text
+
+2005-03-14 Monday 16:56  cannon
+
+	* ext_localconf.php, ext_tables.php, ext_tables.sql,
+	  icon_tx_newseventregister_participants.gif, locallang_db.php,
+	  tca.php: Add participants table
+
+2005-03-14 Monday 16:04  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, locallang.php,
+	  news_event_register.tmpl: parse labels; parse fields; parse
+	  date/time
+
+2005-03-14 Monday 01:34  cannon
+
+	* class.tx_newseventregister.php, ext_typoscript_setup.txt,
+	  locallang.php, news_event_register.tmpl: parse labels
+
+2005-03-14 Monday 00:09  cannon
+
+	* locallang.php, news_event_register.tmpl: revise localization
+	  markers
+
+2005-03-13 Sunday 22:42  cannon
+
+	* locallang.php, news_event_register.tmpl: fill out email templates
+
+2005-03-13 Sunday 18:55  cannon
+
+	* locallang.php, news_event_register.tmpl: add poc, attended,
+	  registered, access, follow up
+
+2005-03-13 Sunday 18:39  cannon
+
+	* ext_tables.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt, locallang.php,
+	  news_event_register.tmpl: add language and template files
+
+2005-03-13 Sunday 18:04  cannon
+
+	* class.tx_newseventregister.php, ext_localconf.php,
+	  ext_tables.php, ext_typoscript_constants.txt,
+	  ext_typoscript_setup.txt: add class and localconf
+
+2005-03-13 Sunday 17:26  cannon
+
+	* ext_emconf.php, ext_icon.gif, ext_tables.php, ext_tables.sql,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  locallang_db.php, doc/wizard_form.dat, doc/wizard_form.html
+	  (utags: initial): Initial /news_event_register import
+
+2005-03-13 Sunday 17:26  cannon
+
+	* ext_emconf.php, ext_icon.gif, ext_tables.php, ext_tables.sql,
+	  ext_typoscript_constants.txt, ext_typoscript_setup.txt,
+	  locallang_db.php, doc/wizard_form.dat, doc/wizard_form.html:
+	  Initial revision
+

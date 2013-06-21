@@ -1,0 +1,175 @@
+<T3DataStructure>
+  <sheets>
+        <sDEF>
+                <ROOT>
+                <TCEforms>
+                        <sheetTitle>LLL:EXT:ms_survey/locallang.php:ff_general_opts</sheetTitle>
+                </TCEforms>
+            <type>array</type>
+            <el>
+	      <allow_anonymous>
+
+<TCEforms>
+
+
+<label>LLL:EXT:ms_survey/locallang.php:ff_allow_anon</label>
+<config>                                         
+<type>select</type>
+<items type="array"> 
+	<numIndex index="0" type="array">                                                                                                                                                  <numIndex index="0"></numIndex>
+	<numIndex index="1"></numIndex>
+	</numIndex>
+	<numIndex index="1" type="array">
+	<numIndex index="0">LLL:EXT:ms_survey/locallang.php:ff_allow_anon_yes</numIndex>
+	<numIndex index="1">2</numIndex>       
+	</numIndex>      
+	<numIndex index="2" type="array">
+	<numIndex index="0">LLL:EXT:ms_survey/locallang.php:ff_allow_anon_no</numIndex>
+	<numIndex index="1">1</numIndex>
+	</numIndex>
+	</items>        
+	<maxitems>1</maxitems>
+	<size>1</size>
+	</config>
+	</TCEforms>
+</allow_anonymous>
+
+<surveyrequired>
+	<TCEforms>
+	<label>LLL:EXT:ms_survey/locallang.php:ff_surveyrequired</label>
+	<config>																					<type>check</type>
+	<default>1</default>
+	</config>
+	</TCEforms>
+</surveyrequired>
+
+<progressBar>
+	<TCEforms>
+	<label>LLL:EXT:ms_survey/locallang.php:ff_progress_bar</label>
+	<config>																					<type>check</type>
+	<default>0</default>
+	</config>
+	</TCEforms>
+</progressBar>
+																										
+																										
+<templateFile>
+<TCEforms>
+	<label>LLL:EXT:ms_survey/locallang.php:ff_template_file</label>
+		<config>
+		<type>group</type>
+		<internal_type>file</internal_type>
+		<allowed>tmpl,html</allowed>
+		<max_size>100</max_size>
+	<maxitems>1</maxitems>
+	<size>1</size>
+	<selectedListStyle>Width:180px</selectedListStyle>
+	</config>
+	</TCEforms>
+</templateFile>
+<registrantPid>
+	<TCEforms>
+		<exclude>1</exclude>
+			<label>LLL:EXT:ms_survey/locallang.php:ff_registrantPid</label>
+			<config>
+			<type>group</type>
+			<internal_type>db</internal_type>
+		<allowed>pages</allowed>
+	<size>1</size>
+	<maxitems>1</maxitems>
+	<minitems>0</minitems>																				<show_thumbs>0</show_thumbs>
+			</config>
+			</TCEforms>
+</registrantPid>
+<successRedirectPID>
+	<TCEforms>
+		<exclude>1</exclude>
+			<label>LLL:EXT:ms_survey/locallang.php:ff_redirect_page</label>
+			<config>
+			<type>group</type>
+			<internal_type>db</internal_type>
+		<allowed>pages</allowed>
+	<size>1</size>
+	<maxitems>1</maxitems>
+	<minitems>0</minitems>																				<show_thumbs>0</show_thumbs>
+			</config>
+			</TCEforms>
+</successRedirectPID>
+			
+            </el>
+          </ROOT>
+ 
+    </sDEF>
+    <s_email>
+          <ROOT>
+
+                <TCEforms>
+                        <sheetTitle>LLL:EXT:ms_survey/locallang.php:ff_email_opts</sheetTitle>
+                </TCEforms>
+            <type>array</type>
+            <el>
+	   <emailNotification>
+                         <TCEforms>
+                               <label>LLL:EXT:ms_survey/locallang.php:ff_email_notification</label>
+                          <config>
+                               <type>check</type>
+                               <default>1</default>
+                          </config>
+                        </TCEforms>
+</emailNotification>
+
+	   <emailFrom>
+	   
+                        <TCEforms>
+                                <label>LLL:EXT:ms_survey/locallang.php:ff_email_from</label>
+                                <config>
+                                        <type>input</type>
+                                        <size>50</size>
+                                </config>
+                        </TCEforms>
+              </emailFrom>
+
+		<emailName>
+                        <TCEforms>
+                                <label>LLL:EXT:ms_survey/locallang.php:ff_email_name</label>
+                                <config>
+                                        <type>input</type>
+                                        <size>30</size>
+                                </config>
+                        </TCEforms>
+              </emailName>
+
+              <emailSubject>
+                        <TCEforms>
+                                <label>LLL:EXT:ms_survey/locallang.php:ff_email_subject</label>
+                                <config>
+                                        <type>input</type>
+                                        <size>40</size>
+                                </config>
+                        </TCEforms>
+              </emailSubject>
+              <emailBody>
+                        <TCEforms>
+                                <label>LLL:EXT:ms_survey/locallang.php:ff_email_body</label>
+                                <config>
+                                        <type>text</type>
+                                        <cols>40</cols>
+                                        <rows>5</rows>
+                                </config>
+                        </TCEforms>
+              </emailBody>
+              <emailTemplate>
+                        <TCEforms>
+                                <label>LLL:EXT:ms_survey/locallang.php:ff_email_template</label>
+                                <config>
+                                        <type>text</type>
+                                        <cols>40</cols>
+                                        <rows>10</rows>
+                                </config>
+                        </TCEforms>
+              </emailTemplate>
+            </el>
+          </ROOT> 
+	     </s_email>        
+  </sheets>             
+</T3DataStructure>

@@ -1,0 +1,208 @@
+<html>
+<head>
+<title>Application Note Templates</title>
+</head>
+<body>
+<div id="singleview">
+<h1>Application Note Detail View</h1>
+<!-- ###SINGLEVIEW### begin -->
+<table>
+        <tr><th>Id</th><td>###ID###</td></tr>
+        <tr><th>Number</th><td>###NUMBER###</td></tr>
+        <tr><th>Title</th><td>###TITLE###</td></tr>
+        <tr><th>Description</th><td>###DESCRIPTION###</td></tr>
+        <tr><th>Date published</th><td>###DATE_PUBLISHED### ###TIME_PUBLISHED###</td></tr>
+        <tr><th>Author</th><td>###AUTHOR###</td></tr>
+        <tr><th>PDF</th><td><a href="###PDF_URL###">###PDF_FILENAME### ###PDF_SIZE### (###PDF_DOWNLOADS###)</a></td></tr>
+        <tr><th>ZIPs</th><td>
+                        <!-- ###ZIP_FILES### begin -->
+                        <a href="###ZIP_URL###">###ZIP_FILENAME### ###ZIP_SIZE### (###ZIP_DOWNLOADS###)</a><br/>
+                        <!-- ###ZIP_FILES### end -->
+        </td></tr>
+        <tr><th>Categories</th><td>
+		<ul>
+                        <!-- ###CATEGORIES### begin -->
+                        <li>###CATEGORY###</li>
+                        <!-- ###CATEGORIES### end -->
+		</ul>
+        </td></tr>
+        <tr><th>SW version</th><td>###SOFTWARE_VERSION###</td></tr>
+        <tr><th>Target Device Family</th><td>
+		<ul>
+                        <!-- ###DEVICES### begin -->
+                        <li><a href="###DEVICE_URL###">###DEVICE_TITLE###</a></li>
+                        <!-- ###DEVICES### end -->
+		</ul>
+        </td></tr>
+	<tr><th>Related Notes</th><td>
+		<ul>
+			<!-- ###RELATED_NOTES### begin -->
+			<li><a href="###RELATEDNOTE_URL###">###RELATEDNOTE_ID### (###RELATEDNOTE_TITLE###)</a></li>
+			<!-- ###RELATED_NOTES### end -->
+		</ul>
+	</td></tr>
+        <tr><th>Special Status Start</th><td>###SPECIAL_STATUS_START_DATE### ###SPECIAL_STATUS_START_TIME###</td></tr>
+        <tr><th>Special Status End</th><td>###SPECIAL_STATUS_END_DATE### ###SPECIAL_STATUS_END_TIME###</td></tr>
+        <tr><th>Special Status Priority</th><td>###SPECIAL_STATUS_PRIORITY###</td></tr>
+        <tr><th>Last updated</th><td>###LAST_UPDATED_DATE### ###LAST_UPDATED_TIME###</td></tr>
+        <tr><th>Created</th><td>###CREATED_DATE### ###CREATED_TIME###</td></tr>
+</table>
+<a href="###BACKLINK_URL###">Back to list</a>
+<!-- ###SINGLEVIEW### end -->
+</div>
+<div>
+<!-- ###LISTVIEW### begin -->
+<table>
+        <tr>
+                <th>Id</th>
+                <th><a href="###SORT_BY_NUMBER_URL###">Number</a></th>
+                <th><a href="###SORT_BY_TITLE_URL###">Title</a></th>
+                <th>Description</th>
+                <th><a href="###SORT_BY_DATE_PUBLISHED_URL###">Date published</a></th>
+                <th><a href="###SORT_BY_AUTHOR_URL###">Author</a></th>
+                <th>PDF</th>
+                <th>ZIPs</th>
+                <th>Categories</th>
+                <th>SW version</th>
+                <th>Target Device Family</th>
+		<th>Related Notes</th>
+		<th>Special Status Start</th>
+		<th>Special Status End</th>
+		<th>Special Status Priority</th>
+		<th>Last updated</th>
+		<th>Created</th>
+        </tr>
+        <!-- ###LIST_ITEM### begin -->
+	<!-- ###EVEN_ROW### begin -->
+        <tr>
+                <td>###ID###</td>
+                <td><a href="###SINGLEVIEW_URL###">###NUMBER###</a></td>
+                <td>###TITLE###</td>
+                <td>###DESCRIPTION###</td>
+                <td>###DATE_PUBLISHED### ###TIME_PUBLISHED###</td>
+                <td>###AUTHOR###</td>
+                <td><a href="###PDF_URL###">###PDF_FILENAME### ###PDF_SIZE### (###PDF_DOWNLOADS###)</a></td>
+                <td>
+                        <!-- ###ZIP_FILES### begin -->
+                        <a href="###ZIP_URL###">###ZIP_FILENAME### ###ZIP_SIZE### (###ZIP_DOWNLOADS###)</a>
+                        <!-- ###ZIP_FILES### end -->
+                </td>
+                <td>
+                        <!-- ###CATEGORIES### begin -->
+                        ###CATEGORY###
+                        <!-- ###CATEGORIES### end -->
+                </td>
+                <td>###SOFTWARE_VERSION###</td>
+		<td>
+			<ul>
+				<!-- ###DEVICES### begin -->
+				<li><a href="###DEVICE_URL###">###DEVICE_TITLE###</a></li>
+				<!-- ###DEVICES### end -->
+			</ul>
+		</td>
+		<td>
+			<ul>
+				<!-- ###RELATED_NOTES### begin -->
+				<li><a href="###RELATEDNOTE_URL###">###RELATEDNOTE_ID### (###RELATEDNOTE_TITLE###)</a></li>
+				<!-- ###RELATED_NOTES### end -->
+			</ul>
+		</td>
+		<td>###SPECIAL_STATUS_START_DATE### ###SPECIAL_STATUS_START_TIME###</td>
+		<td>###SPECIAL_STATUS_END_DATE### ###SPECIAL_STATUS_END_TIME###</td>
+		<td>###SPECIAL_STATUS_PRIORITY###</td>
+		<td>###LAST_UPDATED_DATE### ###LAST_UPDATED_TIME###</td>
+		<td>###CREATED_DATE### ###CREATED_TIME###</td>
+        </tr>
+	<!-- ###EVEN_ROW### end -->
+	<!-- ###ODD_ROW### begin -->
+        <tr>
+                <td>###ID###</td>
+                <td><a href="###SINGLEVIEW_URL###">###NUMBER###</a></td>
+                <td>###TITLE###</td>
+                <td>###DESCRIPTION###</td>
+                <td>###DATE_PUBLISHED###</td>
+                <td>###AUTHOR###</td>
+                <td><a href="###PDF_URL###">###PDF_FILENAME### ###PDF_SIZE### (###PDF_DOWNLOADS###)</a></td>
+                <td>
+                        <!-- ###ZIP_FILES### begin -->
+                        <a href="###ZIP_URL###">###ZIP_FILENAME### ###ZIP_SIZE### (###ZIP_DOWNLOADS###)</a>
+                        <!-- ###ZIP_FILES### end -->
+                </td>
+                <td>
+                        <!-- ###CATEGORIES### begin -->
+                        ###CATEGORY###
+                        <!-- ###CATEGORIES### end -->
+                </td>
+                <td>###SOFTWARE_VERSION###</td>
+		<td>
+			<ul>
+				<!-- ###DEVICES### begin -->
+				<li><a href="###DEVICE_URL###">###DEVICE_TITLE###</a></li>
+				<!-- ###DEVICES### end -->
+			</ul>
+		</td>
+		<td>
+			<ul>
+				<!-- ###RELATED_NOTES### begin -->
+				<li><a href="###RELATEDNOTE_URL###">###RELATEDNOTE_ID### (###RELATEDNOTE_TITLE###)</a></li>
+				<!-- ###RELATED_NOTES### end -->
+			</ul>
+		</td>
+		<td>###SPECIAL_STATUS_START_DATE### ###SPECIAL_STATUS_START_TIME###</td>
+		<td>###SPECIAL_STATUS_END_DATE### ###SPECIAL_STATUS_END_TIME###</td>
+		<td>###SPECIAL_STATUS_PRIORITY###</td>
+		<td>###LAST_UPDATED_DATE### ###LAST_UPDATED_TIME###</td>
+		<td>###CREATED_DATE### ###CREATED_TIME###</td>
+        </tr>
+	<!-- ###ODD_ROW### end -->
+        <!-- ###LIST_ITEM### end -->
+	<!-- ###EMPTY_LIST### begin -->
+	<tr>
+		<td colspan="16">No application notes found</td>
+	</tr>
+	<!-- ###EMPTY_LIST### end -->
+</table>
+<!-- ###SIMPLE_SEARCH_FORM### begin -->
+<form action="###SIMPLE_SEARCH_ACTION###" method="get">
+	<input type="hidden" name="tx_piapappnote_pi1[pointer]" value="0"/>
+	<input type="hidden" name="tx_piapappnote_pi1[typeS][noteid]" value="Y"/>
+	<input type="hidden" name="tx_piapappnote_pi1[typeS][author]" value="Y"/>
+	<input type="hidden" name="tx_piapappnote_pi1[typeS][title]" value="Y"/>
+	<input type="hidden" name="tx_piapappnote_pi1[typeS][description]" value="Y"/>
+        Search: <input type="text" name="tx_piapappnote_pi1[sword]" value="###SWORD###"/><br/>
+        <input type="submit"/>
+</form>
+<a href="###ADVANCED_SEARCH_URL###">Advanced Search</a>
+<!-- ###SIMPLE_SEARCH_FORM### end -->
+<!-- ###ADVANCED_SEARCH_FORM### begin -->
+<form action="###ADVANCED_SEARCH_ACTION###" method="get">
+	<input type="hidden" name="tx_piapappnote_pi1[pointer]" value="0"/>
+	Search in <label><input type="checkbox" name="tx_piapappnote_pi1[typeS][noteid]" value="Y"###NOTEID_CHECKED###/> Note ID</label>
+	<label><input type="checkbox" name="tx_piapappnote_pi1[typeS][author]" value="Y"###AUTHOR_CHECKED###/> Author</label>
+	<label><input type="checkbox" name="tx_piapappnote_pi1[typeS][title]" value="Y"###TITLE_CHECKED###/> Title</label>
+	<label><input type="checkbox" name="tx_piapappnote_pi1[typeS][description]" value="Y"###DESCRIPTION_CHECKED###/> Description</label>
+        <input type="text" name="tx_piapappnote_pi1[sword]" value="###SWORD###"/><br/>
+	<label>Category: <select name="tx_piapappnote_pi1[typeS][categories][]" multiple="multiple" size="10">
+		<!-- ###CATEGORIES### begin -->
+		<option value="###VALUE###"###SELECTED###>###NAME###</option>
+		<!-- ###CATEGORIES### end -->
+	</select></label></br>
+	<label>Software Version: <select name="tx_piapappnote_pi1[typeS][versions][]" multiple="multiple" size="10">
+		<!-- ###VERSIONS### begin -->
+		<option value="###VALUE###"###SELECTED###>###NAME###</option>
+		<!-- ###VERSIONS### end -->
+	</select></label></br>
+	<label>Device: <select name="tx_piapappnote_pi1[typeS][devices][]" multiple="multiple" size="10">
+		<!-- ###DEVICES### begin -->
+		<option value="###VALUE###"###SELECTED###>###NAME###</option>
+		<!-- ###DEVICES### end -->
+	</select></label></br>
+        <input type="submit"/>
+<a href="###SIMPLE_SEARCH_URL###">Simple Search</a>
+</form>
+<!-- ###ADVANCED_SEARCH_FORM### end -->
+###NAVIGATION_BAR###
+<!-- ###LISTVIEW### end -->
+</div>
+</body>
+</html>

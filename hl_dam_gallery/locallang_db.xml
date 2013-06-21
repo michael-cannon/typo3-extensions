@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>database</type>
+        <description>Language labels for database tables/fields belonging to extension 'hl_dam_gallery'</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="tt_content.tx_hldamgallery_usepage">Use gallery page</label>
+            <label index="tt_content.tx_hldamgallery_hidemeta">Hide meta</label>
+            <label index="tt_content.tx_hldamgallery_hidenav">Hide navigation</label>
+            <label index="tt_content.tx_hldamgallery_squarethumbs">Show previews as squares</label>
+            <label index="tt_content.tx_hldamgallery_displaypage">Display images on gallery page:</label>
+            <label index="tt_content.list_type_pi1">DAM Show Image</label>
+        </languageKey>
+    </data>
+</T3locallang>

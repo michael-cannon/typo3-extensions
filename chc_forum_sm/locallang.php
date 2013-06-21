@@ -1,0 +1,124 @@
+<?php
+/**
+ * Language labels for extension "chc_forum"
+ * 
+ * This file is detected by the translation tool.
+ */
+
+$LOCAL_LANG = Array (
+	'default' => Array (
+		'pi1_title' => 'CHC Forum',
+		'pi1_plus_wiz_description' => 'Adds the CHC forum plugin',
+	),
+	'dk' => Array (
+	),
+	'de' => Array (
+		'pi1_title' => 'CHC Forum',
+		'pi1_plus_wiz_description' => 'Fügt das CHC Forum Plugin hinzu',
+	),
+	'no' => Array (
+		'pi1_title' => 'CHC Forum',
+		'pi1_plus_wiz_description' => 'Legger til CHC forum plugin',
+	),
+	'it' => Array (
+		'pi1_title' => 'CHC Forum',
+		'pi1_plus_wiz_description' => 'Aggiungi il plugin CHC forum',
+	),
+	'fr' => Array (
+	),
+	'es' => Array (
+		'pi1_title' => 'Foro CHC',
+		'pi1_plus_wiz_description' => 'Añade el plugin Foro CHC',
+	),
+	'nl' => Array (
+		'pi1_title' => 'CHC Forum',
+		'pi1_plus_wiz_description' => 'Voegt de CHC forum plugin toe',
+	),
+	'cz' => Array (
+		'pi1_title' => 'CHC fórum',
+		'pi1_plus_wiz_description' => 'Pøidá plug-in CHC fórum',
+	),
+	'pl' => Array (
+	),
+	'si' => Array (
+	),
+	'fi' => Array (
+		'pi1_title' => 'CHC Forum',
+		'pi1_plus_wiz_description' => 'Lisää CHC Forum pluginin',
+	),
+	'tr' => Array (
+		'pi1_title' => 'CHC tartýþma forumu',
+		'pi1_plus_wiz_description' => 'Sayfaya CHC tartýþma forumu ekle',
+	),
+	'se' => Array (
+		'pi1_title' => 'CHC forum',
+		'pi1_plus_wiz_description' => 'Lägger CHC-forum pluginen på hemsidan',
+	),
+	'pt' => Array (
+	),
+	'ru' => Array (
+		'pi1_title' => 'CHC-ôîðóì',
+		'pi1_plus_wiz_description' => 'Äîáàâëÿåò ïëàãèí CHC-ôîðóì',
+	),
+	'ro' => Array (
+	),
+	'ch' => Array (
+	),
+	'sk' => Array (
+	),
+	'lt' => Array (
+	),
+	'is' => Array (
+	),
+	'hr' => Array (
+		'pi1_title' => 'CHC Forum',
+		'pi1_plus_wiz_description' => 'Dodaje CHC forum plugin',
+	),
+	'hu' => Array (
+		'pi1_title' => 'CHC fórum',
+		'pi1_plus_wiz_description' => 'CHC fórum plugin hozzáadása',
+	),
+	'gl' => Array (
+	),
+	'th' => Array (
+	),
+	'gr' => Array (
+	),
+	'hk' => Array (
+		'pi1_title' => 'CHC ½×¾Â',
+		'pi1_plus_wiz_description' => '¥[¤JCHC ½×¾Â´¡¤J¦¡¤¸¥ó',
+	),
+	'eu' => Array (
+	),
+	'bg' => Array (
+	),
+	'br' => Array (
+	),
+	'et' => Array (
+	),
+	'ar' => Array (
+	),
+	'he' => Array (
+	),
+	'ua' => Array (
+	),
+	'lv' => Array (
+	),
+	'jp' => Array (
+	),
+	'vn' => Array (
+	),
+	'ca' => Array (
+	),
+	'ba' => Array (
+	),
+	'kr' => Array (
+	),
+	'eo' => Array (
+	),
+	'my' => Array (
+	),
+	'hi' => Array (
+	),
+);
+?>

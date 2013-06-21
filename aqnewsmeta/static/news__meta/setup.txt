@@ -1,0 +1,3 @@
+plugin.tt_news.aqnewsmeta {
+	crop = {$plugin.tt_news.aqnewsmeta.crop}
+}

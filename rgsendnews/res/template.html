@@ -1,0 +1,90 @@
+<!-- ###TEMPLATE### -->
+<div id="log"></div>
+<div id="rgsnsendlink">###LL_SENDLINK###</div>
+	
+<div id="rgsnnest">
+	<div id="rgsn">
+		<div class="topbar" onclick="rgsnSlide.toggle();">
+			<div id="rgsnclose">
+				<img src="typo3conf/ext/rgsendnews/res/close.gif" title="###LL_CLOSE###" alt="###LL_CLOSE###" />
+			</div>
+			###LL_HEADER###
+		</div>
+	  <form id="rgsnform" method="post" action="###ACTIONURL###">
+	  	<fieldset class="csc-mailform">
+	  		<legend>Send this form</legend>
+ 		
+	  		<div class="csc-mailform-field">
+					<label for="rgsnsendname">###LL_SENDNAME###</label>
+		  		<input type="text" name="rgsn[sender]" id="rgsnsendname" />
+		  	</div>
+				<div class="csc-mailform-field">
+		  		<label for="rgsnsendmail">###LL_SENDEMAIL###</label>
+		  		<input type="text" name="rgsn[sendmail]" id="rgsnsendmail" />
+	  		</div>
+				<div class="csc-mailform-field">
+	  			<label for="rgsnrecname">###LL_RECNAME###</label>	
+	  			<input type="text" name="rgsn[receiver]" id="rgsnrecname" />
+	  		</div>	  	
+				<div class="csc-mailform-field">
+	  			<label for="rgsnrecmail">###LL_RECEMAIL###</label>	
+	  			<input type="text" name="rgsn[recmail]" id="rgsnrecmail" />
+	  		</div>
+	  		<div class="csc-mailform-field">
+	  			<label for="rgsntext">###LL_TEXT###</label>
+	  			<textarea id="rgsntext" name="rgsn[comment]" ></textarea>
+	  		</div>
+
+				<!-- ###CAPTCHA### -->
+				<div class="csc-mailform-field csc-captcha">
+	  			<label for="rgsncaptcha">###LL_CAPTCHA###</label>	
+	  				<input type="text" id="rgsncaptcha" size="5" name="rgsn[captcha]" value="" />
+					 	###CAPTCHAPICTURE###
+	  		</div>
+	  		<!-- ###CAPTCHA### -->
+								
+				<div class="csc-mailform-field">
+	  			<label for="rgsnhtml">###LL_HTML###</label>	
+	  			<input type="checkbox" name="rgsn[html]" id="rgsnhtml" value="1" checked="checked" />
+	  		</div>
+	  		
+	  		<div class="csc-mailform-field">	
+	  			<input type="hidden" name="rgsn[newsid]" value="###NEWS_UID###" />
+	  			<input type="hidden" name="rgsn[url]" value="###NEWS_URL###" />
+					<input class="csc-mailform-submit" type="submit" value="###LL_SUBMIT###" />
+	  		</div>
+				
+	  		<div class="csc-mailform-field">	
+	  			<input class="csc-mailform-submit" type="reset" value="###LL_RESET###" />
+	  		</div>
+
+				
+	  	</fieldset>
+	  </form>
+	  <div class="bottombar">
+	  </div>
+	</div>
+</div>
+<!-- ###TEMPLATE### -->
+
+
+<!-- ###TEMPLATE_SUBJECT### -->
+Empfehlung von ###SENDER### - ###NEWS_TITLE###
+<!-- ###TEMPLATE_SUBJECT### -->
+
+<!-- ###TEMPLATE_PLAINMAIL### -->
+Hallo ###RECEIVER###,
+
+###SENDER### will dich auf einen interessanten Artikel aufmerksam machen, und meinte dazu: ###COMMENT###.
+
+Der Titel des Artikels ist "###NEWS_TITLE###" und lässt sich hier abrufen ###URL###.
+Folgend noch eine kurze Inhaltsangabe: 
+--------------------------
+###NEWS_SHORT###
+--------------------------
+
+Liebe Grüße
+###SENDER###
+- ein Service von Georg Ringer http://www.ringer.it/ 
+
+<!-- ###TEMPLATE_PLAINMAIL### -->

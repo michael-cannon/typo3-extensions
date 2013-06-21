@@ -1,0 +1,5 @@
+
+  # cat=basic; type=boolean; label=Have Foldout type dynTab menu: The default is to have this disabled because without foldout menus you have nice status icons which are also made dynamic and display if all fields on a tab have been filled correctly. You won't have this if you enable this option.
+foldOut = 0
+
+

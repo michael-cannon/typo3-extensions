@@ -1,0 +1,18 @@
+/**
+ * @author Michael Cannon <michael@peimic.com>
+ * @version $Id: setup.txt,v 1.1.1.1 2010/04/15 10:03:39 peimic.comprock Exp $
+ */
+
+config {
+	baseURL = {$siteURL}
+    tx_realurl_enable = {$config.tx_realurl_enable}
+    simulateStaticDocuments = {$config.simulateStaticDocuments}
+    no_cache = {$config.no_cache}
+	prefixLocalAnchors = {$config.prefixLocalAnchors}
+	absRefPrefix = {$config.absRefPrefix}
+	redirectOldLinksToNew = {$config.redirectOldLinksToNew}
+}
+
+[hostname={$devURL}]
+	config.baseURL = {$devURL}
+[end]

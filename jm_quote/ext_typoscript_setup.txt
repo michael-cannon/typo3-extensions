@@ -1,0 +1,7 @@
+plugin.tx_jmquote_pi1 {
+  	pid_list = {$plugin.tx_jmquote_pi1.pid_list}
+  	citeWrap = {$plugin.tx_jmquote_pi1.citeWrap}
+  	authorWrap = {$plugin.tx_jmquote_pi1.authorWrap}
+  	contentWrap = {$plugin.tx_jmquote_pi1.contentWrap}
+  	listMode = {$plugin.tx_jmquote_pi1.listMode}
+}

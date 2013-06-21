@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<ROOT>
+		<type>Array</type>
+		<el>
+			<fields>
+				<type>array</type>
+				<section>1</section>
+				<tx_templavoila>
+					<title>LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.section</title>
+				</tx_templavoila>
+				<el>
+					<jpg>
+						<type>array</type>
+						<tx_templavoila>
+							<title>JPG</title>
+						</tx_templavoila>
+						<el>
+							<file>
+								<TCEforms>
+									<label>LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.file</label>
+									<config>
+										<type>group</type>
+										<internal_type>file</internal_type>
+										<allowed>jpg</allowed>
+										<max_size>100</max_size>
+										<uploadfolder>uploads/tx_newsshow</uploadfolder>
+										<show_thumbs>1</show_thumbs>
+										<size>1</size>
+										<maxitems>1</maxitems>
+										<minitems>0</minitems>
+									</config>
+								</TCEforms>
+							</file>
+							<link>
+								<TCEforms>
+									<label>LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.link</label>
+									<config>
+										<type>select</type>
+										<items>
+											<numIndex index="0">
+												<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.link.I.0</numIndex>
+												<numIndex index="1">0</numIndex>
+											</numIndex>
+											<numIndex index="1">
+												<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.link.I.1</numIndex>
+												<numIndex index="1">1</numIndex>
+											</numIndex>
+										</items>
+									</config>
+								</TCEforms>
+							</link>
+							<url>
+								<TCEforms>
+									<label>LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.url</label>
+									<config>
+										<type>input</type>
+										<size>15</size>
+										<max>255</max>
+										<checkbox></checkbox>
+										<eval>nospace</eval>
+									</config>
+								</TCEforms>
+							</url>
+						</el>
+					</jpg>
+					<path>
+						<type>array</type>
+						<tx_templavoila>
+							<title>PATH</title>
+						</tx_templavoila>
+						<el>
+							<path>
+								<TCEforms>
+									<label>LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.path</label>
+									<config>
+										<type>input</type>
+										<size>30</size>
+										<eval>nospace</eval>
+									</config>
+								</TCEforms>
+							</path>
+							<link>
+								<TCEforms>
+									<label>LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.link</label>
+									<config>
+										<type>select</type>
+										<items>
+											<numIndex index="0">
+												<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.link.I.0</numIndex>
+												<numIndex index="1">0</numIndex>
+											</numIndex>
+											<numIndex index="1">
+												<numIndex index="0">LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.link.I.1</numIndex>
+												<numIndex index="1">1</numIndex>
+											</numIndex>
+										</items>
+									</config>
+								</TCEforms>
+							</link>
+							<url>
+								<TCEforms>
+									<label>LLL:EXT:newsshow/locallang_db.php:tx_newsshow_newsshows.pictures.url</label>
+									<config>
+										<type>input</type>
+										<size>15</size>
+										<max>255</max>
+										<checkbox></checkbox>
+										<eval>nospace</eval>
+									</config>
+								</TCEforms>
+							</url>
+						</el>
+					</path>
+				</el>
+			</fields>
+		</el>
+	</ROOT>
+</T3DataStructure>

@@ -1,0 +1,498 @@
+# setup
+plugin.tx_timtabsociable_pi1 {
+    # the value for tagline will get by locallang.xml
+    # this change was implemented in version 1.1 ans necessary for overwriting value by TS 
+    tagline.wrap = <strong>|</strong>
+    outerWrap =
+	alternativeTitle = TEXT
+	alternativeTitle.field = title
+
+	services {
+		addthis {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.addthis}
+				altText = addthis.com
+				titleText = addthis.com
+			}
+			url = http://www.addthis.com/bookmark.php?pub=geotek&amp;url=%URL%&amp;title=%TITLE%
+			title = addthis.com
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		ask {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.ask}
+				altText = ask.com
+				titleText = ask.com
+			}
+			url = http://myjeeves.ask.com/mysearch/BookmarkIt?v=1.2&amp;t=webpages&amp;url=%URL%&amp;title=%TITLE%
+			title = ask.com
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		backflip {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.backflip}
+				altText = backflip
+				titleText = backflip
+			}
+			url = http://www.backflip.com/add_page_pop.ihtml?url=%URL%&amp;title=%TITLE%
+			title = backflip
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		blinkbits {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.blinkbits}
+				altText = blinkbits
+				titleText = blinkbits
+			}
+			url = http://www.blinkbits.com/bookmarklets/save.php?v=1&amp;source_url=%URL%&amp;title=%TITLE%&amp;body=%TITLE%
+			title = blinkbits
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		blinklist {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.blinklist}
+				altText = blinklist
+				titleText = blinklist
+			}
+			url = http://www.blinklist.com/index.php?Action=Blink/addblink.php&amp;Description=&amp;Url=%URL%&amp;Title=%TITLE%
+			title = blinklist
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		blogmarks {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.blogmarks}
+				altText = blogmarks
+				titleText = blogmarks
+			}
+			url = http://blogmarks.net/my/new.php?mini=1&amp;simple=1&amp;url=%URL%&amp;title=%TITLE%
+			title = blogmarks
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		bluedot {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.bluedot}
+				altText = bluedot.us
+				titleText = bluedot.us
+			}
+			url = http://bluedot.us/Authoring.aspx?u=%URL%&amp;t=%TITLE%
+			title = bluedot.us
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		comments {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.comments}
+				altText = co.mments
+				titleText = co.mments
+			}
+			url = http://co.mments.com/track?url=%URL%&amp;title=%TITLE%
+			title = co.mments
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		connotea {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.connotea}
+				altText = connotea
+				titleText = connotea
+			}
+			url = http://www.connotea.org/addpopup?continue=confirm&amp;uri=%URL%&amp;title=%TITLE%
+			title = connotea
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		delicious {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.delicious}
+				altText = del.icio.us
+				titleText = del.icio.us
+			}
+			url = http://del.icio.us/post?url=%URL%&amp;title=%TITLE%
+			title = del.icio.us
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		delirious {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.delirious}
+				altText = de.lirio.us
+				titleText = de.lirio.us
+			}
+			url = http://de.lirio.us/rubric/post?uri=%URL%;title=%TITLE%;when_done=go_back
+			title = de.lirio.us
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		digg {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.digg}
+				altText = digg.com
+				titleText = digg.com
+			}
+			url = http://digg.com/submit?phase=2&amp;url=%URL%
+			title = digg.com
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		fark {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.fark}
+				altText = Fark.com
+				titleText = Fark.com
+			}
+			url = http://cgi.fark.com/cgi/fark/edit.pl?new_url=%URL%&amp;new_comment=%TITLE%&amp;linktype=Misc
+			title = Fark.com
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		feedmelinks {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.feedmelinks}
+				altText = Feed me links!
+				titleText = Feed me links!
+			}
+			url = http://feedmelinks.com/categorize?from=toolbar&amp;op=submit&amp;url=%URL%name=%TITLE%
+			title = Feed me links!
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		folkd {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.folkd}
+				altText = Folkd
+				titleText = Folkd
+			}
+			url = http://www.folkd.com/submit/%URL%
+			title = Folkd
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		furl {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.furl}
+				altText = Furl
+				titleText = Furl
+			}
+			url = http://www.furl.net/storeIt.jsp?u=%URL%&amp;t=%TITLE%
+			title = Furl
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		google {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.google}
+				altText = google.com
+				titleText = google.com
+			}
+			url = http://www.google.com/bookmarks/mark?op=add&amp;bkmk=%URL%&amp;title=%TITLE%
+			title = google.com
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		hype {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.hype}
+				altText = hype it!
+				titleText = hype it!
+			}
+			url = http://hype.yeebase.com/submit/%URL%
+			title = hype it!
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		linkagogo {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.linkagogo}
+				altText = LinkaGoGo
+				titleText = LinkaGoGo
+			}
+			url = http://www.linkagogo.com/go/AddNoPopup?url=%URL%&amp;title=%TITLE%
+			title = LinkaGoGo
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		linkarena {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.linkarena}
+				altText = LinkaARENA
+				titleText = LinkaARENA
+			}
+			url = http://linkarena.com/bookmarks/addlink/?url=%URL%&amp;title=%TITLE%
+			title = LinkaARENA
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		live {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.live}
+				altText = live.com
+				titleText = live.com
+			}
+			url = https://favorites.live.com/quickadd.aspx?marklet=1&amp;mkt=en-us&amp;url=%URL%&amp;title=%TITLE%&amp;top=1
+			title = live.com
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		magnolia {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.magnolia}
+				altText = Ma.gnolia
+				titleText = Ma.gnolia
+			}
+			url = http://ma.gnolia.com/beta/bookmarklet/add?url=%URL%&amp;title=%TITLE%&amp;description=%TITLE%
+			title = Ma.gnolia
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		misterwong {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.misterwong}
+				altText = Mister Wong
+				titleText = Mister Wong
+			}
+			url = http://www.mister-wong.de/index.php?action=addurl&amp;bm_url=%URL%&amp;bm_description=%TITLE%
+			title = Mister Wong
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		mylinkde {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.mylinkde}
+				altText = MyLink.de
+				titleText = MyLink.de
+			}
+			url = http://www.mylink.de/qa.asp?link=%URL%&amp;bez=%TITLE%
+			title = MyLink.de
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		netscape {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.netscape}
+				altText = netscape
+				titleText = netscape
+			}
+			url = http://www.netscape.com/submit/?U=%URL%&amp;T=%TITLE%
+			title = netscape
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		netvouz {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.netvouz}
+				altText = netvouz
+				titleText = netvouz
+			}
+			url = http://www.netvouz.com/action/submitBookmark?url=%URL%&amp;title=%TITLE%&amp;description=%TITLE%
+			title = netvouz
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		newsvine {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.newsvine}
+				altText = newsvine.com
+				titleText = newsvine.com
+			}
+			url = http://www.newsvine.com/_tools/seed&amp;save?u=%URL%&amp;h=%TITLE%
+			title = newsvine.com
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		oneview {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.oneview}
+				altText = oneview
+				titleText = oneview
+			}
+			url = http://www.oneview.de/quickadd/neu/addBookmark.jsf?URL=%URL%&amp;title=%TITLE%
+			title = oneview
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		rawsugar {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.rawsugar}
+				altText = RawSugar
+				titleText = RawSugar
+			}
+			url = http://www.rawsugar.com/tagger/?turl=%URL%&amp;tttl=%TITLE%
+			title = RawSugar
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		reddit {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.reddit}
+				altText = Reddit
+				titleText = Reddit
+			}
+			url = http://reddit.com/submit?url=%URL%&amp;title=%TITLE%
+			title = Reddit
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		scuttle {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.scuttle}
+				altText = scuttle
+				titleText = scuttle
+			}
+			url = http://www.scuttle.org/bookmarks.php/maxpower?action=add&amp;address=%URL%&amp;title=%TITLE%&amp;description=%TITLE%
+			title = scuttle
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		shadows {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.shadows}
+				altText = shadows
+				titleText = shadows
+			}
+			url = http://www.shadows.com/features/tcr.htm?url=%URL%&amp;title=%TITLE%
+			title = shadows
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		simpy {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.simpy}
+				altText = Simpy
+				titleText = Simpy
+			}
+			url = http://www.simpy.com/simpy/LinkAdd.do?href=%URL%&amp;title=%TITLE%
+			title = Simpy
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		smarking {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.smarking}
+				altText = Smarking
+				titleText = Smarking
+			}
+			url = http://smarking.com/editbookmark/?url=%URL%&amp;description=%TITLE%
+			title = Smarking
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		spurl {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.spurl}
+				altText = Spurl
+				titleText = Spurl
+			}
+			url = http://www.spurl.net/spurl.php?url=%URL%&amp;title=%TITLE%
+			title = Spurl
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		stumbleupon {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.stumbleupon}
+				altText = stumbleupon.com
+				titleText = stumbleupon.com
+			}
+			url = http://www.stumbleupon.com/submit?url=%URL%&amp;title=%TITLE%
+			title = stumbleupon.com
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		tailrank {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.tailrank}
+				altText = TailRank
+				titleText = TailRank
+			}
+			url = http://tailrank.com/share/?text=&amp;link_href=%URL%&amp;title=%TITLE%
+			title = TailRank
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		tagthat {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.tagthat}
+				altText = TagThat
+				titleText = TagThat
+			}
+			url = http://www.tagthat.de/bookmarken.php?action=neu&amp;url=%URL%&amp;title=%TITLE%
+			title = TagThat
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		technorati {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.technorati}
+				altText = Technorati
+				titleText = Technorati
+			}
+			url = http://technorati.com/faves/?add=%URL%
+			title = Technorati
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		webnews {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.webnews}
+				altText = Webnews
+				titleText = Webnews
+			}
+			url = http://www.webnews.de/einstellen?url=%URL%&amp;title=%TITLE%
+			title = Webnews
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		wink {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.wink}
+				altText = Wink
+				titleText = Wink
+			}
+			url = http://www.wink.com/_/tag?url=%URL%&amp;doctitle=%TITLE%
+			title = Wink
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		wists {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.wists}
+				altText = Wists
+				titleText = Wists
+			}
+			url = http://wists.com/r.php?c=&amp;r=%URL%&amp;title=%TITLE%
+			title = Wists
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		yahoomyweb {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.yahoomyweb}
+				altText = YahooMyWeb
+				titleText = YahooMyWeb
+			}
+			url = http://myweb.yahoo.com/myresults/bookmarklet?t=%TITLE%&amp;u=%URL%&amp;ei=UTF-8
+			title = YahooMyWeb
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+		yiggde {
+			icon {
+				file = {$plugin.tx_timtabsociable_pi1.file.yiggde}
+				altText = YiggIt
+				titleText = YiggIt
+			}
+			url = http://yigg.de/neu?exturl=%URL%&amp;exttitle=%TITLE%&amp;extdesc=%TITLE%
+			title = YiggIt
+			target = {$plugin.tx_timtabsociable_pi1.iconTarget}
+			wrap = {$plugin.tx_timtabsociable_pi1.iconWrap}
+		}
+	}
+    activeServices = addthis,ask,backflip,blinkbits,blinklist,blogmarks,bluedot,comments,connotea,delicious,delirious,digg,fark,feedmelinks,folkd,furl,google,hype,linkagogo,linkarena,live,magnolia,misterwong,mylinkde,netscape,netvouz,newsvine,oneview,rawsugar,reddit,scuttle,shadows,simpy,smarking,spurl,stumbleupon,tailrank,tagthat,technorati,webnews,wink,wists,yahoomyweb,yiggde
+	pid = {$plugin.tx_timtabsociable_pi1.pid}
+}

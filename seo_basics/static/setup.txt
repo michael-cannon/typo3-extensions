@@ -1,0 +1,123 @@
+plugin.tx_seobasics >
+plugin.tx_seobasics = COA
+plugin.tx_seobasics {
+
+	# Append a line break for every header tag
+	5 = TEXT
+	5.value (
+
+	
+)
+
+	# Building the page title
+	10 = TEXT 
+	10.data = page:tx_seo_titletag // page:title
+	10.trim = 1
+	10.stdWrap.stdWrap.append = TEXT
+	10.stdWrap.stdWrap.append.data = TSFE:tmpl|sitetitle
+	10.stdWrap.stdWrap.append.trim = 1
+	10.stdWrap.stdWrap.append.required = 1
+	10.stdWrap.stdWrap.append.if.isTrue = {$plugin.tx_seo.titleWrapAppendSiteTitle}
+	10.stdWrap.stdWrap.append.noTrimWrap = {$plugin.tx_seo.titlesWrap}
+	10.stdWrap.noTrimWrap = {$plugin.tx_seo.titleWrap}
+	10.stdWrap.insertData = 1
+	10.htmlSpecialChars = 1
+	10.wrap = <title>|</title>
+	10.append < .5
+
+	20 < .10
+	20.wrap = <meta name="title" content="|" />
+
+
+	# Building the Keywords tag
+	30 = TEXT 
+	30 < .10
+	30.data = page:keywords
+	30.stdWrap.noTrimWrap = {$plugin.tx_seo.keywordsWrap}
+	30.stdWrap.stdWrap >
+	30.required = 1
+	30.wrap = <meta name="keywords" content="|" />
+
+
+	# Building the Description tag
+	40 = TEXT
+	40 < .30
+	40.data = page:description
+	40.stdWrap.noTrimWrap = {$plugin.tx_seo.descriptionWrap}
+	40.wrap = <meta name="description" content="|" />
+
+
+	# Building the Date tag (last changed)
+	50 = TEXT
+	50 < .10
+	50.data = page:SYS_LASTCHANGED // page:crdate
+	50.date = Y-m-d
+	50.stdWrap >
+	50.wrap = <meta name="date" content="|" />
+
+
+	# Building the Canonical tag
+	60 = TEXT
+	60 < .30
+	60 {
+		data >
+		stdWrap >
+		typolink {
+			parameter.data = TSFE:id
+			addQueryString = 1
+			addQueryString {
+				method = GET
+				exclude = id,tx_ttnews[backPid]
+			}
+			returnLast = url
+		}
+		wrap = <link rel="canonical" href="{$siteURL}|" />
+	}
+
+
+	# Building the Abstract tag
+	70 = TEXT
+	70 < .30
+	70.data = page:abstract
+	70.stdWrap >
+	70.wrap = <meta name="abstract" content="|" />
+
+
+	# Building the Author tag
+	# Thank you Joey <info@cybercraft.de> for the postCObjet cleanup
+	80 = TEXT
+	80 < .30
+	80 {
+		data = page:author
+		ifEmpty.data = page:author_email
+		stdWrap >
+		required = 1
+		postCObject = TEXT
+		postCObject {
+			data = page:author_email
+			noTrimWrap = | (|)|
+			if.isTrue.data = page:author
+			required = 1
+		}
+		wrap = <meta name="author" content="|" />
+	}
+}
+
+
+# activate SEO in main "page." configuration
+config.noPageTitle = 2
+page.headerData.776 = < plugin.tx_seobasics
+
+
+# Include sitemap.xml
+includeLibs.tx_seobasics_sitemap = EXT:seo_basics/class.tx_seobasics_sitemap.php
+tx_seo_xmlsitemaps = PAGE
+tx_seo_xmlsitemaps {
+	typeNum = 776
+	config.disableAllHeaderCode = 1
+	config.renderCharset = UTF-8
+	config.xmlprologue = xml_10
+	config.additionalHeaders = Content-type: text/xml
+	10 = USER
+	10.userFunc = tx_seobasics_sitemap->renderXMLSitemap
+}

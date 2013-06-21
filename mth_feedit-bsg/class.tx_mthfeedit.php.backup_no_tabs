@@ -1,0 +1,1255 @@
+<?php
+/***************************************************************
+*  Copyright notice
+*
+*  (c) 2005 Morten Tranberg Hansen (mth@daimi.au.dk)
+*  All rights reserved
+*
+*  This script is part of the TYPO3 project. The TYPO3 project is
+*  free software; you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation; either version 2 of the License, or
+*  (at your option) any later version.
+*
+*  The GNU General Public License can be found at
+*  http://www.gnu.org/copyleft/gpl.html.
+*
+*  This script is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  This copyright notice MUST APPEAR in all copies of the script!
+***************************************************************/
+/**
+ * This is a API for crating and editing records in the frontend.
+ * The API is build on top of fe_adminLib.
+ * See documentation or extensions 'news_feedit' and 'joboffers_feedit' for examples how to use this API
+ *
+ * @author	Morten Tranberg Hansen <mth@daimi.au.dk>
+ */
+
+
+require_once(PATH_tslib.'class.tslib_pibase.php');
+require_once(PATH_site.TYPO3_mainDir.'sysext/lang/lang.php');
+if(t3lib_extmgm::isLoaded('rtehtmlarea')) require_once(t3lib_extMgm::extPath('rtehtmlarea').'pi2/class.tx_rtehtmlarea_pi2.php');
+if(t3lib_extmgm::isLoaded('rlmp_dateselectlib')) require_once(t3lib_extMgm::extPath('rlmp_dateselectlib').'class.tx_rlmpdateselectlib.php');
+
+class tx_mthfeedit {
+  // Private fields
+  var $prefixId = 'tx_mthfeedit';		// Same as class name
+  var $scriptRelPath = 'class.tx_mthfeedit.php';	// Path to this script relative to the extension dir.
+  var $extKey = 'mth_feedit';	// The extension key.
+
+  var $conf;
+  var $cObj; // contains an initialized cObj, so we can use the cObj functions whenever we want to.
+  var $caller; // the caller
+  var $table; // the table
+  var $TCA; // contains the complete TCA of the $table
+  var $cmd; // this is 'hopefully' the same value as fe_adminLib's cmd.
+  var $id_field = ''; // the field from a record witch will identify the record.
+  var $additionalJS_end = array(); // JS to be added after the end of the content.
+#  var $LANG; // language object, used to translate 'complicated' label strings to the single label.
+
+
+  // Fields for the RTE API
+  var $RTEObj;
+  var $strEntryField;
+  var $docLarge = 0;
+  var $RTEcounter = 0;
+  var $formName;
+  var $additionalJS_post = array();	// Additional JavaScript to be printed after the form
+  var $additionalJS_submit = array();	// Additional JavaScript to be executed on submit
+  var $PA = array(
+		  'itemFormElName' =>  '',
+		  'itemFormElValue' => '',
+		  );
+  var $specConf = array();
+  var $thisConfig = array();
+  var $RTEtypeVal = 'text';
+  var $thePidValue;
+
+  /**
+   * [Put your description here]
+   */
+  function init($caller,$conf)	{
+
+    $GLOBALS['TSFE']->set_no_cache();  
+
+    /**** SET PRIVATE VARS ****/
+    $this->conf = $this->array_merge_recursive2($this->getDefaultConfArray(),$conf);
+    $this->cObj = t3lib_div::makeInstance('tslib_cObj');
+    $this->table = $conf["table"];
+    $this->caller = $caller;   
+#    debug($this->conf);
+    $this->cmd = (string)t3lib_div::_GP('cmd') ? (string)t3lib_div::_GP('cmd') : $this->conf['defaultCmd'];
+    if (!$this->cmd) debug("WARNING:: NO COMMAND SPECIFIED FOR THE SCRIPT","NO COMMAND");
+
+    $this->id_field = $GLOBALS["TCA"][$this->table]["ctrl"]["label"];
+
+    // init $this->RTEObj id rtehtmlarea is availiable
+    if(t3lib_extmgm::isLoaded('rtehtmlarea') && !$this->RTEObj) 
+      $this->RTEObj = t3lib_div::makeInstance('tx_rtehtmlarea_pi2');//&t3lib_BEfunc::RTEgetObj();//
+
+    /**** LOAD LOCALLANG ****/
+    // loads default locallang
+    $this->LOCAL_LANG = $GLOBALS['TSFE']->readLLfile(t3lib_extMgm::extPath($this->extKey).'locallang.php');
+    // loads callers locallang
+    $this->LOCAL_LANG = t3lib_div::array_merge_recursive_overrule($this->LOCAL_LANG,$caller->LOCAL_LANG);  
+
+    /**** LOAD TCA ****/
+    $GLOBALS['TSFE']->includeTCA();
+    t3lib_div::loadTCA($this->table);
+    // Set private TCA var
+    $this->TCA = &$GLOBALS["TCA"][$this->table];    
+#    debug($this->TCA,'TCA');
+
+    /**** CONFIGURE TCA ****/
+    $GLOBALS["TCA"][$this->table]["feInterface"]["fe_admin_fieldList"] = $this->conf['create.']['fields'] ? $this->conf['create.']['fields'].($this->conf['edit.']['fields']?','.$this->conf['edit.']['fields']:'') : $this->conf['edit.']['fields'];
+    if($this->conf['fe_cruser_id']) 
+      $GLOBALS["TCA"][$this->table]['ctrl']['fe_cruser_id'] = $this->conf['fe_cruser_id'];
+    if($this->conf['fe_crgroup_id'] && $this->conf['allowedGroups']) {
+      $GLOBALS["TCA"][$this->table]['ctrl']['fe_crgroup_id'] = $this->conf['fe_crgroup_id'];
+    }
+
+#    debug($this->TCA);
+#    debug(t3lib_div::_GP('FE'));
+
+    /**** Init language object (used for translation of labels) ****/
+    $GLOBALS['TSFE']->initLLvars();
+
+    /**** Init Robert Lemkes dateselectlib if it is loaded  ****/
+    if(t3lib_extmgm::isLoaded('rlmp_dateselectlib')) tx_rlmpdateselectlib::includeLib();
+
+    /**** DO ADDITIONAL REQUIRED STUFF FOR THE FIELDS ****/
+    $fieldArray = explode(',',$this->conf[$this->cmd.'.']['show_fields']);
+    foreach((array)$fieldArray as $fN) { //runs through the different fields
+      switch((string)$this->TCA['columns'][$fN]['config']['type']) {
+      case 'group':
+	if($this->TCA['columns'][$fN]['config']['internal_type']=='file') {
+	  $this->conf[$this->cmd.'.']['fields'] .= ','.$fN.'_file'; // add the upload field to the allowed fields
+	  $GLOBALS['TCA'][$this->table]['columns'][$fN.'_file']['config']['uploadfolder'] = $GLOBALS['TCA'][$this->table]['columns'][$fN]['config']['uploadfolder']; // the new upload field should have the same upload folder as the original field
+	  $this->conf['parseValues.'][$fN.'_file'] = 'files['.ereg_replace(',',';',$this->TCA['columns'][$fN]['config']['allowed']).']['.$this->TCA['columns'][$fN]['config']['max_size'].']'; // adds the parse options for the new field, so it will be parsed as a file.
+	}
+      }
+    }
+
+    /**** CHECK IF LOGIN IS REQUIRED ****/
+    if($this->conf['requireLogin'] && !$GLOBALS['TSFE']->loginUser) return $this->getLL("login_required_message");
+
+    /**** FE ADMIN LIB ****/
+    $feAConf = $this->conf;
+    $feAConf["templateContent"]= $this->getDefaultTemplate(); // gets the default template
+#    debug($feAConf);
+
+    $content = $this->cObj->cObjGetSingle('USER_INT',$feAConf);
+
+    /**** ADDS THE REQUIRED JAVASCRIPTS ****/    
+    $content = $this->getJSBefore() . $content;
+    $content .= $this->getJSAfter();
+
+#    debug($content,'content');
+    return $content;
+  }
+
+  /*
+   * Default configurations for fe_adminLib
+   */
+  function getDefaultConfArray() {
+    return array(
+		 'userFunc' => 'user_feAdmin->init',
+		 'includeLibs' => 'media/scripts/fe_adminLib.inc',
+		 'userFunc_updateArray' => 'tx_mthfeedit->updateArray',
+		 'evalFunc' => 'tx_mthfeedit->processDataArray',
+
+		 'create' => 1,
+		 'create.' => array(
+				    'preview' => 1,
+				    'userFunc_afterSave' => 'tx_mthfeedit->afterSave',
+				    ),
+		 'edit' => 1,
+		 'edit.' => array(
+				  'preview' => 1,
+				  'menuLockPid' => 1,
+				  'userFunc_afterSave' => 'tx_mthfeedit->afterSave',
+				  ),
+		 'delete' => 1,
+		 'delete.' => array(
+				  'preview' => 1,
+				  ),
+		 'setfixed' => 1,
+		 'setfixed.' => array(
+				      'approve.' => array(
+							  'hidden' => 0,
+							  '_FIELDLIST' => 'uid,pid',
+							  ),
+				      'DELETE' => 1,
+				      'DELETE.' => array(
+							  '_FIELDLIST' => 'uid,pid',
+							  ),
+				    ),
+
+		 'no_cache' => 1,
+		 'no_header' => 0,
+		 'keep_piVars' => '',
+		 'defaultCmd' => 'edit',
+		 'infomail' => 0,
+		 'required_marker' => '*',
+		 'clearCacheOfPages' => $GLOBALS['TSFE']->id,
+		 );
+  }
+
+
+  /**********************************************************************************************
+   * TEMPLATE FUNCTIONS
+   **********************************************************************************************/
+
+  /**
+   * Gets a default template made from the TCA.
+   * The template there is returned depends on what $this->cmd is.
+   */
+  function getDefaultTemplate()	{
+    $callerMethods = get_class_methods(get_class($this->caller));
+
+    $template = array_search('getrequiredtemplate',$callerMethods) ? $this->caller->getRequiredTemplate() : $this->getRequiredTemplate();
+    $template .= array_search('getemailtemplate',$callerMethods) ? $this->caller->getEmailTemplate() : $this->getEmailTemplate();
+    switch((string)$this->cmd) {
+    case 'edit':
+      $template .= array_search('getedittemplate',$callerMethods) ? $this->caller->getEditTemplate() : $this->getEditTemplate();
+      $template .= array_search('geteditmenutemplate',$callerMethods) ? $this->caller->getEditMenuTemplate() : $this->getEditMenuTemplate();
+      break;
+    case 'create':
+      $template .= array_search('getcreatetemplate',$callerMethods) ? $this->caller->getCreateTemplate() : $this->getCreateTemplate();
+      break;
+    case 'delete':
+      $template .= array_search('getdeletetemplate',$callerMethods) ? $this->caller->getDeleteTemplate() : $this->getDeleteTemplate();
+      break;
+    case 'setfixed':
+      $template .= array_search('getsetfixedtemplate',$callerMethods) ? $this->caller->getSetfixedTemplate() : $this->getSetfixedTemplate();
+      break;
+    default:
+      debug('mth_feedit->getDefaultTemplate():: No template found for cmd='.$this->cmd,'No Template');
+      $template = '';
+    }
+#    debug(array($template));
+    return $template;
+  }
+
+
+  /**
+   * Makes the form content from the TCA according to the configuration for the $cmd
+   * @param	string		The cmd. Should be 'edit' or 'create'.
+   */
+  function makeHTMLForm($cmd)	{
+    $fields = array_intersect( array_unique(t3lib_div::trimExplode(",",$this->conf[$cmd.'.']['show_fields'],1)) , array_unique(t3lib_div::trimExplode(",",$this->conf[$cmd.'.']['fields'],1)));
+    $reqFields = array_intersect( array_unique(t3lib_div::trimExplode(",",$this->conf[$cmd.'.']["required"],1)) , array_unique(t3lib_div::trimExplode(",",$this->conf[$cmd.'.']['show_fields'],1)));
+    $result = array();
+    while(list(,$fN)=each($fields))	{
+      $fieldCode = $this->getFormFieldCode($cmd,$fN);
+      if ($fieldCode)	{
+
+	// NOTE: There are two ways to make a field required. The new way is to include 'required' in evalValues for a field. The old one is to have the the field in the required list.
+	//       The new way take precedence over the old way. So if the new field has some evalValues, it makes no different if the field is in the required list or not.
+	$feData=t3lib_div::_GP('FE');
+	if($this->conf[$cmd.'.']['evalValues.'][$fN]) {        // evalValues defined
+	  $msg = is_array($feData[$this->table]) ? '<div'.$this->caller->pi_classParam('form-error-field').'>###EVAL_ERROR_FIELD_'.$fN.'###</div>' : '';  // if no data is sent, no data is evaluated, and then no error msg should be displayed
+	  $reqMarker = in_array('required',t3lib_div::trimExplode(',',$this->conf[$cmd.'.']['evalValues.'][$fN])) ? $this->conf['required_marker'] : '';
+	} elseif (in_array($fN,$reqFields)) {                                  // No evalValues, but field listed in required list.
+	  $msg = '<!--###SUB_REQUIRED_FIELD_'.$fN.'###--><div'.$this->caller->pi_classParam('form-required-message').'>'.$this->getLL("required_message").'</div><!--###SUB_REQUIRED_FIELD_'.$fN.'###-->';
+	  $reqMarker = $this->conf['required_marker'];	
+	} else {                                                               
+	  $msg = '';
+	  $reqMarker = '';
+	}
+	
+	$helpIcon = ($this->conf['show_help_icons'] ? '<div'.$this->caller->pi_classParam('form-help-icon').'>'.$this->helpIcon($fN).'</div>' : '');
+
+	$result[]='<div'.$this->caller->pi_classParam('form-row').'>
+	             <div class="'.$this->caller->pi_getClassName('form-label').' '.$this->caller->pi_getClassName('form-label-'.$fN).'">
+                       <div'.$this->caller->pi_classParam('form-required-marker').'>'.$reqMarker.'</div>
+                       '.$this->getLLFromLabel($this->TCA["columns"][$fN]["label"]). '
+                       '.$helpIcon.'
+                     </div>
+		     <div'.$this->caller->pi_classParam('form-field').'>'.$fieldCode.'</div>
+                     '.$msg.'
+		   </div>';
+      }
+    }
+    
+    // Keep callers piVars
+    $result = $this->addCallersPiVars($result);
+    
+    return implode(chr(10),$result);
+  }
+
+  /**
+   * Returns a help icon for the field
+   * @param	string		The field to get the help icon for
+   * @param	boolean		The help icon with link to javascript popup, with help in.
+   */
+  function helpIcon($field) {
+    //    debug($this->conf);
+    foreach($GLOBALS['TCA_DESCR'][$this->table]['refs'] as $ref) {
+      $fieldDescription = $GLOBALS['TSFE']->sL('LLL:'.$ref.':'.$field.'.description') .' ';
+    }
+    if(empty($fieldDescription)) return '';
+    else { 
+      //      $aOnClick = 'confirm(\''.$fieldDescription.'\');return false;';
+      $fieldDescription = '<html><head><title>'.$field.'</title><style type="text/css">'.preg_replace("(\r)"," ",preg_replace("(\n)"," ",$this->conf['help_window_style'])).'</style></head><body'.$this->caller->pi_classParam('help-body').'><div'.$this->caller->pi_classParam('help-text').'>'.$fieldDescription.'</div></body></html>';
+      $aOnClick = 'top.vHWin=window.open(\'\',\'viewFieldHelpFE\',\'height=20,width=300,status=0,menubar=0,scrollbars=1\');top.vHWin.document.writeln(\''.$fieldDescription.'\');top.vHWin.document.close();top.vHWin.focus();return false;';
+
+      $script = 
+	'<script type="text/javascript">' .
+	'' .
+	'</script>';
+
+      require_once(PATH_t3lib . 'class.t3lib_iconworks.php');
+      return 
+	'<a href="#" onclick="'.htmlspecialchars($aOnClick).'">'.
+	'<img'.t3lib_iconWorks::skinImg('typo3/','gfx/helpbubble.gif','width="14" height="14"').' hspace="2" border="0" class="absmiddle"'.($GLOBALS['CLIENT']['FORMSTYLE']?' style="cursor:help;"':'').' alt="" />'.
+	'</a>';
+    }
+  }
+
+  /**
+   * Makes a preview of the form content according to the configuration for the $cmd
+   * @param	string		The cmd. Should be 'edit' or 'create' or 'all'.
+   * @param	boolean		Should the output be wrapped in html or not.
+   */
+  function makeHTMLPreview($cmd, $withHTML = true) {
+    $fields = (string)$cmd=='all' ? t3lib_div::trimExplode(",",($this->conf['create.']['show_fields'] ? $this->conf['create.']['show_fields'].($this->conf['edit.']['show_fields']?','.$this->conf['edit.']['show_fields']:'') : $this->conf['edit.']['show_fields'])) : t3lib_div::trimExplode(",",$this->conf[$cmd.'.']['show_fields']);
+    $result = array();
+
+    $hiddenFields = array();
+    foreach((array)$fields as $fN) {
+      $label = $this->getLLFromLabel($this->TCA['columns'][$fN]['label']);
+      $fieldCode = $this->getPreviewFieldCode($cmd, $fN, $withHTML);
+      if(!$withHTML) {
+	$result[] = $label.chr(10).$fieldCode.chr(10);
+      } else {
+	$result[] = '<div'.$this->caller->pi_classParam('preview-row').'>
+                     <div class="'.$this->caller->pi_getClassName('preview-label').' '.$this->caller->pi_getClassName('preview-label-'.$fN).'">
+                       '.$label.'
+                     </div>
+                     <div class="'.$this->caller->pi_getClassName('preview-value').' '.$this->caller->pi_getClassName('preview-value-'.$fN).'">
+                     '.$fieldCode.'
+                     </div>
+                     </div>';
+#       $hiddenFields[] = '<input type="hidden" name="FE['.$this->table.']['.$fN.']" />';
+      }     
+    }
+
+#    $result[] = ''.implode(chr(10),$hiddenFields);
+
+    // Keep callers piVars
+    if($withHTML)
+      $result = $this->addCallersPiVars($result);
+
+    return implode(chr(10),$result);
+  }
+  
+  /**
+   * A dummy methor for making a NON HTML preview of the form content according to the configurations for the $cmd
+   * @param	string		The cmd. Should be 'edit' or 'create'.
+   */
+  function makeTEXTPreview($cmd) {
+    return $this->makeHTMLPreview($cmd,false);
+  }
+
+  /**
+   * Add callers piVars as hidden input fields to the result array
+   * @param	array		The array to add piVars as input fields to
+   * @result	array		The result array with added piVars input fields
+   */
+  function addCallersPiVars($result = array()) {
+    $keep_piVars = t3lib_div::trimExplode(',',$this->conf['keep_piVars']);
+    foreach($keep_piVars as $piVar) {
+      if(!empty($piVar))
+	$result[] = '<input type="hidden" name="'.$this->caller->prefixId.'['.$piVar.']" value="'.$this->caller->piVars[$piVar].'" />';
+    }
+    return $result;
+  }
+  
+  /**
+   * Gets the PREVIEW fieldcode for field ($fN) of the form. This depends on the fields type.
+   * @param	string		The field to get the fieldcode for.
+   * @param	boolean		Should the output be with html (input fields) or not.
+   */
+  function getPreviewFieldCode($cmd,$fN,$withHTML) {
+#    debug('getPreviewFieldCode():: fN='.$fN.', cmd='.$cmd,'function call');
+    $fieldName = 'FE['.$this->table.']['.$fN.']';
+    $type = $this->TCA["columns"][$fN]["config"]["type"];
+    $feData = t3lib_div::_POST('FE');
+#    debug(intval($feData[$this->table]['datetime']),'datetime');
+    switch((string)$type) {
+    case "input":
+      $evalValuesArr = t3lib_div::trimExplode(',',$this->conf[$cmd.'.']['evalValues.'][$fN]);
+      $displayTwice = false;
+      $isPassword = false;
+      foreach((array)$evalValuesArr as $eval) {
+	switch((string)$eval) {
+	case 'twice':
+	  $displayTwice = true;
+	  break;
+	case 'password':
+	  $isPassword = true;
+	  break;
+	}
+      }
+      
+      $values = '###FIELD_'.$fN.'###';
+      $feData = t3lib_div::_POST("FE");
+      // Format the values.                TODO: This only shows the date on a nice format if it is send to the page, not if it is from an overrideValue.
+      if($isPassword) $values = '********';
+      else if($this->TCA['columns'][$fN]["config"]["eval"]=='date' && !empty($feData[$this->table][$fN])) {     
+	$values = strftime("%e-%m-%Y",$feData[$this->table][$fN]);
+      } else if($this->TCA['columns'][$fN]["config"]["eval"]=='datetime' && !empty($feData[$this->table][$fN])) {
+	$values = strftime("%H:%M %e-%m-%Y",$feData[$this->table][$fN]);
+      }
+      
+      if($displayTwice) {
+	$fieldName_again = 'FE['.$this->table.']['.$fN.'_again]';
+	return $withHTML?'<input type="hidden" name="'.$fieldName.'" /><input type="hidden" name="'.$fieldName_again.'" />'.$values:$values;
+      } else {
+	return $withHTML?'<input type="hidden" name="'.$fieldName.'" />'.$values:$values;
+      }
+      break;
+    case "group":     
+      return $withHTML?'<input type="hidden" name="'.$fieldName.'" /><input type="hidden" name="FE['.$this->table.']['.$fN.'_file]" />###FIELD_'.$fN.'###,###FIELD_'.$fN.'_file###':'###FIELD_'.$fN.'###, ###FIELD_'.$fN.'_file###';
+      break;
+    case "select":
+      $values = '###FIELD_'.$fN.'###';
+      if($this->TCA['columns'][$fN]["config"]["foreign_table"]) {  // reference to elements from another table
+	$label = $GLOBALS["TCA"][$this->TCA['columns'][$fN]["config"]["foreign_table"]]["ctrl"]["label"];
+	$feData = t3lib_div::_POST('FE');
+	if($feData[$this->table][$fN]) {
+	  $uids = t3lib_div::trimExplode(',',$feData[$this->table][$fN]);
+	  $orClause = '';
+	  foreach($uids as $uid) $orClause .= $orClause ? 'OR uid LIKE \''.$uid.'\'' : 'uid = \''.$uid.'\'';
+	  $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*',$this->TCA['columns'][$fN]["config"]["foreign_table"],$orClause);
+	  if($GLOBALS['TYPO3_DB']->sql_error()) debug($GLOBALS['TYPO3_DB']->sql_error(),'sql error');
+	  $values = '';
+	  while($resRow = mysql_fetch_assoc($res)) {
+	    $values .= $values ? ', ' . $resRow[$label] : $resRow[$label];
+	  }
+	}
+      } elseif($this->TCA['columns'][$fN]["config"]["items"]) {                // fixed items
+	$feData = t3lib_div::_POST('FE');
+	if($feData[$this->table][$fN]) {
+	  $vals = t3lib_div::trimExplode(',',$feData[$this->table][$fN]);
+	  $values = '';
+	  foreach($this->TCA['columns'][$fN]["config"]["items"] as $item) {
+	    if(!empty($item)) {
+	      list($label,$val) = $item;
+	      if(in_array($val,$vals)) {
+		$values .= $values ? ', ' . $label : $label;
+	      }
+	    }
+	  }    
+	}
+      }
+      return $withHTML?'<input type="hidden" name="'.$fieldName.'" />'.$values:$values;
+      break;
+    case "text":
+      $values = '###FIELD_'.$fN.'###';
+      $feData = t3lib_div::_POST('FE');
+      if($feData[$this->table]['_TRANSFORM_'.$fN]) { // if rte output, this makes sure that it's not passed through htmlspecialchar
+	$values = $feData[$this->table][$fN];
+      }
+      return $withHTML?'<input type="hidden" name="'.$fieldName.'" />'.$values:$values;
+      break;
+    default:
+      return $withHTML?'<input type="hidden" name="'.$fieldName.'" />###FIELD_'.$fN.'###':'###FIELD_'.$fN.'###';
+      break;
+    }
+  }
+
+
+  /**
+   * Gets the preview fieldcode for field ($fN) of the form. This depends on the fields type.
+   * @param	string		The cmd. Should be 'edit' or 'create'.
+   * @param	string		The field to get the fieldcode for.
+   */
+  function getFormFieldCode($cmd,$fN) {
+#    $this->TCA['columns']['title']["config"]["eval"] = 'date';
+    $fieldName = 'FE['.$this->table.']['.$fN.']';
+    $class = $this->caller->pi_classParam('form-data-'.$fN);
+    $defaultParams = ' name="'.$fieldName.'"'.$class;
+    $type = $this->TCA["columns"][$fN]["config"]["type"];
+#    debug($this->TCA['columns']);
+    switch((string)$type) {
+    case "input":
+      $onChange = 'onChange="feedit_'.$this->table.'_formGet('."'".$fieldName."','".$this->TCA['columns'][$fN]["config"]["eval"]."','".$is_in."','".$checkbox."','".$checkboxVal."','".$checkbox_off."');".'"';
+      $evalValuesArr = t3lib_div::trimExplode(',',$this->conf[$cmd.'.']['evalValues.'][$fN]);
+      $displayTwice = false;
+      $isPassword = false;
+      foreach((array)$evalValuesArr as $eval) {
+	switch((string)$eval) {
+	case 'twice':
+	  $displayTwice = true;
+	  break;
+	case 'password':
+	  $isPassword = true;
+	  break;
+	}
+      }
+
+      $type = 'text';
+      if($isPassword) $type = 'password';
+
+#      debug($this->TCA['columns'][$fN]['config'],'config '.$fN);
+      if($displayTwice) {
+	$fieldName_again = 'FE['.$this->table.']['.$fN.'_again]';
+	$onChange_again = 'onChange="feedit_'.$this->table.'_formGet('."'".$fieldName_again."','".$this->TCA['columns'][$fN]["config"]["eval"]."','".$is_in."','".$checkbox."','".$checkboxVal."','".$checkbox_off."');".'"';
+
+	$this->additionalJS_end['feedit_'.$fN.'_set_data'] = 'feedit_'.$this->table.'_formSet('."'".$fieldName."','".$this->TCA['columns'][$fN]["config"]["eval"]."','".$is_in."','".$checkbox. "','".$checkboxVal."','".$checkbox_off."')".';';
+	$this->additionalJS_end['feedit_'.$fN.'_again_set_data'] = 'feedit_'.$this->table.'_formSet('."'".$fieldName_again."','".$this->TCA['columns'][$fN]["config"]["eval"]."','".$is_in."','".$checkbox. "','".$checkboxVal."','".$checkbox_off."')".';';
+	return '<input type="'.$type.'" name="'.$fieldName.'_feVal" '.$class.' maxlength="'.$this->TCA["columns"][$fN]["config"]["max"].'" '.$onChange.' />
+                <input type="hidden" name="'.$fieldName.'" />
+		<input type="'.$type.'" name="'.$fieldName_again.'_feVal" '.$class.' maxlength="'.$this->TCA["columns"][$fN]["config"]["max"].'" '.$onChange_again.' />
+                <input type="hidden" name="'.$fieldName_again.'" />';
+
+      } else {
+	$this->additionalJS_end['feedit_'.$fN.'_set_data'] = 'feedit_'.$this->table.'_formSet('."'".$fieldName."','".$this->TCA['columns'][$fN]["config"]["eval"]."','".$is_in."','".$checkbox. "','".$checkboxVal."','".$checkbox_off."')".';';
+
+	return 
+	  '<input type="'.$type.'" name="'.$fieldName.'_feVal" id="'.$fieldName.'_feVal" '.$class.' maxlength="'.$this->TCA["columns"][$fN]["config"]["max"].'" '.$onChange.' />' .
+	  '<input type="hidden" name="'.$fieldName.'" />' .
+	  // inserts button for rlmp_dateselectlib
+	  (t3lib_extmgm::isLoaded('rlmp_dateselectlib') && 
+	   !empty($this->TCA['columns'][$fN]["config"]["eval"]) ?
+	   (is_int(array_search('date',t3lib_div::trimExplode(',',$this->TCA['columns'][$fN]["config"]["eval"]))) 
+	    ?
+	    tx_rlmpdateselectlib::getInputButton($fieldName.'_feVal',array('calConf.'=>array('inputFieldDateTimeFormat'=>'%e-%m-%Y'))) 
+	    :
+	    (is_int(array_search('datetime',t3lib_div::trimExplode(',',$this->TCA['columns'][$fN]["config"]["eval"])))
+	     ?
+	     tx_rlmpdateselectlib::getInputButton($fieldName.'_feVal',array('calConf.'=>array('inputFieldDateTimeFormat'=>'%H:%M %e-%m-%Y')))
+	     : ''))
+	   : ''); 
+      }
+      break;
+    case "text":
+      /**** GET THE SPECIELCONF FOR THE FIELD AND CHECK FOR USE OF AN RTE****/
+      $useRTE = false;
+      
+      $specialConf = array();
+
+      // Get the type value
+      $type = 0; // default value
+      $typeField = $this->TCA['ctrl']['type'];
+      $uid = $feData[$this->table]['uid'] ? $feData[$this->table]['uid'] : t3lib_div::_GET('rU');
+      if($typeField && $uid) { // get the type from the database else use default value
+	$rec = $GLOBALS['TSFE']->sys_page->getRawRecord($this->table,$uid);
+	$type = intval($rec[$typeField]);
+      }
+  
+      // get the special configurations and check for an existing richtext configuration
+      $showitem = $this->TCA['types'][$type]['showitem'] ? explode(',',$this->TCA['types'][$type]['showitem']) : explode(',',$this->TCA['types'][1]['showitem']); // if ['types'][$type] we should try with ['types'][1] according to TCA doc
+      foreach((array)$showitem as $fieldConfig) {
+	$fC = explode(';',$fieldConfig);
+	if(trim($fC[0])==$fN) {                      // if field is $fN
+	  foreach(explode(':',$fC[3]) as $sC) {
+	    if(substr($sC,0,8)=='richtext') {        // if there is a richtext configuration we found what we were looking for
+	      $buttons = substr(trim($sC),9,strlen(trim($sC))-10);
+	      $specialConf['richtext']['parameters'] = t3lib_div::trimExplode('|',$buttons);
+	      $useRTE = true;
+
+	      break;
+	    }
+	  }
+	}
+      }
+
+      /**** USE RTE OR NOT  ****/
+      if($useRTE && is_object($this->RTEObj) && $this->RTEObj->isAvailable()) {   // use RTE
+
+	$this->RTEcounter++;
+	$this->formName = $this->table.'_form';
+	$this->strEntryField = $fN;
+	$this->PA['itemFormElName'] = $fieldName;
+	$feData = t3lib_div::_POST('FE');
+	$this->PA['itemFormElValue'] = $feData[$this->table][$fN];
+	$this->specConf = $specialConf;
+
+	$pageTSConfig = $GLOBALS['TSFE']->getPagesTSconfig();
+	$this->thisConfig = $pageTSConfig['RTE.']['default.']['FE.'];
+#	debug($this->thisConfig,'thisConfig');
+	$this->thePidValue = $GLOBALS['TSFE']->id;
+	$RTEItem = $this->RTEObj->drawRTE($this,$this->table,$fN,$row=array(), $this->PA, $this->specConf, $this->thisConfig, $this->RTEtypeVal, '', $this->thePidValue);
+	return $RTEItem . '<div'.$this->caller->pi_classParam('rte-clearer').'></div>';
+      } else {                                                                   // dont use RTE
+	return '<textarea'.$defaultParams.' cols="'.$this->TCA["columns"][$fN]["config"]["cols"].'" rows="'.$this->TCA["columns"][$fN]["config"]["rows"].'" wrap="VIRTUAL"></textarea>';
+      }
+      break;
+    case "check":
+      if($this->TCA['columns'][$fN]['config']['cols']>1) debug("getFormFieldCode():: WARNING, checkbox have more cols, not implementet yet.");
+      return '<input type="hidden" '.$defaultParams.' value="0"><input type="checkbox" '.$defaultParams.' value="1">';
+      break;
+    case "group":
+      if($this->TCA['columns'][$fN]["config"]["internal_type"]=='file')	{
+	// fetch data from table
+	$feData = t3lib_div::_POST('FE');
+	$uid = $feData[$this->table]['uid'] ? $feData[$this->table]['uid'] : t3lib_div::_GET('rU');
+	$rec = $GLOBALS['TSFE']->sys_page->getRawRecord($this->table,$uid);
+	
+	// make option tags from existing data.
+	$options = "";
+	foreach(explode(",",$rec[$fN]) as $opt)
+	  $options .= '<option value="'.$opt.'">'.$opt.'</option>';
+
+	
+	$result .= '<select size="'.$this->TCA['columns'][$fN]["config"]["size"].'" name="FE['.$this->table.']['.$fN.']_select" style="width:250px;">
+                   '.$options.'
+                   </select>
+                   <input type="hidden" name="'.$fieldName.'">
+                   <a onClick="feedit_manipulateGroup(\''.$fieldName.'\');return false;"><img border="0" src="typo3/gfx/group_clear.gif"></a>';
+
+#	unset($result);
+	if($this->TCA['columns'][$fN]["config"]["maxitems"]>sizeof(explode(",",$rec[$fN]))) {
+	  $result .= $this->TCA['columns'][$fN]["config"]["allowed"].'<input type="file" name="FE['.$this->table.']['.$fN.'_file][]" />';
+	}
+	
+	return $result;
+      } else {
+	debug("getFormFieldCode()::GROUP TYPE 'DB' NOT SUPPORTET YET");
+      }
+      break;
+    case "select":
+      $feData = t3lib_div::_POST('FE');
+      $uid = $feData[$this->table]['uid'] ? $feData[$this->table]['uid'] : t3lib_div::_GET('rU');
+      $rec = $GLOBALS['TSFE']->sys_page->getRawRecord($this->table,$uid);
+
+      if($this->TCA['columns'][$fN]["config"]["foreign_table"]) {               // reference to elements from another table
+	$label = $GLOBALS["TCA"][$this->TCA['columns'][$fN]["config"]["foreign_table"]]["ctrl"]["label"];
+
+	$foreignTable = $this->TCA['columns'][$fN]["config"]["foreign_table"];
+	$whereClause = $this->TCA['columns'][$fN]["config"]["foreign_table_where"];
+
+	$storageAndSiteroot = $GLOBALS["TSFE"]->getStorageSiterootPids();        
+	$whereClause = str_replace('###CURRENT_PID###',intval($storageAndSiteroot["_STORAGE_PID"])/*intval($GLOBALS["TSFE"]->page['uid'])*/,$whereClause); // replaced with STORAGE_PID cause it makes more sende ;) 
+#	$whereClause = str_replace('###THIS_UID###',,$whereClause);
+#	$whereClause = str_replace('###THIS_CID###',,$whereClause);
+	$whereClause = str_replace('###STORAGE_PID###',intval($storageAndSiteroot["_STORAGE_PID"]),$whereClause);
+	$whereClause = str_replace('###SITEROOT###',intval($storageAndSiteroot['_SITEROOT']),$whereClause);
+
+	$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*',$foreignTable,'1=1 '.$whereClause . $this->cObj->enableFields($foreignTable));
+	if (mysql_error())	debug(array(mysql_error()),'getFormFieldCode()::field='.$fN);
+
+	// gets uids of selected records.
+	$uids = array();
+	if($feData[$this->table][$fN]) {                                // from post var
+	  $uids = explode(",",$feData[$this->table][$fN]);
+	} elseif($this->TCA['columns'][$fN]["config"]["MM"] && $uid) {  // from mm-relation
+	  #debug($GLOBALS['TYPO3_DB']->SELECTquery('*',$this->TCA['columns'][$fN]["config"]["MM"],'uid_local=\''.$uid.'\'','sorting'),'hej');
+	  $MMres = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*',$this->TCA['columns'][$fN]["config"]["MM"],'uid_local=\''.$uid.'\'','sorting');
+	  if (mysql_error())	debug(array(mysql_error(),$query),'getFormFieldCode()::field='.$fN);
+	  
+	  if(mysql_num_rows($MMres)!=$rec[$fN])
+	    debug("Wrong number of selections reached");
+	  while($MMrow = mysql_fetch_assoc($MMres)) 
+	    $uids[] = $MMrow["uid_foreign"];  
+	} else {                                                        // clean from DB
+	  $uids = explode(",",$rec[$fN]);	
+	}
+
+#	debug($uids,'uids');
+#	debug($GLOBALS['TYPO3_DB']->sql_num_rows($res));
+	while($resRow = mysql_fetch_assoc($res)) {
+	  $selected = in_array($resRow["uid"],$uids)?"selected":"";
+	  $options .= '<option value="'.$resRow["uid"].'" '.$selected.'>'.$resRow[$label].'</option>';
+	}
+      } elseif($this->TCA['columns'][$fN]["config"]["items"]) {                // fixed items
+	// Get selected uids.
+	$uids = array();
+	if($feData[$this->table][$fN]) {                                // from post var
+	  $uids = explode(",",$feData[$this->table][$fN]);
+	} else {                                                        // clean from DB
+	  $uids = explode(",",$rec[$fN]);	
+	}
+	
+	$options = '<option value="0">-----</option>';
+	foreach((array)$this->TCA['columns'][$fN]["config"]["items"] as $key => $item) {
+	  $selected = in_array($item[1],$uids)?"selected":"";
+	  if($key!=0)
+	    $options .= '<option value="'.$item[1].'"'.$selected.'>'.$this->getLLFromLabel($item[0]).'</option>';
+	}
+      } else {                                                                 // unknown TCA config
+	$options = '<option><em>Unknown TCA-configuration</em></option>';
+      }
+
+      if($this->TCA['columns'][$fN]["config"]["size"]) {
+	$size = ' size="'.$this->TCA['columns'][$fN]["config"]["size"].'" ';
+	
+	if($this->TCA['columns'][$fN]["config"]["maxitems"]>1) { 
+	  $size .= ' multiple ';
+	  $onChange = ' onChange="feedit_manipulateMultipleSelect(\''.$fieldName.'\')" ';
+	  $hr = '<input type="hidden" name="'.$fieldName.'" value="'.implode(",",$uids).'">';
+	  $name = substr($name,0,-1).'_select" ';
+	}
+      }
+      $row .= '<select '.$size.' '.$onChange.' name="FE['.$this->table.']['.$fN.']_select">
+                    '.$options.'
+                    </select>'.$hr;
+      return $row;
+      break;
+    case "radio":
+      debug("getFormFieldCode():: radio buttons not implementet yet.");
+    default:
+      debug("getFormFieldCode():: Unknown type (".$type.") with field ".$fN);
+      return '<input type="text"'.$defaultParams.' />';
+      break;
+    }
+  }
+
+  function getEditMenuTemplate() {
+    return '
+<!-- ###TEMPLATE_EDITMENU### begin -->
+	'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-editmenu').'">'.$this->getLL("edit_menu_header").'</h1>').'
+	<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-editmenu').'">'.$this->getLL("edit_menu_description").'</div>
+	<div'.$this->caller->pi_classParam('editmenu-list').'>
+		<!-- ###ALLITEMS### begin -->
+			<!-- ###ITEM### begin -->
+				<div><a href="###FORM_URL###&rU=###FIELD_uid###&cmd=edit&backURL=###FORM_URL_ENC###'.rawurlencode('&cmd=edit').'">###FIELD_'.strtolower($this->id_field).'###</a></div>
+			<!-- ###ITEM### end -->
+		<!-- ###ALLITEMS### end -->
+	</div>
+	<div class="'.$this->caller->pi_getClassName('link').' '.$this->caller->pi_getClassName('link-editmenu').'"><div><a href="###FORM_URL###&cmd=create">'.$this->getLL("edit_menu_createnew_label").'</a></div></div>
+<!-- ###TEMPLATE_EDITMENU### -->
+
+<!-- ###TEMPLATE_EDITMENU_NOITEMS### begin -->
+	'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-editmenu-noitems').'">'.$this->getLL("edit_menu_noitems_header").'</h1>').'
+	<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-editmenu-noitems').'">'.$this->getLL("edit_menu_noitems_description").'</div>
+	<div class="'.$this->caller->pi_getClassName('link').' '.$this->caller->pi_getClassName('link-editmenu-noitems').'"><div><a href="###FORM_URL###&cmd=create">'.$this->getLL("edit_menu_createnew_label").'</a></div></div>
+<!-- ###TEMPLATE_EDITMENU_NOITEMS### -->
+';
+  }
+
+  function getEditTemplate() {
+    $HTMLFormEdit = $this->makeHTMLForm('edit');
+    $HTMLPreviewEdit = $this->makeHTMLPreview('edit');
+
+    if($this->conf['delete.']['preview']) {
+      $deleteLink = '<div><a href="###FORM_URL###&cmd=delete&preview=1&backURL=###FORM_URL_ENC###&rU=###REC_UID###">'.$this->getLL("edit_delete_label").'</a></div>';
+    } else {
+      $deleteLink = '<div><a href="###FORM_URL###&cmd=delete&backURL=###FORM_URL_ENC###&rU=###REC_UID###" onClick="return confirm(\''.$this->getLL("edit_delete_confirm").'\');">'.$this->getLL("edit_delete_label").'</a></div>';
+    }
+    if(!$this->conf['delete']) $deleteLink = '';
+    return '
+<!-- ###TEMPLATE_EDIT### -->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-edit').'">'.$this->getLL("edit_header_prefix").' "###FIELD_'.strtolower($this->id_field).'###"</h1>').'
+'.($this->conf['text_in_top_of_form']?'<div'.$this->caller->pi_classParam('form-text').'>'.$this->cObj->stdWrap($this->conf['text_in_top_of_form'],$this->conf['text_in_top_of_form.']).'</div>':'').'
+<div'.$this->caller->pi_classParam('form-wrap').'>
+<form name="'.$this->table.'_form" method="post" action="###FORM_URL###" enctype="'.$GLOBALS["TYPO3_CONF_VARS"]["SYS"]["form_enctype"].'" onsubmit="'.implode(';', $this->additionalJS_submit).'">
+'.$HTMLFormEdit.'
+<div'.$this->caller->pi_classParam('form-row').'>
+   ###HIDDENFIELDS###
+   <input type="Submit" name="submit" value="'.$this->getLL("edit_submit_label").'"'.$this->caller->pi_classParam('form-submit').'>
+</div>
+</form>
+<script type="text/javascript">
+'.implode(chr(10), $this->additionalJS_post).'
+</script>
+</div>
+</div>
+<div class="'.$this->caller->pi_getClassName('link').' '.$this->caller->pi_getClassName('link-edit').'">
+'.$deleteLink.'
+<div><a href="###FORM_URL###&cmd=edit">'.$this->getLL("back_label").'</a></div>
+</div>
+<!-- ###TEMPLATE_EDIT### end-->
+
+<!-- ###TEMPLATE_EDIT_PREVIEW### -->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-edit-preview').'">'.$this->getLL("edit_header_prefix").' "###FIELD_'.strtolower($this->id_field).'###"</h1>').'
+'.($this->conf['text_in_top_of_preview']?'<div'.$this->caller->pi_classParam('preview-text').'>'.$this->cObj->stdWrap($this->conf['text_in_top_of_preview'],$this->conf['text_in_top_of_preview.']).'</div>':'').'
+<div'.$this->caller->pi_classParam('preview-wrap').'>
+<form name="'.$this->table.'_form" method="post" action="###FORM_URL###" enctype="'.$GLOBALS["TYPO3_CONF_VARS"]["SYS"]["form_enctype"].'">
+'.$HTMLPreviewEdit.'
+<div'.$this->caller->pi_classParam('preview-row').'>
+    ###HIDDENFIELDS###
+    <input type="Submit" name="doNotSave" value="'.$this->getLL("edit_preview_donotsave_label").'"'.$this->caller->pi_classParam('preview-donotsave').'>
+    <input type="Submit" name="submit" value="'.$this->getLL("edit_preview_submit_label").'"'.$this->caller->pi_classParam('preview-submit').'>
+</div>
+</form>
+</div>
+<!-- ###TEMPLATE_EDIT_PREVIEW### end-->
+
+<!-- ###TEMPLATE_EDIT_SAVED### begin-->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-edit-saved').'">'.$this->getLL("edit_saved_header").'</h1>').'
+<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-edit-saved').'">'.$this->getLL("edit_saved_message").'</div>
+<div class="'.$this->caller->pi_getClassName('link').' '.$this->caller->pi_getClassName('link-edit-saved').'"><div><a href="###FORM_URL###&cmd=edit">'.$this->getLL("back_label").'</a></div></div>
+<!-- ###TEMPLATE_EDIT_SAVED### end-->
+';
+  }
+
+
+  function getCreateTemplate() {
+    $HTMLFormCreate = $this->makeHTMLForm('create');
+    $HTMLPreviewCreate = $this->makeHTMLPreview('create');
+    return '
+
+<!-- ###TEMPLATE_CREATE_LOGIN### -->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-create-login').'">'.$this->getLL("create_header_prefix").' '.$this->getLLFromLabel($this->TCA["ctrl"]["title"]).'</h1>').'
+'.($this->conf['text_in_top_of_form']?'<div'.$this->caller->pi_classParam('form-text').'>'.$this->cObj->stdWrap($this->conf['text_in_top_of_form'],$this->conf['text_in_top_of_form.']).'</div>':'').'
+<div'.$this->caller->pi_classParam('form-wrap').'>
+<form name="'.$this->table.'_form" method="post" action="###FORM_URL###" enctype="'.$GLOBALS["TYPO3_CONF_VARS"]["SYS"]["form_enctype"].'" onsubmit="'.implode(';', $this->additionalJS_submit).'">
+'.$HTMLFormCreate.'
+<div'.$this->caller->pi_classParam('form-row').'>
+   ###HIDDENFIELDS###
+   <input type="Submit" name="submit" value="'.$this->getLL("create_submit_label").'"'.$this->caller->pi_classParam('form-submit').'>
+</div>
+</form>
+<script type="text/javascript">
+'.implode(chr(10), $this->additionalJS_post).'
+</script>
+</div>
+<div class="'.$this->caller->pi_getClassName('link').' '.$this->caller->pi_getClassName('link-create-login').'"><div><a href="###FORM_URL###&cmd=edit">'.$this->getLL("create_edit_link").'</a></div></div>
+<!-- ###TEMPLATE_CREATE_LOGIN### end-->
+
+
+<!-- ###TEMPLATE_CREATE_LOGIN_PREVIEW### begin-->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-create-login-preview').'">'.$this->getLL("create_header_prefix").' '.$this->getLLFromLabel($this->TCA["ctrl"]["title"]).'</h1>').'
+'.($this->conf['text_in_top_of_preview']?'<div'.$this->caller->pi_classParam('preview-text').'>'.$this->cObj->stdWrap($this->conf['text_in_top_of_preview'],$this->conf['text_in_top_of_preview.']).'</div>':'').'
+<div'.$this->caller->pi_classParam('preview-wrap').'>
+<form name="'.$this->table.'_form" method="post" action="###FORM_URL###" enctype="'.$GLOBALS["TYPO3_CONF_VARS"]["SYS"]["form_enctype"].'">
+'.$HTMLPreviewCreate.'
+<div'.$this->caller->pi_classParam('preview-row').'>
+    ###HIDDENFIELDS###
+    <input type="Submit" name="doNotSave" value="'.$this->getLL("create_preview_donotsave_label").'"'.$this->caller->pi_classParam('preview-donotsave').'>
+    <input type="Submit" name="submit" value="'.$this->getLL("create_preview_submit_label").'"'.$this->caller->pi_classParam('preview-submit').'>
+</div>
+</form>
+</div>
+<!-- ###TEMPLATE_CREATE_LOGIN_PREVIEW### end-->
+
+<!-- ###TEMPLATE_CREATE### -->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-create').'">'.$this->getLL("create_header_prefix").' '.$this->getLLFromLabel($this->TCA["ctrl"]["title"]).'</h1>').'
+'.($this->conf['text_in_top_of_form']?'<div'.$this->caller->pi_classParam('form-text').'>'.$this->cObj->stdWrap($this->conf['text_in_top_of_form'],$this->conf['text_in_top_of_form.']).'</div>':'').'
+<div'.$this->caller->pi_classParam('form-wrap').'>
+<form name="'.$this->table.'_form" method="post" action="###FORM_URL###" enctype="'.$GLOBALS["TYPO3_CONF_VARS"]["SYS"]["form_enctype"].'" onsubmit="'.implode(';', $this->additionalJS_submit).'">
+'.$HTMLFormCreate.'
+<div'.$this->caller->pi_classParam('form-row').'>
+   ###HIDDENFIELDS###
+   <input type="Submit" name="submit" value="'.$this->getLL("create_submit_label").'"'.$this->caller->pi_classParam('form-submit').'>
+</div>
+</form>
+<script type="text/javascript">
+'.implode(chr(10), $this->additionalJS_post).'
+</script>
+</div>
+</div>
+<!-- ###TEMPLATE_CREATE### end-->
+
+
+<!-- ###TEMPLATE_CREATE_PREVIEW### begin-->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-create-preview').'">'.$this->getLL("create_header_prefix").' '.$this->getLLFromLabel($this->TCA["ctrl"]["title"]).'</h1>').'
+'.($this->conf['text_in_top_of_preview']?'<div'.$this->caller->pi_classParam('preview-text').'>'.$this->cObj->stdWrap($this->conf['text_in_top_of_preview'],$this->conf['text_in_top_of_preview.']).'</div>':'').'
+<div'.$this->caller->pi_classParam('preview-wrap').'>
+<form name="'.$this->table.'_form" method="post" action="###FORM_URL###" enctype="'.$GLOBALS["TYPO3_CONF_VARS"]["SYS"]["form_enctype"].'">
+'.$HTMLPreviewCreate.'
+<div'.$this->caller->pi_classParam('preview-row').'>
+    ###HIDDENFIELDS###
+    <input type="Submit" name="doNotSave" value="'.$this->getLL("create_preview_donotsave_label").'"'.$this->caller->pi_classParam('preview-donotsave').'>
+    <input type="Submit" name="submit" value="'.$this->getLL("create_preview_submit_label").'"'.$this->caller->pi_classParam('preview-submit').'>
+</div>
+</form>
+</div>
+<!-- ###TEMPLATE_CREATE_PREVIEW### end-->
+
+
+<!-- ###TEMPLATE_CREATE_SAVED### begin-->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-create-saved').'">'.$this->getLL("create_saved_header").'</h1>').'
+<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-create-saved').'">'.$this->getLL("create_saved_message").'</div>
+<div class="'.$this->caller->pi_getClassName('link').' '.$this->caller->pi_getClassName('link-create-saved').'"><div><a href="###FORM_URL###&cmd=create">'.$this->getLL("back_label").'</a></div></div>
+<!-- ###TEMPLATE_CREATE_SAVED### end-->
+';
+  }
+
+  function getDeleteTemplate() {
+    return '
+    <!-- ###TEMPLATE_DELETE_PREVIEW### begin-->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-delete-preview').'">'.$this->getLL("delete_preview_header").'</h1>').'
+<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-delete-preview').'">'.$this->getLL("delete_preview_message").'</div>
+<div class="'.$this->caller->pi_getClassName('link').' '.$this->caller->pi_getClassName('link-delete-preview').'">
+<div><a href="###FORM_URL###&cmd=delete&backURL=###FORM_URL_ENC###&rU=###REC_UID###">'.$this->getLL("delete_preview_delete_label").'</a></div>
+<div><a href="###FORM_URL###&cmd=edit&rU=###REC_UID###&backURL=###BACK_URL###" >'.$this->getLL("delete_preview_dont_delete_label").'</a></div>
+</div>
+<!-- ###TEMPLATE_DELETE_PREVIEW### end-->
+
+<!-- ###TEMPLATE_DELETE_SAVED### begin-->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-delete-saved').'">'.$this->getLL("delete_saved_header").'</h1>').'
+<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-delete-saved').'">'.$this->getLL("delete_saved_message").'</div>
+<div class="'.$this->caller->pi_getClassName('link').' '.$this->caller->pi_getClassName('link-delete-saved').'"><div><a href="###FORM_URL###&cmd=edit">'.$this->getLL("back_label").'</a></div></div>
+<!-- ###TEMPLATE_DELETE_SAVED### end-->
+';
+  }
+
+
+  function getSetfixedTemplate() {
+    return '
+<!-- ###TEMPLATE_SETFIXED_OK### -->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-setfixed-ok').'">Setfixed succeeded</h1>').'
+<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-setfixed-ok').'">Record uid; ###FIELD_uid###</div>
+<!-- ###TEMPLATE_SETFIXED_OK### end-->
+
+<!-- ###TEMPLATE_SETFIXED_OK_DELETE### -->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-setfixed-ok-delete').'">Setfixed delete record "###FIELD_uid###"</h1>').'
+<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-setfixed-ok').'">Record uid; ###FIELD_uid###</div>
+<!-- ###TEMPLATE_SETFIXED_OK_DELETE### end-->
+
+<!-- ###TEMPLATE_SETFIXED_FAILED### -->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-setfixed-failed').'">Setfixed failed!</h1>').'
+<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-setfixed-failed').'">May happen if you click the setfixed link a second time (if the record has changed since the setfixed link was generated this error will happen!)</div>
+<!-- ###TEMPLATE_SETFIXED_FAILED### end-->
+';
+  }
+
+  function getEmailTemplate() {
+    return '
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### begin -->
+[Auto Generated Message] Your informations has been saved.
+
+	<!--###SUB_RECORD###-->
+        You have submitted the following informations at '.t3lib_div::getIndpEnv('TYPO3_SITE_URL').':'.chr(10).'
+	'.$this->makeTEXTPreview('all').'
+	<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### end-->
+
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED-ADMIN### begin -->
+[Auto Generated Message] New record created.
+
+	<!--###SUB_RECORD###-->
+	'.$this->makeTEXTPreview('all').'
+	
+	Approve:
+	###THIS_URL######FORM_URL######SYS_SETFIXED_approve###
+	
+	Delete:
+	###THIS_URL######FORM_URL######SYS_SETFIXED_DELETE###
+	<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED-ADMIN### end-->
+
+<!-- ###EMAIL_TEMPLATE_EDIT_SAVED-ADMIN### begin -->
+[Auto Generated Message] Consultancy record edited.
+
+	<!--###SUB_RECORD###-->
+	'.$this->makeTEXTPreview('all').'
+	
+	Approve:
+	###THIS_URL######FORM_URL######SYS_SETFIXED_approve###
+	
+	Delete:
+	###THIS_URL######FORM_URL######SYS_SETFIXED_DELETE###
+	<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_EDIT_SAVED-ADMIN### end-->
+
+
+
+<!-- ###EMAIL_TEMPLATE_SETFIXED_DELETE### begin -->
+Consultancy DELETED!
+
+<!--###SUB_RECORD###-->
+Record name: ###FIELD_'.$this->id_field.'###
+
+Your entry has been deleted by the admin for some reason.
+
+- kind regards.
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_DELETE### begin -->
+
+
+
+<!-- ###EMAIL_TEMPLATE_SETFIXED_approve### begin -->
+Consultancy approved
+
+<!--###SUB_RECORD###-->
+
+Record name: ###FIELD_'.$this->id_field.'###
+
+Your consultancy entry has been approved! 
+
+- kind regards.
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_approve### begin -->
+';
+}
+
+
+  function getRequiredTemplate() {
+    return '
+<!-- ###TEMPLATE_AUTH### -->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-auth').'">Authentication failed</h1>').'
+<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-auth').'">Of some reason the authentication failed. </div>
+<!-- ###TEMPLATE_AUTH### end-->
+
+<!-- ###TEMPLATE_NO_PERMISSIONS### -->
+'.($this->conf['no_header']?'':'<h1 class="'.$this->caller->pi_getClassName('header').' '.$this->caller->pi_getClassName('header-no-permissions').'">No permissions to edit record</h3>').'
+<div class="'.$this->caller->pi_getClassName('message').' '.$this->caller->pi_getClassName('message-no-permissions').'">Sorry, you did not have permissions to edit the record.</div>
+<!-- ###TEMPLATE_NO_PERMISSIONS### end-->
+';
+  }
+
+
+
+  /**********************************************************************************************
+   * FUNCTIONS CALLED FROM fe_adminLib
+   **********************************************************************************************/ 
+
+
+  /*
+   * This function has the data array passed to it in $content.
+   * Must return the data array again.
+   * The function runs through the fields from fe_adminLibs dataArr and does som required processing for the different fields types.
+   */
+  function processDataArray($content,$conf) {
+#    debug($content,'processDataArray content');
+#    debug($conf,   'processDataArray conf');
+    $fe_adminLib = &$conf['parentObj'];
+    $dataArr = $content;
+    $table = $fe_adminLib->theTable;
+    foreach((array)$dataArr as $fN=>$value) {
+      switch((string)$GLOBALS['TCA'][$table]['columns'][$fN]['config']['type']) {
+      case 'input':
+	// if evaltype is date or datetime and overrideValue is 'now' we transform it into the current timestamp + the int following 'now'.
+	// Example: if override value is now+30 we transform it into a timestamp representing the day 30 days from today
+	if(($GLOBALS['TCA'][$table]['columns'][$fN]['config']['eval']=='date' || $GLOBALS['TCA'][$table]['columns'][$fN]['config']['eval']=='datetime') &&
+	   substr($fe_adminLib->conf[$fe_adminLib->cmdKey."."]["overrideValues."][$fN],0,3) == 'now') {
+	  $dataArr[$fN] = time() + 24*60*60*intval(substr($fe_adminLib->conf[$fe_adminLib->cmdKey."."]["overrideValues."][$fN],3));
+	}
+	break;
+      }
+    }
+    return $dataArr;
+  }
+
+  /*
+   * This function has the value-array passed to it before the value array is used to construct the update-JavaScript statements in fe_adminLib.
+   * Must return the value-array again.
+   * The function runs through the fields from fe_adminLibs dataArr and does som required stuff for the different fields types
+   */
+  function updateArray($content,$conf) {
+#    debug($content,'updateArray content');
+#    debug($conf,'updateArray conf');
+    $fe_adminLib = &$conf['parentObj'];
+    $dataArr = $content;
+    $table = $fe_adminLib->theTable;
+    foreach((array)$dataArr as $fN=>$value) {
+      switch((string)$GLOBALS['TCA'][$table]['columns'][$fN]['config']['type']) {
+      case 'group':
+	// we need to update the additional field $fN.'_file'.
+	$fe_adminLib->additionalUpdateFields .= ','.$fN.'_file';
+	break;
+      case 'input':
+	// if evaltype is date or datetime and defaultValue is 'now' we transform it into the current timestamp + the int following 'now'.
+	// Example: if default value is now+30 we transform it into a timestamp representing the day 30 days from today
+	if(($GLOBALS['TCA'][$table]['columns'][$fN]['config']['eval']=='date' || $GLOBALS['TCA'][$table]['columns'][$fN]['config']['eval']=='datetime') &&
+	   substr($fe_adminLib->conf[$fe_adminLib->cmdKey."."]["defaultValues."][$fN],0,3) == 'now' && empty($dataArr[$fN])) {
+	  $dataArr[$fN] = time() + 24*60*60*intval(substr($fe_adminLib->conf[$fe_adminLib->cmdKey."."]["defaultValues."][$fN],3));
+	}
+	break;
+      }
+    }
+    return $dataArr;
+  }
+
+
+  /*
+   * This funtion is called after a record is saved in fe_adminLib.
+   * The function runs through the fields from fe_adminLibs dataArr and does som required stuff for the different fields types
+   */
+  function afterSave($content,$conf)	{
+#    debug($content,'content');
+#    debug($conf,'conf');
+#    debug($_FILES,'$_FILES');
+
+    $fe_adminLib = &$conf['parentObj'];
+    $dataArr = $fe_adminLib->dataArr;
+    $table = $fe_adminLib->theTable;
+
+    foreach((array)$dataArr as $fN=>$value) {
+      switch((string)$GLOBALS['TCA'][$table]['columns'][$fN]['config']['type']) {
+      case 'group':
+	if($GLOBALS['TCA'][$table]['columns'][$fN]['config']['internal_type']=='file') { //internal_type=file
+	  /**** DELETED FILES ****/
+	  // if files are deleted in the field, we also want to make sure they are deleted on the server
+	  if($content['origRec']) {
+	    $diff = array_diff( explode(',',$content['origRec'][$fN]), explode(',',$content['rec'][$fN]) );
+	    foreach((array)$diff as $file) {
+	      $uploadPath = $GLOBALS['TCA'][$table]['columns'][$fN]['config']['uploadfolder'];
+	      @unlink(PATH_site.$uploadPath.'/'.$file);
+	    }
+	  }
+	  /**** UPLOADED FILES ****/
+	  // if a new file is uploaded, we need to add to the database.
+	  $file = $dataArr[$fN.'_file'];
+	  if($file) {
+	    $fV = $content['rec'][$fN] ? $content['rec'][$fN].','.$file : $file;
+	    $cObj = t3lib_div::makeInstance('tslib_cObj');
+	    $cObj->DBgetUpdate($table, $content['rec']['uid'], array($fN=>$fV), $fN, TRUE);
+	  }
+	}
+	break;
+      case 'select':
+	if($GLOBALS['TCA'][$table]['columns'][$fN]['config']['MM']) { //its a MM relation
+	  $uids = explode(',',$dataArr[$fN]);
+	  $uid = $content['rec']['uid'];
+	  $mmTable = $GLOBALS['TCA'][$table]['columns'][$fN]['config']['MM'];
+	  // update the $fN in $table
+	  $cObj = t3lib_div::makeInstance('tslib_cObj');
+	  $cObj->DBgetUpdate($table, $uid, array($fN=>count($uids)), $fN, TRUE);
+	  // update the MM table
+	  $GLOBALS['TYPO3_DB']->exec_DELETEquery($mmTable,'uid_local='.intval($uid));
+	  foreach((array)$uids as $foreign_uid) {
+	    $GLOBALS['TYPO3_DB']->exec_INSERTquery($mmTable,array('uid_local'=>intval($uid),'uid_foreign'=>intval($foreign_uid)));    
+	  }
+	}
+	break;
+      }
+    }
+
+  }
+
+
+  /**********************************************************************************************
+   * JAVASCRIPT FUNCTIONS
+   **********************************************************************************************/
+ 
+  function getJSBefore() {
+    $formName = $this->table.'_form';
+    return '<script type="text/javascript" src="t3lib/jsfunc.evalfield.js"></script>
+	    <script type="text/javascript">
+	        function typoSetup() {	
+					this.passwordDummy = "********";
+					this.decimalSign = ".";
+				}
+		var TS = new typoSetup();
+	        var evalFunc = new evalFunc();
+	
+            function feedit_'.$formName.'Set(theField, evallist, is_in, checkbox, checkboxValue,checkbox_off){
+/*alert("SET:" + theField+": "+document.'.$formName.'[theField].value);*/
+	      var theFObj = new evalFunc_dummy (evallist,is_in, checkbox, checkboxValue);
+              var feValField = theField+"_feVal";
+
+if(!(document.'.$formName.' && document.'.$formName.'[theField] && document.'.$formName.'[feValField])) return;
+
+      theValue = document.'.$formName.'[theField].value;
+/*              valField = theField.substring(0,theField.length-1)+"_hrv]";
+	      document.'.$formName.'[theField].value = theValue;
+alert(theValue); */
+      document.'.$formName.'[feValField].value = evalFunc.outputObjValue(theFObj, theValue);
+
+/*alert(theField+": "+document.'.$formName.'[theField].value);
+alert(feValField+": "+document.'.$formName.'[feValField].value);*/
+	    }
+
+	    function feedit_'.$formName.'Get(theField, evallist, is_in, checkbox, checkboxValue,checkbox_off){
+/*alert("GET: " + theField);*/
+	      var theFObj = new evalFunc_dummy (evallist,is_in, checkbox, checkboxValue);
+      if (checkbox_off){
+		document.'.$formName.'[theField].value=checkboxValue;
+	      }else{
+		document.'.$formName.'[theField].value = evalFunc.evalObjValue(theFObj, document.'.$formName.'[theField+"_feVal"].value);
+                  /*if(document.'.$formName.'[theField].value.length==0)
+                  for(idx=1; eval = feedit_split(evallist,",",idx);idx++);
+                     if(eval == "required") {
+                       alert("Feltet skal udfyldes");
+                }*/
+	      }
+	     feedit_'.$formName.'Set(theField, evallist, is_in, checkbox, checkboxValue,checkbox_off);
+	    }
+            function feedit_manipulateMultipleSelect(theField) {
+               selObj = document.'.$formName.'[theField+"_select"];
+               val = selObj.value;
+               list = document.'.$formName.'[theField].value;
+               newList = "";
+               for(i=0;i<selObj.length;i++) {
+                  if(selObj.options[i].selected == true) {
+                     newList += selObj.options[i].value+",";
+                  }
+               }
+               if(newList.length!=0)
+                 newList = newList.substring(0,newList.length-1);
+               document.'.$formName.'[theField].value = newList;
+               
+            }
+
+            function feedit_manipulateGroup(theField) {
+               selObj = document.'.$formName.'[theField+"_select"];
+               val = selObj.value;
+               list = document.'.$formName.'[theField].value;
+               newList = "";
+               for(i=0;i<selObj.length;i++) {
+                  if(selObj.options[i].selected == false) {
+                     newList += selObj.options[i].value+",";
+                  } else {
+                     rem_i = i;
+                  }
+               }
+               if(newList.length!=0)
+                 newList = newList.substring(0,newList.length-1);
+alert(newList);
+               document.'.$formName.'[theField].value = newList;
+               selObj.options[rem_i] = null;
+               
+            }
+
+
+            function feedit_split(theStr1, delim, index) {
+               var theStr = ""+theStr1;
+               var lengthOfDelim = delim.length;
+               sPos = -lengthOfDelim;
+               if (index<1) {index=1;}
+               for (var a=1; a<index; a++){
+                   sPos = theStr.indexOf(delim, sPos+lengthOfDelim);
+                   if (sPos==-1){return null;}
+               }
+               ePos = theStr.indexOf(delim, sPos+lengthOfDelim);
+               if(ePos == -1) {ePos = theStr.length;}
+               return (theStr.substring(sPos+lengthOfDelim,ePos));
+            }
+	    </script>
+';
+    
+  }
+
+  function getJSAfter() {
+    return '<script type="text/javascript">'.implode(chr(10), $this->additionalJS_end).'</script>';
+  }
+ 
+  /**********************************************************************************************
+   * HELPER FUNCTIONS
+   **********************************************************************************************/
+
+  function getLLFromLabel($label) {
+    return $GLOBALS['TSFE']->sL($label);
+  }
+
+  function getLL($key,$alt='')	{
+    return $GLOBALS['TSFE']->getLLL($key,$this->LOCAL_LANG);    
+  }
+
+  /**
+   * array_merge_recursive2()
+   *
+   * Similar to array_merge_recursive but keyed-valued are always overwritten.
+   * Empty values is also overwritten.
+   * Priority goes to the 2nd array.
+   *
+   * @param $paArray1 array
+   * @param $paArray2 array
+   * @return array
+   */
+  function array_merge_recursive2($paArray1, $paArray2) {
+    if (!is_array($paArray1) or !is_array($paArray2)) { return $paArray2?$paArray2:$paArray1; }
+    foreach ($paArray2 AS $sKey2 => $sValue2) {
+	$paArray1[$sKey2] = $this->array_merge_recursive2(@$paArray1[$sKey2], $sValue2);
+    }
+    return $paArray1;
+  }
+
+}
+
+if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/mth_feedit/class.tx_mthfeedit.php'])	{
+	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/mth_feedit/class.tx_mthfeedit.php']);
+}
+
+?>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'bsg_regsteps'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.list_type_pi1">BSG Registration Plugin</label>
+			<label index="tx_bsgregsteps_department">Department</label>
+			<label index="tx_bsgregsteps_bmail">Business email</label>
+			<label index="tx_bsgregsteps_adminmail">Administrative email</label>
+			<label index="tx_bsgregsteps_courses">Courses</label>
+			<label index="tx_bsgregsteps_courses_list">Course ID List</label>
+			<label index="tx_bsgregsteps_conf_series">Conference Series</label>
+			<label index="tx_bsgregsteps_priority_code">Priority Code</label>
+		</languageKey>
+	</data>
+</T3locallang>

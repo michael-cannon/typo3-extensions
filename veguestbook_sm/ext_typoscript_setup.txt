@@ -1,0 +1,77 @@
+plugin.tx_veguestbook_pi1 {
+  userFunc = tx_veguestbook_pi1->main
+  templateFile = {$plugin.tx_veguestbook_pi1.file.templateFile}
+  teasercut = 50
+  wordcut = 100
+  sortingField = crdate
+  sortingDirection = desc
+  limit = 5
+  email_from_name = 
+  email_from_mail = 
+  allowedTags = <a>,<br>,<b>,<li>,<ol>,<p>,<strong>,<u>,<ul>
+
+  datetime_stdWrap.strftime=  %A, %d-%m-%y %H:%M
+  date_stdWrap.strftime= %d.%m.%y
+  time_stdWrap.strftime= %H:%M
+
+  emoticons {
+  	active = 0
+	10 = IMAGE
+	10 {
+	  file = EXT:ve_guestbook/pi1/emoticons/###EMOTICON###.gif
+	  params = hspace="1" vspace="1"
+	  border = 0
+	  altText = Emoticon
+	  titleText = Emoticon
+	}
+	
+	subst {
+	  11.str = :D
+	  11.val = 1
+	  12.str = :) || :-) 
+	  12.val = 2
+	  13.str = :( || :-(
+	  13.val = 3
+	  14.str = :cry:
+	  14.val = 4
+	  15.str = :?:
+	  15.val = 5
+	  16.str = ;) || ;-)
+	  16.val = 6
+	}
+  }
+
+  _CSS_DEFAULT_STYLE (
+  /* example styles */
+	.tx-guestbook-list-table { border-style: solid; border-color: #000000; border-width: 1px; }
+    .tx-guestbook-list-header { background-color: #539521; color: #FFFFFF; font-weight:bold; }
+    .tx-guestbook-list-row { background-color: #FFFFFF; }
+    .tx-guestbook-list-rowleft { background-color: #EEEEEE; }
+    .tx-guestbook-list-entrycomment-title {font-weight: bold; }
+    .tx-guestbook-list-entrycomment { font-style: italic; }
+    .tx-guestbook-list-small { font-size: 9px; color: #666666; }
+    .tx-veguestbook-pi1-browsebox TD { font-size: 9px; color: #666666; }
+    .tx-veguestbook-pi1-browsebox-strong, .tx-ttnews-browsebox-SCell { font-weight: bold; }
+    .tx-veguestbook-pi1-browsebox-SCell { background-color: #EEEEEE; }
+    .tx-guestbook-latest-header { background-color: #539521; color: #FFFFFF; font-weight:bold; }
+    .tx-guestbook-latest-row { background-color: #FFFFFF; }
+    .tx-guestbook-latest-small { font-size: 9px; color: #666666; }
+    .tx-guestbook-form-inputfield-med { border-style: solid; border-width: 1pt; border-color:#539521; font-size:14px; color:#333333; width:100px; }
+    .tx-guestbook-form-inputfield-big { border-style: solid; border-width: 1pt; border-color:#539521; font-size:14px; color:#333333; width:150px; }
+    .tx-guestbook-form-textarea { border-style: solid; border-width: 1pt; border-color:#539521; font-size:14px; color:#333333; width:250px; }
+    .tx-guestbook-form-obligationfield { color: #CC0000; }
+    .tx-guestbook-form-error { color: #CC0000; }
+  )
+
+  pageBrowser {
+    maxPages = 10
+    # if you want the pagebrowser to display only numbers, set showPBrowserText to 0.  
+    tableParams = cellpadding="5" cellspacing="0" border="0"
+    showResultCount = 1
+    activepage_stdWrap.wrap = <strong>|</strong>
+    page_stdWrap.wrap = |
+    pagelink_stdWrap.wrap = |
+    previous_stdWrap.wrap =|
+    next_stdWrap.wrap = |
+  }
+}

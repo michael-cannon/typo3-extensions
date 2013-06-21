@@ -1,0 +1,9 @@
+07-01-23 Kasper Ligaard <ligaard@daimi.au.dk>
+	* Italian translation added, thanks to Claudio Strizzolo
+	* New maintainer: Kasper Ligaard
+	* Solved IE6 autofill problem by using javascript onBlur instead of onChange in mth_feedit/class.tx_mthfeedit.php
+	
+
+05-08-22 Morten Tranberg Hansen  <mth@daimi.au.dk>
+
+	* Initial release

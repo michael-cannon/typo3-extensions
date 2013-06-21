@@ -1,0 +1,346 @@
+2008-06-19 Thursday 22:42  cannon
+
+	* hide user new/edit icons; add location usergroup to feuser
+	  list/view screens
+
+2008-06-19 Thursday 22:25  cannon
+
+	* add new stuff, check in old
+
+2008-06-19 Thursday 22:25  cannon
+
+	* Please Select in select lists; full location validation; rename
+	  getWhereAgencyOwner to getWhereAgencyManager; create model
+	  options loader; remove admin/fe_user bits from location select;
+	  mini control panel update; location form drop downs; create
+	  central view_common::asSelect
+
+2008-06-19 Thursday 22:00  cannon
+
+	* Copy "class.tx_cbgaedms_model_fe_users.php" to
+	  "class.tx_cbgaedms_model_fe_groups.php"
+
+2008-06-19 Thursday 22:00  cannon
+
+	* add select options loader
+
+2008-06-19 Thursday 21:18  cannon
+
+	* Copy "class.tx_cbgaedms_model_static_countries.php" to
+	  "class.tx_cbgaedms_model_static_country_zones.php"
+
+2008-06-19 Thursday 21:18  cannon
+
+	* add options select
+
+2008-06-19 Thursday 20:59  cannon
+
+	* Copy "class.tx_cbgaedms_model_silo.php" to
+	  "class.tx_cbgaedms_model_static_countries.php"
+
+2008-06-18 Wednesday 22:12  cannon
+
+	* add new stuff, check in old
+
+2008-06-18 Wednesday 22:12  cannon
+
+	* add location error labels; location validation patterns; doc type
+	  Unicode allowance; doc type controller initialize method;
+	  location edit action start for insert/update;
+
+2008-06-18 Wednesday 17:49  cannon
+
+	* home page navigation linking; debug feuser first_name/last_name
+	  no show; start location edits
+
+2008-06-17 Tuesday 22:23  cannon
+
+	* refine error showing on edit and new forms.
+
+2008-06-17 Tuesday 21:36  cannon
+
+	* copy in search template; minor sitemap cleanup;
+
+2008-06-17 Tuesday 21:12  cannon
+
+	* add new stuff, check in old
+
+2008-06-17 Tuesday 21:12  cannon
+
+	* Time for conference call from earlier today; control panel
+	  admin/viewer screen director; user profile link entry;
+	  locationLookup placeholder; relocate mass error message; update
+	  user edi icon images;
+
+2008-06-17 Tuesday 09:50  cannon
+
+	* add new stuff, check in old
+
+2008-06-17 Tuesday 09:50  cannon
+
+	* revise mini layout
+
+2008-06-17 Tuesday 09:17  cannon
+
+	* add mini control panel for login
+
+2008-06-17 Tuesday 09:13  cannon
+
+	* Copy "Control_Panel_Viewer.php" to "Control_Panel_Mini.php"
+
+2008-06-17 Tuesday 09:12  cannon
+
+	* add new stuff, check in old
+
+2008-06-17 Tuesday 09:12  cannon
+
+	* add manager/viewer navigation panels
+
+2008-06-16 Monday 22:21  cannon
+
+	* update CHANGELOG
+
+2008-06-16 Monday 22:20  cannon
+
+	* remove requiredDocTypePid refs
+
+2008-06-16 Monday 22:13  cannon
+
+	* update CHANGELOG
+
+2008-06-16 Monday 22:12  cannon
+
+	* template verbiage and header edits
+
+2008-06-16 Monday 21:58  cannon
+
+	* build out user list and view screens; fe_users temp order and
+	  limit added
+
+2008-06-16 Monday 21:41  cannon
+
+	* add users storage pid conf
+
+2008-06-16 Monday 21:38  cannon
+
+	* add start of users list
+
+2008-06-16 Monday 12:34  cannon
+
+	* Remove create doc links on doc list; update doc list nav icon
+
+2008-06-16 Monday 11:47  cannon
+
+	* update CHANGELOG
+
+2008-06-16 Monday 11:46  cannon
+
+	* docs listing in locations; add doctype required field; alter sort
+	  fields; version list and view screens; give load entry parameter
+	  options; add required bit to version views; document list/view
+	  screens; css cleanup by Nicole; add list all docs to menu
+
+2008-06-15 Sunday 23:38  cannon
+
+	* updated changelog sans filenames
+
+2008-06-15 Sunday 23:31  cannon
+
+	* Removal of "ChangeLog"
+
+2008-06-15 Sunday 23:30  cannon
+
+	* changelog update
+
+2008-06-15 Sunday 23:29  cannon
+
+	* doc list links
+
+2008-06-15 Sunday 23:23  cannon
+
+	* changelog update
+
+2008-06-15 Sunday 23:22  cannon
+
+	* Create documents landing page; documents_list view clean up;
+	  latest versions grabbing enabled; backend related items
+	  hidden/deleted view prevention; move model security to model
+	  common;
+
+2008-06-15 Sunday 20:12  cannon
+
+	* correct unicode display issues; put into Location view limiting
+	  for managers; correct ownerOk code; enable masterAgency location
+	  view selection; backend related ordering;
+
+2008-06-15 Sunday 17:21  cannon
+
+	* remove org code, bad decision for admin/parent/child relations
+
+2008-06-15 Sunday 16:57  cannon
+
+	* add base organization code
+
+2008-06-15 Sunday 14:43  cannon
+
+	* location view fill; no google map; wait on docs panel; add model
+	  level ownerOk checking; add officefax; create loadModelEntry;
+	  format user model load; location view updates sans google map and
+	  docs;
+
+2008-06-15 Sunday 12:02  cannon
+
+	* centralize path settings to configuration
+
+2008-06-15 Sunday 11:59  cannon
+
+	* remove controller template and language path setters; path set by
+	  configuration
+
+2008-06-15 Sunday 11:56  cannon
+
+	* add new stuff, check in old
+
+2008-06-15 Sunday 11:56  cannon
+
+	* redo security setup; create location list; begin location view;
+	  correct configurations import; begin ownerOk; centralize user
+	  security for templates;
+
+2008-06-14 Saturday 23:04  cannon
+
+	* doc type review; edms access restriction to IPP employee group;
+	  template access restrictions; remove edmsaccess mm relations;
+	  access rights setup; restrictedAccess templates; correct
+	  configurations include; access levels to admin panel;
+
+2008-06-14 Saturday 17:49  cannon
+
+	* add validation for doctype
+
+2008-06-14 Saturday 15:51  cannon
+
+	* Inital import of "locallang.xml" file
+
+2008-06-14 Saturday 15:46  cannon
+
+	* correct doc type template linkings
+
+2008-06-14 Saturday 14:05  cannon
+
+	* add more Pid locations; carry bae cbgaemds configuration to all;
+	  begin admin panel setup; revise view_common linking methods; add
+	  hidden option to doctype update; breadcrumb nav styling;
+
+2008-06-12 Thursday 00:17  cannon
+
+	* add new stuff, check in old
+
+2008-06-12 Thursday 00:16  cannon
+
+	* enable doc type inserting; add base TypoScript with storagePid;
+	  link to new doc type form
+
+2008-06-11 Wednesday 18:12  cannon
+
+	* add update edit ability
+
+2008-06-11 Wednesday 15:41  cannon
+
+	* separate edit and form actions; create page links in common view
+
+2008-06-11 Wednesday 15:18  cannon
+
+	* Removal of "./FE_Users_Edit.php"
+
+2008-06-11 Wednesday 15:18  cannon
+
+	* Removal of "./Document_Versions_Edit.php"
+
+2008-06-11 Wednesday 15:18  cannon
+
+	* Removal of "./Document_Type_Edit.php"
+
+2008-06-11 Wednesday 15:18  cannon
+
+	* Removal of "./User_Access_Edit.php"
+
+2008-06-11 Wednesday 15:18  cannon
+
+	* Removal of "./Document_Edit.php"
+
+2008-06-11 Wednesday 15:18  cannon
+
+	* Removal of "./Business_Silo_Edit.php"
+
+2008-06-11 Wednesday 15:18  cannon
+
+	* Removal of "./Location_Edit.php"
+
+2008-06-11 Wednesday 15:18  cannon
+
+	* add new stuff, check in old
+
+2008-06-11 Wednesday 14:55  cannon
+
+	* initial list to detail to edit links
+
+2008-06-11 Wednesday 14:55  cannon
+
+	* Inital import of "models" directory
+
+2008-06-11 Wednesday 14:55  cannon
+
+	* Inital import of "controllers" directory
+
+2008-06-11 Wednesday 13:59  cannon
+
+	* add common MVC class; correct model class name
+
+2008-06-11 Wednesday 12:01  cannon
+
+	* views settling
+
+2008-06-11 Wednesday 11:52  cannon
+
+	* Copy "class.tx_cbgaedms_view_Document_TypeEntry.php" to
+	  "class.tx_cbgaedms_view_common.php"
+
+2008-06-09 Monday 17:57  cannon
+
+	* add new stuff, check in old
+
+2008-06-09 Monday 17:57  cannon
+
+	* add doc type list/edit templates
+
+2008-06-09 Monday 12:21  cannon
+
+	* model updates in controllers
+
+2008-06-09 Monday 12:05  cannon
+
+	* correct model name
+
+2008-06-07 Saturday 20:47  cannon
+
+	* add new stuff, check in old
+
+2008-06-07 Saturday 20:46  cannon
+
+	* correct ajax, template paths; fix switch controllers
+	  configuration and defaultAction paths and setup; begin dynamic
+	  doc listing
+
+2008-06-05 Thursday 09:10  cannon
+
+	* use simple controllers for nav demo; install base templates
+
+2008-06-05 Thursday 06:48  cannon
+
+	* Initial revision
+
+2008-06-05 Thursday 06:48  cannon
+
+	* initial cbgaedms import
+

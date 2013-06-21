@@ -1,0 +1,5 @@
+#! /bin/bash
+
+tar -cf ../backup.tar .
+gzip -9 ../backup.tar
+

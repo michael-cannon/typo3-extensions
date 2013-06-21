@@ -1,0 +1,6 @@
+
+plugin.tx_tfclifegroups_pi1._LOCAL_LANG.default.all_interests=All interests
+plugin.tx_tfclifegroups_pi1._LOCAL_LANG.default.all_semesters=All semesters
+plugin.tx_tfclifegroups_pi1._LOCAL_LANG.default.all_ages=All ages
+plugin.tx_tfclifegroups_pi1._LOCAL_LANG.default.all_days=All days
+plugin.tx_tfclifegroups_pi1._LOCAL_LANG.default.all_categories=All categories

@@ -1,0 +1,754 @@
+2009-09-30 Wednesday 22:44  mc
+
+	* Removal of "ChangeLog"
+
+2009-09-30 Wednesday 22:43  mc
+
+	* update CHANGELOG
+
+2009-09-30 Wednesday 01:56  mc
+
+	* add cbDebug on/off helper
+
+2009-09-28 Monday 22:33  mc
+
+	* update with NY conferences as tracks
+
+2009-09-26 Saturday 21:09  mc
+
+	* correct reset purchaseCount calling location
+
+2009-09-26 Saturday 20:41  mc
+
+	* update CHANGELOG
+
+2009-09-26 Saturday 20:37  mc
+
+	* implement multiple quantity price points
+
+2009-09-26 Saturday 18:07  mc
+
+	* Inital import of "NY.regform.php" file
+
+2009-09-26 Saturday 17:55  mc
+
+	* updated conf info
+
+2009-08-12 Wednesday 18:35  mc
+
+	* correct course price lookup
+
+2009-08-12 Wednesday 11:24  mc
+
+	* enable per SF entity pricing
+
+2009-08-07 Friday 08:37  cannon
+
+	* add new stuff, check in old
+
+2009-07-30 Thursday 06:35  cannon
+
+	* add new stuff, check in old
+
+2009-07-29 Wednesday 19:20  cannon
+
+	* add new stuff, check in old
+
+2009-05-12 Tuesday 10:41  cannon
+
+	* BSG SF updates
+
+2009-05-11 Monday 08:51  cannon
+
+	* BSG made updates
+
+2009-04-03 Friday 11:34  cannon
+
+	* Acqal branding
+
+2009-03-16 Monday 11:26  cannon
+
+	* error updates
+
+2009-03-16 Monday 11:24  cannon
+
+	* update config
+
+2009-02-14 Saturday 12:25  cannon
+
+	* fix bdm conf link
+
+2009-02-12 Thursday 14:43  cannon
+
+	* add secondary 2-day training check
+
+2009-02-12 Thursday 14:22  cannon
+
+	* include training only event link; Training Only email tag
+
+2009-02-10 Tuesday 12:21  cannon
+
+	* pc and clourse updates
+
+2009-01-29 Thursday 12:48  cannon
+
+	* turn off debug
+
+2009-01-29 Thursday 12:47  cannon
+
+	* create training only conf code variable
+
+2009-01-29 Thursday 11:52  cannon
+
+	* recaptcha checking
+
+2008-12-20 Saturday 02:57  cannon
+
+	* error checking
+
+2008-12-18 Thursday 12:01  cannon
+
+	* verbiage updates; success br; array_search name fix
+
+2008-12-10 Wednesday 01:46  cannon
+
+	* separate javascript
+
+2008-12-08 Monday 12:03  cannon
+
+	* Inital import of "helpers.js" file
+
+2008-12-08 Monday 12:03  cannon
+
+	* enable scheduling conflict warnings
+
+2008-12-08 Monday 10:54  cannon
+
+	* date corrections
+
+2008-12-05 Friday 19:38  cannon
+
+	* 2009 conf updates
+
+2008-12-03 Wednesday 20:57  cannon
+
+	* update DC/NY/SF priority codes form CH
+
+2008-12-02 Tuesday 21:45  cannon
+
+	* add recaptcha
+
+2008-12-02 Tuesday 20:58  cannon
+
+	* quick check in
+
+2008-11-27 Thursday 00:15  cannon
+
+	* minor revisions
+
+2008-11-26 Wednesday 13:50  cannon
+
+	* conference series error checking
+
+2008-11-25 Tuesday 11:49  cannon
+
+	* new member swapping
+
+2008-11-01 Saturday 23:56  cannon
+
+	* allow for empty validation when not mandatory; correct adminmail
+	  handling
+
+2008-10-26 Sunday 15:36  cannon
+
+	* admin email, start of 2009 updats
+
+2008-10-26 Sunday 15:03  cannon
+
+	* pre-2009 checkin
+
+2008-09-25 Thursday 00:58  cannon
+
+	* ny half-day
+
+2008-09-17 Wednesday 09:31  cannon
+
+	* add NY half-day
+
+2008-09-15 Monday 11:32  cannon
+
+	* membership link
+
+2008-09-15 Monday 00:34  cannon
+
+	* add half day conf sessions
+
+2008-09-05 Friday 02:30  cannon
+
+	* add new stuff, check in old
+
+2008-09-05 Friday 02:30  cannon
+
+	* verbiage updates
+
+2008-08-20 Wednesday 21:17  cannon
+
+	* update conf titles
+
+2008-08-19 Tuesday 05:03  cannon
+
+	* update error checking
+
+2008-08-08 Friday 00:51  cannon
+
+	* sf error checking
+
+2008-07-31 Thursday 03:21  cannon
+
+	* update NY last day to full day workshops
+
+2008-07-31 Thursday 03:09  cannon
+
+	* prework checkin
+
+2008-07-02 Wednesday 02:00  cannon
+
+	* course error checking in configs
+
+2008-06-07 Saturday 01:49  cannon
+
+	* update zip validation to be country specific
+
+2008-04-28 Monday 23:18  cannon
+
+	* update codes
+
+2008-04-24 Thursday 03:55  cannon
+
+	* correct zip validation code
+
+2008-04-24 Thursday 03:52  cannon
+
+	* correct course code
+
+2008-04-15 Tuesday 22:30  cannon
+
+	* correct pricing and time
+
+2008-04-10 Thursday 11:02  cannon
+
+	* update soa conference id
+
+2008-04-10 Thursday 10:34  cannon
+
+	* remove dups
+
+2008-04-08 Tuesday 04:37  cannon
+
+	* send Typo_Uid__c on Salesforce update or create
+
+2008-03-20 Thursday 02:01  cannon
+
+	* pull Salesforce Access out of extension
+
+2008-03-20 Thursday 01:45  cannon
+
+	* immediate conference registration; usergroup cleanup
+
+2008-03-19 Wednesday 06:40  cannon
+
+	* add non-logged in member de-dup
+
+2008-03-18 Tuesday 04:53  cannon
+
+	* hotel correction; show PC to logged in folks
+
+2008-03-15 Saturday 03:07  cannon
+
+	* enable per link price; event total price
+
+2008-03-15 Saturday 02:19  cannon
+
+	* update pc
+
+2008-03-13 Thursday 06:52  cannon
+
+	* create training event link as well
+
+2008-03-13 Thursday 05:19  cannon
+
+	* remove 2nd set of conf reg
+
+2008-03-13 Thursday 05:19  cannon
+
+	* Inital import of "NY.priority-codes.php" file
+
+2008-03-13 Thursday 05:16  cannon
+
+	* Stacey requests to default priority code by default
+
+2008-03-12 Wednesday 06:43  cannon
+
+	* readd pro buy/renewal pricing
+
+2008-03-12 Wednesday 06:33  cannon
+
+	* Professional spell
+
+2008-03-12 Wednesday 04:35  cannon
+
+	* relocate confirm mail location
+
+2008-03-12 Wednesday 02:44  cannon
+
+	* enable 1-2 day conference package error checking
+
+2008-03-12 Wednesday 02:06  cannon
+
+	* correct 93
+
+2008-03-12 Wednesday 02:00  cannon
+
+	* update prices
+
+2008-03-12 Wednesday 02:00  cannon
+
+	* Remoal of "SFNY.priority-codes.php"
+
+2008-03-11 Tuesday 03:36  cannon
+
+	* salesforce id udpates
+
+2008-03-11 Tuesday 03:33  cannon
+
+	* Copy "CH.mail.confirm.php" to "SF.mail.confirm.php"
+
+2008-03-11 Tuesday 03:33  cannon
+
+	* Copy "CH.mail.confirm.php" to "NY.mail.confirm.php"
+
+2008-03-11 Tuesday 03:06  cannon
+
+	* inital pre-SF updates for SF/NYconfs
+
+2008-03-11 Tuesday 02:43  cannon
+
+	* Copy "CH.priority-codes.php" to "SFNY.priority-codes.php"
+
+2008-03-11 Tuesday 02:42  cannon
+
+	* Copy "CH.priority-codes.php" to "SF.priority-codes.php"
+
+2008-03-11 Tuesday 02:42  cannon
+
+	* Copy "CH.config.php" to "NY.config.php"
+
+2008-03-11 Tuesday 02:42  cannon
+
+	* Copy "CH.config.php" to "SF.config.php"
+
+2008-03-11 Tuesday 02:32  cannon
+
+	* dir include change; Unique non-sponsoring attendance
+
+2008-03-08 Saturday 05:04  cannon
+
+	* add pro pricing to CMXXXX
+
+2008-03-08 Saturday 03:18  cannon
+
+	* CMXXXX code updates
+
+2008-03-08 Saturday 03:03  cannon
+
+	* add non-sponsoring id
+
+2008-03-07 Friday 00:40  cannon
+
+	* allow empty state
+
+2008-03-06 Thursday 02:03  cannon
+
+	* prevent duplicate billing
+
+2008-03-02 Sunday 03:32  cannon
+
+	* date correction
+
+2008-03-01 Saturday 02:09  cannon
+
+	* city specific priority codes
+
+2008-03-01 Saturday 02:06  cannon
+
+	* Copy "CH.priority-codes.php" to "DC.priority-codes.php"
+
+2008-03-01 Saturday 02:06  cannon
+
+	* Move "priority-codes.php" to "CH.priority-codes.php"
+
+2008-02-29 Friday 08:20  cannon
+
+	* fixme to TODO
+
+2008-02-29 Friday 08:18  cannon
+
+	* update DC config to SF
+
+2008-02-29 Friday 08:01  cannon
+
+	* remove conference-series need
+
+2008-02-29 Friday 08:01  cannon
+
+	* Remoal of "conference-series.php"
+
+2008-02-29 Friday 07:46  cannon
+
+	* add DC priority codes; un-city regform and success
+
+2008-02-29 Friday 07:32  cannon
+
+	* Move "CH.success.php" to "success.php"
+
+2008-02-29 Friday 07:28  cannon
+
+	* Remoal of "CH.regform.php"
+
+2008-02-29 Friday 07:26  cannon
+
+	* Copy "CH.mail.confirm.php" to "DC.mail.confirm.php"
+
+2008-02-29 Friday 07:24  cannon
+
+	* Copy "CH.config.php" to "DC.config.php"
+
+2008-02-29 Friday 07:20  cannon
+
+	* enable multiple city config
+
+2008-02-29 Friday 06:08  cannon
+
+	* Move "config.php" to "CH.config.php"
+
+2008-02-29 Friday 06:07  cannon
+
+	* add city text
+
+2008-02-29 Friday 05:54  cannon
+
+	* Move "success.php" to "CH.success.php"
+
+2008-02-29 Friday 05:53  cannon
+
+	* Move "regform.php" to "CH.regform.php"
+
+2008-02-29 Friday 05:53  cannon
+
+	* Move "mail.confirm.CH.php" to "CH.mail.confirm.php"
+
+2008-02-29 Friday 05:49  cannon
+
+	* Move "mail.confirm.php" to "mail.confirm.CH.php"
+
+2008-02-29 Friday 05:39  cannon
+
+	* Remoal of "conference_list.php"
+
+2008-02-29 Friday 05:23  cannon
+
+	* no dual 1-day selections
+
+2008-02-28 Thursday 06:01  cannon
+
+	* add debug helpers; add prioirity code to registrant email
+
+2008-02-28 Thursday 05:44  cannon
+
+	* update priority codes
+
+2008-02-28 Thursday 05:33  cannon
+
+	* total price inclusion instead of per event
+
+2008-02-23 Saturday 08:43  cannon
+
+	* salesforce integration live
+
+2008-02-23 Saturday 06:01  cannon
+
+	* straight event saved
+
+2008-02-23 Saturday 05:00  cannon
+
+	* SF ids
+
+2008-02-23 Saturday 02:00  cannon
+
+	* accounts and contacts to salesforce; begin training links
+
+2008-02-22 Friday 02:02  cannon
+
+	* autobuypro JavaScript and PHP cleanup
+
+2008-02-21 Thursday 11:58  cannon
+
+	* by city config prep; correct JS array
+
+2008-02-20 Wednesday 13:54  cannon
+
+	* auto-join members
+
+2008-02-20 Wednesday 13:46  cannon
+
+	* config file for city and defaults
+
+2008-02-20 Wednesday 13:28  cannon
+
+	* push priority codes to own file
+
+2008-02-20 Wednesday 13:22  cannon
+
+	* Inital import of "priority-codes.php" file
+
+2008-02-20 Wednesday 13:18  cannon
+
+	* enable ajaxAutoBuypro; simplify errors
+
+2008-02-20 Wednesday 13:16  cannon
+
+	* Inital import of "templates/ajaxbuypro.php" file
+
+2008-02-20 Wednesday 05:44  cannon
+
+	* enable buypro with renewal option
+
+2008-02-19 Tuesday 22:34  cannon
+
+	* priority code update; remove dupped pri code in reg form
+
+2008-02-16 Saturday 01:54  cannon
+
+	* updated default naming
+
+2008-02-13 Wednesday 01:38  cannon
+
+	* 1-day/2-day verbiage error
+
+2008-02-13 Wednesday 00:51  cannon
+
+	* Don't allow some course combo selection
+
+2008-02-12 Tuesday 23:40  cannon
+
+	* allow for no buypro
+
+2008-02-12 Tuesday 23:09  cannon
+
+	* regform clean up; config pc update
+
+2008-02-12 Tuesday 02:13  cannon
+
+	* US zip with hyphen
+
+2008-02-12 Tuesday 02:08  cannon
+
+	* hide buypro; add pri code
+
+2008-02-12 Tuesday 02:06  eugene
+
+	* Updated validator
+
+2008-02-12 Tuesday 01:49  eugene
+
+	* Updated validator
+
+2008-02-12 Tuesday 00:11  eugene
+
+	* Updated state selections
+
+2008-02-12 Tuesday 00:03  eugene
+
+	* Updated state with "Please choose one" by default
+
+2008-02-10 Sunday 08:29  cannon
+
+	* sanitize credit cards
+
+2008-02-09 Saturday 04:48  cannon
+
+	* pc explanation
+
+2008-02-09 Saturday 04:44  cannon
+
+	* correct recoginition of usergroup level; show default priority
+	  code
+
+2008-02-08 Friday 21:12  eugene
+
+	* Updated fix for empty courses in pi1
+
+2008-02-08 Friday 20:27  eugene
+
+	* Added check when JS is disabled and courses are not selected
+
+2008-02-08 Friday 20:04  eugene
+
+	* Now form is not submitting when no courses are selected - JS
+	  fixup
+
+2008-02-06 Wednesday 23:47  cannon
+
+	* add	 , u.courses_list to sql
+
+2008-02-06 Wednesday 23:38  cannon
+
+	* add courses_list to record
+
+2008-02-06 Wednesday 03:31  cannon
+
+	* conference list inclusions
+
+2008-02-06 Wednesday 02:42  cannon
+
+	* Move "conferencelist.php" to "conference_list.php"
+
+2008-02-05 Tuesday 01:07  cannon
+
+	* add form action
+
+2008-02-01 Friday 23:47  cannon
+
+	* pc from get/request priority
+
+2008-02-01 Friday 23:45  cannon
+
+	* grab pc from get
+
+2008-02-01 Friday 04:54  cannon
+
+	* courseChange function inclusion
+
+2008-02-01 Friday 04:27  cannon
+
+	* course error checking
+
+2008-02-01 Friday 04:19  cannon
+
+	* Eugene updates for security and course checking
+
+2008-02-01 Friday 04:15  cannon
+
+	* Inital import of "templates/mail.confirm.php" file
+
+2008-02-01 Friday 01:23  cannon
+
+	* 2-day tagging
+
+2008-01-31 Thursday 07:43  cannon
+
+	* add thankyoutitle
+
+2008-01-31 Thursday 06:54  cannon
+
+	* - to and
+
+2008-01-31 Thursday 04:28  cannon
+
+	* Linkpoint emails should be containing person's name, company,
+	  phone, and email now
+
+2008-01-31 Thursday 04:00  cannon
+
+	* Update registrant email subject
+
+2008-01-30 Wednesday 22:23  cannon
+
+	* add course background; rearrange course selections
+
+2008-01-30 Wednesday 21:36  cannon
+
+	* alter admin content ordering
+
+2008-01-30 Wednesday 21:28  cannon
+
+	* added success page agenda
+
+2008-01-30 Wednesday 21:16  cannon
+
+	* pretty print courses in emails
+
+2008-01-30 Wednesday 20:47  cannon
+
+	* revise testing pricing
+
+2008-01-30 Wednesday 20:06  cannon
+
+	* normal admin email
+
+2008-01-30 Wednesday 10:56  cannon
+
+	* Inital import of "conference-series.php" file
+
+2008-01-30 Wednesday 10:56  cannon
+
+	* Inital import of "conferencelist.php" file
+
+2008-01-30 Wednesday 10:55  cannon
+
+	* enable session reset; add conf_series and priority code saving;
+	  price point and course updates; set crdate/tstamp; reformat admin
+	  email
+
+2008-01-30 Wednesday 01:53  cannon
+
+	* subtitle for courses
+
+2008-01-30 Wednesday 01:30  cannon
+
+	* update admin email, course offerings; bill for buypro
+
+2008-01-30 Wednesday 00:30  cannon
+
+	* normal admin
+
+2008-01-30 Wednesday 00:23  cannon
+
+	* enable courses field in user record
+
+2008-01-29 Tuesday 23:54  cannon
+
+	* workshop pricing
+
+2008-01-29 Tuesday 23:45  cannon
+
+	* live enabling
+
+2008-01-29 Tuesday 23:18  cannon
+
+	* grab pc from URL
+
+2008-01-29 Tuesday 23:15  cannon
+
+	* no credit card on 0 dollar transactions; function format
+
+2008-01-29 Tuesday 21:08  cannon
+
+	* CORPORATE enabling
+
+2008-01-29 Tuesday 20:53  cannon
+
+	* update pricing/course formatting
+
+2008-01-29 Tuesday 20:50  cannon
+
+	* update pricing/course formatting
+
+2008-01-29 Tuesday 20:31  cannon
+
+	* Inital import of 'bsg_regsteps' directory
+
+2008-01-29 Tuesday 20:31  cannon
+
+	* Initial revision
+

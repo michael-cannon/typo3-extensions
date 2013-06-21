@@ -1,0 +1,47 @@
+/**
+ * @author Michael Cannon <michael@peimic.com>
+ * @version $Id: constants.txt,v 1.1.1.1 2010/04/15 10:03:39 peimic.comprock Exp $
+ */
+config {
+	# cat=icsecurity/links; type=string; label=Spam Protect Email Addresses:If set, then all email addresses in typolinks will be encrypted so spam bots cannot detect them.
+	spamProtectEmailAddresses = -3
+
+	# cat=icsecurity/links; type=string; label=Spam Protect At Sign:Substitute label for the at-sign.
+	spamProtectEmailAddresses_atSubst = @
+
+	# cat=icsecurity/links; type=string; label=Spam Protect Last Dot:Substitute label for the last dot.
+	spamProtectEmailAddresses_lastDotSubst = .
+}
+
+plugin.wt_spamshield {
+	# cat=icsecurity/enable; type=boolean; label=Use Spamshield with Mailform
+	enable.standardMailform = 1
+
+	# cat=icsecurity/links; type=string; label=Mailform Spam Detected Page:Full URL only
+	redirect.standardMailform = {$siteURL}/index.php?id=19
+
+	# cat=icsecurity/enable; type=boolean; label=Use Spamshield with Powermail
+	enable.powermail = 1
+
+	# cat=icsecurity/enable; type=boolean; label=Use Spamshield with ve_guestbook
+	enable.ve_guestbook = 0
+
+	# cat=icsecurity/links; type=int; label=ve_guestbook Spam Detected Page:PID only
+	redirect.ve_guestbook = 19
+}
+
+plugin.tx_srfreecap {
+	backgroundBlur = 0
+	backgroundMorph = 0
+	backgroundType = White with squiggles
+	imageHeight = 80
+	mergeWithBackground = 0
+	morphFactor = 0
+	textColor = 0
+}
+
+# cat=icsecurity/enable; type=boolean; label=Use https_enforcer: Only use if required as static cache is disabled. Safer if used by section or page than entire site.
+https_enforcer.enable = 0
+https_enforcer.always_allow_SSL = 1
+https_enforcer.secure_typo3_root = dev.iconspect.com
+https_enforcer.unsecure_typo3_root = dev.iconspect.com

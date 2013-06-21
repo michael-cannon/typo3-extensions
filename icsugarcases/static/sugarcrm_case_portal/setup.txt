@@ -1,0 +1,26 @@
+/**
+ * @author Michael Cannon <michael@peimic.com>
+ * @version $Id: setup.txt,v 1.1.1.1 2010/04/15 10:03:39 peimic.comprock Exp $
+ */
+
+plugin.tx_icsugarcases_pi1 {
+	xyz = {$plugin.icsugarcases.xyz}
+	template.home = {$plugin.icsugarcases.template.home}
+	template.casesList = {$plugin.icsugarcases.template.casesList}
+	template.case = {$plugin.icsugarcases.template.case}
+	template.caseEntryList = {$plugin.icsugarcases.template.caseEntryList}
+	template.notesList = {$plugin.icsugarcases.template.notesList}
+	template.note = {$plugin.icsugarcases.template.note}
+	template.noteEntryList = {$plugin.icsugarcases.template.noteEntryList}
+	template.error = {$plugin.icsugarcases.template.error}
+	template.newCase = {$plugin.icsugarcases.template.newCase}
+	template.editCase = {$plugin.icsugarcases.template.editCase}
+	template.search = {$plugin.icsugarcases.template.search}
+	template.pageBrowser = {$plugin.icsugarcases.template.pageBrowser}
+	template.portalNav = {$plugin.icsugarcases.template.portalNav}
+	pageBrowser < plugin.tx_pagebrowse_pi1
+	limit = {$plugin.icsugarcases.limit}
+	new.case.save.redirect = {$plugin.icsugarcases.new.case.save.redirect}
+	edit.case.save.redirect = {$plugin.icsugarcases.edit.case.save.redirect}
+	new.note.save.redirect = {$plugin.icsugarcases.new.note.save.redirect}
+}

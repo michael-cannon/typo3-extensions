@@ -1,0 +1,184 @@
+plugin.tx_srfeuserregister_pi1 {
+#$Id: ext_typoscript_constants.txt,v 1.1.1.1 2010/04/15 10:04:04 peimic.comprock Exp $
+    # cat=plugin.tx_srfeuserregister_pi1/file; type=string; label= Template File: HTML-template file 
+  file.templateFile = EXT:sr_feuser_register/pi1/tx_srfeuserregister_pi1_tmpl.tmpl
+  file.icon_delete =  EXT:sr_feuser_register/pi1/icon_delete.gif
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Force file deletion: On record deletion, related images and files will be deleted even if the record is only marked 'deleted'
+  forceFileDelete = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/file; type=file[pdf,doc,sxw,txt]; label= Attachment file: File to be attached to the confirmation email.
+  file.attachmentFile = EXT:sr_feuser_register/pi1/tx_srfeuserregister_pi1_sample.txt
+
+  # cat=plugin.tx_srfeuserregister_pi1/file; type=file[gif]; label= Icon used for deletion of uploaded files.
+  file.icon_delete = EXT:sr_feuser_register/pi1/icon_delete.gif
+
+    # cat=plugin.tx_srfeuserregister_pi1/file; type=file[css]; label= HTML emails stylesheet: If HTML emails are enabled, this file contains the CSS stylesheet to be incorporated in these mails.
+  HTMLMailCSS = EXT:sr_feuser_register/pi1/tx_srfeuserregister_htmlmail.css
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Administration email: Enter the administration email address here. This email address will be the sender email and also receive administration notifications.
+  email = MyTypo3Site@mydomain.org
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Site name: Enter the name of the registering site here. If set, this will be used as the email address name in the mails sent as well as signature on the mails.
+  siteName = My Typo3 Site
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Registration form fields: List of fields to be included on the front end user registration form.
+  formFields = username,password,first_name,last_name,date_of_birth,email,usergroup,address,city,zone,static_info_country,zip,telephone,language,title,company,www,module_sys_dmail_html,image,disable
+
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Required fields: List of fields that must be fillied in on the front end user registration form.
+  requiredFields = username,password,first_name,last_name,email
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Authentication code fields: List of fields that are used in the calculation of authentication codes. Direct Mail uses only uid.
+  authcodeFields = uid
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Authentication code length: Length of the authentication codes. Direct Mail uses 8.
+  codeLength = 8
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Name of the HTML form: The name is referenced on the country onChange attribute.
+  formName = fe_users_form
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Country onchange attribute: Javascript to execute when the selected country is changed in the country selector box.
+  onChangeCountryAttribute = javascript:window.document.forms['fe_users_form'].submit();
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Front end user records PID: If the records edited/created are located in another page than the current, enter the PID of that page here.
+  pid =
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Registration page PID: PID of the page on which the plugin is inserted with the intent of serving as the front end user registration page.
+  registerPID =
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Profile editing page PID: PID of the page on which the plugin is inserted with the intent of serving as the front user profile editing page.
+  editPID =
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Confirmation page PID: PID of the page on which the plugin is inserted with the intent of serving as the front end user confirmation page (or setfixed page!).
+  confirmPID =
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Confirmation page Type: Type (or pageNum) of the confirmation page.
+  confirmType = 0
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Login page PID: PID of the page on which the New login box plugin is inserted with the intent of serving as the front user login page.
+  loginPID =
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Default CODE: Default CODE, when not specified on the inserted plugin record. May be CREATE or EDIT or empty.
+  defaultCODE = 
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable preview on registration: If set, the registration dialogue will include a preview of the front end user data before it is saved.
+  enablePreviewRegister = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable preview on profile update: If set, the profile update dialogue will include a preview of the front end user data before it is saved.
+  enablePreviewEdit = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable email confirmation request: If set, an email will be sent to the prospective front end user requesting a confirmation of registration.
+  enableEmailConfirmation = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable email on approval: If set, an email will be sent to the front end user when he(she) confirms his(her) registration.
+  enableEmailOnApprove = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable email on refusal: If set, an email will be sent to the prospective front end user when he refuses to confirm his(her) registration.
+  enableEmailOnRefuse = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable email on registration: If set, an email will be sent to the front end user confirming his(her) registration. This is ignored if email confirmation request is enabled.
+  enableEmailOnRegister = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable email on profile update: If set, an email will be sent to the front end user to confirm the update of his(her) profile.
+  enableEmailOnUpdate = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable email on delete: If set, an email will be sent to the front end user to confirm the deletion of his(her) account.
+  enableEmailOnDelete = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable admin notification on confirmation request: If set, an email will be sent to the site administration when a request for confirmation of registration is sent to a user.
+  enableAdminNotifyConfirmation = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable admin notification on approval: If set, an email will be sent to the site administration when a user confirms his(her) registration.
+  enableAdminNotifyOnApprove = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable admin notification on refusal: If set, an email will be sent to the site administration when a user refuses to confirm his(her) registration.
+  enableAdminNotifyOnRefuse = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable admin notification on registration: If set, an email will be sent to the site administration when a user registers. This is ignored if email confirmation request is enabled.
+  enableAdminNotifyOnRegister = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable admin notification on update: If set, an email will be sent to the site administration when a user updates his(her) profile.
+  enableAdminNotifyOnUpdate = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable admin notification on deletion: If set, an email will be sent to the site administration when a user deletes his(her) account.
+  enableAdminNotifyOnDelete = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable HTML emails: If set, emails sent to the front end user will be sent in HTML format.
+  enableHTMLMail = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable HTML email attachment: If set, the specified attachment file will be attached to the confirmation HTML email.
+  enableEmailAttachment = 0
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable auto-login: If set, the user will be automatically logged in upon confirmation of his(her) registration.
+  enableAutoLoginOnConfirmation = 0
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Redirect_url on login: Url to which the user may be redirected to upon login, when auto login is enabled.
+  autoLoginRedirect_url = 
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Redirect URL on Edit Save
+  editsavedRedirect_url = 
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= User group(s) upon registration: The value of the user group field. Must be a list of integers WITHOUT spaces between the comma separated values! Furthermore these integer MUST point to actual fe_groups records!
+  userGroupUponRegistration = 
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= User group(s) after confirmation: The value of the user group(s) assigned to the front end user after receipt of his(her) confirmation.
+  userGroupAfterConfirmation = 
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Minimum password length: The minimum number of characters that the password must contain.
+  passwordAtLeast = 5
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Maximun password length: The maximum number of characters that the password may contain.
+  passwordAtMost = 40
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Minimum username length: The minimum number of characters that the username must contain.
+  usernameAtLeast = 6
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Maximun username length: The maximum number of characters that the username may contain.
+  usernameAtMost = 50
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=int+; label= Maximun name length: The maximum number of characters that the name of the front end user may contain.
+  nameAtMost = 80
+
+    # cat=plugin.tx_srfeuserregister_pi1/typo; type=wrap; label= Wrap 1:  In the default HTML template file, this wraps highlights some major prompts.
+  wrap1 = <b> | </b>
+
+    # cat=plugin.tx_srfeuserregister_pi1/typo; type=wrap; label= Wrap 2:  In the default HTML template file, this wraps the error messages.
+  wrap2 = <font color="red" ><b> | </b></font>
+
+    # cat=plugin.tx_srfeuserregister_pi1/typo; type=wrap; label= Wrap 3:  In the default HTML template file, this wraps some notices.
+  wrap3 = <em> | </em>
+
+    # cat=plugin.tx_srfeuserregister_pi1/color; type=color; label= Color 1: This bgcolor is used in the template-file.
+  color1 = #cccccc
+
+    # cat=plugin.tx_srfeuserregister_pi1/color; type=color; label= Color 2: This bgcolor is used in the template-file.
+  color2 = #999999
+
+    # cat=plugin.tx_srfeuserregister_pi1/color; type=color; label= Color 3: This bgcolor is used in the template-file.
+  color3 = #333333
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Allowd Credit Cards: List of credit cards allowed for use on the front end user registration form.
+  ccAllowedTypes = CC_AMERICAN_EXPRESS,CC_DINERS_CLUB,CC_DISCOVER,CC_JB,CC_MASTER_CARD,CC_VISA
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= Temporary User Time Limit: Number of days temporary user may login.
+  tempuserTimelimit = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label= User Time Limit: Number of days user may login.
+  timelimit =
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable User Registration Auto-login: If set, the newly registered user will be automatically logged after his(her) registration.
+  enableAutoLogin = 0
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable Temporary User Auto-login: If set, the temporary user will be automatically logged after his(her) registration.
+  enableAutoLoginTempuser = 1
+
+    # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable Credit Card Saving: If set, the credit card information will be saved.
+  enableCreditcardSave = 0
+  
+  # cat=plugin.tx_srfeuserregister_pi1/enable; type=boolean; label= Enable CANSPAM Logging: If set, logs information for CANSPAM compliance.
+  enableCanspamLogging = 0
+
+    # cat=plugin.tx_srfeuserregister_pi1//; type=string; label=Conference usergroup addon
+  conferenceUsergroupAppend =
+}

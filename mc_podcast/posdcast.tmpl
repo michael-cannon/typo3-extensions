@@ -1,0 +1,23 @@
+FILE -> Filename
+TITLE -> Title at id3
+ARTIST -> Artist at id3
+ALBUM -> Album at id3
+GENRE -> Genre at id3
+PLAYTIME_STRING -> Playtime human readable
+PLAYTIME_SECONDS -> Playtime in seconds
+MIME_TYPE -> Mimetype
+FILESIZE -> Filesize in bytes
+CODEC -> Name of the coded
+CHANNELS -> Number of channels
+CHANNELMODE -> Channel mode literal
+BITRATE_MODE -> Bitrate mode literal
+BITRATE -> Bitrate in kbits/s
+FLASH_PLAYER -> url of the swf mp3 player
+TITLE_PLAYER -> A flowered title for the player
+TITLE_PLAYER_URL -> The same of TITLE_PLAYER but with urlencoded for url params
+<!-- ###PODCAST_PLAYER### begin -->
+        <object type="application/x-shockwave-flash" data="###FLASH_PLAYER###?song_url=###FILE###&amp;b_fgcolor=005178&amp;song_title=###TITLE_PLAYER_URL###" height="17" width="17">
+        <param name="movie" value="###FLASH_PLAYER###?song_url=###FILE###&amp;b_fgcolor=005178&amp;song_title=###TITLE_PLAYER_URL###" />
+        <img src="noflash.gif" alt="" height="17" width="17" />
+        </object> 
+<!-- ###PODCAST_PLAYER### end -->

@@ -1,0 +1,74 @@
+# Common configuration
+plugin.tx_cbgaedms_mvc3.configurations < plugin.tx_cbgaedms
+plugin.tx_cbgaedms_mvc3.configurations {
+}
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+includeLibs.tx_lib_switch = EXT:lib/class.tx_lib_switch.php
+includeLibs.tx_cbgaedms_controller_Document = EXT:cbgaedms/controllers/class.tx_cbgaedms_controller_Document.php
+includeLibs.tx_cbgaedms_controller_Document_Type = EXT:cbgaedms/controllers/class.tx_cbgaedms_controller_Document_Type.php
+
+# The controller switch
+plugin.tx_cbgaedms.controllerSwitch = USER
+plugin.tx_cbgaedms.controllerSwitch {
+    userFunc = tx_lib_switch->main
+
+    Document = USER
+    Document {
+       userFunc = tx_cbgaedms_controller_Document->main
+       setupPath = plugin.tx_cbgaedms_mvc3.configurations.
+       configurations < plugin.tx_cbgaedms_mvc3.configurations
+       configurations.defaultAction = Document_List
+		configurations.validationRules {
+			10 {
+				field = doc
+				pattern = /^\X+/
+				message = %%%docMissingError%%%
+			}
+			20 {
+				field = doctype
+				pattern = /^\d+$/
+				message = %%%doctypeMissingError%%%
+			}
+			30 {
+				field = newfile
+				pattern = /^\X+/
+				message = %%%newfileMissingError%%%
+			}
+		}
+		configurations.validationRulesVersion {
+			10 {
+				field = newfile
+				pattern = /^\X+/
+				message = %%%newfileMissingError%%%
+			}
+		}
+		configurations.validationRulesEdit {
+			10 {
+				field = doc
+				pattern = /^\X+/
+				message = %%%docMissingError%%%
+			}
+			20 {
+				field = doctype
+				pattern = /^\d+$/
+				message = %%%doctypeMissingError%%%
+			}
+		}
+    }
+    Document_Type = USER
+    Document_Type {
+       userFunc = tx_cbgaedms_controller_Document_Type->main
+       setupPath = plugin.tx_cbgaedms_mvc3.configurations.
+       configurations < plugin.tx_cbgaedms_mvc3.configurations
+       configurations.defaultAction = Document_Type_List
+		configurations.validationRules {
+			10 {
+				field = doctype
+				pattern = /^\X+/
+				message = %%%emptyDoctypeError%%%
+			}
+		}
+    }
+}
+tt_content.list.20.cbgaedms_mvc3 =< plugin.tx_cbgaedms.controllerSwitch
